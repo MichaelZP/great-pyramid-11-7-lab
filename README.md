@@ -4,6 +4,8 @@
 
 [Polska wersja](README_PL.md) · [Mathematics](docs/MATHEMATICS.md) · [Golden Egg](docs/GOLDEN-EGG.md) · [Optical correspondence](docs/OPTICAL-CORRESPONDENCE.md) · [Predecessor: Fusion model](https://github.com/MichaelZP/great-pyramid-11-7)
 
+**Open in the browser (no install):** [michaelzp.github.io/great-pyramid-11-7-lab](https://michaelzp.github.io/great-pyramid-11-7-lab/)
+
 ![11:7 laboratory — pyramid, rainbows, constant table](docs/images/lab-11-7.png)
 
 This repository is the **web laboratory (v2)** of the 11:7 Great Pyramid study. The Fusion 360 generator remains in a separate project: [MichaelZP/great-pyramid-11-7](https://github.com/MichaelZP/great-pyramid-11-7).
@@ -96,6 +98,12 @@ Display radii are schematic, not atmospheric distances. See [docs/OPTICAL-CORRES
 ![Golden egg revolved about the apothem](docs/images/golden-egg.png)
 
 Selecting **Golden Egg 1.618033989** sets the pyramid to **51.795319256°**. Behind the solid a translucent hyperbolic cone (`r ∝ 1/z`) stands on the ground plane. The face-plane cut is a golden ellipse (`L/W = φ`); revolving that ellipse about the **apothem** produces the golden egg. Details: [docs/GOLDEN-EGG.md](docs/GOLDEN-EGG.md).
+
+## Run in a browser
+
+GitHub does **not** execute the Vite app from the source tree. The production build is hosted on **GitHub Pages**, so anyone can open the laboratory without cloning:
+
+**https://michaelzp.github.io/great-pyramid-11-7-lab/**
 
 ## Run locally
 

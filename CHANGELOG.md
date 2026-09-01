@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.1 — 2026-09-02
+
+- Higher-resolution README screenshots (11:7 laboratory and Golden Φ Egg).
+- GitHub Pages live laboratory at https://michaelzp.github.io/great-pyramid-11-7-lab/
+
 ## 2.0.0 — 2026-09-01
 
 Interactive web laboratory (this repository).

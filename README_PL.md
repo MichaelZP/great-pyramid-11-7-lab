@@ -4,6 +4,8 @@
 
 [English version](README.md) · [Matematyka](docs/MATHEMATICS.md) · [Golden Egg](docs/GOLDEN-EGG.md) · [Korespondencja optyczna](docs/OPTICAL-CORRESPONDENCE.md) · [Poprzednik: model Fusion](https://github.com/MichaelZP/great-pyramid-11-7)
 
+**Otwórz w przeglądarce (bez instalacji):** [michaelzp.github.io/great-pyramid-11-7-lab](https://michaelzp.github.io/great-pyramid-11-7-lab/)
+
 ![Laboratorium 11:7 — piramida, tęcze, tabela stałych](docs/images/lab-11-7.png)
 
 To repozytorium to **laboratorium WWW (v2)** badania piramidy 11:7. Generator Autodesk Fusion pozostaje w osobnym projekcie: [MichaelZP/great-pyramid-11-7](https://github.com/MichaelZP/great-pyramid-11-7).
@@ -34,6 +36,12 @@ Wynik służy geometrii, wizualizacji i dyskusji krytycznej — nie jest dowodem
 | Własny stosunek | `B/H` lub kąt użytkownika | edytowalny |
 
 Wagi oceny (z skoroszytu): dokładność niezależna 0,35, zgodność z obserwacją 0,25, prostota ułamka 0,25, odporność w paśmie 0,15. **11:7 pozostaje najprostszym modelem konstrukcyjnym**; Golden Egg to trop geometryczny, nie zamiennik konstrukcji.
+
+## Uruchomienie w przeglądarce
+
+Sam GitHub **nie uruchamia** aplikacji Vite z drzewa źródłowego. Zbudowana strona stoi na **GitHub Pages** — laboratorium otwiera się bez pobierania kodu:
+
+**https://michaelzp.github.io/great-pyramid-11-7-lab/**
 
 ## Uruchomienie lokalne
 
