@@ -9,10 +9,12 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default: "bg-accent text-accent-fg hover:opacity-90",
-        ghost: "bg-transparent text-fg hover:bg-bg-subtle box-shadow-none",
+        ghost:
+          "bg-transparent text-fg hover:bg-bg-subtle box-shadow-none",
         outline:
           "bg-transparent text-fg shadow-[var(--shadow-border)] hover:shadow-[var(--shadow-border-hover)]",
-        winner: "bg-winner text-accent-fg hover:opacity-90",
+        winner:
+          "bg-winner text-accent-fg hover:opacity-90",
       },
       size: {
         default: "h-11 px-4",
