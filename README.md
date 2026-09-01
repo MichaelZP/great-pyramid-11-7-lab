@@ -1,5 +1,5 @@
 # Great Pyramid 11:7 — Mathematical Constants Laboratory
-
+Run in a browser https://michaelzp.github.io/great-pyramid-11-7-lab/
 > **One proportion, a live 3D solid, a table of constant errors, a labelled rainbow correspondence, and a Golden Φ Egg cut from z = 1/r.**
 
 [Polska wersja](README_PL.md) · [Mathematics](docs/MATHEMATICS.md) · [Golden Egg](docs/GOLDEN-EGG.md) · [Optical correspondence](docs/OPTICAL-CORRESPONDENCE.md) · [Predecessor: Fusion model](https://github.com/MichaelZP/great-pyramid-11-7)
