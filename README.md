@@ -61,11 +61,11 @@ The Golden Φ Egg is a **separate** model: it does not use the rounded 51.84° c
 | Golden Φ Egg | `L/W = φ`; `z = 1/r`; `Z₀ = 7.65` | **51.795319256°** |
 | Custom ratio | user `B/H` or angle | editable |
 
-Consensus score weights (from the workbook): independent accuracy 0.35, agreement with observation 0.25, fraction simplicity 0.25, robustness in band 0.15. **11:7 remains the simplest construction model**; Golden Egg is a geometric lead, not a replacement construction.
+Consensus score weights (from the workbook): independent accuracy 0.35, agreement with observation 0.25, fraction simplicity 0.25, robustness in band 0.15. **11:7 remains the simplest construction model**; Golden Egg is a geometric lead, not a replacement construction. On the Golden Egg preset the laboratory engine reports **10 of 13** relations within 0.1%, with mean relative error ≈ 0.090% and maximum ≈ 0.397% (~0.4%).
 
 ## Constant comparisons (11:7, tolerance 0.1%)
 
-Each row is derived from the current pyramid. With `MathTolerance = 0.001`, the 11:7 solid stays inside 0.1% for the classical twelve, and L/W is reported as a thirteenth, angle-dependent egg ratio.
+Each row is derived from the current pyramid. With `MathTolerance = 0.001`, the 11:7 solid keeps the classical twelve inside 0.1%; after the exact egg integrator the thirteenth L/W row sits just outside (~0.106% relative to φ). That is 12 of 13 — not 13 of 13.
 
 | Symbol | Formula | Target |
 |---|---|---|
@@ -97,7 +97,7 @@ Display radii are schematic, not atmospheric distances. See [docs/OPTICAL-CORRES
 
 ![Golden egg revolved about the apothem](docs/images/golden-egg.png)
 
-Selecting **Golden Egg 1.618033989** sets the pyramid to **51.795319256°**. Behind the solid a translucent hyperbolic cone (`r ∝ 1/z`) stands on the ground plane. The face-plane cut is a golden ellipse (`L/W = φ`); revolving that ellipse about the **apothem** produces the golden egg. Details: [docs/GOLDEN-EGG.md](docs/GOLDEN-EGG.md).
+Selecting **Golden Egg 1.618033989** sets the pyramid to **51.795319256°**. Behind the solid a translucent hyperbolic cone (`r ∝ 1/z`) stands on the ground plane. The face-plane cut is a golden ellipse (`L/W = φ`); revolving that ellipse about the **apothem** produces the golden egg. With this preset the engine reports 10 of 13 relations within 0.1% and a maximum relative error of ~0.4% (about 4× the declared tolerance); 11:7 remains the construction model. Details: [docs/GOLDEN-EGG.md](docs/GOLDEN-EGG.md).
 
 ## Run in a browser
 

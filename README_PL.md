@@ -35,7 +35,7 @@ Wynik służy geometrii, wizualizacji i dyskusji krytycznej — nie jest dowodem
 | Golden Φ Egg | `L/W = φ`; `z = 1/r`; `Z₀ = 7,65` | **51,795319256°** |
 | Własny stosunek | `B/H` lub kąt użytkownika | edytowalny |
 
-Wagi oceny (z skoroszytu): dokładność niezależna 0,35, zgodność z obserwacją 0,25, prostota ułamka 0,25, odporność w paśmie 0,15. **11:7 pozostaje najprostszym modelem konstrukcyjnym**; Golden Egg to trop geometryczny, nie zamiennik konstrukcji.
+Wagi oceny (z skoroszytu): dokładność niezależna 0,35, zgodność z obserwacją 0,25, prostota ułamka 0,25, odporność w paśmie 0,15. **11:7 pozostaje najprostszym modelem konstrukcyjnym**; Golden Egg to trop geometryczny, nie zamiennik konstrukcji. Dla predefiniowanego Golden Egg silnik laboratorium zgłasza **10 z 13** relacji w 0,1%, średni błąd względny ≈ 0,090%, maksimum ≈ 0,397% (~0,4%). Dla 11:7 klasyczne dwanaście pozostaje w 0,1%; trzynasty wiersz L/W wypada tuż poza (~0,106%) po dokładnym integratorze — to 12 z 13, nie 13 z 13.
 
 ## Uruchomienie w przeglądarce
 

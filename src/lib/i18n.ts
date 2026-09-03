@@ -10,7 +10,7 @@ export const translations = {
     rainbowCaption:
       "Primary: vertical semicircle in the mid-plane, red r = H through the apex. Secondary: parallel plane behind the pyramid, green r = 2H. Front-face apothem 51.84° → green. Edge 41.99° ends at the apex.",
     goldenEggCaption:
-      "Hyperbolic cone z = 1/r (Harthun–Rennert). Cut at Z₀ = 7.65 with L/W = φ gives 51.795319256°. Pyramid slope, constants and errors follow that angle.",
+      "Hyperbolic cone z = 1/r (Harthun–Rennert). Cut at Z₀ = 7.65 with L/W = φ gives 51.795319256°. Pyramid slope, constants and errors follow that angle. Laboratory consensus: 10 of 13 within 0.1%, MAX ≈ 0.4% — a geometric lead, not a replacement for 11:7.",
     hologram: "Hologram",
     rainbow: "Rainbow",
     dimensions: "Dimensions",
@@ -115,7 +115,7 @@ export const translations = {
     rainbowCaption:
       "Pierwotna: pionowy półokrąg w płaszczyźnie środkowej, czerwień r = H przez czubek. Wtórna: równoległa płaszczyzna za piramidą, zieleń r = 2H. Apotema ściany przedniej 51,84° → zieleń. Krawędź 41,99° kończy się w wierzchołku.",
     goldenEggCaption:
-      "Stożek hiperboliczny z = 1/r (Harthun–Rennert). Cięcie w Z₀ = 7,65 przy L/W = φ daje 51,795319256°. Nachylenie piramidy i błędy stałych liczone są z tego kąta.",
+      "Stożek hiperboliczny z = 1/r (Harthun–Rennert). Cięcie w Z₀ = 7,65 przy L/W = φ daje 51,795319256°. Nachylenie piramidy i błędy stałych liczone są z tego kąta. Konsensus laboratorium: 10 z 13 w 0,1%, MAX ≈ 0,4% — trop geometryczny, nie zamiennik 11:7.",
     hologram: "Hologram",
     rainbow: "Tęcza",
     dimensions: "Wymiary",

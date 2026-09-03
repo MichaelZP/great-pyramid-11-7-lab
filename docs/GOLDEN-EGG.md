@@ -40,15 +40,21 @@ The green apothem of the pyramid is the same line as the major axis of the secti
 
 1. Translucent hyperbolic cone, axis vertical, **base on the ground plane behind the pyramid**.
 2. Cutting plane = **front face plane** of the pyramid (contains the apothem).
-3. Plane ∩ cone = closed oval. After the solved calibration, **L/W = φ** at αp.
+3. Plane ∩ cone = closed oval. Geometric L/W equals φ at αp to machine precision.
 4. That oval is shown as a gold meridian in the cutting plane.
 5. The oval is **revolved about the apothem** (51.795°) to a translucent golden egg.
 
 The ellipse is therefore **not** vertical along world Z; its long axis is the apothem.
 
+The on-screen cone and egg in the 3D scene are a proportional schematic for framing. They do not use the same Z₀ parameterization as the numeric L/W row.
+
 ## Constant row L/W
 
-The constants table includes **L/W**. The geometric length/width of the `z = 1/r` cut is evaluated at the current apothem angle and scaled so that the value is **exactly φ** at 51.795319256°. Changing the slope (other presets or the custom slider) shows the deviation from φ.
+The constants table includes **L/W**. The geometric length/width of the `z = 1/r` cut is integrated directly: closed-form oval endpoints around Z₀ plus a ternary search for the maximum half-width. At αp the geometric ratio equals φ to machine precision; there is no silent rescaling. Changing the slope (other presets or the custom slider) shows the true geometric deviation from φ.
+
+## Laboratory consensus
+
+Selecting the Golden Egg preset moves the laboratory consensus. With the engine it reports **10 of 13** relations within 0.1%, mean relative error ≈ **0.090%**, and maximum relative error ≈ **0.397%** (~0.4%), about 4× the declared 0.1% tolerance. The worst classical rows are **e−1**, **e**, and **π**. Therefore Golden Egg is a **geometric lead**, not a replacement construction model; **11:7 remains the simplest construction model**. These figures are computed by the laboratory engine.
 
 ## What this does not claim
 
