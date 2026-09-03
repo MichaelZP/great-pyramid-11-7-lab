@@ -296,7 +296,7 @@ export const MODELS: ModelDef[] = [
     short: "Egg",
     basis: "Harthun–Rennert z=1/r · Z₀=7.65 · L/W=φ",
     notes:
-      "Stożek hiperboliczny z=1/r. Z₀=7.65 i warunek L/W=φ dają kąt 51,795319256°. Wszystkie stałe liczone z tego kąta.",
+      "Stożek hiperboliczny z=1/r. Z₀=7.65 i L/W=φ dają 51,795319256°. Silnik laboratorium: 10 z 13 relacji w 0,1%, średni błąd ≈ 0,090%, MAX ≈ 0,397% (~0,4%). Trop geometryczny, nie zamiennik konstrukcji 11:7.",
     kind: "angle",
     angleDeg: GOLDEN_EGG_ANGLE,
   },
@@ -391,27 +391,18 @@ export function relationValue(id: ConstantId, geo: Geo): number {
 
 /**
  * Length/width of the Harthun–Rennert egg: plane at the apothem angle
- * cutting the hyperbolic cone r = 1/z around axis height Z₀.
- * Calibrated so L/W = φ exactly at GOLDEN_EGG_ANGLE.
+ * cutting the hyperbolic cone z·r = 1 around axis height Z₀.
+ *
+ * The closed oval around Z₀ has closed-form endpoints (larger quadratic
+ * root below Z₀; positive root above). Max half-width is a ternary search
+ * on y². At GOLDEN_EGG_ANGLE the geometric L/W equals φ to machine
+ * precision; there is no calibration rescale.
  */
 export function eggLengthOverWidth(
   angleDeg: number,
   z0 = GOLDEN_EGG_Z0,
 ): number {
-  const geom = geometricEggLW(angleDeg, z0);
-  const atSolved = geometricEggLWSolved();
-  if (!Number.isFinite(geom) || !Number.isFinite(atSolved) || atSolved === 0) {
-    return Number.NaN;
-  }
-  return (geom / atSolved) * PHI;
-}
-
-let _eggLWSolved: number | null = null;
-function geometricEggLWSolved(): number {
-  if (_eggLWSolved == null) {
-    _eggLWSolved = geometricEggLW(GOLDEN_EGG_ANGLE, GOLDEN_EGG_Z0);
-  }
-  return _eggLWSolved;
+  return geometricEggLW(angleDeg, z0);
 }
 
 function geometricEggLW(angleDeg: number, z0: number): number {
@@ -420,28 +411,32 @@ function geometricEggLW(angleDeg: number, z0: number): number {
   const sina = Math.sin(alpha);
   if (!(tana > 0) || !(sina > 0)) return Number.NaN;
 
+  // y² = 0 ⇒ tan(α)/z = |z − Z₀|
+  // z < Z₀: z² − Z₀·z + tan(α) = 0. Larger root is the oval end;
+  // the smaller root is a spurious distant branch (L/W ≈ 37, not φ).
+  const discLo = z0 * z0 - 4 * tana;
+  if (!(discLo > 0)) return Number.NaN;
+  const zLo = (z0 + Math.sqrt(discLo)) / 2;
+  // z > Z₀: z² − Z₀·z − tan(α) = 0. Positive root.
+  const zHi = (z0 + Math.sqrt(z0 * z0 + 4 * tana)) / 2;
+  if (!(zLo > 0 && zLo < z0 && z0 < zHi)) return Number.NaN;
+
   const y2 = (z: number) => {
-    if (z <= 0) return -1;
     const x = (z - z0) / tana;
     return 1 / (z * z) - x * x;
   };
 
-  const zMin = z0 * 0.55;
-  const zMax = z0 * 1.45;
-  const n = 1600;
-  let zLo: number | null = null;
-  let zHi: number | null = null;
-  let maxY = 0;
-  for (let i = 0; i <= n; i++) {
-    const z = zMin + ((zMax - zMin) * i) / n;
-    const v = y2(z);
-    if (v >= 0) {
-      if (zLo == null) zLo = z;
-      zHi = z;
-      maxY = Math.max(maxY, Math.sqrt(v));
-    }
+  let lo = zLo;
+  let hi = zHi;
+  for (let i = 0; i < 80; i++) {
+    const m1 = lo + (hi - lo) / 3;
+    const m2 = hi - (hi - lo) / 3;
+    if (y2(m1) < y2(m2)) lo = m1;
+    else hi = m2;
   }
-  if (zLo == null || zHi == null || zHi <= zLo || maxY <= 0) return Number.NaN;
+  const maxY2 = y2((lo + hi) / 2);
+  if (!(maxY2 > 0)) return Number.NaN;
+  const maxY = Math.sqrt(maxY2);
   return (zHi - zLo) / sina / (2 * maxY);
 }
 

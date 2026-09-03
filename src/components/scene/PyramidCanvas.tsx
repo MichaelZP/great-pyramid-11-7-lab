@@ -6,7 +6,6 @@ import { useLabStore } from "@/store/lab-store";
 import { useActiveSnapshot } from "@/hooks/use-lab";
 import {
   CONSTANTS,
-  GOLDEN_EGG_Z0,
   RAINBOW_ANGLE,
   TARGET_RATIO,
 } from "@/lib/pyramid/engine";
