@@ -25,6 +25,7 @@ export const translations = {
     reverseDepth: "Reverse depth",
     language: "Language",
     assembling: "Assembling the pyramid…",
+    confirmExit: "Exit Great Pyramid 11:7? Your current lab settings will be lost.",
 
     geometryTemplate: "Geometry template",
     oneShapeParam: "One shape parameter",
@@ -130,6 +131,7 @@ export const translations = {
     reverseDepth: "Odwróć głębię",
     language: "Język",
     assembling: "Składanie piramidy…",
+    confirmExit: "Zamknąć Great Pyramid 11:7? Bieżące ustawienia laboratorium zostaną utracone.",
 
     geometryTemplate: "Szablon geometrii",
     oneShapeParam: "Jeden parametr kształtu",

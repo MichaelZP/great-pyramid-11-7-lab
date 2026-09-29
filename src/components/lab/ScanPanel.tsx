@@ -58,12 +58,12 @@ export function ScanPanel() {
               dataKey="angle"
               type="number"
               domain={["dataMin", "dataMax"]}
-              tick={{ fill: AXIS, fontSize: 11, fontFamily: "IBM Plex Mono" }}
+              tick={{ fill: AXIS, fontSize: 11, fontFamily: "monospace" }}
               tickFormatter={(v: number) => v.toFixed(2).replace(".", dec)}
               stroke={GRID}
             />
             <YAxis
-              tick={{ fill: AXIS, fontSize: 11, fontFamily: "IBM Plex Mono" }}
+              tick={{ fill: AXIS, fontSize: 11, fontFamily: "monospace" }}
               tickFormatter={(v: number) =>
                 `${v.toFixed(2).replace(".", dec)}%`
               }
@@ -75,7 +75,7 @@ export function ScanPanel() {
                 background: "#12151a",
                 border: "1px solid #2a2e35",
                 borderRadius: 8,
-                fontFamily: "IBM Plex Mono",
+                fontFamily: "monospace",
                 fontSize: 12,
                 color: "#ece8e1",
               }}

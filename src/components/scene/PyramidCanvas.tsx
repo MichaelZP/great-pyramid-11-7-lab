@@ -924,6 +924,7 @@ function Lights() {
 
 export function PyramidCanvas() {
   const crossEye = useLabStore((s) => s.crossEye);
+  const mobileCamera = window.matchMedia("(max-width: 1023px)").matches;
   return (
     <div className="relative h-full w-full">
       <Canvas
@@ -935,7 +936,7 @@ export function PyramidCanvas() {
           powerPreference: "high-performance",
         }}
         camera={{
-          position: [0, 2.5 * START_H, 10 * (BASE / 2)],
+          position: [0, 2.5 * START_H, (mobileCamera ? 6.5 : 10) * (BASE / 2)],
           fov: 32,
           near: 0.1,
           far: 60,

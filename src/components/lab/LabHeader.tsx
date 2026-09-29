@@ -28,21 +28,21 @@ export function LabHeader() {
   const { t, locale, toggleLocale, fmt, fmtDeg, modelName } = useI18n();
 
   return (
-    <header className="pointer-events-none absolute inset-x-0 top-0 z-20 flex items-start justify-between gap-3 p-3 sm:p-4">
+    <header className="pointer-events-none absolute inset-x-0 top-0 z-20 flex flex-col items-stretch gap-2 px-2 pt-[calc(env(safe-area-inset-top)+0.5rem)] sm:flex-row sm:items-start sm:justify-between sm:gap-3 sm:p-4">
       {sceneFullscreen ? (
         <div />
       ) : (
-      <div className="panel pointer-events-auto max-w-[min(100%,28rem)] rounded-lg px-4 py-3">
+      <div className="panel pointer-events-auto max-w-[min(100%,28rem)] rounded-lg px-3 py-2 sm:px-4 sm:py-3">
         <p className="text-xs font-medium tracking-[0.22em] text-muted uppercase">
           {t("siteKicker")}
         </p>
-        <h1 className="font-display text-2xl leading-none text-fg sm:text-3xl">
+        <h1 className="font-display text-xl leading-none text-fg sm:text-3xl">
           {t("siteTitle")}
         </h1>
-        <p className="mt-1.5 max-w-sm text-xs leading-relaxed text-muted sm:text-sm">
+        <p className="mt-1.5 hidden max-w-sm text-xs leading-relaxed text-muted sm:block sm:text-sm">
           {t("siteLead")}
         </p>
-        <p className="mt-2 font-mono text-xs tabular text-fg">
+        <p className="mt-1 font-mono text-[0.65rem] tabular text-fg sm:mt-2 sm:text-xs">
           {modelName(snap.model.id)}
           <span className="text-muted"> · </span>
           {fmtDeg(snap.geo.angleDeg, 4)}
@@ -52,18 +52,18 @@ export function LabHeader() {
           {snap.summary.matches}/{CONSTANTS.length}
         </p>
         {snap.model.id === "goldenEgg" ? (
-          <p className="mt-1.5 max-w-sm font-mono text-[0.65rem] leading-relaxed text-muted">
+          <p className="mt-1.5 hidden max-w-sm font-mono text-[0.65rem] leading-relaxed text-muted sm:block">
             {t("goldenEggCaption")}
           </p>
         ) : showRainbow ? (
-          <p className="mt-1.5 max-w-sm font-mono text-[0.65rem] leading-relaxed text-muted">
+          <p className="mt-1.5 hidden max-w-sm font-mono text-[0.65rem] leading-relaxed text-muted sm:block">
             {t("rainbowCaption")}
           </p>
         ) : null}
       </div>
       )}
 
-      <div className="pointer-events-auto flex flex-wrap justify-end gap-1">
+      <div className="pointer-events-auto flex w-full shrink-0 gap-1 overflow-x-auto pb-1 sm:w-auto sm:flex-wrap sm:justify-end sm:overflow-visible">
         <Toggle
           pressed={showHologram}
           onClick={toggleHologram}
@@ -158,7 +158,7 @@ function Toggle({
       size="sm"
       onClick={onClick}
       aria-pressed={pressed}
-      className={cn("min-h-11 gap-1.5 px-3", !pressed && "bg-bg-elevated/80")}
+      className={cn("min-h-11 shrink-0 gap-1.5 px-3", !pressed && "bg-bg-elevated/80")}
     >
       {icon}
       <span className="hidden sm:inline">{label}</span>

@@ -3,6 +3,7 @@ import { SceneMount } from "@/components/scene/SceneMount";
 import { useLabStore, type LabTab } from "@/store/lab-store";
 import { MODELS } from "@/lib/pyramid/engine";
 import { useI18n } from "@/hooks/use-i18n";
+import { t as translate } from "@/lib/i18n";
 import { LabHeader } from "./LabHeader";
 import { ModelRail } from "./ModelRail";
 import { ConstantsPanel } from "./ConstantsPanel";
@@ -119,9 +120,35 @@ export function AppShell() {
     return () => window.removeEventListener("keydown", onKey);
   }, [setModel, setSceneFullscreen]);
 
+  useEffect(() => {
+    let disposed = false;
+    let remove: (() => Promise<void>) | undefined;
+    void Promise.all([import("@capacitor/core"), import("@capacitor/app")]).then(
+      async ([{ Capacitor }, { App }]) => {
+        if (!Capacitor.isNativePlatform() || disposed) return;
+        const listener = await App.addListener("backButton", () => {
+          const state = useLabStore.getState();
+          if (state.sceneFullscreen) {
+            state.setSceneFullscreen(false);
+          } else if (state.mobileTab !== "modele") {
+            state.setMobileTab("modele");
+          } else if (window.confirm(translate(useLabStore.getState().locale, "confirmExit"))) {
+            void App.exitApp();
+          }
+        });
+        if (disposed) void listener.remove();
+        else remove = () => listener.remove();
+      },
+    );
+    return () => {
+      disposed = true;
+      void remove?.();
+    };
+  }, []);
+
   return (
     <main ref={mainRef} className="relative h-dvh overflow-hidden bg-bg text-fg">
-      <div className="absolute inset-0">
+      <div className={cn("absolute inset-x-0 top-32 bottom-[48dvh] lg:inset-0", sceneFullscreen && "inset-0")}>
         <SceneMount />
       </div>
 
@@ -147,15 +174,15 @@ export function AppShell() {
           </section>
 
           <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 lg:hidden">
-            <div className="pointer-events-auto max-h-[48dvh] overflow-hidden rounded-t-xl bg-bg-elevated shadow-[var(--shadow-border)]">
-              <nav className="flex border-b border-border">
+            <div className="pointer-events-auto max-h-[48dvh] overflow-hidden rounded-t-xl bg-bg-elevated pb-[env(safe-area-inset-bottom)] shadow-[var(--shadow-border)]">
+              <nav className="flex overflow-x-auto border-b border-border">
                 {tabs.map((tab) => (
                   <button
                     key={tab.id}
                     type="button"
                     onClick={() => setMobileTab(tab.id)}
                     className={cn(
-                      "min-h-11 flex-1 px-2 text-sm font-medium",
+                      "min-h-11 min-w-0 flex-1 px-1 text-xs font-medium sm:px-2 sm:text-sm",
                       mobileTab === tab.id
                         ? "bg-bg-subtle text-fg"
                         : "text-muted",
@@ -165,7 +192,7 @@ export function AppShell() {
                   </button>
                 ))}
               </nav>
-              <div className="max-h-[40dvh] overflow-y-auto p-4">
+              <div className="max-h-[min(40dvh,calc(48dvh-3rem-env(safe-area-inset-bottom)))] overflow-y-auto p-3 sm:p-4">
                 {mobileTab === "modele" ? <ModelRail /> : null}
                 {mobileTab === "stale" ? <ConstantsPanel /> : null}
                 {mobileTab === "skan" ? (
