@@ -162,7 +162,7 @@ export function AppShell() {
 
   return (
     <main ref={mainRef} className="relative h-dvh overflow-clip bg-bg text-fg">
-      <div className={cn("absolute inset-x-0 top-36 bottom-[48dvh] lg:inset-0", sceneFullscreen && "inset-0")}>
+      <div className={cn("lab-scene absolute inset-x-0 top-36 bottom-[48dvh] lg:inset-0", sceneFullscreen && "inset-0")}>
         <SceneMount />
       </div>
 
@@ -187,14 +187,15 @@ export function AppShell() {
             </div>
           </section>
 
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 lg:hidden">
-            <div className="pointer-events-auto max-h-[48dvh] overflow-hidden rounded-t-xl bg-bg-elevated pb-[env(safe-area-inset-bottom)] shadow-[var(--shadow-border)]">
+          <div className="mobile-panel pointer-events-none absolute inset-x-0 bottom-0 z-20 lg:hidden">
+            <div className="mobile-panel-content pointer-events-auto max-h-[48dvh] overflow-hidden rounded-t-xl bg-bg-elevated pb-[env(safe-area-inset-bottom)] shadow-[var(--shadow-border)]">
               <nav className="flex overflow-x-auto border-b border-border">
                 {tabs.map((tab) => (
                   <button
                     key={tab.id}
                     type="button"
                     onClick={() => setMobileTab(tab.id)}
+                    aria-pressed={mobileTab === tab.id}
                     className={cn(
                       "min-h-11 min-w-0 flex-1 px-1 text-xs font-medium sm:px-2 sm:text-sm",
                       mobileTab === tab.id
@@ -206,7 +207,7 @@ export function AppShell() {
                   </button>
                 ))}
               </nav>
-              <div className="max-h-[min(40dvh,calc(48dvh-3rem-env(safe-area-inset-bottom)))] overflow-y-auto p-3 sm:p-4">
+              <div className="mobile-panel-body max-h-[min(40dvh,calc(48dvh-3rem-env(safe-area-inset-bottom)))] overflow-y-auto p-3 sm:p-4">
                 {mobileTab === "modele" ? <ModelRail /> : null}
                 {mobileTab === "stale" ? <ConstantsPanel /> : null}
                 {mobileTab === "skan" ? (

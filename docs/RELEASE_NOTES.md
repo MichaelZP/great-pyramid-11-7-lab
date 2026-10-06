@@ -1,38 +1,17 @@
-# Review all thirteen mathematical positions, lessons and history
+# Pyramid 11:7 — stage 12 author review
 
-The update lets users inspect all thirteen model comparisons through labelled
-3D constructions, formulas, relative errors and four-step explanations in
-Polish and English. Length sums use explicit copies, e/e−1 use complementary
-angles and L/W uses the calculated closed oval and its maximum width.
+This draft prepares the implemented lab and separate cone/vortex previews for author acceptance. It retains all thirteen labelled constructions/four-step lessons, PL/EN history/sources, optional nine-step tutorial, presets/sliders, scan/ranking, rainbow/hologram, camera and stereo. The existing Capacitor foundation remains included; no new APK is delivered.
 
-Each position adds scoped history and sources. An optional nine-step tutorial
-connects the dependent relations, supports arbitrary navigation and retains
-progress after reload. The visible project credit is
-**Michał Przybylski — prylski.dev**.
+Separate static previews cover hyperbolic sections/two scaled and axially placed/reflected systems (current stage 9), opposite-circulation tori (stage 10), and artistic particles/trails/deformation/glow with educational/cinematic modes, camera and bounded quality (stage 11). These `docs/` pages are **not integrated into the main app or Android assets**.
 
-Review fixes correct the RMS scan minimum to 51.846°, cancel pending playback
-when hidden or closed, avoid repeated geometry uploads after height settles,
-and prevent the header from covering the model controls. Documentation now
-distinguishes the oval from an ellipse, numerical residuals from exact equality,
-chosen score weights from independence, and ordinary illustrations from the
-calculated section. Comparison targets, 0.1% tolerance and source XLSX inputs
-remain unchanged.
+The review fixes 844×390 layout: toolbar controls are reachable and scene height grows from approximately 59 to 246 px, with scrollable side controls. Desktop and expanded-scene layout remain usable; mobile navigation exposes pressed state. CI adds the 14 prototype tests. Reproducible dependency inventory and available verbatim notices accompany the release, with three full-notice gaps recorded.
 
-Validation: 87 tests, TypeScript, independent 60-digit audit of all 13 rows and
-both workbooks, three local build modes, desktop and 320/390 px browser review.
-The 11:7 preset matches 12/13; Golden Egg matches 10/13. RMS regression and
-4.2/18 s playback cancellation are covered by automated tests. CI also checks
-all three build modes. See [review evidence](REVIEW-13.md) and
-[manual acceptance](MANUAL_ACCEPTANCE.md).
+Validation: **87 application tests + 14 prototype tests PASS**, TypeScript PASS, independent 60-digit audit/all 13 rows/both workbooks PASS, and web/Android-assets/Pages builds PASS. Browser review covers lessons, PL/EN history, tutorial, presets/layers/stereo and separate geometry/animation controls. [Stage 12 audit](ETAP-12.md) distinguishes automated checks, browser inspection and unverified physical-device behaviour.
 
-This is a **draft test update**. Physical Android touch/offline/Back/fullscreen
-and sustained animation/FPS acceptance remain pending; no connected device
-was available. Browser motion is restricted by its host. Bundles above 500 kB
-and library deprecation warnings remain. Brun uncertainty, global golden-angle
-uniqueness, statistical provenance of weights/reference angle and historical
-function/intent remain unresolved. Some source pages blocked the fresh review.
+11:7 gives 12/13 at 0.1%; oval L/W stays outside tolerance. Golden Egg gives 10/13. Targets/tolerances remain unchanged; dependent ratios and chosen scores are not historical probabilities. Vortices are artistic, without a Navier–Stokes solver or proof of pyramid function.
 
-The PR targets `main` from `feature/android-offline` and includes the earlier
-offline Capacitor foundation already committed on that branch. It must remain
-draft until the outstanding acceptance is reviewed. No merge or production
-deployment is requested or performed.
+Known limits: physical Android/native fullscreen/sustained FPS/thermal behaviour unverified; large-bundle/library warnings; unresolved Brun uncertainty/global uniqueness/historical claims. Project licensing and three dependency notice gaps block public distribution; native dependencies need audit before APK distribution. Local author review is ready.
+
+Use [startup/checklist](MANUAL_ACCEPTANCE.md), [audit](ETAP-12.md) and [materials/licences](THIRD_PARTY.md). Delivery stays on `feature/android-offline` in draft [PR #3](https://github.com/MichaelZP/great-pyramid-11-7-lab/pull/3) targeting `main`. No merge, deployment or release tag.
+
+Concept: **Michał Przybylski — prylski.dev**, https://github.com/MichaelZP/.

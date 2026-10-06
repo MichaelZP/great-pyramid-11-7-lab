@@ -1,3 +1,600 @@
+# ETAP 12 — końcowy audyt i wersja do odbioru, 2026-10-06
+
+**Gotowa do lokalnego odbioru autora; publikacja i odbiór natywnego Androida
+pozostają zablokowane przez opisane niżej bramki.**
+Koncepcja: Michał Przybylski — [prylski.dev](https://prylski.dev/),
+https://github.com/MichaelZP/.
+
+Rzeczywisty zakres: aplikacja z 13 relacjami, lekcjami, historią PL/EN,
+tutorialem i laboratorium oraz **osobne** podglądy etapów 9–11 w `docs/`.
+Stożki i wiry nie zostały zintegrowane z główną aplikacją ani APK. Zastane
+zmiany zachowano; plan i starsze wpisy nie są dowodem ukończenia etapów.
+Gałąź `feature/android-offline`, draft
+[PR #3](https://github.com/MichaelZP/great-pyramid-11-7-lab/pull/3) do `main`.
+Bez scalania, produkcji, nowego tagu i APK.
+
+**Kontrole:** 87/87 testów aplikacji, 14/14 prototypów, TypeScript, niezależny
+audyt 60-cyfrowy 13 pozycji/obu XLSX/JS oraz web/Android-assets/Pages PASS.
+CI rozszerzono o 14 testów prototypów. Brak skryptu lint. Przegląd przeglądarki:
+13 lekcji, 26 historii PL/EN, 9 kroków tutorialu, szablony/suwak/warstwy/stereo,
+A/B × 4 przekroje, skalowanie/odbicie, tryby i kamera wirów. Naprawiono
+ucinanie paska i scenę wysokości ~59 px przy 844×390; scena po naprawie ~246 px,
+przewijany panel boczny i wszystkie kontrolki dostępne. Desktop 1280×720 PASS.
+
+ADB wykrył NE2213, ale fizyczny dotyk/orientacja/offline/Back/fullscreen,
+długotrwałe FPS/temperatura/pamięć i APK **NIEZWERYFIKOWANE**. CSS pełnego
+widoku sprawdzono; natywnego fullscreen host nie potwierdził. Pomiar CPU
+Canvas nie jest pomiarem FPS. Czytnik ekranu/pełne WCAG niezweryfikowane.
+Znane ostrzeżenia bibliotek i dużych paczek pozostają.
+
+11:7: **12/13 w 0,1%**, L/W poza tolerancją; Golden Egg: **10/13**.
+Zależności dokładne, przybliżenia, hipoteza autora i sztuka są rozdzielone.
+Bez solvera Naviera–Stokesa i bez dowodu działania piramidy. Nie zmieniano
+celów/tolerancji ani zaakceptowanych zwrotów/położenia torusów.
+
+**Bramki publikacji:** decyzja autora o licencji/prawach do materiałów;
+3 brakujące pełne noty zależności npm; dla APK także audyt zależności natywnych
+i odbiór fizyczny. Zachowano podpis koncepcji; nie ustanowiono nowej licencji.
+Do autora: A/B, α, q, wygląd wirów, dokładne brzmienie hipotezy i dowody,
+licencja oraz ewentualna przyszła integracja podglądów.
+
+Materiały: [audyt](ETAP-12.md), [uruchomienie i checklista](MANUAL_ACCEPTANCE.md),
+[opis wydania](RELEASE_NOTES.md), [licencje i materiały](THIRD_PARTY.md),
+[dowody etapu 12](etap-12/). Następny krok: ręczny odbiór autora na telefonie.
+Poniżej zachowano historyczne raporty z ich datami i ograniczeniami.
+
+# ETAP 11 — lokalna implementacja i kontrole, 2026-10-06
+
+**Gotowe do odbioru artystycznego; fizyczny telefon i rzeczywista płynność
+wyświetlania NIEZWERYFIKOWANE.**
+„Wizualizacja artystyczna przeciwbieżnych wirów toroidalnych”.
+Koncepcja: Michał Przybylski — [prylski.dev](https://prylski.dev/),
+https://github.com/MichaelZP/. Inspiracja Naviera–Stokesa jest artystyczna,
+bez solvera, obliczeń mieszania/zderzeń ani dowodu działania piramidy.
+
+Autor w tej rozmowie zaakceptował położenie C₁=(0,0,5), C₂=(0,0,9),
+R=2,4, r=0,65, d=4 (regulacja 2–8) i zwroty T1: θ+,ψ+, T2: θ−,ψ−.
+Historyczne wpisy o braku tej akceptacji poniżej nie opisują aktualnej decyzji.
+Nie uznano za zatwierdzone wyglądu etapu 11 ani wyborów A/B, α i q.
+
+Właściwe repo `android-offline`, `feature/android-offline`, HEAD
+`f8ed12762abf0612213d7d48ce44b9ce2c1c1075`; zastane zmiany zachowano.
+Odczytano instrukcje projektu i wymagane plany/status. Brak AGENTS.md.
+Zachowano geometrię, zwroty, kontrolki i jeden zegar etapu 10; jego renderer
+ma opcjonalne rozszerzenie oraz ograniczone cache geometrii/rozmiarów Canvas.
+Dodano [etap-11/podglad.html](etap-11/podglad.html): cząstki (okrąg T1,
+kwadrat T2), analityczne smugi, gładką deformację trajektorii, łagodną zmianę
+rozstawu, subtelną poświatę, tryb edukacyjny/filmowy i kamerę filmową.
+Zerowa deformacja zachowuje ruch etapu 10, większa nie odwraca zwrotów.
+Pauza zamraża także parametry pośrednie i kamerę; ręczne sterowanie kamerą
+wyłącza automat aż do świadomego ponownego włączenia. Reset i ograniczony
+ruch dostępne. Wyłączenie efektów pozostawia działającą regularną geometrię.
+Główna aplikacja/silnik/13 relacji/tolerancje bez zmian.
+
+Canvas 2D/CPU, bez nowych bibliotek i obliczeń GPU. Jakości niska/średnia/
+wysoka: maks. 48/120/240 cząstek na torus, 4/8/12 segmentów smug,
+limity 30/45/60 rysowań/s i DPR 1/1,5/2. To nie gwarantowane FPS.
+Małe widoki startują od niskiej, większy komputer od średniej. Pomiar czasu
+CPU może automatycznie obniżyć jakość; użytkownik świadomie ją podnosi.
+Stały bufor cząstek 7680 B, pierścień najwyżej 120 próbek, brak historii smug.
+
+**Kontrole:** 9/9 testów etapów 10–11 (5 nowych) oraz 5/5 regresji etapów 7–9
+PASS; 87/87 aplikacji i TypeScript PASS. Web/Android-assets/Pages PASS,
+Node 24.19.0, lokalne wyjścia `%TEMP%/pyramid-stage11-*`. Vite/Vitest wymagały
+wyjścia poza sandbox blokujący config. Brak skryptu lint; znane ostrzeżenia
+>500 kB i outDir TEMP. Bez sync, APK/AAB ani instalacji. Buildy aplikacji
+nie dołączają osobnego prototypu docs. Whitespace/składnia PASS.
+
+**Przeglądarka:** 90 kombinacji obu trybów, trzech rzutów, pięciu klatek
+oraz 320×844/390×844/844×390 bez błędów/przepełnienia. Sprawdzono dziewięć
+warstw i oznaczeń oraz ruch/pauzę/ręczne przejęcie kamery; konsola czysta.
+CPU 30 nieruchomych klatek z maksymalnymi efektami i DPR=1:
+
+| Jakość | Komputer 908×1004 mediana / p95 [ms] | Viewport 390×844 na komputerze [ms] |
+|---|---:|---:|
+| Niska | 5,2 / 8,5 | 5,0 / 11,4 |
+| Średnia | 7,9 / 14,4 | 6,7 / 10,6 |
+| Wysoka | 12,2 / 22,3 | 11,2 / 19,4 |
+
+Wysoka nie jest domyślna: p95 przekracza 16,7 ms dla 60 Hz. To CPU
+trzech Canvas, bez późniejszego compositora/GPU. W podglądzie IAB callbacks
+animacji występowały ok. 1/s mimo widocznej strony; nie potwierdzamy FPS ani
+rzeczywistego czasu pokazu. Pamięć po 600 nieruchomych klatkach: JS heap
+28,62–48,98 MiB z okresowymi spadkami, bufor zawsze 7680 B. Brak
+monotonicznego wzrostu w tej próbie nie dowodzi braku długotrwałego wycieku.
+Fizyczny telefon: aktualne ADB bez urządzeń, wydajność/dotyk/DPR/ukrycie strony
+na nim NIEZWERYFIKOWANE. Brak pełnego nowego manualnego odbioru wszystkich
+lekcji głównej aplikacji; jej niezmieniony kod ma regresje PASS.
+
+Szczegóły mechanizmu, akceptacja i wszystkie granice:
+[plan-podwojnego-wiru.md](plan-podwojnego-wiru.md).
+[Pomiar i kontrole](etap-11/browser-checks.json),
+[edukacyjny 390 px](etap-11/edukacyjny-390.jpg),
+[panel ustawień filmowych](etap-11/panel-filmowy.jpg),
+[instrukcja odbioru](etap-11/odbior.md).
+
+**Jak obejrzeć:** http://127.0.0.1:8088/etap-11/podglad.html, działający
+lokalny serwer. Wybierz „Pokaż obiegi · 100%”, potem tryb i Odtwórz;
+kamera filmowa wymaga osobnego włączenia. Przy aktywnym ograniczonym ruchu
+pozostają ręczne nieruchome klatki. Offline zachowaj katalogi etap-7/10/11.
+Uruchomienie z katalogu aplikacji: `python -m http.server 8088 --bind 127.0.0.1 --directory docs`.
+
+**Do oceny autora:** czytelność efektów i kamera obu trybów oraz wcześniejsze
+A/B, α, q. Położenie i zwroty już zaakceptowane.
+**Jeden następny krok:** odbiór obu trybów na fizycznym telefonie z autorem,
+z dłuższym pomiarem płynności i pamięci.
+Bez commitów, push, zmian PR, publikacji na produkcję i scalania.
+Poniżej zachowano wcześniejsze wpisy jako historię.
+
+---
+
+# ETAP 10 — prototyp dwóch przeciwbieżnych wirów, 2026-10-06
+
+**Wykonano lokalny prototyp; kontrole kodu i przeglądarki PASS.
+Fizyczny telefon NIEZWERYFIKOWANY.** Interfejs nosi opis
+„Wizualizacja artystyczna przeciwbieżnych wirów toroidalnych”.
+Inspiracja Naviera–Stokesa nie oznacza solvera ani dowodu działania piramidy.
+Koncepcja: Michał Przybylski — [prylski.dev](https://prylski.dev/),
+https://github.com/MichaelZP/.
+
+## Sprawdzenie podstawy i wykonana praca
+
+Odczytano instrukcje projektu, PLAN, STATUS, plan-stozka, animacja-stozka
+i wynik odbioru/audytu etapu 9. Sprawdzono właściwe repozytorium:
+`android-offline`, gałąź `feature/android-offline`, HEAD
+`f8ed12762abf0612213d7d48ce44b9ce2c1c1075`. Zastany zmieniony STATUS
+oraz nieśledzone dokumenty i `docs/etap-7/` zachowano. Nadrzędne repo
+na `master` pozostaje osobnym kontekstem. Nie znaleziono AGENTS.md.
+Nie korzystano z historycznych uprawnień do push w PLAN.md.
+
+Aktualny etap 9 ma oba układy, odbicie bieżącej klatki, oznaczenia,
+selektor i jeden zegar; ponowne 5/5 testów przed implementacją PASS.
+Starszy wpis o statycznym odbiciu opisuje usunięte braki. Brak fizycznego
+odbioru telefonu oraz wybór A/B i α pozostają otwarte, lecz nie blokują
+regulowanego lokalnego wariantu artystycznego.
+
+Dodano osobny [podgląd etapu 10](etap-10/podglad.html), korzystający
+z nieruchomej końcowej konstrukcji etapu 9. Piramida nadal B=11, h=7.
+Torusy: C₁=(0;0;7−d/2), C₂=(0;0;7+d/2), R=2,4, r=0,65; domyślnie
+d=4, środki na Z=5 i Z=9. Rozstaw 2–8 u zachowuje dodatnią szczelinę.
+To położenie i promienie robocze, wymagające oceny autora. Powiązanie
+z odpowiednimi układami ma numer, styl linii i schematyczny łącznik.
+Nie jest matematycznym przekształceniem powierzchni ani owalu.
+
+Każdy torus ma 3 zamknięte trajektorie i 3 znaczniki. θ: obieg wokół Z;
+ψ: obieg przez kołowy przekrój wokół rdzenia. T1: θ+, ψ+; T2: θ−, ψ−
+w tej samej światowej konwencji. Strzałki, znaki i ciągłe/przerywane linie
+pokazują zwroty. Widoki z boku, z góry i perspektywiczny oraz dwa
+jednoczesne rzuty kontrolne pozwalają ocenić ruch. Rzut z góry nakłada
+torusy; selektor T1/T2/oba pozwala sprawdzić każdy oddzielnie.
+
+Odtwarzanie, osobna pauza, reset, suwak pokazu, prędkość 0,25–3×,
+rozstaw, siedem warstw, selektor układów i ograniczony ruch są dostępne.
+Pokaz: konstrukcja → odsłanianie torusów/trajektorii → ruch, 12 s;
+po 100% obieg trwa do pauzy. Obiegi bazowo 8 s dla θ i 4 s dla ψ.
+Seek zeruje fazę i zatrzymuje; reset wraca do konstrukcji. Ukrycie strony,
+pagehide, ograniczony ruch i błędne dane zatrzymują zegar. Geometria nie
+jest deformowana. Bez zderzeń, mieszania, turbulencji, smug i ciężkich efektów.
+
+Zachowano cztery presety cięcia, własne α/z₀, A/B i q. Domyślne q=0,4
+w etapie 10 jest roboczym wyborem czytelności; etap 9 nadal ma q=0,08.
+Rzeczywisty owal pochodzi ze wspólnego `etap-7/section.js`: wyodrębniono
+funkcję z HTML bez zmiany wzorów. Etap 9 nadal zawiera animację od Golden
+Egg, zakresy/kadry, oznaczenia, L/W oraz osobne porównanie ze złotą elipsą.
+Dodano link między podglądami. Główna aplikacja i silnik bez zmian.
+Parametry, równania, zwroty i przebieg:
+[plan-podwojnego-wiru.md](plan-podwojnego-wiru.md).
+
+## Weryfikacja i granice dowodów
+
+- **9/9 testów podglądów PASS**: 5 regresji etapów 7–9 i 4 testy etapu 10.
+  Nowe testy sprawdzają równanie torusa, zamknięcie, ciągłość stycznych,
+  zwroty obu składowych, rozłączność, zachowanie powierzchni/cięć/odbicia,
+  renderer, stałą piramidę, warstwy, selektor i rzeczywiste handlery DOM.
+  Zegar, prędkość, pauza/reset/seek, ruch po 100%, zmiana d, ograniczony
+  ruch, schowanie strony i błędne dane są objęte testami. Po końcowej
+  korekcie komunikatu fazy pokazowej ponownie uruchomiono 4 testy etapu 10.
+- **87/87 testów aplikacji PASS, TypeScript PASS.** Web, Android-assets
+  i Pages PASS, lokalne wyjścia `%TEMP%/pyramid-stage10-{web,android,pages}`.
+  Node 24.19.0 z dostarczonego runtime. Systemowy Node 20 zatrzymał się
+  na sandboxowym EPERM odczytu ścieżki; kontrole wykonano dostarczonym
+  Node ≥22 poza sandboxem. Bez instalowania zależności. Pozostały znane
+  ostrzeżenia o paczkach >500 kB i outDir w TEMP. Projekt nie ma skryptu lint.
+  Nie wykonywano Capacitor sync, APK/AAB ani instalacji. Buildy aplikacji
+  nie zawierają prototypu z docs i nie dowodzą jego odbioru na Androidzie.
+- **Przeglądarka:** 45 kombinacji 320×844 / 390×844 / 844×390 × trzy
+  rzuty × 0/25/50/75/100%, bez błędów parametrów i poziomego przepełnienia.
+  Sprawdzono ruch znaczników, pełny pokaz do 100%, pauzę/reset, seek,
+  prędkość, rozstaw 2/8, warstwy, ograniczony ruch, cztery presety, A/B,
+  zmianę q, komunikat braku owalu i odzyskanie poprawnego źródła.
+  Wykryto i poprawiono komunikat statusu pozostający w fazie odsłaniania
+  po dojściu do 100%; dodano asercję regresji.
+  Dodatkowo 15 kombinacji etap 9: pierwszy/drugi/oba × pięć klatek,
+  bez błędów i przepełnienia; tabela zachowuje błąd 0,105620% dla α=β.
+  Nie wykonano nowego pełnego manualnego odbioru wszystkich lekcji
+  głównej aplikacji; ich kod nie został zmieniony, regresje 87/87 PASS.
+  [Zapis kontroli przeglądarki](etap-10/browser-checks.json),
+  [widok perspektywiczny](etap-10/etap-10-perspective.jpg),
+  [rzut z boku 390 px](etap-10/etap-10-side-390.jpg),
+  [rzut z góry 390 px](etap-10/etap-10-top-390.jpg).
+  Pauzę potwierdzono stanem UI i testem zegara. Porównanie całych JPEG
+  viewportu obejmowało także przewijanie/fokus, więc nie jest dowodem
+  identycznych pikseli zatrzymanego canvasu. Pełny zrzut strony był
+  niedostępny; użyto przejrzanych zrzutów viewportu.
+- **Telefon fizyczny NIEZWERYFIKOWANY:** ADB bez urządzeń. Nie potwierdzono
+  fizycznego dotyku, płynności, obrotu telefonu ani zachowania po schowaniu
+  jego przeglądarki. Viewporty komputerowe nie zastępują tego odbioru.
+
+## Jak uruchomić i co pozostaje
+
+Z katalogu `android-offline`, Node ≥22:
+
+```powershell
+python -m http.server 8088 --bind 127.0.0.1 --directory docs
+node --test docs/etap-10/vortex.test.mjs docs/etap-7/animation.test.mjs
+```
+
+**Podgląd: http://127.0.0.1:8088/etap-10/podglad.html**.
+Etap 9 dostępny obok: http://127.0.0.1:8088/etap-7/podglad.html.
+Lokalny serwer uruchomiono w tej sesji. Offline zachowaj katalogi
+etap-7 i etap-10 z ich plikami HTML/CSS/JS. Etap 9 wymaga teraz także
+section.js; zaktualizowano instrukcję odbioru. Przez USB z dostępnym
+telefonem można użyć `adb reverse tcp:8088 tcp:8088` i lokalnego adresu
+w jego przeglądarce; tej operacji nie wykonywano bez urządzenia.
+
+Decyzje autora: środki i promienie torusów, rozstaw, zwroty θ/ψ, robocze
+q=0,4 oraz wcześniejsze A/B i α. Nie zatwierdzono ich za autora.
+**Jeden następny krok:** odbiór prototypu z autorem na fizycznym telefonie
+z zapisem wyboru położenia i zwrotów.
+
+Bez commitów, push, zmian PR, publikacji na produkcję i merge.
+Poniżej zachowano wcześniejsze statusy i audyt wejściowy jako historię.
+
+---
+
+# ETAP 9 — uzupełnienie animacji obu układów, 2026-10-06
+
+**Wynik: implementacja i lokalna weryfikacja PASS; fizyczny telefon
+NIEZWERYFIKOWANY.** Drugi układ jest teraz odbiciem aktualnej klatki
+p₂(t)=RΣ(p₁(t)), Σ: Z=7, a nie statycznym odbiciem końca. Dotyczy to
+powierzchni, płaszczyzny cięcia, rzeczywistego owalu, odcinków L/W,
+asymptot, lokalnych osi, strzałek kontynuacji i pozycji oznaczeń.
+
+Dodano x′/y′/z′, L′(t)/W′(t), Q′(t), Π′(t) oraz zachowano 0H′.
+Oba układy używają tych samych lokalnych wycinków siatki i pomocy;
+pomarańczowa geometria jest ich odbiciem w świecie. Ekranowe odsunięcia
+tekstu zachowują czytelność; nie zmieniają punktów konstrukcji.
+Selektor **Pierwszy / Drugi / Oba** działa także podczas odtwarzania,
+bez resetu postępu ani dodatkowego zegara. Dotychczasowe warstwy obejmują
+wybrane układy. Płaszczyzna Σ pojawia się przy widocznym drugim układzie.
+
+Pełny start Golden Egg Q=(16,775;0;28,35) i jego odbicie
+Q′=(16,775;0;−14,35) nie zależą od q. Piramida B=11, h=7 pozostaje
+nieruchoma. Zachowano A/B, cztery presety α oraz własne parametry,
+jednolitą skalę, ograniczony ruch, tolerancję 0,1% i osobną złotą elipsę.
+Kadr całego przejścia ma teraz środek (8,4;0;7), aby obejmował oba
+początki; zakres 38×52, skala ekranowa i kadr etapu 7 pozostają zachowane.
+Nieskończona powierzchnia może wykraczać poza ekran.
+
+**Decyzje autora pozostają otwarte:** robocze A i α=β nie stanowią
+zatwierdzenia wariantu. Na końcu A, α=β cięcia zawierają VM−/VM+;
+B daje równoległość, a złoty α daje przybliżone powiązanie kątowe.
+Podczas ruchu nie deklarujemy zawierania ścian przez cięcia. Dla α=β
+L/W nadal ma błąd 0,105620285%, poza 0,1%.
+
+**Kontrole tej implementacji:**
+
+- Node 24.19.0; `node --test docs/etap-7/animation.test.mjs`: **5/5 PASS**.
+  480 pozycji matematycznych: 4 kąty × 3 z₀ × 2 końce × 4 q × 5 klatek,
+  każda dla obu układów. Sprawdzono równania powierzchni/cięcia,
+  odbicie, skale długości, L/W, k=σ², pionowe osie i niezmienny start.
+  Osobno 480 konfiguracji renderera: 4 kąty × 2 końce × 4 q × 3 zakresy
+  × 5 klatek; porównano wszystkie punkty linii, strzałek i oznaczeń.
+  Testy rzeczywistych handlerów DOM obejmują widoczność i warstwy przy
+  0/25/50/75/100%, jeden zegar, zmianę widoku w ruchu, pauzę, reset,
+  seek, koniec, prędkość, ograniczony ruch i ukrycie strony.
+- Istniejące testy aplikacji **87/87 PASS**, TypeScript **PASS**.
+  Web, Android-assets i wariant Pages **PASS**, tylko lokalne wyjścia
+  `%TEMP%/pyramid-stage9-{web,android,pages}`. Ostrzeżenia o paczkach
+  >500 kB pozostają; ostrzeżenie outDir wynika z użycia TEMP.
+  Sandbox blokował konfigurację Vite przy pierwszym Vitest; powtórzenie
+  poza sandboxem przeszło. Nie wykonywano sync ani pakowania Androida.
+- Przeglądarka: 30 kombinacji 320/390 px × pierwszy/drugi/oba ×
+  0/25/50/75/100%; bez błędów parametrów i poziomego przepełnienia strony.
+  Potwierdzono A/B dla wszystkich czterech presetów, zakresy, warstwy,
+  oba kadry, 3D/pionowy, pełny start przy q=0,16, przewijanie tabeli,
+  odtwarzanie do końca, pauzę przy 50%, reset, seek, prędkość 0,5×/4×,
+  ograniczony ruch i komunikat dla parametrów bez zamkniętego owalu.
+  Brak ostrzeżeń/błędów konsoli. Jedno automatyczne kliknięcie warstwy
+  nie zmieniło stanu; ponowne kliknięcie po odczycie stanu przeszło.
+  Podczas pierwszego reloadu przeglądarka miała stary animation.js;
+  wersjonowany adres skryptu `?v=9` rozwiązał cache.
+  [Zapis viewportów i wariantów](etap-7/etap-9-browser-checks.json),
+  [start 390 px](etap-7/etap-9-start-390.jpg),
+  [połowa 320 px](etap-7/etap-9-polowa-320.jpg),
+  [koniec 390 px](etap-7/etap-9-koniec-390.jpg).
+- `adb devices -l`: pusta lista. Fizyczny telefon, dotyk, orientacje,
+  płynność i pauza po schowaniu przeglądarki na urządzeniu są
+  **NIEZWERYFIKOWANE**. Test viewportu ani build zasobów tego nie zastępują.
+- `git diff --check`: PASS. Zastane zmiany zachowano. Gałąź
+  `feature/android-offline`, HEAD `f8ed12762abf0612213d7d48ce44b9ce2c1c1075`.
+
+Podgląd: **http://127.0.0.1:8087/podglad.html**. Definicje i kolejność
+operacji: [animacja-stozka.md](animacja-stozka.md). Odbiór, w tym dalszy
+test fizycznego telefonu: [odbior-etapu-9.md](odbior-etapu-9.md).
+**Następny krok:** wykonać i zapisać fizyczny odbiór etapu 9 według instrukcji.
+Wybór A/B i α pozostaje osobną decyzją autora.
+
+Zakres ograniczony do istniejącego osobnego podglądu, jego testów i
+dokumentacji. Bez integracji głównej aplikacji, dalszych efektów, commitów,
+push, zmian PR, publikacji i merge. Buildy aplikacji nie zawierają podglądu.
+Poniżej zachowano audyt wejściowy i starsze wpisy jako historię;
+nie opisują aktualnej implementacji.
+
+---
+
+# ETAP 9 — audyt wejściowy wykonania, 2026-10-06
+
+**Wynik: etap 9 jest częściowo wykonany i nie spełnia warunku animacji obu
+układów.** Istniejąca geometria odbicia jest użyteczna, lecz pokazuje koniec
+przejścia, niezależnie od aktualnego postępu. Nie jest to brak całego drugiego
+układu. Brakuje jego animacji, wyboru widoku tylko drugiego układu i kompletu
+lustrzanych oznaczeń. Fizyczny telefon pozostaje niezweryfikowany.
+
+Zakres tej sesji: audyt i aktualizacja wyłącznie tego pliku. Odczytano
+instrukcje README/README_PL, AUTHORSHIP, dokumenty wskazane przez PLAN oraz
+PLAN.md, zastany STATUS.md, plan-stozka.md i animacja-stozka.md; sprawdzono
+rzeczywisty kod, podgląd i istniejące kontrole. Nie znaleziono AGENTS.md
+w drzewie projektu ani sprawdzonych katalogach nadrzędnych. Historyczne
+uprawnienia do zmian/push w PLAN.md nie dotyczą tego audytu. PLAN.md opisuje
+etapy 0–4; nie zawiera osobnej specyfikacji odbioru etapu 9. Kryteria poniżej
+pochodzą z bieżącego polecenia autora oraz zastanych specyfikacji etapów 7–8.
+
+**Stan wejściowy:** właściwe repozytorium to `android-offline`, gałąź
+`feature/android-offline`, HEAD `f8ed12762abf0612213d7d48ce44b9ce2c1c1075`.
+Zastano zmieniony `docs/STATUS.md` oraz nieśledzone `docs/plan-stozka.md`,
+`docs/animacja-stozka.md` i cały `docs/etap-7/`. Zachowano te zmiany.
+Nadrzędne repozytorium jest na `master` i już miało nieśledzone
+`android-offline/` oraz dwa PNG; nie jest repozytorium aplikacji.
+
+Dowody w tabeli odnoszą się do [podglad.html](etap-7/podglad.html),
+[animation.js](etap-7/animation.js) i [testów podglądu](etap-7/animation.test.mjs).
+Numery w nawiasach to aktualne linie kodu w tych plikach. Podgląd działa
+osobno od aplikacji: `PyramidCanvas.tsx` i `RelationOverlay.tsx` nie zawierają
+animacji dwóch układów ani sterowania etapu 9. Buildy aplikacji nie dołączają
+`docs/etap-7/`.
+
+| Wymaganie | Stan | Dowód w kodzie lub podglądzie | Pozostała praca |
+|---|---|---|---|
+| 1. Lustrzana powierzchnia, płaszczyzna, rzeczywisty przekrój i oznaczenia | częściowo | HTML (67–105): wspólny `tr` odbija powierzchnię, prostokąt cięcia, obrys i odcinki L/W końca. Kontrola współrzędnych potwierdziła odbicie tej geometrii przy 100%. Są 0H′ i P′ dla B. `if(!mirrored)` pomija osie x/y/z i podpisy L/W drugiego układu (85–89, 105). | Odbijać aktualną klatkę i dodać komplet odpowiednich oznaczeń; ujednolicić pomocnicze wycinki asymptot i strzałki, które mają różne `guideScale` (83, 91). |
+| 2. Płaszczyzna odbicia i szeroka część ku górze | wykonane | `Stage8.reflect(p)` zwraca `[X,Y,14-Z]`; HTML (75, 99, 115) rysuje Σ: Z=7 i górną szeroką część. Potwierdzono w rzucie pionowym. | Zachować tę ustaloną płaszczyznę podczas dodawania animacji. |
+| 3. Powiązanie z przeciwległą ścianą piramidy | częściowo | HTML (76) pokazuje VM− i VM+. Dla końca A, α=β odbita płaszczyzna zawiera V i M+; reszta równania dla M+ <1e-12. W B jest tylko równoległa, a przy złotym α powiązanie kątowe jest przybliżone. | Przenieść powiązanie na ruch drugiego układu; opisać jego zależność od A/B i α bez deklarowania ścisłego dopasowania wszystkich wariantów. |
+| 4. Animacja obu układów | brak | HTML (69): pierwszy używa `frame`, drugi `Stage8.reflect(Stage8.transform(p,o,end))`. Zmiana t nie zmienia żadnej pomarańczowej linii; potwierdzono dla 80 pozycji oraz wizualnie przy 0/25/50/100%. | Animować cały drugi układ jako lustrzany odpowiednik aktualnej klatki pierwszego. |
+| 5. Wspólny suwak, odtwarzanie, pauza, reset | częściowo | HTML (137–150) i `Stage8.playback`: jedna anulowalna pętla, seek zatrzymuje ruch, pauza zachowuje postęp, reset daje 0%. Przeglądarka potwierdziła te działania i koniec 100%. Aktualnie sterują ruchem tylko pierwszego układu. | Podłączyć drugi układ do tego samego postępu i zegara. |
+| 6. Widoczność pierwszego, drugiego i obu | częściowo | HTML (26, 77): `mirror` wybiera `[false]` lub `[false,true]`. Działają pierwszy i oba; warstwy są wspólne. | Dodać widok tylko drugiego oraz zweryfikować wszystkie trzy wybory podczas ruchu. |
+| 7. Geometria w początku, pośrednich pozycjach i końcu | częściowo | 3/3 istniejących testów: 480 pozycji pierwszego, równania powierzchni/cięcia, L/W, kąty, dodatnia jednolita skala, niezmienny start względem q i zgodny koniec. Dodatkowo 80 kontroli `drawScene`: nieruchoma piramida i statyczny drugi układ; geometria obu jest lustrzana na końcu. | Testy geometrii i lustrzanej relacji drugiego układu we wszystkich klatkach; istniejący test celowo sprawdza tylko statyczne odbicie końca. |
+| 8. Oznaczenia, tolerancja 0,1%, owal a złota elipsa | częściowo | HTML (53–60, 125–133): rzeczywisty owal, osobny wzorzec `(φ cos q,sin q)`, jedna skala 2/W i próg `e<=.1` dla błędu w %. Engine ma `RELATIVE_TOLERANCE=0.001`. Podgląd pokazuje L/W=1,61974296, błąd 0,105620%, NIE dla α=β. | Uzupełnić oznaczenia odbicia i ich czytelność podczas ruchu; zachować istniejącą tolerancję i rozdział owalu od elipsy. |
+| 9. Działanie na telefonie | niezweryfikowane | W przeglądarce 320/390 px: brak poziomego przepełnienia strony i błędów konsoli, działające kontrolki, przewijanie tabeli i przejścia A/B. `adb devices -l` nie wykazał urządzenia. | Fizyczny telefon: dotyk, orientacje, płynność, widoczność podpisów i pauza po ukryciu strony. Wynik viewportu nie jest odbiorem telefonu; build zasobów Androida nie jest APK ani testem urządzenia. |
+| 10. Kontrole projektu, dokumentacja, odbiór i PR | częściowo | Testy podglądu 3/3, aplikacji 87/87, TypeScript, web/Android-assets/Pages i `git diff --check`: PASS. Dokument animacji opisuje etap 8 i statyczne odbicie. MANUAL_ACCEPTANCE.md dotyczy głównej aplikacji, bez odbioru etapu 9. PR #3 jest OPEN/draft, oba CI SUCCESS, ale nie zawiera lokalnych plików etapów 7–8. | Dokumentacja i instrukcja odbioru etapu 9 oraz wynik odbioru obu układów. Ewentualny PR dla tych zmian wymaga osobnego upoważnienia; obecny PR nie dowodzi wykonania etapu 9. |
+
+**Kontrole wykonane w tym audycie:**
+
+- Node dostarczony z runtime: 24.19.0. Systemowy Node 20.15.0 jest poniżej
+  wymaganego >=22, dlatego nie użyto go do kontroli projektu.
+- `node --test docs/etap-7/animation.test.mjs`: 3/3 PASS.
+  `node node_modules/vitest/vitest.mjs run`: 87/87 PASS w 4 plikach.
+  `node node_modules/typescript/bin/tsc --noEmit`: PASS.
+- Istniejące trzy warianty Vite z CI przeszły: web, `--mode android`,
+  Pages z `GITHUB_PAGES=true`. Wyjścia skierowano do
+  `%TEMP%/pyramid-stage9-audit-{web,android,pages}`. Nie synchronizowano
+  Capacitor, nie budowano APK/AAB. Pozostają ostrzeżenia paczek >500 kB;
+  ostrzeżenie o outDir poza projektem wynika z użycia TEMP.
+- Pierwsze uruchomienie Vitest/Vite zatrzymał sandbox: esbuild nie mógł
+  odczytać katalogu nadrzędnego/config. Powtórzenie poza sandboxem przeszło.
+  To rozwiązana przeszkoda środowiskowa, nie błąd testów ani funkcji.
+- `verify.py` uruchomiono z kopii w `%TEMP%/pyramid-stage9-audit-numeric`,
+  aby nie nadpisywać projektowego `wyniki.json`. Obliczenia Decimal (60 cyfr)
+  potwierdziły tolerancje, rodzinę złotych rozwiązań i niezmienniki odbicia.
+  Dla α=β: L/W=1,6197429608524617, błąd 0,105620284521%, poza 0,1%.
+- Dodatkowy audyt kodu `drawScene` w pamięci, bez zapisania zmian/testów
+  w projekcie: 80 pozycji (A/B, α=β/złoty, q=0,005/0,08/0,16/2,
+  t=0/0,25/0,5/0,75/1). Współrzędne piramidy i drugiego układu są stałe;
+  pierwszy zmienia się z t. Powierzchnia, cięcie, przekrój i odcinki L/W
+  na końcu spełniają X′=X, Y′=Y, Z′+Z=14. Nie rozszerza to wyniku na
+  pominięte oznaczenia ani różne wizualne wycinki asymptot/strzałek.
+- Użyto dostępnego lokalnego serwera **http://127.0.0.1:8087/podglad.html**.
+  Przeglądarka: start, 25/50%, koniec A/B, play/pauza/seek/reset,
+  ograniczony ruch, zmiana q i presetu, rzut pionowy/3D, oba kadry,
+  przełącznik odbicia, warstwa przekroju i błąd parametrów bez zamkniętego
+  owalu. Start przy q=0,08/0,16 pozostaje Q=(16,775;0;28,35).
+  Odbicie końca pozostaje nieruchome. Widok 320/390 px nie przepełnia
+  strony; brak ostrzeżeń/błędów konsoli w sprawdzonym podglądzie.
+- GitHub odczytano na żywo: [PR #3](https://github.com/MichaelZP/great-pyramid-11-7-lab/pull/3),
+  OPEN, draft, `feature/android-offline` -> `main`, head zgodny z lokalnym
+  f8ed127. Oba kontrole `check` SUCCESS:
+  [CI push](https://github.com/MichaelZP/great-pyramid-11-7-lab/actions/runs/37419250637),
+  [CI PR](https://github.com/MichaelZP/great-pyramid-11-7-lab/actions/runs/37419247682).
+  Lista plików PR nie obejmuje `docs/etap-7/`, `plan-stozka.md` ani
+  `animacja-stozka.md`; CI nie uruchamia testu animation.test.mjs.
+
+**Nierozstrzygnięte decyzje autora:** końcowe zakotwiczenie i warunek skali
+A lub B (ewentualnie inne jawne Z_P i L_doc), a także wariant α.
+A i α=β dają ścisłe powiązanie końcowego cięcia ze ścianą, lecz L/W jest
+poza 0,1%; złoty α przy z₀=7,65 daje L/W≈φ i przybliżone powiązanie kątowe.
+Robocze A nie jest zatwierdzonym wyborem. Start pierwszego układu Golden Egg
+i Σ: Z=7 są już ustalone. Przygotowując etap 9 można zachować oba warianty;
+nie trzeba wymyślać decyzji autora. Integracja osobnego podglądu z główną
+aplikacją nie została wyspecyfikowana jako część etapu 9 w odczytanych
+dokumentach i wymaga oddzielnego ustalenia zakresu. Brak precyzyjnej
+hipotezy funkcji fizycznej konstrukcji pozostaje tematem wcześniejszego
+planu; nie blokuje tej animacji i nie jest pracą etapu 9.
+
+**Jeden następny krok:** domknąć etap 9 w istniejącym podglądzie, zaczynając
+od lustrzanej animacji aktualnej klatki drugiego układu na wspólnym zegarze,
+z zachowaniem dostępnych A/B i wariantów α.
+
+**Prompt obejmujący wyłącznie brakujące prace etapu 9:**
+
+> Pracuj w android-offline na aktualnej gałęzi. Przeczytaj instrukcje oraz
+> audyt etapu 9 w docs/STATUS.md i zachowaj zastane zmiany. W istniejącym
+> docs/etap-7/podglad.html i animation.js animuj drugi układ jako
+> p₂(t)=RΣ(p₁(t)), Σ: Z=7: powierzchnię, płaszczyznę, rzeczywisty przekrój,
+> linie, pomocnicze wycinki i pozycje oznaczeń. Uzupełnij brakujące oznaczenia
+> drugiego układu. Użyj istniejącego postępu, play/pauzy/resetu i jednej pętli;
+> dodaj wybór pierwszy/drugi/oba. Zachowaj piramidę B=11, h=7, pełny start
+> Golden Egg niezależny od q, końce A/B, warianty α, jednolitą skalę,
+> ograniczony ruch, próg 0,1% i oddzielny wzorzec złotej elipsy. Nie uznawaj
+> A/B ani wariantu α za decyzję autora. Rozszerz istniejące testy o relację
+> lustrzaną i niezmienniki obu układów przy 0/25/50/75/100%, widoczność i
+> wspólne sterowanie. Sprawdź podgląd 320/390 px, istniejące kontrole projektu
+> oraz fizyczny telefon, jeśli dostępny; brak urządzenia oznacz jako
+> niezweryfikowane. Uzupełnij dokumentację i instrukcję odbioru tylko etapu 9.
+> Nie dodawaj dalszych efektów ani integracji głównej aplikacji. Bez commitów,
+> push, publikacji, tworzenia lub modyfikacji PR i merge bez osobnego polecenia.
+
+Nie zmieniono kodu ani innych dokumentów projektu. Zachowano wcześniejszą
+treść STATUS.md poniżej; nowszy wynik audytu ma pierwszeństwo wobec dawnych
+opisów zakresu i dowodów. Nie wykonano commitów, push, publikacji ani merge.
+
+---
+
+# ETAP 8 — animacja od położenia Golden Egg, 2026-10-06
+
+**Zaimplementowano w osobnym podglądzie etapu 7.** Autor wskazał początek
+„tak jak w widoku modelu golden egg”. Odczytano GoldenEggConstruct i
+przeniesiono położenie pionowej osi, poziom lokalnego zera i kierunek cięcia
+na niezmienną piramidę B=11, h=7. Rzeczywisty owal pozostaje z etapu 7;
+ilustracyjna geometria jaja nie zastępuje przekroju. Dokładne współrzędne,
+adaptacja parametrów i kolejność operacji: [animacja-stozka.md](animacja-stozka.md).
+
+Animowany jest cały pierwszy układ: powierzchnia, płaszczyzna, przekrój,
+linie i pozycje oznaczeń. Obrót R=I; ruch to przesunięcie i jednolita skala
+z łagodnym początkiem/końcem. Zachowano q względem V, stały kadr i wszystkie
+warianty. **Korekta po zrzucie autora:** q skaluje wyłącznie koniec;
+start nie zależy od q i ma Q_start=(16,775;0;28,35), lokalne zero Z=−7,865.
+Wcześniejsze zmniejszanie startu przez q zostało usunięte. Dodano stały kadr
+„Całe przejście”, z powierzchnią po lewej i piramidą po prawej; dawny kadr
+etapu 7 i jego skala ekranowa są nadal dostępne do wyboru.
+Dodano postęp 0–100%, odtwarzanie/pauzę, reset, skok do końca, prędkość,
+warstwy i ograniczony ruch. Ręczny postęp zatrzymuje odtwarzanie.
+Odbicie jest statycznym podglądem końca w Z=7; jego pełna animacja to etap 9.
+
+**Sprawdzono:** 3/3 testy podglądu (480 pozycji i zegar odtwarzania),
+87/87 testów aplikacji, TypeScript, web/Android-assets/Pages buildy,
+składnia i whitespace. Node 24.19.0; buildy w `%TEMP%/pyramid-stage8-*`.
+W przeglądarce: koniec A/B, klatki pośrednie, pauza, seek, reset, prędkość,
+trzy pełne cykle, wariant/preset, warstwy i ograniczony ruch; brak błędów
+konsoli i poziomego przepełnienia przy 320/390 px. Poprawiono czytelność
+podpisów przy małej skali. [Zrzut 390 px](etap-7/etap-8-390.png).
+Dotychczasowe ostrzeżenia o paczkach >500 kB pozostają. Bez testu na
+fizycznym telefonie, APK/AAB ani integracji tego podglądu z główną sceną.
+Tolerancja 0,1% zachowana; α=β nadal ma błąd L/W 0,105620285%, poza progiem.
+
+Po korekcie początku: ponownie 3/3 testy podglądu, w tym niezależność startu
+od q, zachowany koniec i 480 pozycji. W przeglądarce sprawdzono q=0,0616595
+i 0,16, A/B, oba kadry i ekran 390 px. [Aktualny pełny start](etap-7/etap-8-start-pelny.png).
+Dotychczasowe zrzuty 390 px i połowy przedstawiają wersję przed korektą.
+Korekta obejmuje osobny podgląd i dokumentację; główna aplikacja bez zmian.
+
+**Jak uruchomić podgląd:** http://127.0.0.1:8087/podglad.html;
+z katalogu aplikacji `python -m http.server 8087 --bind 127.0.0.1
+--directory docs/etap-7`. Można też otworzyć docs/etap-7/podglad.html lokalnie.
+Testy podglądu: `node --test docs/etap-7/animation.test.mjs` (Node ≥22).
+HTML wymaga sąsiadującego animation.js, działa offline. Bez commitów,
+push, merge i publikacji. Gałąź `feature/android-offline`, HEAD `f8ed127`;
+zastane zmiany zachowano. Buildy aplikacji nie zawierają osobnego podglądu.
+
+**Decyzje autora:** początek wskazany; A pozostaje roboczy, końcowe A/B
+i wariant α pozostają dostępne do wyboru.
+**Jeden następny krok:** autor ocenia pełny start z Golden Egg
+i wybiera końcowy wariant na podstawie animacji.
+
+Michał Przybylski — [prylski.dev](https://prylski.dev/),
+https://github.com/MichaelZP/.
+
+---
+
+# ETAP 7 — specyfikacja i osobny podgląd, 2026-10-06
+
+**Aktualizacja — powierzchnia bez podstawy:** domyślny tryb
+„Bez podstawy · ku nieskończoności” usuwa końcowe okręgi/dyski, rozszerza
+siatkę poza kadr i oznacza kontynuację strzałkami. Lokalne osie x,y,z,
+zero 0H i odbite 0H′ oraz przerywane płaszczyzny pokazują z → 0⁺ dla
+r → ∞. Oznaczenie O nadal dotyczy piramidy. Lokalna płaszczyzna zerowa
+po umieszczeniu na osi ma Z = Z(P_q)−s_q z₀, a nie automatycznie Z = 0.
+Powierzchnia nie osiąga ani tej płaszczyzny, ani punktu zero. Poprzednie
+wycinki pozostają do wyboru. Piramida, cięcia i skalowanie wokół V są
+zachowane. [Aktualny podgląd](etap-7/podglad-nieskonczonosc.png).
+
+**Aktualizacja podglądu — skalowanie względem V:** dodano suwak skali
+obu układów z ich płaszczyznami i przekrojami, przy niezmiennej piramidzie
+i stałym kadrze. Domyślne 8% oraz szerszy zakres powierzchni pokazują
+dolną i górną szeroką podstawę. Podstawy są granicami wyświetlanego
+wycinka zr = k. Odbicie pozostaje w Z = h; kąty i L/W są zachowane.
+Można przełączyć zakres na samo otoczenie przekrojów. Kontrola współrzędnych
+renderowania potwierdziła nieruchomą piramidę i jednolite skalowanie obu
+układów względem V dla A/B i rzutów 3D/pionowego; kontrola przeglądarki
+objęła suwak, wpisanie mnożnika i zmianę zakresu.
+[Aktualny zrzut](etap-7/podglad-skala.png). Ten sam lokalny adres podglądu
+poniżej; bez publikacji i zmian w aplikacji.
+
+Aktualny zakres: [plan-stozka.md](plan-stozka.md), niezależne obliczenia i
+lokalny podgląd; bez zmiany aplikacji, animacji, commitów, push i publikacji.
+Gałąź `feature/android-offline`, początkowy HEAD `f8ed127`, drzewo aplikacji
+było czyste. Zastany stan nadrzędnego repozytorium pozostawiono bez zmian.
+Starsze zapisy o uprawnieniach i PR poniżej dotyczą poprzedniego etapu.
+
+**Ustalono i sprawdzono:** odczytano trzy strony Huntleya oraz autorską stronę
+Langego i obraz wzoru; zdefiniowano zr = k, jednostki k, dziedzinę, płaszczyznę,
+gałęzie i pomiar we własnej płaszczyźnie. Sprawdzono e, c, d i półcięciwę
+ogniskową złotej elipsy. Przekrój powierzchni jest owalem, nie elipsą.
+Niezależny skrypt [verify.py](etap-7/verify.py) (Decimal, 60 cyfr) i
+[wyniki.json](etap-7/wyniki.json) odtwarzają długości, szerokości, tolerancje,
+trzy różne złote pary parametrów, miarę całego obrysu oraz niezmienniki
+jednolitego skalowania i odbicia. Nie potwierdzono globalnej jednoznaczności
+pierwiastka dla każdej ustalonej wysokości; jednoznaczność pary (α,z₀)
+została obalona różnymi rozwiązaniami przy k = 1.
+
+- θ Huntleya = 51,827292372988°, β 11:7 = 51,842773412631°;
+  różnica 0,015481039643°, błąd 0,029870439%: zgodność w tolerancji 0,1%.
+- Dla k = 1, z₀ = 7,65 złoty dobór α ≈ 51,795319255898°;
+  odchylenie α od β 0,091534757% spełnia tolerancję kątową.
+- Przy α = β, L/W = 1,619742960852, błąd 0,105620285%: poza 0,1%.
+  Przy α = 51,84° błąd wynosi 0,099439369%: w tolerancji, bez dokładnej równości.
+- Zarejestrowany obrys po jednej wspólnej skali porównano ze wzorcem Huntleya;
+  dyskretna miara Hausdorffa nie oznacza klasycznej elipsy ani zgodności L/W.
+- Autor ustalił odbicie w **Z = h = 7**, przez wierzchołek V, na wspólnej osi.
+  Odbita powierzchnia ma szeroką część ku górze; płaszczyzna cięcia ma −α.
+
+**Jak obejrzeć:** otwórz [podglad.html](etap-7/podglad.html) w przeglądarce
+(działa bez internetu). W bieżącej sesji uruchomiono osobny serwer lokalny:
+**http://127.0.0.1:8087/podglad.html**. Odtworzenie: z katalogu aplikacji
+`python -m http.server 8087 --bind 127.0.0.1 --directory docs/etap-7`.
+Podgląd pozwala porównać α = β, złoty dobór, Langego i Huntleya; warianty
+położenia A/B, oba układy, przekroje, płaszczyzny i apotemy. Dostępne są
+obrót widoku, rzut pionowy i własne α/z₀; pełnej animacji nie dodano.
+
+**Weryfikacja:** niezależne obliczenia i niezmienniki przeszły; składnia JS
+podglądu i kontrola whitespace przeszły. Przeglądarka potwierdziła wartości
+dla 11:7, złotego doboru i Langego, przełączanie A/B, rzut pionowy/3D,
+widoczność odbicia i komunikat dla parametrów bez zamkniętego owalu.
+Brak błędów/ostrzeżeń konsoli podglądu oraz poziomego przepełnienia całej
+strony przy domyślnym rozmiarze 1280 px. Zrzuty:
+[wariant A](etap-7/podglad-A.png), [wariant B](etap-7/podglad-B.png).
+To kontrola osobnego podglądu na komputerze; aplikacji/Androida nie budowano
+i nie testowano na urządzeniu w tym etapie.
+
+**Potrzebna odpowiedź:** dla pierwszego układu A (P = V, L′ = h) czy B
+(P na połowie wysokości, L′ = h/2), ewentualnie konkretne Z_P i L_doc?
+Ponadto α = β (ścisłe powiązanie ze ścianą, L/W poza 0,1%) czy złoty dobór
+α przy z₀ = 7,65 (złota proporcja i przybliżone powiązanie ze ścianą)?
+Odbicie w Z = h jest już przyjęte. Domyślny podgląd A nie jest decyzją autora.
+
+**Jeden następny krok:** wybór przez autora zakotwiczenia, skali i wariantu
+cięcia na podstawie podglądu; dopiero potem osobny etap integracji w scenie.
+
+---
+
 # Final review — 2026-10-06
 
 Reviewed the complete existing thirteen-position update on

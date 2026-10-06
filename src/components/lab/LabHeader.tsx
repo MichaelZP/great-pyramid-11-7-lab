@@ -32,15 +32,15 @@ export function LabHeader() {
   const { t, locale, toggleLocale, fmt, fmtDeg, modelName } = useI18n();
 
   return (
-    <header className="pointer-events-none absolute inset-x-0 top-0 z-20 flex flex-col items-stretch gap-2 px-2 pt-[calc(env(safe-area-inset-top)+0.5rem)] sm:flex-row sm:items-start sm:justify-between sm:gap-3 sm:p-4">
+    <header className="pointer-events-none absolute inset-x-0 top-0 z-20 flex flex-col items-stretch gap-2 px-2 pt-[calc(env(safe-area-inset-top)+0.5rem)] lg:flex-row lg:items-start lg:justify-between lg:gap-3 lg:p-4">
       {sceneFullscreen ? (
         <div />
       ) : (
-      <div className="panel pointer-events-auto max-w-[min(100%,28rem)] rounded-lg px-3 py-2 sm:px-4 sm:py-3">
+      <div className="panel pointer-events-auto shrink-0 max-w-[min(100%,28rem)] rounded-lg px-3 py-2 lg:px-4 lg:py-3">
         <p className="text-xs font-medium tracking-[0.22em] text-muted uppercase">
           {t("siteKicker")}
         </p>
-        <h1 className="font-display text-xl leading-none text-fg sm:text-3xl">
+        <h1 className="font-display text-xl leading-none text-fg lg:text-3xl">
           {t("siteTitle")}
         </h1>
         <a href="https://prylski.dev/" target="_blank" rel="noopener noreferrer" className="mt-1 block text-xs text-muted underline underline-offset-2">
@@ -49,7 +49,7 @@ export function LabHeader() {
         <p className="sr-only">
           {t("siteLead")}
         </p>
-        <p className="mt-1 font-mono text-[0.65rem] tabular text-fg sm:mt-2 sm:text-xs">
+        <p className="mt-1 font-mono text-[0.65rem] tabular text-fg lg:mt-2 lg:text-xs">
           {modelName(snap.model.id)}
           <span className="text-muted"> · </span>
           {fmtDeg(snap.geo.angleDeg, 4)}
@@ -72,7 +72,7 @@ export function LabHeader() {
       </div>
       )}
 
-      <div className="pointer-events-auto flex w-full shrink-0 gap-1 overflow-x-auto pb-1 sm:w-auto sm:flex-wrap sm:justify-end sm:overflow-visible">
+      <div className="pointer-events-auto flex min-w-0 w-full gap-1 overflow-x-auto pb-1 lg:w-auto lg:flex-wrap lg:justify-end lg:overflow-visible">
         <Button variant="outline" size="sm" className="min-h-11 shrink-0" onClick={() => useTutorialStore.getState().start()}>Tutorial</Button>
         <Toggle
           pressed={showHologram}
@@ -172,7 +172,7 @@ function Toggle({
       className={cn("min-h-11 shrink-0 gap-1.5 px-3", !pressed && "bg-bg-elevated/80")}
     >
       {icon}
-      <span className="hidden sm:inline">{label}</span>
+      <span className="hidden lg:inline">{label}</span>
     </Button>
   );
 }
