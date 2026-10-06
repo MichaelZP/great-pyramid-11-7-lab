@@ -3,6 +3,15 @@
 **Ready for local author acceptance. Public distribution and native Android acceptance remain blocked by the gates below.** No new product feature, release tag, APK, merge or production deployment is included.
 
 Concept: **Michał Przybylski — prylski.dev**, https://github.com/MichaelZP/.
+
+Follow-up: the author authorized a **separate public test preview** for phone
+access after this audit. [Pages preview](https://michaelzp.github.io/great-pyramid-11-7-lab/preview/etap-12/)
+packages this audited app and the static prototypes together under a review
+hub, without integrating them into the app/APK, merging the PR or replacing
+the existing site root. All three unresolved-notice packages have zero emitted
+modules in this web artifact; see [inventory](etap-12/web-preview-inventory.json).
+Original workbooks/private correspondence are not included. The historical
+publication limits below remain applicable to final/native releases.
 See [startup/checklist](MANUAL_ACCEPTANCE.md), [release notes](RELEASE_NOTES.md), [authorship](../AUTHORSHIP.md) and [materials/licences](THIRD_PARTY.md).
 
 ## Actual scope

@@ -27,4 +27,12 @@ Direct app dependencies React/React DOM, Three, fiber/drei, Recharts, Zustand, R
 
 Declarations alone are not a full notice audit. Before public distribution, obtain authoritative notices or show whether these dependencies are absent from the shipped artifact and fulfil applicable notice requirements. This is a publication gate, not a claim that every listed library executes in these scenes. **Maven/Gradle/native dependencies are outside this inventory** and need audit before APK distribution.
 
+For the separately authorized Pages test preview, the Rollup emitted-chunk
+inventory verifies **zero emitted modules** for all three unresolved packages.
+See [web-preview-inventory.json](etap-12/web-preview-inventory.json). The
+builder rejects an artifact if any of them emits code. Their full npm-inventory
+gaps remain for other distribution scopes; this does not claim a complete native
+audit. The preview includes available notices and no original workbooks/private
+correspondence, and assigns no project licence.
+
 Reproduce after `npm ci`: `python docs/etap-12/audit_dependencies.py`. Local files plus recorded upstream notices; exit 1 while gaps remain. `fetch_missing_notices.py` records version-specific retrievals, requires internet and does not install packages/choose project licensing. Failed retrieval records stay unresolved.

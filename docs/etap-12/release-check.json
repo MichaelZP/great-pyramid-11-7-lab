@@ -1,6 +1,6 @@
 {
   "scope": "Git tracked and non-ignored untracked app-repository files; heuristic scan, no matched secret values stored",
-  "textFilesChecked": 141,
+  "textFilesChecked": 144,
   "findings": [],
   "brokenReleaseLinks": []
 }

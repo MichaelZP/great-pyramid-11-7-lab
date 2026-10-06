@@ -5,6 +5,18 @@ Concept: **Michał Przybylski — prylski.dev**, https://github.com/MichaelZP/.
 
 ## Start
 
+### Phone preview over the internet
+
+The author separately authorized a GitHub Pages test preview after stage 12:
+[open the review hub](https://michaelzp.github.io/great-pyramid-11-7-lab/preview/etap-12/).
+It links the lab, current stage 9 cones and stages 10/11 vortices. No local
+computer, shared Wi-Fi or installation is needed; use an internet connection.
+This is a separate test path, not a replacement of the existing Pages root.
+For animation, if reduced motion is enabled, uncheck **Ograniczony ruch**, then
+press **Odtwórz**. Physical-phone results still need recording in the checklist.
+
+### Local development preview
+
 Two terminals in `android-offline`, Node ≥22 and Python 3. Dependency installation uses the lockfile:
 
 ```sh

@@ -1,3 +1,22 @@
+# ETAP 12 — podgląd internetowy do odbioru, 2026-10-06
+
+Po zakończeniu audytu autor zlecił udostępnienie wersji testowej przez GitHub,
+aby obejrzeć ją na telefonie poza lokalnym Wi-Fi. Osobny adres GitHub Pages:
+https://michaelzp.github.io/great-pyramid-11-7-lab/preview/etap-12/.
+Panel wejściowy prowadzi do laboratorium oraz podglądów stożków i wirów.
+Dotychczasowy główny adres Pages zachowuje swój build. Bez merge PR, APK,
+integracji prototypów z aplikacją i bez nowej licencji.
+
+Audytowany kod aplikacji: `25281f5`. Osobna paczka ma poprawną bazę ścieżek
+Pages i spis modułów faktycznie emitowanych przez Rollup. Wszystkie trzy
+pakiety z brakującymi pełnymi notami mają **0 emitowanych modułów** w tym
+artefakcie; bramki pełnego npm/native audytu pozostają dla innych wydań.
+Nie przesłano oryginalnych XLSX ani prywatnej korespondencji. Wersja testowa
+jest udostępniana na aktualne polecenie autora, a odbiór fizyczny nadal czeka.
+[Instrukcja na telefon](MANUAL_ACCEPTANCE.md),
+[spis paczki](etap-12/web-preview-inventory.json),
+[materiały i licencje](THIRD_PARTY.md).
+
 # ETAP 12 — końcowy audyt i wersja do odbioru, 2026-10-06
 
 **Gotowa do lokalnego odbioru autora; publikacja i odbiór natywnego Androida

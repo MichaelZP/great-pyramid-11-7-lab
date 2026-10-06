@@ -1,5 +1,11 @@
 # Pyramid 11:7 — stage 12 author review
 
+Author-authorized follow-up: a [separate Pages test hub](https://michaelzp.github.io/great-pyramid-11-7-lab/preview/etap-12/)
+provides phone access to this audited app and the static prototypes. The
+existing site root stays unchanged; the PR stays draft. Emitted-chunk inventory
+shows that all three unresolved-notice packages are absent from this artifact.
+This does not resolve the broader npm/native inventory or assign a licence.
+
 This draft prepares the implemented lab and separate cone/vortex previews for author acceptance. It retains all thirteen labelled constructions/four-step lessons, PL/EN history/sources, optional nine-step tutorial, presets/sliders, scan/ranking, rainbow/hologram, camera and stereo. The existing Capacitor foundation remains included; no new APK is delivered.
 
 Separate static previews cover hyperbolic sections/two scaled and axially placed/reflected systems (current stage 9), opposite-circulation tori (stage 10), and artistic particles/trails/deformation/glow with educational/cinematic modes, camera and bounded quality (stage 11). These `docs/` pages are **not integrated into the main app or Android assets**.
@@ -12,6 +18,6 @@ Validation: **87 application tests + 14 prototype tests PASS**, TypeScript PASS,
 
 Known limits: physical Android/native fullscreen/sustained FPS/thermal behaviour unverified; large-bundle/library warnings; unresolved Brun uncertainty/global uniqueness/historical claims. Project licensing and three dependency notice gaps block public distribution; native dependencies need audit before APK distribution. Local author review is ready.
 
-Use [startup/checklist](MANUAL_ACCEPTANCE.md), [audit](ETAP-12.md) and [materials/licences](THIRD_PARTY.md). Delivery stays on `feature/android-offline` in draft [PR #3](https://github.com/MichaelZP/great-pyramid-11-7-lab/pull/3) targeting `main`. No merge, deployment or release tag.
+Use [startup/checklist](MANUAL_ACCEPTANCE.md), [audit](ETAP-12.md) and [materials/licences](THIRD_PARTY.md). Source delivery stays on `feature/android-offline` in draft [PR #3](https://github.com/MichaelZP/great-pyramid-11-7-lab/pull/3) targeting `main`. The separately authorized test preview adds only `preview/etap-12/` on `gh-pages`. No merge, production-root replacement, APK or release tag.
 
 Concept: **Michał Przybylski — prylski.dev**, https://github.com/MichaelZP/.
