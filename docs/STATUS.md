@@ -60,8 +60,14 @@ version and old Android artifacts do not include this draft update.
 [MANUAL_ACCEPTANCE.md](MANUAL_ACCEPTANCE.md), including timed playback with
 reduced motion off and sustained animation behavior, before readiness review.
 
-Branch push and draft PR are being prepared under the current authorization.
-No merge or production publication is authorized or performed.
+Implementation commit `0730d406f538188b3d5070e44a008c449a0c076f` was pushed
+on `feature/android-offline`. [Draft PR #3](https://github.com/MichaelZP/great-pyramid-11-7-lab/pull/3)
+is verified OPEN and draft, targeting `main`. Both GitHub CI runs for that
+implementation passed, including typecheck, 87 tests and three build modes:
+[PR CI](https://github.com/MichaelZP/great-pyramid-11-7-lab/actions/runs/37417291314),
+[push CI](https://github.com/MichaelZP/great-pyramid-11-7-lab/actions/runs/37417066622).
+This final status recording changes documentation only. No merge or production
+publication was performed; the PR stays draft for physical acceptance.
 
 ---
 
