@@ -10,8 +10,13 @@ import { ConstantsPanel } from "./ConstantsPanel";
 import { ScanPanel } from "./ScanPanel";
 import { VerdictPanel } from "./VerdictPanel";
 import { cn } from "@/lib/utils";
+import { useRelationLesson } from "@/hooks/use-relation-lesson";
+import { useTutorial } from "@/hooks/use-tutorial";
+import { useTutorialStore } from "@/store/tutorial-store";
 
 export function AppShell() {
+  useRelationLesson();
+  useTutorial();
   const mobileTab = useLabStore((s) => s.mobileTab);
   const setMobileTab = useLabStore((s) => s.setMobileTab);
   const setModel = useLabStore((s) => s.setModel);
@@ -60,18 +65,21 @@ export function AppShell() {
           }
         ).webkitRequestFullscreen;
       try {
-        void req?.call(root);
+        if (!req) { setSceneFullscreen(false); return; }
+        void Promise.resolve(req.call(root)).catch(() => setSceneFullscreen(false));
       } catch {
-        /* iframe / permission */
+        setSceneFullscreen(false);
       }
     };
     const exit = () => {
       const doc = document as Document & {
         webkitExitFullscreen?: () => Promise<void> | void;
+        webkitFullscreenElement?: Element;
       };
-      if (document.fullscreenElement || doc.webkitExitFullscreen) {
+      if (document.fullscreenElement || doc.webkitFullscreenElement) {
         try {
-          void (document.exitFullscreen?.() ?? doc.webkitExitFullscreen?.());
+          const exitFullscreen = doc.exitFullscreen ?? doc.webkitExitFullscreen;
+          void Promise.resolve(exitFullscreen?.call(doc)).catch(() => { /* rejected by host */ });
         } catch {
           /* ignore */
         }
@@ -100,8 +108,10 @@ export function AppShell() {
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.target instanceof HTMLInputElement) return;
+      if (e.target instanceof HTMLElement && e.target.closest("input, select, textarea, [contenteditable=true]")) return;
       if (e.key === "Escape") {
+        useTutorialStore.getState().close();
+        useLabStore.getState().selectRelation(null);
         setSceneFullscreen(false);
         return;
       }
@@ -130,6 +140,10 @@ export function AppShell() {
           const state = useLabStore.getState();
           if (state.sceneFullscreen) {
             state.setSceneFullscreen(false);
+          } else if (useTutorialStore.getState().open) {
+            useTutorialStore.getState().close();
+          } else if (state.relationId) {
+            state.selectRelation(null);
           } else if (state.mobileTab !== "modele") {
             state.setMobileTab("modele");
           } else if (window.confirm(translate(useLabStore.getState().locale, "confirmExit"))) {
@@ -147,8 +161,8 @@ export function AppShell() {
   }, []);
 
   return (
-    <main ref={mainRef} className="relative h-dvh overflow-hidden bg-bg text-fg">
-      <div className={cn("absolute inset-x-0 top-32 bottom-[48dvh] lg:inset-0", sceneFullscreen && "inset-0")}>
+    <main ref={mainRef} className="relative h-dvh overflow-clip bg-bg text-fg">
+      <div className={cn("absolute inset-x-0 top-36 bottom-[48dvh] lg:inset-0", sceneFullscreen && "inset-0")}>
         <SceneMount />
       </div>
 
@@ -156,7 +170,7 @@ export function AppShell() {
 
       {!sceneFullscreen ? (
         <>
-          <aside className="panel pointer-events-auto absolute top-28 bottom-4 left-4 hidden w-[22.5rem] overflow-y-auto rounded-xl p-4 lg:block">
+          <aside className="panel pointer-events-auto absolute top-36 bottom-4 left-4 hidden w-[22.5rem] overflow-y-auto rounded-xl p-4 lg:block">
             <ModelRail />
           </aside>
 

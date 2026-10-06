@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased — thirteen-position update, 2026-10-06
+
+- Labelled constructions and four-step PL/EN lessons for all 13 comparisons.
+- Scoped history, bibliography and optional nine-step tutorial with saved progress.
+- Correct RMS scan minimum, cancellable playback, visible author credit, compact
+  header and fewer idle geometry uploads.
+- Correct oval terminology, approximation precision and ranking evidence limits.
+- Test-version details and remaining Android acceptance: [release notes](docs/RELEASE_NOTES.md).
+
 ## 2.0.1 — 2026-09-02
 
 - Higher-resolution README screenshots (11:7 laboratory and Golden Φ Egg).

@@ -5,7 +5,10 @@ import { useActiveSnapshot } from "@/hooks/use-lab";
 import { useI18n } from "@/hooks/use-i18n";
 import { CONSTANTS } from "@/lib/pyramid/engine";
 import { cn } from "@/lib/utils";
+import { relationSceneDescription } from "@/lib/relation-copy";
+import { RELATION_PRESENTATIONS } from "@/lib/pyramid/relations";
 import { Button } from "@/components/ui/button";
+import { useTutorialStore } from "@/store/tutorial-store";
 
 export function LabHeader() {
   const snap = useActiveSnapshot();
@@ -17,6 +20,7 @@ export function LabHeader() {
   const sceneFullscreen = useLabStore((s) => s.sceneFullscreen);
   const crossEye = useLabStore((s) => s.crossEye);
   const stereoSwap = useLabStore((s) => s.stereoSwap);
+  const relationId = useLabStore((s) => s.relationId);
   const toggleRainbow = useLabStore((s) => s.toggleRainbow);
   const toggleHologram = useLabStore((s) => s.toggleHologram);
   const toggleGuides = useLabStore((s) => s.toggleGuides);
@@ -39,7 +43,10 @@ export function LabHeader() {
         <h1 className="font-display text-xl leading-none text-fg sm:text-3xl">
           {t("siteTitle")}
         </h1>
-        <p className="mt-1.5 hidden max-w-sm text-xs leading-relaxed text-muted sm:block sm:text-sm">
+        <a href="https://prylski.dev/" target="_blank" rel="noopener noreferrer" className="mt-1 block text-xs text-muted underline underline-offset-2">
+          Michał Przybylski — prylski.dev
+        </a>
+        <p className="sr-only">
           {t("siteLead")}
         </p>
         <p className="mt-1 font-mono text-[0.65rem] tabular text-fg sm:mt-2 sm:text-xs">
@@ -51,12 +58,14 @@ export function LabHeader() {
           <span className="text-muted"> · </span>
           {snap.summary.matches}/{CONSTANTS.length}
         </p>
-        {snap.model.id === "goldenEgg" ? (
-          <p className="mt-1.5 hidden max-w-sm font-mono text-[0.65rem] leading-relaxed text-muted sm:block">
+        {relationId && RELATION_PRESENTATIONS[relationId].renderer ? (
+          <p className="sr-only">{relationSceneDescription(relationId, locale)}</p>
+        ) : snap.model.id === "goldenEgg" ? (
+          <p className="sr-only">
             {t("goldenEggCaption")}
           </p>
         ) : showRainbow ? (
-          <p className="mt-1.5 hidden max-w-sm font-mono text-[0.65rem] leading-relaxed text-muted sm:block">
+          <p className="sr-only">
             {t("rainbowCaption")}
           </p>
         ) : null}
@@ -64,6 +73,7 @@ export function LabHeader() {
       )}
 
       <div className="pointer-events-auto flex w-full shrink-0 gap-1 overflow-x-auto pb-1 sm:w-auto sm:flex-wrap sm:justify-end sm:overflow-visible">
+        <Button variant="outline" size="sm" className="min-h-11 shrink-0" onClick={() => useTutorialStore.getState().start()}>Tutorial</Button>
         <Toggle
           pressed={showHologram}
           onClick={toggleHologram}
@@ -158,6 +168,7 @@ function Toggle({
       size="sm"
       onClick={onClick}
       aria-pressed={pressed}
+      aria-label={label}
       className={cn("min-h-11 shrink-0 gap-1.5 px-3", !pressed && "bg-bg-elevated/80")}
     >
       {icon}

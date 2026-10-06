@@ -1,66 +1,47 @@
 # Golden Φ Egg
 
-The Golden Φ Egg is a **separate** pyramid model. It does not reuse the rounded 51.84° generator of the classical cone.
+Golden Egg is a separate preset defined by a planar section of the surface of
+revolution `zr=1`, where `r=√(x²+y²)`. The cutting plane is
+`z=Z₀+x tan θ`, with the adopted parameter `Z₀=7.65`.
 
-## Defining condition
+Solving `L/W=φ` numerically near 51.8° gives
+`θ≈51.795319255897588°`. The stored preset is rounded to
+`51.795319256°`; its relative L/W residual is below `1e-11`, rather than
+exactly zero. No proof of global uniqueness over the full domain is supplied.
+The condition defines the preset; it is not an independent confirmation of φ.
 
-Hyperbolic cone of revolution (Harthun–Rennert form used in the workbooks):
+## Section calculation
 
-```text
-z · r = 1     (equivalently  z = 1/r)
-```
+With `t=tan θ`, the closed oval around `Z₀` has endpoints
+`zLo=(Z₀+√(Z₀²−4t))/2` and `zHi=(Z₀+√(Z₀²+4t))/2`, provided
+`Z₀²>4t>0`. The smaller root belongs to a separate unbounded component.
+In the plane, `y²=1/z²−((z−Z₀)/t)²` and
+`L=(zHi−zLo)/sin θ`. The engine searches the maximum of `y²` to obtain
+`W=2√max(y²)`; no integration or calibration rescale is needed.
 
-A plane cuts the cone at axis height **Z₀ = 7.65**. Among such planes there is one angle **αp** for which the oval section has
+This section is an **oval, not an ellipse**. The independent audit solves
+`z³(Z₀−z)=t²` to find its unique maximum width. Uniqueness of this width
+does not establish uniqueness of the golden angle.
 
-```text
-L / W = φ = 1.6180339887…
-```
+The pyramid preset takes this angle as its face slope:
+`H/A=tan θ`, `B/H=2/tan θ≈1.574109391`.
+For 11:7, L/W is `≈1.619742960852462`, with relative error
+`≈0.105620285%` against φ, outside the declared 0.1% comparison threshold.
 
-Solving that condition yields
+## Scene and evidence
 
-```text
-αp = 51.7953192558977°  ≈  51.795319256°
-```
+The ordinary translucent cone and revolved egg are an artistic illustration
+with framing parameters different from the numerical `Z₀=7.65` section.
+Their apparent ratio is not evidence for the numeric row. Selecting **L/W**
+shows the actual closed section, its cutting plane, endpoints, length and
+maximum width, using uniform scaling and translation only.
 
-All pyramid parameters and constant errors for this preset are computed from **that angle alone**, not from 51.84°.
+The Golden Egg preset matches **10/13** comparisons at 0.1%; its mean error
+is approximately **0.090%**, maximum **0.397%**. The largest errors are
+e−1, e and π. These are dependent comparisons, not independent discoveries.
+The source workbooks evaluate only twelve rows in their main error tables.
 
-## Relation to the pyramid
-
-αp is used as the **face slope** (apothem inclination):
-
-```text
-θ = αp
-H / A = tan(αp)
-B / H = 2 / tan(αp) ≈ 1.574109391
-```
-
-The green apothem of the pyramid is the same line as the major axis of the section.
-
-## Scene construction
-
-1. Translucent hyperbolic cone, axis vertical, **base on the ground plane behind the pyramid**.
-2. Cutting plane = **front face plane** of the pyramid (contains the apothem).
-3. Plane ∩ cone = closed oval. Geometric L/W equals φ at αp to machine precision.
-4. That oval is shown as a gold meridian in the cutting plane.
-5. The oval is **revolved about the apothem** (51.795°) to a translucent golden egg.
-
-The ellipse is therefore **not** vertical along world Z; its long axis is the apothem.
-
-The on-screen cone and egg in the 3D scene are a proportional schematic for framing. They do not use the same Z₀ parameterization as the numeric L/W row.
-
-## Constant row L/W
-
-The constants table includes **L/W**. The geometric length/width of the `z = 1/r` cut is integrated directly: closed-form oval endpoints around Z₀ plus a ternary search for the maximum half-width. At αp the geometric ratio equals φ to machine precision; there is no silent rescaling. Changing the slope (other presets or the custom slider) shows the true geometric deviation from φ.
-
-## Laboratory consensus
-
-Selecting the Golden Egg preset moves the laboratory consensus. With the engine it reports **10 of 13** relations within 0.1%, mean relative error ≈ **0.090%**, and maximum relative error ≈ **0.397%** (~0.4%), about 4× the declared 0.1% tolerance. The worst classical rows are **e−1**, **e**, and **π**. Therefore Golden Egg is a **geometric lead**, not a replacement construction model; **11:7 remains the simplest construction model**. These figures are computed by the laboratory engine.
-
-## What this does not claim
-
-- that the builders cut a hyperbolic cone;
-- that 51.795° is a surveyed field angle;
-- that `Z₀ = 7.65` is an Egyptian metrological unit;
-- endorsement by any cited author of a historical programme.
-
-It claims only that, with the stated cone and `Z₀`, the unique plane giving `L/W = φ` has angle 51.795319256°, and that the laboratory derives every listed error from that number.
+The modern proposal does not establish a physical function or builders’
+intent. The surface, `Z₀`, weights and angle reference are adopted project
+inputs. See the [independent audit](matematyka-13-stalych.md) and
+[history with scoped sources](HISTORY-13.md).

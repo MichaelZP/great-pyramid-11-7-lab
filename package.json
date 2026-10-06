@@ -3,7 +3,7 @@
   "private": true,
   "version": "2.0.0",
   "type": "module",
-  "description": "Interactive 3D laboratory of the Great Pyramid 11:7 model, twelve mathematical constants, and the Golden Φ Egg.",
+  "description": "Interactive 3D laboratory of the Great Pyramid 11:7 model, thirteen mathematical comparisons, and the Golden Φ Egg.",
   "scripts": {
     "dev": "vite --host 0.0.0.0 --port 8080",
     "build": "tsc --noEmit && vite build",

@@ -18,6 +18,15 @@ import {
 import { fmt, fmtDeg } from "@/lib/utils";
 import { t, modelName } from "@/lib/i18n";
 import { useI18n } from "@/hooks/use-i18n";
+import { RelationGeometry, RelationCamera } from "./RelationOverlay";
+import { RELATION_PRESENTATIONS, relationSteps } from "@/lib/pyramid/relations";
+import { relationCopy, relationSceneDescription } from "@/lib/relation-copy";
+import { LessonPlayback } from "@/components/lab/RelationPanel";
+import { TutorialControls } from "@/components/lab/TutorialPanel";
+import { useTutorialStore } from "@/store/tutorial-store";
+import { TUTORIAL_STEPS, tutorialCopy } from "@/lib/pyramid/tutorial";
+import { Button } from "@/components/ui/button";
+import { useReducedMotion } from "@/hooks/use-relation-lesson";
 
 const BASE = 2;
 const START_H = BASE / TARGET_RATIO;
@@ -102,6 +111,9 @@ function PyramidRig() {
   const showTexture = useLabStore((s) => s.showTexture);
   const pyramidOpacity = useLabStore((s) => s.pyramidOpacity);
   const autoRotate = useLabStore((s) => s.autoRotate);
+  const relationId = useLabStore((s) => s.relationId);
+  const lesson = Boolean(relationId && RELATION_PRESENTATIONS[relationId].renderer);
+  const reduced = useReducedMotion();
   const isGoldenEgg = snap.model.id === "goldenEgg";
   const targetH = BASE / snap.geo.bh;
 
@@ -145,29 +157,31 @@ function PyramidRig() {
 
   return (
     <>
-      <AnimatedPyramid
+      {relationId !== "eggLW" ? <AnimatedPyramid
         targetH={targetH}
         texture={limestone}
-        showHologram={showHologram}
+        showHologram={showHologram && !lesson}
         showTexture={showTexture}
-        opacity={pyramidOpacity}
+        opacity={lesson ? 0.18 : pyramidOpacity}
         holoTexture={holo.texture}
-      />
-      {showGuides ? <Guides targetH={targetH} /> : null}
-      {showHologram ? <HologramStele texture={holo.texture} /> : null}
-      <Rainbow visible={showRainbow} match={match} targetH={targetH} />
+      /> : null}
+      {showGuides && !lesson ? <Guides targetH={targetH} /> : null}
+      {showHologram && !lesson ? <HologramStele texture={holo.texture} /> : null}
+      <Rainbow visible={showRainbow && !lesson} match={match} targetH={targetH} />
       <AngleGuides
         targetH={targetH}
-        visible={showRainbow && !isGoldenEgg}
+        visible={showRainbow && !isGoldenEgg && !lesson}
       />
-      {isGoldenEgg ? <GoldenEggConstruct targetH={targetH} /> : null}
-      <ArrisGuide targetH={targetH} visible={showRainbow} />
-      <Plinth />
+      {isGoldenEgg && !lesson ? <GoldenEggConstruct targetH={targetH} /> : null}
+      <ArrisGuide targetH={targetH} visible={showRainbow && !lesson} />
+      {relationId ? <RelationGeometry id={relationId} /> : null}
+      <RelationCamera id={relationId} />
+      {relationId !== "eggLW" ? <Plinth /> : null}
       <OrbitControls
         makeDefault
         enableDamping
         dampingFactor={0.08}
-        autoRotate={autoRotate}
+        autoRotate={autoRotate && !relationId && !reduced}
         autoRotateSpeed={0.35}
         minPolarAngle={0.12}
         maxPolarAngle={Math.PI * 0.52}
@@ -199,14 +213,21 @@ function AnimatedPyramid({
   holoTexture: THREE.CanvasTexture;
 }) {
   const hRef = useRef(START_H);
+  const renderedHeight = useRef<number | null>(null);
   const faces = useRef<THREE.BufferGeometry[]>([]);
   const edge = useRef<THREE.BufferGeometry>(null);
   const built = useMemo(() => makeFaceGeometries(START_H), []);
+  const relationId = useLabStore((s) => s.relationId);
+  const reduced = useReducedMotion();
 
   useFrame((_, delta) => {
     const d = Math.min(delta, 0.1);
-    hRef.current = lerp(hRef.current, targetH, 1 - Math.exp(-d * 7));
+    hRef.current = relationId || reduced ? targetH : lerp(hRef.current, targetH, 1 - Math.exp(-d * 7));
+    if (Math.abs(hRef.current - targetH) < 1e-7) hRef.current = targetH;
     const H = hRef.current;
+    // Upload vertices and recompute normals only while the height changes.
+    if (renderedHeight.current === H) return;
+    renderedHeight.current = H;
     const A = BASE / 2;
     const corners: Array<readonly [number, number, number]> = [
       [-A, 0, A],
@@ -923,7 +944,15 @@ function Lights() {
 }
 
 export function PyramidCanvas() {
+  const tutorial = useTutorialStore();
   const crossEye = useLabStore((s) => s.crossEye);
+  const relationId = useLabStore((s) => s.relationId);
+  const step = useLabStore((s) => s.lessonStep);
+  const fullscreen = useLabStore((s) => s.sceneFullscreen);
+  const { locale } = useI18n();
+  const c = relationCopy(locale);
+  const steps = relationSteps(relationId);
+  const lesson = Boolean(relationId && RELATION_PRESENTATIONS[relationId].renderer);
   const mobileCamera = window.matchMedia("(max-width: 1023px)").matches;
   return (
     <div className="relative h-full w-full">
@@ -959,6 +988,18 @@ export function PyramidCanvas() {
         <CrossEyeStereo />
       </Canvas>
       {crossEye ? <CrossEyeOverlay /> : null}
+      {relationId ? <p className="sr-only">{relationSceneDescription(relationId, locale)}</p> : null}
+      {relationId ? <div className={`pointer-events-none absolute inset-x-2 bottom-2 z-10 flex justify-center ${fullscreen ? "" : "lg:top-28 lg:bottom-auto lg:left-[calc(22.5rem+2rem)] lg:right-[calc(24rem+2rem)]"}`}>
+        <div className="panel pointer-events-auto max-w-full rounded-sm p-2">
+          {tutorial.open && fullscreen ? <p aria-live="polite" className="mb-2 max-w-sm text-xs text-fg">{tutorialCopy(locale).step} {tutorial.step + 1}/{TUTORIAL_STEPS.length} · {TUTORIAL_STEPS[tutorial.step].text[locale]}</p> : lesson && step !== null && fullscreen ? <p aria-live="polite" className="mb-2 max-w-sm text-xs text-fg lg:max-w-[18rem]">{c.step} {step + 1}/{steps.length} · {steps[step].text[locale]}</p> : null}
+          <div className="flex flex-wrap justify-center gap-2">
+            {tutorial.open ? <TutorialControls inScene /> : <>
+              {lesson ? <LessonPlayback inScene /> : null}
+              <Button variant="outline" size="sm" className="min-h-11 whitespace-normal" onClick={() => useLabStore.getState().selectRelation(null)}>{c.returnScene}</Button>
+            </>}
+          </div>
+        </div>
+      </div> : null}
     </div>
   );
 }

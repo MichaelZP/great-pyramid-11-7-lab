@@ -1,6 +1,7 @@
 /**
  * Great Pyramid 11:7 mathematical-constants laboratory.
- * Formulas and scoring follow the source workbook:
+ * Comparison formulas follow the source workbook; the app scores 13 rows
+ * and explicitly prefers 11/7, unlike the workbook's 12-row fraction score:
  * "Great Pyramid — Mathematical Constants Laboratory".
  */
 
@@ -96,8 +97,8 @@ export const CONSTANTS: ConstantDef[] = [
     reference: Math.PI,
     weight: 1,
     formula: "2B / H",
-    formulaPl: "obwód podstawy / wysokość",
-    role: "Obwód podstawy do wysokości",
+    formulaPl: "połowa obwodu podstawy / wysokość",
+    role: "Połowa obwodu podstawy do wysokości",
   },
   {
     id: "gamma",
@@ -163,7 +164,7 @@ export const CONSTANTS: ConstantDef[] = [
     weight: 1,
     formula: "(A + 2D) / (S + B)",
     formulaPl: "kombinacja czterech długości",
-    role: "Niezależny cel numeryczny",
+    role: "Cel porównawczy; wynik zależy od S/A",
   },
   {
     id: "brun",
@@ -174,7 +175,7 @@ export const CONSTANTS: ConstantDef[] = [
     weight: 1,
     formula: "E / A",
     formulaPl: "krawędź boczna / półbok",
-    role: "Niezależny cel numeryczny",
+    role: "Przyjęte oszacowanie; wynik zależy od S/A",
   },
   {
     id: "invPhi",
@@ -207,7 +208,7 @@ export const CONSTANTS: ConstantDef[] = [
     weight: 0.5,
     formula: "2θ / (90° − θ)",
     formulaPl: "wzór kątowy (stopnie)",
-    role: "Zależy od miary kąta w stopniach",
+    role: "Iloraz kątów przy spójnych jednostkach",
   },
   {
     id: "eMinus1",
@@ -268,7 +269,7 @@ export const MODELS: ModelDef[] = [
     name: "Średnia 51,845°",
     short: "51,845°",
     basis: "Kąt używany w analizie 12 stałych",
-    notes: "Kompromis minimax w środku pasma obserwacji.",
+    notes: "Kąt porównawczy w paśmie wejściowym; nie jest minimum minimax dla 13 wierszy.",
     kind: "angle",
     angleDeg: 51.845,
   },
@@ -277,7 +278,7 @@ export const MODELS: ModelDef[] = [
     name: "Petrie–Lehner–Cole",
     short: "51,8504°",
     basis: "Średnia używana dla e",
-    notes: "Najmniejszy błąd średni; szczególnie mocny dla wzoru kątowego e.",
+    notes: "Kąt porównawczy używany dla e; nie jest dokładnym minimum średniego błędu.",
     kind: "angle",
     angleDeg: 51.8504,
   },
@@ -395,8 +396,8 @@ export function relationValue(id: ConstantId, geo: Geo): number {
  *
  * The closed oval around Z₀ has closed-form endpoints (larger quadratic
  * root below Z₀; positive root above). Max half-width is a ternary search
- * on y². At GOLDEN_EGG_ANGLE the geometric L/W equals φ to machine
- * precision; there is no calibration rescale.
+ * on y². The rounded GOLDEN_EGG_ANGLE gives a relative residual below
+ * 1e-11 against φ; there is no calibration rescale.
  */
 export function eggLengthOverWidth(
   angleDeg: number,
@@ -413,7 +414,7 @@ function geometricEggLW(angleDeg: number, z0: number): number {
 
   // y² = 0 ⇒ tan(α)/z = |z − Z₀|
   // z < Z₀: z² − Z₀·z + tan(α) = 0. Larger root is the oval end;
-  // the smaller root is a spurious distant branch (L/W ≈ 37, not φ).
+  // the smaller root belongs to a separate unbounded component, not this oval.
   const discLo = z0 * z0 - 4 * tana;
   if (!(discLo > 0)) return Number.NaN;
   const zLo = (z0 + Math.sqrt(discLo)) / 2;
@@ -523,6 +524,7 @@ export type ScanPoint = {
   bh: number;
   independent: number;
   mean: number;
+  rms: number;
   maximum: number;
   matches: number;
 };
@@ -544,6 +546,7 @@ export function scanAngles(
       bh: geo.bh,
       independent: summary.independent,
       mean: summary.mean,
+      rms: summary.rms,
       maximum: summary.maximum,
       matches: summary.matches,
     });
@@ -662,6 +665,8 @@ export function scanMinima(points: ScanPoint[]): {
   let meanV = points[0]!.mean;
   let indA = points[0]!.angle;
   let indV = points[0]!.independent;
+  let rmsA = points[0]!.angle;
+  let rmsV = points[0]!.rms;
   let maxA = points[0]!.angle;
   let maxV = points[0]!.maximum;
   for (const p of points) {
@@ -677,8 +682,12 @@ export function scanMinima(points: ScanPoint[]): {
       maxV = p.maximum;
       maxA = p.angle;
     }
+    if (p.rms < rmsV) {
+      rmsV = p.rms;
+      rmsA = p.angle;
+    }
   }
-  return { mean: meanA, independent: indA, rmsAngle: indA, minimax: maxA };
+  return { mean: meanA, independent: indA, rmsAngle: rmsA, minimax: maxA };
 }
 
 export function errorTone(error: number, tolerance = RELATIVE_TOLERANCE): "ok" | "mid" | "bad" {

@@ -10,7 +10,20 @@ import {
   geoFromAngle,
   geoFromBH,
   snapshotFor,
+  scanAngles,
+  scanMinima,
 } from "./engine";
+
+describe("independently audited scan minima", () => {
+  it.each([0.0005, 0.001])("RMS is minimized at 51.846° on the %s° grid", (step) => {
+    const points = scanAngles(undefined, undefined, step);
+    const minima = scanMinima(points);
+    expect(minima.rmsAngle).toBeCloseTo(51.846, 10);
+    expect(minima.rmsAngle).not.toBe(minima.independent);
+    const selected = points.find((p) => p.angle === minima.rmsAngle)!;
+    expect(points.every((p) => p.rms >= selected.rms)).toBe(true);
+  });
+});
 
 describe("geoFromBH(11/7)", () => {
   const geo = geoFromBH(11 / 7);

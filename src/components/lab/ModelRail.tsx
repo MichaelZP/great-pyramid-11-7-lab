@@ -14,7 +14,7 @@ export function ModelRail() {
   const setPyramidOpacity = useLabStore((s) => s.setPyramidOpacity);
   const snap = useActiveSnapshot();
   const customGeo = useCustomGeo();
-  const { t, fmt, fmtDeg, modelName, modelBasis } = useI18n();
+  const { t, fmt, fmtDeg, modelName, modelBasis, locale } = useI18n();
 
   return (
     <div className="flex flex-col gap-4">
@@ -26,6 +26,7 @@ export function ModelRail() {
           {t("oneShapeParam")}
         </h2>
         <p className="mt-1 text-sm text-muted">{t("pickModel")}</p>
+        <p className="mt-2 text-xs leading-relaxed text-muted">{locale === "pl" ? "Model matematyczny i ilustracja. Dopasowanie proporcji nie dowodzi intencji budowniczych. Historię i źródła znajdziesz przy pozycjach w panelu Stałe." : "Mathematical model and illustration. Matching ratios do not establish builders’ intent. Find history and sources beside each position in Constants."}</p>
       </header>
 
       <ul className="flex flex-col gap-1.5">
