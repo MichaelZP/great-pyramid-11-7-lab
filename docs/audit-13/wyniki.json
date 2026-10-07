@@ -1,0 +1,1649 @@
+{
+  "precision": 60,
+  "angle_11_7": "51.8427734126309404232325611631863206643882946990127336729813",
+  "golden_t": "1.27055972801510142569898046488116619250724499214325915025508",
+  "golden_angle": "51.7953192558975880944562480296486257571636422253040353447493",
+  "eleven_seven": [
+    {
+      "id": "pi",
+      "value": "3.14285714285714285714285714285714285714285714285714285714285",
+      "reference": "3.14159265358979323846264338327950288419716939937510582097493",
+      "relative_error": "0.000402499434770681975840798341518847073746344654297677842482821",
+      "percent_error": "0.0402499434770681975840798341518847073746344654297677842482821",
+      "within": true
+    },
+    {
+      "id": "gamma",
+      "value": "0.577235434372772582829181003827523253566617179197435111444519",
+      "reference": "0.577215664901532860606512090082402431042159335939923598805767",
+      "relative_error": "0.0000342497136544183948949313553648131109316792357261287588303965",
+      "percent_error": "0.00342497136544183948949313553648131109316792357261287588303965",
+      "within": true
+    },
+    {
+      "id": "sqrt3",
+      "value": "1.73239538055491323061987054239151626038785369355876625499486",
+      "reference": "1.73205080756887729352744634150587236694280525381038062805581",
+      "relative_error": "0.000198939306243321439884455061677533209855778047263745786510771",
+      "percent_error": "0.0198939306243321439884455061677533209855778047263745786510771",
+      "within": true
+    },
+    {
+      "id": "sqrt6",
+      "value": "2.44997704257325751552781004861217666136307741489266529601076",
+      "reference": "2.44948974278317809819728407470589139196594748065667012843269",
+      "relative_error": "0.000198939306243321439884455061677533209855778047263745786513754",
+      "percent_error": "0.0198939306243321439884455061677533209855778047263745786513754",
+      "within": true
+    },
+    {
+      "id": "sqrt2",
+      "value": "1.41421356237309504880168872420969807856967187537694807317668",
+      "reference": "1.41421356237309504880168872420969807856967187537694807317668",
+      "relative_error": "0",
+      "percent_error": "0",
+      "within": true
+    },
+    {
+      "id": "sqrt5",
+      "value": "2.23564310386380701287073909524426875374882262683584731317461",
+      "reference": "2.23606797749978969640917366873127623544061835961152572427090",
+      "relative_error": "0.000190009266380956210471729131054261314072645757763632666496583",
+      "percent_error": "0.0190009266380956210471729131054261314072645757763632666496583",
+      "within": true
+    },
+    {
+      "id": "tribonacci",
+      "value": "1.83962637699099101074571267130743177082071735328321772351016",
+      "reference": "1.83928675521416113255185256465328660042417874609759224677876",
+      "relative_error": "0.000184648628533365170918797188944025047659602860283581356840499",
+      "percent_error": "0.0184648628533365170918797188944025047659602860283581356840499",
+      "within": true
+    },
+    {
+      "id": "brun",
+      "value": "1.90258632149603179388319444427670056891490603940675429328391",
+      "reference": "1.902160583104",
+      "relative_error": "0.000223818323128671822335339816668724216735854886660620269880388",
+      "percent_error": "0.0223818323128671822335339816668724216735854886660620269880388",
+      "within": true
+    },
+    {
+      "id": "invPhi",
+      "value": "0.618115143048911165612182925529507155769447008400603065621552",
+      "reference": "0.618033988749894848204586834365638117720309179805762862135448",
+      "relative_error": "0.000131310414141573722828515872106516770990345420475412349065097",
+      "percent_error": "0.0131310414141573722828515872106516770990345420475412349065097",
+      "within": true
+    },
+    {
+      "id": "phi",
+      "value": "1.61859034679680505404968716195220328486932550705356858791881",
+      "reference": "1.61803398874989484820458683436563811772030917980576286213545",
+      "relative_error": "0.000343848182905015629483394931882715380458809442411961473924510",
+      "percent_error": "0.0343848182905015629483394931882715380458809442411961473924510",
+      "within": true
+    },
+    {
+      "id": "e",
+      "value": "2.71732398023875870872339702271046837196342555299356062684003",
+      "reference": "2.71828182845904523536028747135266249775724709369995957496697",
+      "relative_error": "0.000352372668006068001632931019773884575999119137531977792605628",
+      "percent_error": "0.0352372668006068001632931019773884575999119137531977792605628",
+      "within": true
+    },
+    {
+      "id": "eMinus1",
+      "value": "1.71732398023875870872339702271046837196342555299356062684003",
+      "reference": "1.71828182845904523536028747135266249775724709369995957496697",
+      "relative_error": "0.000557445352922997916763985325675441096945679256758613237467501",
+      "percent_error": "0.0557445352922997916763985325675441096945679256758613237467501",
+      "within": true
+    },
+    {
+      "id": "eggLW",
+      "value": "1.61974296085246174382784166292950590398660284866865147828239",
+      "reference": "1.61803398874989484820458683436563811772030917980576286213545",
+      "relative_error": "0.00105620284521171291426020303329941537364603904756905971809216",
+      "percent_error": "0.105620284521171291426020303329941537364603904756905971809216",
+      "within": false
+    }
+  ],
+  "golden": [
+    {
+      "id": "pi",
+      "value": "3.14821878248013965697820498593280682418502085169079472994735",
+      "reference": "3.14159265358979323846264338327950288419716939937510582097493",
+      "relative_error": "0.00210916233292529565664927359322774067513510044131733614972158",
+      "percent_error": "0.210916233292529565664927359322774067513510044131733614972158",
+      "within": false
+    },
+    {
+      "id": "gamma",
+      "value": "0.577416047747044000305793566643730212802325395607320014331181",
+      "reference": "0.577215664901532860606512090082402431042159335939923598805767",
+      "relative_error": "0.000347154205430864356078543051117658541354340307500079004387761",
+      "percent_error": "0.0347154205430864356078543051117658541354340307500079004387761",
+      "within": true
+    },
+    {
+      "id": "sqrt3",
+      "value": "1.73185349437687040522643384042998962669648312341276286074045",
+      "reference": "1.73205080756887729352744634150587236694280525381038062805581",
+      "relative_error": "0.000113918824519841275324567126953102741618566889612330332116261",
+      "percent_error": "0.0113918824519841275324567126953102741618566889612330332116261",
+      "within": true
+    },
+    {
+      "id": "sqrt6",
+      "value": "2.44921069979100683018957203038467178657187944750187029830882",
+      "reference": "2.44948974278317809819728407470589139196594748065667012843269",
+      "relative_error": "0.000113918824519841275324567126953102741618566889612330332112353",
+      "percent_error": "0.0113918824519841275324567126953102741618566889612330332112353",
+      "within": true
+    },
+    {
+      "id": "sqrt2",
+      "value": "1.41421356237309504880168872420969807856967187537694807317668",
+      "reference": "1.41421356237309504880168872420969807856967187537694807317668",
+      "relative_error": "0",
+      "percent_error": "0",
+      "within": true
+    },
+    {
+      "id": "sqrt5",
+      "value": "2.23694518679623227017471159955053961799837970898569249375064",
+      "reference": "2.23606797749978969640917366873127623544061835961152572427090",
+      "relative_error": "0.000392299923468071876907202410720518351548189792202730614910394",
+      "percent_error": "0.0392299923468071876907202410720518351548189792202730614910394",
+      "within": true
+    },
+    {
+      "id": "tribonacci",
+      "value": "1.84049297938021199930582024941215419632989851845604121872931",
+      "reference": "1.83928675521416113255185256465328660042417874609759224677876",
+      "relative_error": "0.000655810825925518919287661478979739608965442126588504880784136",
+      "percent_error": "0.0655810825925518919287661478979739608965442126588504880784136",
+      "within": true
+    },
+    {
+      "id": "brun",
+      "value": "1.90113703410717043205149624428006739725567697400283671758406",
+      "reference": "1.902160583104",
+      "relative_error": "0.000538098100613204508843500964825154640469810384328851449010286",
+      "percent_error": "0.0538098100613204508843500964825154640469810384328851449010286",
+      "within": true
+    },
+    {
+      "id": "invPhi",
+      "value": "0.617866502082940972106282598205294567406820446028431116279391",
+      "reference": "0.618033988749894848204586834365638117720309179805762862135448",
+      "relative_error": "0.000270999119793805344088752378553715841658356407890593685262260",
+      "percent_error": "0.0270999119793805344088752378553715841658356407890593685262260",
+      "within": true
+    },
+    {
+      "id": "phi",
+      "value": "1.61688652120481495176472454100729420546554700384809038028165",
+      "reference": "1.61803398874989484820458683436563811772030917980576286213545",
+      "relative_error": "0.000709173943846778175892474176294682948226912559927555975445122",
+      "percent_error": "0.0709173943846778175892474176294682948226912559927555975445122",
+      "within": true
+    },
+    {
+      "id": "e",
+      "value": "2.71146457696250419254050193418643830555172835013280915635175",
+      "reference": "2.71828182845904523536028747135266249775724709369995957496697",
+      "relative_error": "0.00250792667087269768956732231873868024324991537624250376634207",
+      "percent_error": "0.250792667087269768956732231873868024324991537624250376634207",
+      "within": false
+    },
+    {
+      "id": "eMinus1",
+      "value": "1.71146457696250419254050193418643830555172835013280915635175",
+      "reference": "1.71828182845904523536028747135266249775724709369995957496697",
+      "relative_error": "0.00396748157585694336168506716569547856996364572367763818086313",
+      "percent_error": "0.396748157585694336168506716569547856996364572367763818086313",
+      "within": false
+    },
+    {
+      "id": "eggLW",
+      "value": "1.61803398874989484820458683436563811772030917980576286213528",
+      "reference": "1.61803398874989484820458683436563811772030917980576286213545",
+      "relative_error": "1.05065778087482124194779761842158480012452560566979686563026E-58",
+      "percent_error": "1.05065778087482124194779761842158480012452560566979686563026E-56",
+      "within": true
+    }
+  ],
+  "egg_11_7": {
+    "zlo": "7.47984578707128589468475309003396284253042259341933515845645",
+    "zhi": "7.81290073506441139541912123909315841267157655605938301043615",
+    "zmax": "7.6463767055338635509709984037443484319581010609756531511779",
+    "length": "0.423562482965745259472476099031635556865661961216193382726840",
+    "width": "0.261499813984576091031461034095237976122608418293337190822834",
+    "lw": "1.61974296085246174382784166292950590398660284866865147828239"
+  },
+  "golden_egg": {
+    "zlo": "7.4801423052987825598778907894027464428038865975315807571807",
+    "zhi": "7.81262896067514052576786955315760507221526191708175494104935",
+    "zmax": "7.6463890539734280142775539526547123287559889433334056299811",
+    "length": "0.423115245749481186102898525258704319698803880548533421830088",
+    "width": "0.261499603031443849362498202756173939416542115371423997023658",
+    "lw": "1.61803398874989484820458683436563811772030917980576286213528"
+  },
+  "independent_scans": [
+    {
+      "step": "0.0005",
+      "count": 241,
+      "minima": {
+        "mean": "51.8505",
+        "independent": "51.8505",
+        "rms": "51.8460",
+        "maximum": "51.8375"
+      },
+      "all13": [
+        "51.8370",
+        "51.8375",
+        "51.8380",
+        "51.8385",
+        "51.8390",
+        "51.8395",
+        "51.8400"
+      ],
+      "near_11_7": {
+        "total": 80,
+        "all13": 7,
+        "all12": 52
+      }
+    },
+    {
+      "step": "0.001",
+      "count": 121,
+      "minima": {
+        "mean": "51.850",
+        "independent": "51.850",
+        "rms": "51.846",
+        "maximum": "51.838"
+      },
+      "all13": [
+        "51.837",
+        "51.838",
+        "51.839",
+        "51.840"
+      ],
+      "near_11_7": {
+        "total": 40,
+        "all13": 4,
+        "all12": 26
+      }
+    }
+  ],
+  "workbooks": [
+    {
+      "file": "Great_Pyramid_11_7_Mathematical_Constants_Lab.xlsx",
+      "sha256": "244068a97cba7f799db463d1f008fab12e95c64999e9b1a8710f483297e5823a",
+      "max_classical_value_delta": 8.215650382226158e-15,
+      "frozen_v_delta": "1.442042638764709171089313677320068759718344373E-17",
+      "sheets": {
+        "00": "00_Start",
+        "01": "01_Models",
+        "02": "02_Constants",
+        "03": "03_12_Errors",
+        "04": "04_Consensus",
+        "05": "05_Angle_Scan",
+        "06": "06_Laboratory",
+        "07": "07_Matrix",
+        "08": "08_Attractors",
+        "09": "09_Optics",
+        "10": "10_Sources",
+        "11": "11_Golden_Egg"
+      },
+      "evidence": {
+        "03_12_Errors!D7": {
+          "formula_or_input": "=2*'01_Models'!F7/'01_Models'!G7",
+          "cached": 3.142857142857143
+        },
+        "01_Models!F7": {
+          "formula_or_input": "='00_Start'!$B$6",
+          "cached": 72.0225
+        },
+        "00_Start!B6": {
+          "formula_or_input": 72.0225,
+          "cached": 72.0225
+        },
+        "01_Models!G7": {
+          "formula_or_input": "=F7/D7",
+          "cached": 45.832499999999996
+        },
+        "01_Models!D7": {
+          "formula_or_input": "=11/7",
+          "cached": 1.5714285714285714
+        },
+        "02_Constants!D6": {
+          "formula_or_input": "=PI()",
+          "cached": 3.141592653589793
+        },
+        "03_12_Errors!P7": {
+          "formula_or_input": "=ABS(D7-'02_Constants'!$D$6)/'02_Constants'!$D$6",
+          "cached": 0.0004024994347707008
+        },
+        "03_12_Errors!E7": {
+          "formula_or_input": "=2*'01_Models'!F7/('01_Models'!G7+2*'01_Models'!I7)",
+          "cached": 0.5772354343727726
+        },
+        "01_Models!I7": {
+          "formula_or_input": "=F7*SQRT(2)",
+          "cached": 101.85519629601623
+        },
+        "02_Constants!D7": {
+          "formula_or_input": 0.5772156649015329,
+          "cached": 0.5772156649015329
+        },
+        "03_12_Errors!Q7": {
+          "formula_or_input": "=ABS(E7-'02_Constants'!$D$7)/'02_Constants'!$D$7",
+          "cached": 3.424971365440888e-05
+        },
+        "03_12_Errors!F7": {
+          "formula_or_input": "=('01_Models'!G7+2*'01_Models'!I7)/(2*'01_Models'!F7)",
+          "cached": 1.7323953805549133
+        },
+        "02_Constants!D8": {
+          "formula_or_input": "=SQRT(3)",
+          "cached": 1.7320508075688772
+        },
+        "03_12_Errors!R7": {
+          "formula_or_input": "=ABS(F7-'02_Constants'!$D$8)/'02_Constants'!$D$8",
+          "cached": 0.00019893930624340024
+        },
+        "03_12_Errors!G7": {
+          "formula_or_input": "=('01_Models'!G7+2*'01_Models'!I7)/'01_Models'!I7",
+          "cached": 2.4499770425732574
+        },
+        "02_Constants!D9": {
+          "formula_or_input": "=SQRT(6)",
+          "cached": 2.449489742783178
+        },
+        "03_12_Errors!S7": {
+          "formula_or_input": "=ABS(G7-'02_Constants'!$D$9)/'02_Constants'!$D$9",
+          "cached": 0.00019893930624337723
+        },
+        "03_12_Errors!H7": {
+          "formula_or_input": "='01_Models'!I7/'01_Models'!F7",
+          "cached": 1.4142135623730951
+        },
+        "02_Constants!D10": {
+          "formula_or_input": "=SQRT(2)",
+          "cached": 1.4142135623730951
+        },
+        "03_12_Errors!T7": {
+          "formula_or_input": "=ABS(H7-'02_Constants'!$D$10)/'02_Constants'!$D$10",
+          "cached": 0
+        },
+        "03_12_Errors!I7": {
+          "formula_or_input": "=('01_Models'!J7+'01_Models'!F7)/'01_Models'!J7",
+          "cached": 2.235643103863807
+        },
+        "01_Models!J7": {
+          "formula_or_input": "=SQRT(G7^2+H7^2)",
+          "cached": 58.28746162608644
+        },
+        "01_Models!H7": {
+          "formula_or_input": "=F7/2",
+          "cached": 36.01125
+        },
+        "02_Constants!D11": {
+          "formula_or_input": "=SQRT(5)",
+          "cached": 2.23606797749979
+        },
+        "03_12_Errors!U7": {
+          "formula_or_input": "=ABS(I7-'02_Constants'!$D$11)/'02_Constants'!$D$11",
+          "cached": 0.00019000926638103948
+        },
+        "03_12_Errors!J7": {
+          "formula_or_input": "=('01_Models'!H7+2*'01_Models'!I7)/('01_Models'!J7+'01_Models'!F7)",
+          "cached": 1.8396263769909913
+        },
+        "02_Constants!D12": {
+          "formula_or_input": 1.839286755214161,
+          "cached": 1.839286755214161
+        },
+        "03_12_Errors!V7": {
+          "formula_or_input": "=ABS(J7-'02_Constants'!$D$12)/'02_Constants'!$D$12",
+          "cached": 0.00018464862853361324
+        },
+        "03_12_Errors!K7": {
+          "formula_or_input": "='01_Models'!K7/'01_Models'!H7",
+          "cached": 1.902586321496032
+        },
+        "01_Models!K7": {
+          "formula_or_input": "=SQRT(G7^2+2*H7^2)",
+          "cached": 68.51451166997397
+        },
+        "02_Constants!D13": {
+          "formula_or_input": 1.902160583104,
+          "cached": 1.902160583104
+        },
+        "03_12_Errors!W7": {
+          "formula_or_input": "=ABS(K7-'02_Constants'!$D$13)/'02_Constants'!$D$13",
+          "cached": 0.0002238183231287067
+        },
+        "03_12_Errors!L7": {
+          "formula_or_input": "='01_Models'!J7/('01_Models'!J7+'01_Models'!H7)",
+          "cached": 0.6181151430489112
+        },
+        "02_Constants!D14": {
+          "formula_or_input": "=(SQRT(5)-1)/2",
+          "cached": 0.6180339887498949
+        },
+        "03_12_Errors!X7": {
+          "formula_or_input": "=ABS(L7-'02_Constants'!$D$14)/'02_Constants'!$D$14",
+          "cached": 0.0001313104141416093
+        },
+        "03_12_Errors!M7": {
+          "formula_or_input": "='01_Models'!J7/'01_Models'!H7",
+          "cached": 1.618590346796805
+        },
+        "02_Constants!D15": {
+          "formula_or_input": "=(1+SQRT(5))/2",
+          "cached": 1.618033988749895
+        },
+        "03_12_Errors!Y7": {
+          "formula_or_input": "=ABS(M7-'02_Constants'!$D$15)/'02_Constants'!$D$15",
+          "cached": 0.0003438481829049635
+        },
+        "03_12_Errors!N7": {
+          "formula_or_input": "=2*'01_Models'!E7/(90-'01_Models'!E7)",
+          "cached": 2.7173239802387594
+        },
+        "01_Models!E7": {
+          "formula_or_input": "=DEGREES(ATAN(2/D7))",
+          "cached": 51.84277341263095
+        },
+        "02_Constants!D16": {
+          "formula_or_input": "=EXP(1)",
+          "cached": 2.718281828459045
+        },
+        "03_12_Errors!Z7": {
+          "formula_or_input": "=ABS(N7-'02_Constants'!$D$16)/'02_Constants'!$D$16",
+          "cached": 0.00035237266800574994
+        },
+        "03_12_Errors!O7": {
+          "formula_or_input": "=2*'01_Models'!E7/(90-'01_Models'!E7)-1",
+          "cached": 1.7173239802387594
+        },
+        "02_Constants!D17": {
+          "formula_or_input": "=EXP(1)-1",
+          "cached": 1.718281828459045
+        },
+        "03_12_Errors!AA7": {
+          "formula_or_input": "=ABS(O7-'02_Constants'!$D$17)/'02_Constants'!$D$17",
+          "cached": 0.0005574453529224948
+        },
+        "03_12_Errors!D12": {
+          "formula_or_input": "=2*'01_Models'!F12/'01_Models'!G12",
+          "cached": 3.148218782480132
+        },
+        "01_Models!F12": {
+          "formula_or_input": "='00_Start'!$B$6",
+          "cached": 72.0225
+        },
+        "01_Models!G12": {
+          "formula_or_input": "=F12/D12",
+          "cached": 45.754444005483926
+        },
+        "01_Models!D12": {
+          "formula_or_input": "=2/TAN(RADIANS('11_Golden_Egg'!$B6))",
+          "cached": 1.574109391240066
+        },
+        "11_Golden_Egg!B6": {
+          "formula_or_input": 51.79531925589765,
+          "cached": 51.79531925589765
+        },
+        "03_12_Errors!P12": {
+          "formula_or_input": "=ABS(D12-'02_Constants'!$D$6)/'02_Constants'!$D$6",
+          "cached": 0.0021091623329229626
+        },
+        "03_12_Errors!E12": {
+          "formula_or_input": "=2*'01_Models'!F12/('01_Models'!G12+2*'01_Models'!I12)",
+          "cached": 0.5774160477470438
+        },
+        "01_Models!I12": {
+          "formula_or_input": "=F12*SQRT(2)",
+          "cached": 101.85519629601623
+        },
+        "03_12_Errors!Q12": {
+          "formula_or_input": "=ABS(E12-'02_Constants'!$D$7)/'02_Constants'!$D$7",
+          "cached": 0.0003471542054305149
+        },
+        "03_12_Errors!F12": {
+          "formula_or_input": "=('01_Models'!G12+2*'01_Models'!I12)/(2*'01_Models'!F12)",
+          "cached": 1.731853494376871
+        },
+        "03_12_Errors!R12": {
+          "formula_or_input": "=ABS(F12-'02_Constants'!$D$8)/'02_Constants'!$D$8",
+          "cached": 0.00011391882451939192
+        },
+        "03_12_Errors!G12": {
+          "formula_or_input": "=('01_Models'!G12+2*'01_Models'!I12)/'01_Models'!I12",
+          "cached": 2.4492106997910077
+        },
+        "03_12_Errors!S12": {
+          "formula_or_input": "=ABS(G12-'02_Constants'!$D$9)/'02_Constants'!$D$9",
+          "cached": 0.00011391882451939975
+        },
+        "03_12_Errors!H12": {
+          "formula_or_input": "='01_Models'!I12/'01_Models'!F12",
+          "cached": 1.4142135623730951
+        },
+        "03_12_Errors!T12": {
+          "formula_or_input": "=ABS(H12-'02_Constants'!$D$10)/'02_Constants'!$D$10",
+          "cached": 0
+        },
+        "03_12_Errors!I12": {
+          "formula_or_input": "=('01_Models'!J12+'01_Models'!F12)/'01_Models'!J12",
+          "cached": 2.236945186796231
+        },
+        "01_Models!J12": {
+          "formula_or_input": "=SQRT(G12^2+H12^2)",
+          "cached": 58.22610473673697
+        },
+        "01_Models!H12": {
+          "formula_or_input": "=F12/2",
+          "cached": 36.01125
+        },
+        "03_12_Errors!U12": {
+          "formula_or_input": "=ABS(I12-'02_Constants'!$D$11)/'02_Constants'!$D$11",
+          "cached": 0.00039229992346740555
+        },
+        "03_12_Errors!J12": {
+          "formula_or_input": "=('01_Models'!H12+2*'01_Models'!I12)/('01_Models'!J12+'01_Models'!F12)",
+          "cached": 1.8404929793802105
+        },
+        "03_12_Errors!V12": {
+          "formula_or_input": "=ABS(J12-'02_Constants'!$D$12)/'02_Constants'!$D$12",
+          "cached": 0.0006558108259247981
+        },
+        "03_12_Errors!K12": {
+          "formula_or_input": "='01_Models'!K12/'01_Models'!H12",
+          "cached": 1.9011370341071725
+        },
+        "01_Models!K12": {
+          "formula_or_input": "=SQRT(G12^2+2*H12^2)",
+          "cached": 68.46232101949191
+        },
+        "03_12_Errors!W12": {
+          "formula_or_input": "=ABS(K12-'02_Constants'!$D$13)/'02_Constants'!$D$13",
+          "cached": 0.0005380981006121437
+        },
+        "03_12_Errors!L12": {
+          "formula_or_input": "='01_Models'!J12/('01_Models'!J12+'01_Models'!H12)",
+          "cached": 0.6178665020829414
+        },
+        "03_12_Errors!X12": {
+          "formula_or_input": "=ABS(L12-'02_Constants'!$D$14)/'02_Constants'!$D$14",
+          "cached": 0.00027099911979326543
+        },
+        "03_12_Errors!M12": {
+          "formula_or_input": "='01_Models'!J12/'01_Models'!H12",
+          "cached": 1.6168865212048174
+        },
+        "03_12_Errors!Y12": {
+          "formula_or_input": "=ABS(M12-'02_Constants'!$D$15)/'02_Constants'!$D$15",
+          "cached": 0.000709173943845329
+        },
+        "03_12_Errors!N12": {
+          "formula_or_input": "=2*'01_Models'!E12/(90-'01_Models'!E12)",
+          "cached": 2.7114645769625123
+        },
+        "01_Models!E12": {
+          "formula_or_input": "=DEGREES(ATAN(2/D12))",
+          "cached": 51.79531925589765
+        },
+        "03_12_Errors!Z12": {
+          "formula_or_input": "=ABS(N12-'02_Constants'!$D$16)/'02_Constants'!$D$16",
+          "cached": 0.0025079266708696595
+        },
+        "03_12_Errors!O12": {
+          "formula_or_input": "=2*'01_Models'!E12/(90-'01_Models'!E12)-1",
+          "cached": 1.7114645769625123
+        },
+        "03_12_Errors!AA12": {
+          "formula_or_input": "=ABS(O12-'02_Constants'!$D$17)/'02_Constants'!$D$17",
+          "cached": 0.003967481575852137
+        },
+        "11_Golden_Egg!R25": {
+          "formula_or_input": "=R23/R21",
+          "cached": 1.6180339887498973
+        },
+        "11_Golden_Egg!R23": {
+          "formula_or_input": "=R17-R16",
+          "cached": 0.4231152457494818
+        },
+        "11_Golden_Egg!R17": {
+          "formula_or_input": "=(R7*$B$8-SQRT((R7*$B$8)^2-4*R7*R6))/(2*R7*R6)",
+          "cached": 0.21615718728498606
+        },
+        "11_Golden_Egg!R7": {
+          "formula_or_input": "=COS($B$7)",
+          "cached": 0.6184725933981152
+        },
+        "11_Golden_Egg!B7": {
+          "formula_or_input": "=RADIANS(B6)",
+          "cached": 0.9039988581370335
+        },
+        "11_Golden_Egg!B8": {
+          "formula_or_input": 7.65,
+          "cached": 7.65
+        },
+        "11_Golden_Egg!R6": {
+          "formula_or_input": "=SIN($B$7)",
+          "cached": 0.7858063700527056
+        },
+        "11_Golden_Egg!R16": {
+          "formula_or_input": "=(R7*$B$8-SQRT((R7*$B$8)^2+4*R7*R6))/(2*R7*R6)",
+          "cached": -0.20695805846449575
+        },
+        "11_Golden_Egg!R21": {
+          "formula_or_input": "=2*SQRT(1/($B$8-$R$27*$R$6)^2-$R$27^2*$R$7^2)",
+          "cached": 0.2614996030314438
+        },
+        "11_Golden_Egg!R27": {
+          "formula_or_input": 0.00459521093768915,
+          "cached": 0.00459521093768915
+        },
+        "04_Consensus!M7": {
+          "formula_or_input": "=100/(1+(J7/'00_Start'!$B$13)^2)/(1+0.01*MAX('01_Models'!P7-7,0))",
+          "cached": 100
+        },
+        "04_Consensus!N7": {
+          "formula_or_input": "=IFERROR(100*COUNTIFS('05_Angle_Scan'!$A$6:$A$246,\">=\"&B7-'00_Start'!$B$9,'05_Angle_Scan'!$A$6:$A$246,\"<=\"&B7+'00_Start'!$B$9,'05_Angle_Scan'!$S$6:$S$246,12)/COUNTIFS('05_Angle_Scan'!$A$6:$A$246,\">=\"&B7-'00_Start'!$B$9,'05_Angle_Scan'!$A$6:$A$246,\"<=\"&B7+'00_Start'!$B$9),0)",
+          "cached": 65
+        },
+        "04_Consensus!O7": {
+          "formula_or_input": "=K7*'00_Start'!$E$6+L7*'00_Start'!$E$7+M7*'00_Start'!$E$8+N7*'00_Start'!$E$9",
+          "cached": 83.69886116039899
+        },
+        "00_Start!B7": {
+          "formula_or_input": 0.001,
+          "cached": 0.001
+        },
+        "00_Start!B8": {
+          "formula_or_input": 51.844,
+          "cached": 51.844
+        },
+        "00_Start!B9": {
+          "formula_or_input": 0.02,
+          "cached": 0.02
+        },
+        "00_Start!B10": {
+          "formula_or_input": 51.78,
+          "cached": 51.78
+        },
+        "00_Start!B11": {
+          "formula_or_input": 51.9,
+          "cached": 51.9
+        },
+        "00_Start!B12": {
+          "formula_or_input": 0.0005,
+          "cached": 0.0005
+        },
+        "00_Start!B13": {
+          "formula_or_input": 0.0001,
+          "cached": 0.0001
+        },
+        "00_Start!E6": {
+          "formula_or_input": 0.35,
+          "cached": 0.35
+        },
+        "00_Start!E7": {
+          "formula_or_input": 0.25,
+          "cached": 0.25
+        },
+        "00_Start!E8": {
+          "formula_or_input": 0.25,
+          "cached": 0.25
+        },
+        "00_Start!E9": {
+          "formula_or_input": 0.15,
+          "cached": 0.15
+        }
+      }
+    },
+    {
+      "file": "Piramida_11_7_laboratorium_stalych.xlsx",
+      "sha256": "400b89121ca2cb90bff4700315108b4158ef62208caaa9c715efc96952c84814",
+      "max_classical_value_delta": 8.215650382226158e-15,
+      "frozen_v_delta": "1.442042638764709171089313677320068759718344373E-17",
+      "sheets": {
+        "00": "00_Start",
+        "01": "01_Modele",
+        "02": "02_Stale",
+        "03": "03_Bledy_12",
+        "04": "04_Konsensus",
+        "05": "05_Skan_kata",
+        "06": "06_Laboratorium",
+        "07": "07_Macierz",
+        "08": "08_Atraktory",
+        "09": "09_Optyka",
+        "10": "10_Zrodla",
+        "11": "11_Zlote_Jajko"
+      },
+      "evidence": {
+        "03_Bledy_12!D7": {
+          "formula_or_input": "=2*'01_Modele'!F7/'01_Modele'!G7",
+          "cached": 3.142857142857143
+        },
+        "01_Modele!F7": {
+          "formula_or_input": "='00_Start'!$B$6",
+          "cached": 72.0225
+        },
+        "00_Start!B6": {
+          "formula_or_input": 72.0225,
+          "cached": 72.0225
+        },
+        "01_Modele!G7": {
+          "formula_or_input": "=F7/D7",
+          "cached": 45.832499999999996
+        },
+        "01_Modele!D7": {
+          "formula_or_input": "=11/7",
+          "cached": 1.5714285714285714
+        },
+        "02_Stale!D6": {
+          "formula_or_input": "=PI()",
+          "cached": 3.141592653589793
+        },
+        "03_Bledy_12!P7": {
+          "formula_or_input": "=ABS(D7-'02_Stale'!$D$6)/'02_Stale'!$D$6",
+          "cached": 0.0004024994347707008
+        },
+        "03_Bledy_12!E7": {
+          "formula_or_input": "=2*'01_Modele'!F7/('01_Modele'!G7+2*'01_Modele'!I7)",
+          "cached": 0.5772354343727726
+        },
+        "01_Modele!I7": {
+          "formula_or_input": "=F7*SQRT(2)",
+          "cached": 101.85519629601623
+        },
+        "02_Stale!D7": {
+          "formula_or_input": 0.5772156649015329,
+          "cached": 0.5772156649015329
+        },
+        "03_Bledy_12!Q7": {
+          "formula_or_input": "=ABS(E7-'02_Stale'!$D$7)/'02_Stale'!$D$7",
+          "cached": 3.424971365440888e-05
+        },
+        "03_Bledy_12!F7": {
+          "formula_or_input": "=('01_Modele'!G7+2*'01_Modele'!I7)/(2*'01_Modele'!F7)",
+          "cached": 1.7323953805549133
+        },
+        "02_Stale!D8": {
+          "formula_or_input": "=SQRT(3)",
+          "cached": 1.7320508075688772
+        },
+        "03_Bledy_12!R7": {
+          "formula_or_input": "=ABS(F7-'02_Stale'!$D$8)/'02_Stale'!$D$8",
+          "cached": 0.00019893930624340024
+        },
+        "03_Bledy_12!G7": {
+          "formula_or_input": "=('01_Modele'!G7+2*'01_Modele'!I7)/'01_Modele'!I7",
+          "cached": 2.4499770425732574
+        },
+        "02_Stale!D9": {
+          "formula_or_input": "=SQRT(6)",
+          "cached": 2.449489742783178
+        },
+        "03_Bledy_12!S7": {
+          "formula_or_input": "=ABS(G7-'02_Stale'!$D$9)/'02_Stale'!$D$9",
+          "cached": 0.00019893930624337723
+        },
+        "03_Bledy_12!H7": {
+          "formula_or_input": "='01_Modele'!I7/'01_Modele'!F7",
+          "cached": 1.4142135623730951
+        },
+        "02_Stale!D10": {
+          "formula_or_input": "=SQRT(2)",
+          "cached": 1.4142135623730951
+        },
+        "03_Bledy_12!T7": {
+          "formula_or_input": "=ABS(H7-'02_Stale'!$D$10)/'02_Stale'!$D$10",
+          "cached": 0
+        },
+        "03_Bledy_12!I7": {
+          "formula_or_input": "=('01_Modele'!J7+'01_Modele'!F7)/'01_Modele'!J7",
+          "cached": 2.235643103863807
+        },
+        "01_Modele!J7": {
+          "formula_or_input": "=SQRT(G7^2+H7^2)",
+          "cached": 58.28746162608644
+        },
+        "01_Modele!H7": {
+          "formula_or_input": "=F7/2",
+          "cached": 36.01125
+        },
+        "02_Stale!D11": {
+          "formula_or_input": "=SQRT(5)",
+          "cached": 2.23606797749979
+        },
+        "03_Bledy_12!U7": {
+          "formula_or_input": "=ABS(I7-'02_Stale'!$D$11)/'02_Stale'!$D$11",
+          "cached": 0.00019000926638103948
+        },
+        "03_Bledy_12!J7": {
+          "formula_or_input": "=('01_Modele'!H7+2*'01_Modele'!I7)/('01_Modele'!J7+'01_Modele'!F7)",
+          "cached": 1.8396263769909913
+        },
+        "02_Stale!D12": {
+          "formula_or_input": 1.839286755214161,
+          "cached": 1.839286755214161
+        },
+        "03_Bledy_12!V7": {
+          "formula_or_input": "=ABS(J7-'02_Stale'!$D$12)/'02_Stale'!$D$12",
+          "cached": 0.00018464862853361324
+        },
+        "03_Bledy_12!K7": {
+          "formula_or_input": "='01_Modele'!K7/'01_Modele'!H7",
+          "cached": 1.902586321496032
+        },
+        "01_Modele!K7": {
+          "formula_or_input": "=SQRT(G7^2+2*H7^2)",
+          "cached": 68.51451166997397
+        },
+        "02_Stale!D13": {
+          "formula_or_input": 1.902160583104,
+          "cached": 1.902160583104
+        },
+        "03_Bledy_12!W7": {
+          "formula_or_input": "=ABS(K7-'02_Stale'!$D$13)/'02_Stale'!$D$13",
+          "cached": 0.0002238183231287067
+        },
+        "03_Bledy_12!L7": {
+          "formula_or_input": "='01_Modele'!J7/('01_Modele'!J7+'01_Modele'!H7)",
+          "cached": 0.6181151430489112
+        },
+        "02_Stale!D14": {
+          "formula_or_input": "=(SQRT(5)-1)/2",
+          "cached": 0.6180339887498949
+        },
+        "03_Bledy_12!X7": {
+          "formula_or_input": "=ABS(L7-'02_Stale'!$D$14)/'02_Stale'!$D$14",
+          "cached": 0.0001313104141416093
+        },
+        "03_Bledy_12!M7": {
+          "formula_or_input": "='01_Modele'!J7/'01_Modele'!H7",
+          "cached": 1.618590346796805
+        },
+        "02_Stale!D15": {
+          "formula_or_input": "=(1+SQRT(5))/2",
+          "cached": 1.618033988749895
+        },
+        "03_Bledy_12!Y7": {
+          "formula_or_input": "=ABS(M7-'02_Stale'!$D$15)/'02_Stale'!$D$15",
+          "cached": 0.0003438481829049635
+        },
+        "03_Bledy_12!N7": {
+          "formula_or_input": "=2*'01_Modele'!E7/(90-'01_Modele'!E7)",
+          "cached": 2.7173239802387594
+        },
+        "01_Modele!E7": {
+          "formula_or_input": "=DEGREES(ATAN(2/D7))",
+          "cached": 51.84277341263095
+        },
+        "02_Stale!D16": {
+          "formula_or_input": "=EXP(1)",
+          "cached": 2.718281828459045
+        },
+        "03_Bledy_12!Z7": {
+          "formula_or_input": "=ABS(N7-'02_Stale'!$D$16)/'02_Stale'!$D$16",
+          "cached": 0.00035237266800574994
+        },
+        "03_Bledy_12!O7": {
+          "formula_or_input": "=2*'01_Modele'!E7/(90-'01_Modele'!E7)-1",
+          "cached": 1.7173239802387594
+        },
+        "02_Stale!D17": {
+          "formula_or_input": "=EXP(1)-1",
+          "cached": 1.718281828459045
+        },
+        "03_Bledy_12!AA7": {
+          "formula_or_input": "=ABS(O7-'02_Stale'!$D$17)/'02_Stale'!$D$17",
+          "cached": 0.0005574453529224948
+        },
+        "03_Bledy_12!D12": {
+          "formula_or_input": "=2*'01_Modele'!F12/'01_Modele'!G12",
+          "cached": 3.148218782480132
+        },
+        "01_Modele!F12": {
+          "formula_or_input": "='00_Start'!$B$6",
+          "cached": 72.0225
+        },
+        "01_Modele!G12": {
+          "formula_or_input": "=F12/D12",
+          "cached": 45.754444005483926
+        },
+        "01_Modele!D12": {
+          "formula_or_input": "=2/TAN(RADIANS('11_Zlote_Jajko'!$B6))",
+          "cached": 1.574109391240066
+        },
+        "11_Zlote_Jajko!B6": {
+          "formula_or_input": 51.79531925589765,
+          "cached": 51.79531925589765
+        },
+        "03_Bledy_12!P12": {
+          "formula_or_input": "=ABS(D12-'02_Stale'!$D$6)/'02_Stale'!$D$6",
+          "cached": 0.0021091623329229626
+        },
+        "03_Bledy_12!E12": {
+          "formula_or_input": "=2*'01_Modele'!F12/('01_Modele'!G12+2*'01_Modele'!I12)",
+          "cached": 0.5774160477470438
+        },
+        "01_Modele!I12": {
+          "formula_or_input": "=F12*SQRT(2)",
+          "cached": 101.85519629601623
+        },
+        "03_Bledy_12!Q12": {
+          "formula_or_input": "=ABS(E12-'02_Stale'!$D$7)/'02_Stale'!$D$7",
+          "cached": 0.0003471542054305149
+        },
+        "03_Bledy_12!F12": {
+          "formula_or_input": "=('01_Modele'!G12+2*'01_Modele'!I12)/(2*'01_Modele'!F12)",
+          "cached": 1.731853494376871
+        },
+        "03_Bledy_12!R12": {
+          "formula_or_input": "=ABS(F12-'02_Stale'!$D$8)/'02_Stale'!$D$8",
+          "cached": 0.00011391882451939192
+        },
+        "03_Bledy_12!G12": {
+          "formula_or_input": "=('01_Modele'!G12+2*'01_Modele'!I12)/'01_Modele'!I12",
+          "cached": 2.4492106997910077
+        },
+        "03_Bledy_12!S12": {
+          "formula_or_input": "=ABS(G12-'02_Stale'!$D$9)/'02_Stale'!$D$9",
+          "cached": 0.00011391882451939975
+        },
+        "03_Bledy_12!H12": {
+          "formula_or_input": "='01_Modele'!I12/'01_Modele'!F12",
+          "cached": 1.4142135623730951
+        },
+        "03_Bledy_12!T12": {
+          "formula_or_input": "=ABS(H12-'02_Stale'!$D$10)/'02_Stale'!$D$10",
+          "cached": 0
+        },
+        "03_Bledy_12!I12": {
+          "formula_or_input": "=('01_Modele'!J12+'01_Modele'!F12)/'01_Modele'!J12",
+          "cached": 2.236945186796231
+        },
+        "01_Modele!J12": {
+          "formula_or_input": "=SQRT(G12^2+H12^2)",
+          "cached": 58.22610473673697
+        },
+        "01_Modele!H12": {
+          "formula_or_input": "=F12/2",
+          "cached": 36.01125
+        },
+        "03_Bledy_12!U12": {
+          "formula_or_input": "=ABS(I12-'02_Stale'!$D$11)/'02_Stale'!$D$11",
+          "cached": 0.00039229992346740555
+        },
+        "03_Bledy_12!J12": {
+          "formula_or_input": "=('01_Modele'!H12+2*'01_Modele'!I12)/('01_Modele'!J12+'01_Modele'!F12)",
+          "cached": 1.8404929793802105
+        },
+        "03_Bledy_12!V12": {
+          "formula_or_input": "=ABS(J12-'02_Stale'!$D$12)/'02_Stale'!$D$12",
+          "cached": 0.0006558108259247981
+        },
+        "03_Bledy_12!K12": {
+          "formula_or_input": "='01_Modele'!K12/'01_Modele'!H12",
+          "cached": 1.9011370341071725
+        },
+        "01_Modele!K12": {
+          "formula_or_input": "=SQRT(G12^2+2*H12^2)",
+          "cached": 68.46232101949191
+        },
+        "03_Bledy_12!W12": {
+          "formula_or_input": "=ABS(K12-'02_Stale'!$D$13)/'02_Stale'!$D$13",
+          "cached": 0.0005380981006121437
+        },
+        "03_Bledy_12!L12": {
+          "formula_or_input": "='01_Modele'!J12/('01_Modele'!J12+'01_Modele'!H12)",
+          "cached": 0.6178665020829414
+        },
+        "03_Bledy_12!X12": {
+          "formula_or_input": "=ABS(L12-'02_Stale'!$D$14)/'02_Stale'!$D$14",
+          "cached": 0.00027099911979326543
+        },
+        "03_Bledy_12!M12": {
+          "formula_or_input": "='01_Modele'!J12/'01_Modele'!H12",
+          "cached": 1.6168865212048174
+        },
+        "03_Bledy_12!Y12": {
+          "formula_or_input": "=ABS(M12-'02_Stale'!$D$15)/'02_Stale'!$D$15",
+          "cached": 0.000709173943845329
+        },
+        "03_Bledy_12!N12": {
+          "formula_or_input": "=2*'01_Modele'!E12/(90-'01_Modele'!E12)",
+          "cached": 2.7114645769625123
+        },
+        "01_Modele!E12": {
+          "formula_or_input": "=DEGREES(ATAN(2/D12))",
+          "cached": 51.79531925589765
+        },
+        "03_Bledy_12!Z12": {
+          "formula_or_input": "=ABS(N12-'02_Stale'!$D$16)/'02_Stale'!$D$16",
+          "cached": 0.0025079266708696595
+        },
+        "03_Bledy_12!O12": {
+          "formula_or_input": "=2*'01_Modele'!E12/(90-'01_Modele'!E12)-1",
+          "cached": 1.7114645769625123
+        },
+        "03_Bledy_12!AA12": {
+          "formula_or_input": "=ABS(O12-'02_Stale'!$D$17)/'02_Stale'!$D$17",
+          "cached": 0.003967481575852137
+        },
+        "11_Zlote_Jajko!R25": {
+          "formula_or_input": "=R23/R21",
+          "cached": 1.6180339887498973
+        },
+        "11_Zlote_Jajko!R23": {
+          "formula_or_input": "=R17-R16",
+          "cached": 0.4231152457494818
+        },
+        "11_Zlote_Jajko!R17": {
+          "formula_or_input": "=(R7*$B$8-SQRT((R7*$B$8)^2-4*R7*R6))/(2*R7*R6)",
+          "cached": 0.21615718728498606
+        },
+        "11_Zlote_Jajko!R7": {
+          "formula_or_input": "=COS($B$7)",
+          "cached": 0.6184725933981152
+        },
+        "11_Zlote_Jajko!B7": {
+          "formula_or_input": "=RADIANS(B6)",
+          "cached": 0.9039988581370335
+        },
+        "11_Zlote_Jajko!B8": {
+          "formula_or_input": 7.65,
+          "cached": 7.65
+        },
+        "11_Zlote_Jajko!R6": {
+          "formula_or_input": "=SIN($B$7)",
+          "cached": 0.7858063700527056
+        },
+        "11_Zlote_Jajko!R16": {
+          "formula_or_input": "=(R7*$B$8-SQRT((R7*$B$8)^2+4*R7*R6))/(2*R7*R6)",
+          "cached": -0.20695805846449575
+        },
+        "11_Zlote_Jajko!R21": {
+          "formula_or_input": "=2*SQRT(1/($B$8-$R$27*$R$6)^2-$R$27^2*$R$7^2)",
+          "cached": 0.2614996030314438
+        },
+        "11_Zlote_Jajko!R27": {
+          "formula_or_input": 0.00459521093768915,
+          "cached": 0.00459521093768915
+        },
+        "04_Konsensus!M7": {
+          "formula_or_input": "=100/(1+(J7/'00_Start'!$B$13)^2)/(1+0.01*MAX('01_Modele'!P7-7,0))",
+          "cached": 100
+        },
+        "04_Konsensus!N7": {
+          "formula_or_input": "=IFERROR(100*COUNTIFS('05_Skan_kata'!$A$6:$A$246,\">=\"&B7-'00_Start'!$B$9,'05_Skan_kata'!$A$6:$A$246,\"<=\"&B7+'00_Start'!$B$9,'05_Skan_kata'!$S$6:$S$246,12)/COUNTIFS('05_Skan_kata'!$A$6:$A$246,\">=\"&B7-'00_Start'!$B$9,'05_Skan_kata'!$A$6:$A$246,\"<=\"&B7+'00_Start'!$B$9),0)",
+          "cached": 65
+        },
+        "04_Konsensus!O7": {
+          "formula_or_input": "=K7*'00_Start'!$E$6+L7*'00_Start'!$E$7+M7*'00_Start'!$E$8+N7*'00_Start'!$E$9",
+          "cached": 83.69886116039899
+        },
+        "00_Start!B7": {
+          "formula_or_input": 0.001,
+          "cached": 0.001
+        },
+        "00_Start!B8": {
+          "formula_or_input": 51.844,
+          "cached": 51.844
+        },
+        "00_Start!B9": {
+          "formula_or_input": 0.02,
+          "cached": 0.02
+        },
+        "00_Start!B10": {
+          "formula_or_input": 51.78,
+          "cached": 51.78
+        },
+        "00_Start!B11": {
+          "formula_or_input": 51.9,
+          "cached": 51.9
+        },
+        "00_Start!B12": {
+          "formula_or_input": 0.0005,
+          "cached": 0.0005
+        },
+        "00_Start!B13": {
+          "formula_or_input": 0.0001,
+          "cached": 0.0001
+        },
+        "00_Start!E6": {
+          "formula_or_input": 0.35,
+          "cached": 0.35
+        },
+        "00_Start!E7": {
+          "formula_or_input": 0.25,
+          "cached": 0.25
+        },
+        "00_Start!E8": {
+          "formula_or_input": 0.25,
+          "cached": 0.25
+        },
+        "00_Start!E9": {
+          "formula_or_input": 0.15,
+          "cached": 0.15
+        }
+      }
+    }
+  ],
+  "engine_comparison": {
+    "max_value_delta": "1.263050745949806581356169444827164986719084364825E-11",
+    "output": {
+      "models": [
+        {
+          "model": {
+            "id": "elevenSeven",
+            "name": "11 : 7",
+            "short": "11:7",
+            "basis": "B : H = 11 : 7  (440 : 280)",
+            "notes": "Najprostszy dokładny ułamek. Kąt 51,8428°. Seked 5½ dłoni.",
+            "kind": "ratio",
+            "bh": 1.5714285714285714
+          },
+          "geo": {
+            "B": 1,
+            "H": 0.6363636363636364,
+            "A": 0.5,
+            "D": 1.4142135623730951,
+            "S": 0.8092951733984024,
+            "E": 0.951293160748016,
+            "bh": 1.5714285714285714,
+            "angleDeg": 51.84277341263095,
+            "lateralOverB2": 1.6185903467968048,
+            "totalOverB2": 2.618590346796805,
+            "volumeOverB3": 0.21212121212121213,
+            "sekedPalms": 5.5
+          },
+          "results": [
+            {
+              "id": "pi",
+              "symbol": "π",
+              "name": "Pi",
+              "family": "π",
+              "reference": 3.141592653589793,
+              "weight": 1,
+              "formula": "2B / H",
+              "formulaPl": "obwód podstawy / wysokość",
+              "role": "Obwód podstawy do wysokości",
+              "value": 3.142857142857143,
+              "error": 0.0004024994347707008,
+              "within": true
+            },
+            {
+              "id": "gamma",
+              "symbol": "γ",
+              "name": "Euler–Mascheroni",
+              "family": "γ–√3–√6",
+              "reference": 0.5772156649015329,
+              "weight": 0.3333333333333333,
+              "formula": "2B / (H + 2D)",
+              "formulaPl": "kombinacja wysokości i przekątnej",
+              "role": "Rodzina γ",
+              "value": 0.5772354343727726,
+              "error": 3.424971365440888e-05,
+              "within": true
+            },
+            {
+              "id": "sqrt3",
+              "symbol": "√3",
+              "name": "Pierwiastek z 3",
+              "family": "γ–√3–√6",
+              "reference": 1.7320508075688772,
+              "weight": 0.3333333333333333,
+              "formula": "(H + 2D) / (2B)",
+              "formulaPl": "odwrotność relacji γ",
+              "role": "Rodzina γ",
+              "value": 1.7323953805549133,
+              "error": 0.00019893930624340024,
+              "within": true
+            },
+            {
+              "id": "sqrt6",
+              "symbol": "√6",
+              "name": "Pierwiastek z 6",
+              "family": "γ–√3–√6",
+              "reference": 2.449489742783178,
+              "weight": 0.3333333333333333,
+              "formula": "(H + 2D) / D",
+              "formulaPl": "związane z √3 i √2",
+              "role": "Rodzina γ",
+              "value": 2.4499770425732574,
+              "error": 0.00019893930624337723,
+              "within": true
+            },
+            {
+              "id": "sqrt2",
+              "symbol": "√2",
+              "name": "Pierwiastek z 2",
+              "family": "kwadrat",
+              "reference": 1.4142135623730951,
+              "weight": 0,
+              "formula": "D / B",
+              "formulaPl": "przekątna kwadratowej podstawy",
+              "role": "Stała strukturalna — niezależna od kąta",
+              "value": 1.4142135623730951,
+              "error": 0,
+              "within": true
+            },
+            {
+              "id": "sqrt5",
+              "symbol": "√5",
+              "name": "Pierwiastek z 5",
+              "family": "φ",
+              "reference": 2.23606797749979,
+              "weight": 0.3333333333333333,
+              "formula": "(S + B) / S",
+              "formulaPl": "pochodna rodziny φ",
+              "role": "Rodzina złotego podziału",
+              "value": 2.2356431038638074,
+              "error": 0.00019000926638084088,
+              "within": true
+            },
+            {
+              "id": "tribonacci",
+              "symbol": "T",
+              "name": "Tribonacci",
+              "family": "Tribonacci",
+              "reference": 1.8392867552141612,
+              "weight": 1,
+              "formula": "(A + 2D) / (S + B)",
+              "formulaPl": "kombinacja czterech długości",
+              "role": "Niezależny cel numeryczny",
+              "value": 1.8396263769909913,
+              "error": 0.00018464862853349252,
+              "within": true
+            },
+            {
+              "id": "brun",
+              "symbol": "B₂",
+              "name": "Stała Bruna",
+              "family": "Brun",
+              "reference": 1.902160583104,
+              "weight": 1,
+              "formula": "E / A",
+              "formulaPl": "krawędź boczna / półbok",
+              "role": "Niezależny cel numeryczny",
+              "value": 1.902586321496032,
+              "error": 0.0002238183231287067,
+              "within": true
+            },
+            {
+              "id": "invPhi",
+              "symbol": "1/φ",
+              "name": "Odwrotność φ",
+              "family": "φ",
+              "reference": 0.6180339887498948,
+              "weight": 0.3333333333333333,
+              "formula": "S / (S + A)",
+              "formulaPl": "pochodna S/A",
+              "role": "Rodzina złotego podziału",
+              "value": 0.6181151430489111,
+              "error": 0.00013131041414160934,
+              "within": true
+            },
+            {
+              "id": "phi",
+              "symbol": "φ",
+              "name": "Złoty podział",
+              "family": "φ",
+              "reference": 1.618033988749895,
+              "weight": 0.3333333333333333,
+              "formula": "S / A",
+              "formulaPl": "apotema / półbok",
+              "role": "Najnaturalniejsza relacja φ",
+              "value": 1.6185903467968048,
+              "error": 0.0003438481829048262,
+              "within": true
+            },
+            {
+              "id": "e",
+              "symbol": "e",
+              "name": "Liczba Eulera",
+              "family": "e",
+              "reference": 2.718281828459045,
+              "weight": 0.5,
+              "formula": "2θ / (90° − θ)",
+              "formulaPl": "wzór kątowy (stopnie)",
+              "role": "Zależy od miary kąta w stopniach",
+              "value": 2.7173239802387594,
+              "error": 0.00035237266800574994,
+              "within": true
+            },
+            {
+              "id": "eMinus1",
+              "symbol": "e − 1",
+              "name": "e minus jeden",
+              "family": "e",
+              "reference": 1.718281828459045,
+              "weight": 0.5,
+              "formula": "e_model − 1",
+              "formulaPl": "pochodna e",
+              "role": "Nie jest niezależnym odkryciem",
+              "value": 1.7173239802387594,
+              "error": 0.0005574453529224948,
+              "within": true
+            },
+            {
+              "id": "eggLW",
+              "symbol": "L/W",
+              "name": "Golden Egg L/W",
+              "family": "φ-egg",
+              "reference": 1.618033988749895,
+              "weight": 1,
+              "formula": "L/W (z=1/r, Z₀=7.65)",
+              "formulaPl": "L/W przekroju z=1/r przy Z₀=7,65",
+              "role": "Stosunek długości do szerokości jaja Harthun–Rennert; φ przy kącie apotemy 51,795319256°",
+              "value": 1.619742960852462,
+              "error": 0.0010562028452118714,
+              "within": false
+            }
+          ],
+          "summary": {
+            "mean": 0.0002980218032416522,
+            "independent": 0.0003839776626616736,
+            "rms": 0.00039696697002166847,
+            "maximum": 0.0010562028452118714,
+            "matches": 12
+          },
+          "consensus": {
+            "numerical": 61.60223373383265,
+            "measurement": 93.86706315473106,
+            "fraction": 100.00000000000001,
+            "robustness": 8.75,
+            "combined": 71.3400475955242,
+            "deltaObs": 0.0012265873690537887,
+            "fractionErr": 0,
+            "bestPQ": {
+              "p": 11,
+              "q": 7,
+              "error": 0
+            },
+            "interpretation": "Najprostszy dokładny ułamek. Kąt 51,8428°. Seked 5½ dłoni."
+          }
+        },
+        {
+          "model": {
+            "id": "goldenEgg",
+            "name": "Golden Egg φ",
+            "short": "Egg",
+            "basis": "Harthun–Rennert z=1/r · Z₀=7.65 · L/W=φ",
+            "notes": "Stożek hiperboliczny z=1/r. Z₀=7.65 i L/W=φ dają 51,795319256°. Silnik laboratorium: 10 z 13 relacji w 0,1%, średni błąd ≈ 0,090%, MAX ≈ 0,397% (~0,4%). Trop geometryczny, nie zamiennik konstrukcji 11:7.",
+            "kind": "angle",
+            "angleDeg": 51.795319256
+          },
+          "geo": {
+            "B": 1,
+            "H": 0.6352798640098871,
+            "A": 0.5,
+            "D": 1.4142135623730951,
+            "S": 0.8084432606042435,
+            "E": 0.9505685170551467,
+            "bh": 1.5741093912342807,
+            "angleDeg": 51.795319256000006,
+            "lateralOverB2": 1.616886521208487,
+            "totalOverB2": 2.616886521208487,
+            "volumeOverB3": 0.21175995466996236,
+            "sekedPalms": 5.509382869319983
+          },
+          "results": [
+            {
+              "id": "pi",
+              "symbol": "π",
+              "name": "Pi",
+              "family": "π",
+              "reference": 3.141592653589793,
+              "weight": 1,
+              "formula": "2B / H",
+              "formulaPl": "obwód podstawy / wysokość",
+              "role": "Obwód podstawy do wysokości",
+              "value": 3.1482187824685615,
+              "error": 0.0021091623292398805,
+              "within": false
+            },
+            {
+              "id": "gamma",
+              "symbol": "γ",
+              "name": "Euler–Mascheroni",
+              "family": "γ–√3–√6",
+              "reference": 0.5772156649015329,
+              "weight": 0.3333333333333333,
+              "formula": "2B / (H + 2D)",
+              "formulaPl": "kombinacja wysokości i przekątnej",
+              "role": "Rodzina γ",
+              "value": 0.5774160477466546,
+              "error": 0.00034715420475616695,
+              "within": true
+            },
+            {
+              "id": "sqrt3",
+              "symbol": "√3",
+              "name": "Pierwiastek z 3",
+              "family": "γ–√3–√6",
+              "reference": 1.7320508075688772,
+              "weight": 0.3333333333333333,
+              "formula": "(H + 2D) / (2B)",
+              "formulaPl": "odwrotność relacji γ",
+              "role": "Rodzina γ",
+              "value": 1.7318534943780386,
+              "error": 0.00011391882384532939,
+              "within": true
+            },
+            {
+              "id": "sqrt6",
+              "symbol": "√6",
+              "name": "Pierwiastek z 6",
+              "family": "γ–√3–√6",
+              "reference": 2.449489742783178,
+              "weight": 0.3333333333333333,
+              "formula": "(H + 2D) / D",
+              "formulaPl": "związane z √3 i √2",
+              "role": "Rodzina γ",
+              "value": 2.449210699792659,
+              "error": 0.00011391882384533133,
+              "within": true
+            },
+            {
+              "id": "sqrt2",
+              "symbol": "√2",
+              "name": "Pierwiastek z 2",
+              "family": "kwadrat",
+              "reference": 1.4142135623730951,
+              "weight": 0,
+              "formula": "D / B",
+              "formulaPl": "przekątna kwadratowej podstawy",
+              "role": "Stała strukturalna — niezależna od kąta",
+              "value": 1.4142135623730951,
+              "error": 0,
+              "within": true
+            },
+            {
+              "id": "sqrt5",
+              "symbol": "√5",
+              "name": "Pierwiastek z 5",
+              "family": "φ",
+              "reference": 2.23606797749979,
+              "weight": 0.3333333333333333,
+              "formula": "(S + B) / S",
+              "formulaPl": "pochodna rodziny φ",
+              "role": "Rodzina złotego podziału",
+              "value": 2.236945186793423,
+              "error": 0.0003922999222116405,
+              "within": true
+            },
+            {
+              "id": "tribonacci",
+              "symbol": "T",
+              "name": "Tribonacci",
+              "family": "Tribonacci",
+              "reference": 1.8392867552141612,
+              "weight": 1,
+              "formula": "(A + 2D) / (S + B)",
+              "formulaPl": "kombinacja czterech długości",
+              "role": "Niezależny cel numeryczny",
+              "value": 1.8404929793783436,
+              "error": 0.0006558108249096366,
+              "within": true
+            },
+            {
+              "id": "brun",
+              "symbol": "B₂",
+              "name": "Stała Bruna",
+              "family": "Brun",
+              "reference": 1.902160583104,
+              "weight": 1,
+              "formula": "E / A",
+              "formulaPl": "krawędź boczna / półbok",
+              "role": "Niezależny cel numeryczny",
+              "value": 1.9011370341102933,
+              "error": 0.0005380980989714637,
+              "within": true
+            },
+            {
+              "id": "invPhi",
+              "symbol": "1/φ",
+              "name": "Odwrotność φ",
+              "family": "φ",
+              "reference": 0.6180339887498948,
+              "weight": 0.3333333333333333,
+              "formula": "S / (S + A)",
+              "formulaPl": "pochodna S/A",
+              "role": "Rodzina złotego podziału",
+              "value": 0.6178665020834772,
+              "error": 0.0002709991189261535,
+              "within": true
+            },
+            {
+              "id": "phi",
+              "symbol": "φ",
+              "name": "Złoty podział",
+              "family": "φ",
+              "reference": 1.618033988749895,
+              "weight": 0.3333333333333333,
+              "formula": "S / A",
+              "formulaPl": "apotema / półbok",
+              "role": "Najnaturalniejsza relacja φ",
+              "value": 1.616886521208487,
+              "error": 0.0007091739415773105,
+              "within": true
+            },
+            {
+              "id": "e",
+              "symbol": "e",
+              "name": "Liczba Eulera",
+              "family": "e",
+              "reference": 2.718281828459045,
+              "weight": 0.5,
+              "formula": "2θ / (90° − θ)",
+              "formulaPl": "wzór kątowy (stopnie)",
+              "role": "Zależy od miary kąta w stopniach",
+              "value": 2.7114645769751347,
+              "error": 0.0025079266662261573,
+              "within": false
+            },
+            {
+              "id": "eMinus1",
+              "symbol": "e − 1",
+              "name": "e minus jeden",
+              "family": "e",
+              "reference": 1.718281828459045,
+              "weight": 0.5,
+              "formula": "e_model − 1",
+              "formulaPl": "pochodna e",
+              "role": "Nie jest niezależnym odkryciem",
+              "value": 1.7114645769751347,
+              "error": 0.003967481568506225,
+              "within": false
+            },
+            {
+              "id": "eggLW",
+              "symbol": "L/W",
+              "name": "Golden Egg L/W",
+              "family": "φ-egg",
+              "reference": 1.618033988749895,
+              "weight": 1,
+              "formula": "L/W (z=1/r, Z₀=7.65)",
+              "formulaPl": "L/W przekroju z=1/r przy Z₀=7,65",
+              "role": "Stosunek długości do szerokości jaja Harthun–Rennert; φ przy kącie apotemy 51,795319256°",
+              "value": 1.61803398875358,
+              "error": 2.2774875490612643e-12,
+              "within": true
+            }
+          ],
+          "summary": {
+            "mean": 0.000901995717330214,
+            "independent": 0.0010271329025455197,
+            "rms": 0.0014695773270529608,
+            "maximum": 0.003967481568506225,
+            "matches": 10
+          },
+          "consensus": {
+            "numerical": 0,
+            "measurement": 0,
+            "fraction": 0.3424241311343062,
+            "robustness": 0,
+            "combined": 0.08560603278357655,
+            "deltaObs": 0.048680743999995,
+            "fractionErr": 0.0017059762399968487,
+            "bestPQ": {
+              "p": 11,
+              "q": 7,
+              "error": 0.0017030708416060374
+            },
+            "interpretation": "Stożek hiperboliczny z=1/r. Z₀=7.65 i L/W=φ dają 51,795319256°. Silnik laboratorium: 10 z 13 relacji w 0,1%, średni błąd ≈ 0,090%, MAX ≈ 0,397% (~0,4%). Trop geometryczny, nie zamiennik konstrukcji 11:7."
+          }
+        }
+      ],
+      "scans": [
+        {
+          "step": 0.0005,
+          "count": 241,
+          "minima": {
+            "mean": 51.850500000000004,
+            "independent": 51.850500000000004,
+            "rmsAngle": 51.850500000000004,
+            "minimax": 51.8375
+          },
+          "all13": [
+            51.837,
+            51.8375,
+            51.838,
+            51.8385,
+            51.839,
+            51.8395,
+            51.84
+          ]
+        },
+        {
+          "step": 0.001,
+          "count": 121,
+          "minima": {
+            "mean": 51.85,
+            "independent": 51.85,
+            "rmsAngle": 51.85,
+            "minimax": 51.838
+          },
+          "all13": [
+            51.837,
+            51.838,
+            51.839,
+            51.84
+          ]
+        }
+      ]
+    }
+  }
+}

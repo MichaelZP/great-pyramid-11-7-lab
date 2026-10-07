@@ -33,7 +33,7 @@ Complementary pyramid angle = 180° − 51.842773°
 Reference scattering angle  ≈ 128.17°
 ```
 
-In correspondence dated 1 April 2017, rainbow-optics specialist Philip Laven provided a wavelength-dependent secondary-rainbow calculation that made a quantitatively stated comparison possible (green near 525 nm, `n ≈ 1.33659`).
+The project records correspondence dated 1 April 2017 with Philip Laven as the provenance of the adopted green reference (near 525 nm, `n ≈ 1.33659`). That correspondence is not included in this repository and was not independently verified in the release review. The linked papers are general optics references; they do not establish builders’ intent or authenticate this correspondence.
 
 ## What this does not claim
 

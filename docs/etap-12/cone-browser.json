@@ -1,0 +1,64 @@
+{
+  "cases": [
+    {
+      "variant": "A",
+      "preset": "pyramid",
+      "placement": "Końcowa skala względem V: 8.0%. Q(t) = (0.000; 0.000; 7.000); Q′(t) = (0.000; 0.000; 7.000); σ(t) = 1.322119; k(t) = σ²k = 1.747999. L(t) = L′(t) = 0.560, W(t) = W′(t) = 0.346. Kąt do osi = 38.157227°. Obrót układu = 0°. Odbicie aktualnej klatki: Z ↦ 14 − Z.",
+      "dimensions": "L = 0.42356248 u; W = 0.26149981 u. Kąty: θ = 51.82729237°, β = 51.84277341°, α = 51.84277341°. „TAK” oznacza zgodność w granicach tolerancji modelu.",
+      "error": ""
+    },
+    {
+      "variant": "A",
+      "preset": "golden",
+      "placement": "Końcowa skala względem V: 8.0%. Q(t) = (0.000; 0.000; 7.000); Q′(t) = (0.000; 0.000; 7.000); σ(t) = 1.323516; k(t) = σ²k = 1.751696. L(t) = L′(t) = 0.560, W(t) = W′(t) = 0.346. Kąt do osi = 38.204681°. Obrót układu = 0°. Odbicie aktualnej klatki: Z ↦ 14 − Z.",
+      "dimensions": "L = 0.42311525 u; W = 0.26149960 u. Kąty: θ = 51.82729237°, β = 51.84277341°, α = 51.79531926°. „TAK” oznacza zgodność w granicach tolerancji modelu.",
+      "error": ""
+    },
+    {
+      "variant": "A",
+      "preset": "lange",
+      "placement": "Końcowa skala względem V: 8.0%. Q(t) = (0.000; 0.000; 7.000); Q′(t) = (0.000; 0.000; 7.000); σ(t) = 1.322201; k(t) = σ²k = 1.748215. L(t) = L′(t) = 0.560, W(t) = W′(t) = 0.346. Kąt do osi = 38.160000°. Obrót układu = 0°. Odbicie aktualnej klatki: Z ↦ 14 − Z.",
+      "dimensions": "L = 0.42353631 u; W = 0.26149980 u. Kąty: θ = 51.82729237°, β = 51.84277341°, α = 51.84000000°. „TAK” oznacza zgodność w granicach tolerancji modelu.",
+      "error": ""
+    },
+    {
+      "variant": "A",
+      "preset": "huntley",
+      "placement": "Końcowa skala względem V: 8.0%. Q(t) = (0.000; 0.000; 7.000); Q′(t) = (0.000; 0.000; 7.000); σ(t) = 1.322575; k(t) = σ²k = 1.749205. L(t) = L′(t) = 0.560, W(t) = W′(t) = 0.346. Kąt do osi = 38.172708°. Obrót układu = 0°. Odbicie aktualnej klatki: Z ↦ 14 − Z.",
+      "dimensions": "L = 0.42341644 u; W = 0.26149975 u. Kąty: θ = 51.82729237°, β = 51.84277341°, α = 51.82729237°. „TAK” oznacza zgodność w granicach tolerancji modelu.",
+      "error": ""
+    },
+    {
+      "variant": "B",
+      "preset": "pyramid",
+      "placement": "Końcowa skala względem V: 8.0%. Q(t) = (0.000; 0.000; 6.720); Q′(t) = (0.000; 0.000; 7.280); σ(t) = 0.661059; k(t) = σ²k = 0.437000. L(t) = L′(t) = 0.280, W(t) = W′(t) = 0.173. Kąt do osi = 38.157227°. Obrót układu = 0°. Odbicie aktualnej klatki: Z ↦ 14 − Z.",
+      "dimensions": "L = 0.42356248 u; W = 0.26149981 u. Kąty: θ = 51.82729237°, β = 51.84277341°, α = 51.84277341°. „TAK” oznacza zgodność w granicach tolerancji modelu.",
+      "error": ""
+    },
+    {
+      "variant": "B",
+      "preset": "golden",
+      "placement": "Końcowa skala względem V: 8.0%. Q(t) = (0.000; 0.000; 6.720); Q′(t) = (0.000; 0.000; 7.280); σ(t) = 0.661758; k(t) = σ²k = 0.437924. L(t) = L′(t) = 0.280, W(t) = W′(t) = 0.173. Kąt do osi = 38.204681°. Obrót układu = 0°. Odbicie aktualnej klatki: Z ↦ 14 − Z.",
+      "dimensions": "L = 0.42311525 u; W = 0.26149960 u. Kąty: θ = 51.82729237°, β = 51.84277341°, α = 51.79531926°. „TAK” oznacza zgodność w granicach tolerancji modelu.",
+      "error": ""
+    },
+    {
+      "variant": "B",
+      "preset": "lange",
+      "placement": "Końcowa skala względem V: 8.0%. Q(t) = (0.000; 0.000; 6.720); Q′(t) = (0.000; 0.000; 7.280); σ(t) = 0.661100; k(t) = σ²k = 0.437054. L(t) = L′(t) = 0.280, W(t) = W′(t) = 0.173. Kąt do osi = 38.160000°. Obrót układu = 0°. Odbicie aktualnej klatki: Z ↦ 14 − Z.",
+      "dimensions": "L = 0.42353631 u; W = 0.26149980 u. Kąty: θ = 51.82729237°, β = 51.84277341°, α = 51.84000000°. „TAK” oznacza zgodność w granicach tolerancji modelu.",
+      "error": ""
+    },
+    {
+      "variant": "B",
+      "preset": "huntley",
+      "placement": "Końcowa skala względem V: 8.0%. Q(t) = (0.000; 0.000; 6.720); Q′(t) = (0.000; 0.000; 7.280); σ(t) = 0.661287; k(t) = σ²k = 0.437301. L(t) = L′(t) = 0.280, W(t) = W′(t) = 0.173. Kąt do osi = 38.172708°. Obrót układu = 0°. Odbicie aktualnej klatki: Z ↦ 14 − Z.",
+      "dimensions": "L = 0.42341644 u; W = 0.26149975 u. Kąty: θ = 51.82729237°, β = 51.84277341°, α = 51.82729237°. „TAK” oznacza zgodność w granicach tolerancji modelu.",
+      "error": ""
+    }
+  ],
+  "start": "Końcowa skala względem V: 8.0%. Q(t) = (16.775; 0.000; 28.350); Q′(t) = (16.775; 0.000; -14.350); σ(t) = 4.733987; k(t) = σ²k = 22.410632. L(t) = L′(t) = 2.005, W(t) = W′(t) = 1.238. Kąt do osi = 38.157227°. Obrót układu = 0°. Odbicie aktualnej klatki: Z ↦ 14 − Z.",
+  "sameStart": "Końcowa skala względem V: 16.0%. Q(t) = (16.775; 0.000; 28.350); Q′(t) = (16.775; 0.000; -14.350); σ(t) = 4.733987; k(t) = σ²k = 22.410632. L(t) = L′(t) = 2.005, W(t) = W′(t) = 1.238. Kąt do osi = 38.157227°. Obrót układu = 0°. Odbicie aktualnej klatki: Z ↦ 14 − Z.",
+  "invalid": "Brak odrębnego zamkniętego owalu: wymagane 0 < α < 90° oraz z₀² > 4k tan α (k = 1).",
+  "recovered": ""
+}

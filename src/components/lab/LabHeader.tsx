@@ -5,7 +5,10 @@ import { useActiveSnapshot } from "@/hooks/use-lab";
 import { useI18n } from "@/hooks/use-i18n";
 import { CONSTANTS } from "@/lib/pyramid/engine";
 import { cn } from "@/lib/utils";
+import { relationSceneDescription } from "@/lib/relation-copy";
+import { RELATION_PRESENTATIONS } from "@/lib/pyramid/relations";
 import { Button } from "@/components/ui/button";
+import { useTutorialStore } from "@/store/tutorial-store";
 
 export function LabHeader() {
   const snap = useActiveSnapshot();
@@ -17,6 +20,7 @@ export function LabHeader() {
   const sceneFullscreen = useLabStore((s) => s.sceneFullscreen);
   const crossEye = useLabStore((s) => s.crossEye);
   const stereoSwap = useLabStore((s) => s.stereoSwap);
+  const relationId = useLabStore((s) => s.relationId);
   const toggleRainbow = useLabStore((s) => s.toggleRainbow);
   const toggleHologram = useLabStore((s) => s.toggleHologram);
   const toggleGuides = useLabStore((s) => s.toggleGuides);
@@ -28,21 +32,24 @@ export function LabHeader() {
   const { t, locale, toggleLocale, fmt, fmtDeg, modelName } = useI18n();
 
   return (
-    <header className="pointer-events-none absolute inset-x-0 top-0 z-20 flex items-start justify-between gap-3 p-3 sm:p-4">
+    <header className="pointer-events-none absolute inset-x-0 top-0 z-20 flex flex-col items-stretch gap-2 px-2 pt-[calc(env(safe-area-inset-top)+0.5rem)] lg:flex-row lg:items-start lg:justify-between lg:gap-3 lg:p-4">
       {sceneFullscreen ? (
         <div />
       ) : (
-      <div className="panel pointer-events-auto max-w-[min(100%,28rem)] rounded-lg px-4 py-3">
+      <div className="panel pointer-events-auto shrink-0 max-w-[min(100%,28rem)] rounded-lg px-3 py-2 lg:px-4 lg:py-3">
         <p className="text-xs font-medium tracking-[0.22em] text-muted uppercase">
           {t("siteKicker")}
         </p>
-        <h1 className="font-display text-2xl leading-none text-fg sm:text-3xl">
+        <h1 className="font-display text-xl leading-none text-fg lg:text-3xl">
           {t("siteTitle")}
         </h1>
-        <p className="mt-1.5 max-w-sm text-xs leading-relaxed text-muted sm:text-sm">
+        <a href="https://prylski.dev/" target="_blank" rel="noopener noreferrer" className="mt-1 block text-xs text-muted underline underline-offset-2">
+          Michał Przybylski — prylski.dev
+        </a>
+        <p className="sr-only">
           {t("siteLead")}
         </p>
-        <p className="mt-2 font-mono text-xs tabular text-fg">
+        <p className="mt-1 font-mono text-[0.65rem] tabular text-fg lg:mt-2 lg:text-xs">
           {modelName(snap.model.id)}
           <span className="text-muted"> · </span>
           {fmtDeg(snap.geo.angleDeg, 4)}
@@ -51,19 +58,22 @@ export function LabHeader() {
           <span className="text-muted"> · </span>
           {snap.summary.matches}/{CONSTANTS.length}
         </p>
-        {snap.model.id === "goldenEgg" ? (
-          <p className="mt-1.5 max-w-sm font-mono text-[0.65rem] leading-relaxed text-muted">
+        {relationId && RELATION_PRESENTATIONS[relationId].renderer ? (
+          <p className="sr-only">{relationSceneDescription(relationId, locale)}</p>
+        ) : snap.model.id === "goldenEgg" ? (
+          <p className="sr-only">
             {t("goldenEggCaption")}
           </p>
         ) : showRainbow ? (
-          <p className="mt-1.5 max-w-sm font-mono text-[0.65rem] leading-relaxed text-muted">
+          <p className="sr-only">
             {t("rainbowCaption")}
           </p>
         ) : null}
       </div>
       )}
 
-      <div className="pointer-events-auto flex flex-wrap justify-end gap-1">
+      <div className="pointer-events-auto flex min-w-0 w-full gap-1 overflow-x-auto pb-1 lg:w-auto lg:flex-wrap lg:justify-end lg:overflow-visible">
+        <Button variant="outline" size="sm" className="min-h-11 shrink-0" onClick={() => useTutorialStore.getState().start()}>Tutorial</Button>
         <Toggle
           pressed={showHologram}
           onClick={toggleHologram}
@@ -158,10 +168,11 @@ function Toggle({
       size="sm"
       onClick={onClick}
       aria-pressed={pressed}
-      className={cn("min-h-11 gap-1.5 px-3", !pressed && "bg-bg-elevated/80")}
+      aria-label={label}
+      className={cn("min-h-11 shrink-0 gap-1.5 px-3", !pressed && "bg-bg-elevated/80")}
     >
       {icon}
-      <span className="hidden sm:inline">{label}</span>
+      <span className="hidden lg:inline">{label}</span>
     </Button>
   );
 }

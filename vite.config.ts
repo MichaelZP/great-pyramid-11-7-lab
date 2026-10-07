@@ -3,8 +3,8 @@ import { defineConfig } from "vitest/config";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 
-export default defineConfig({
-  base: process.env.GITHUB_PAGES === "true" ? "/great-pyramid-11-7-lab/" : "/",
+export default defineConfig(({ mode }) => ({
+  base: mode === "android" ? "./" : process.env.GITHUB_PAGES === "true" ? "/great-pyramid-11-7-lab/" : "/",
   plugins: [tailwindcss(), react()],
   resolve: {
     alias: {
@@ -24,4 +24,4 @@ export default defineConfig({
     environment: "node",
     include: ["src/**/*.test.ts"],
   },
-});
+}));

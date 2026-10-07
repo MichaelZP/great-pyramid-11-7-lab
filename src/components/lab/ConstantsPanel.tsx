@@ -2,13 +2,23 @@ import { CONSTANTS, errorTone, RELATIVE_TOLERANCE } from "@/lib/pyramid/engine";
 import { useActiveSnapshot } from "@/hooks/use-lab";
 import { useI18n } from "@/hooks/use-i18n";
 import { cn } from "@/lib/utils";
+import { RelationPanel } from "./RelationPanel";
+import { relationCopy } from "@/lib/relation-copy";
+import { RELATION_PRESENTATIONS } from "@/lib/pyramid/relations";
+import { useLabStore } from "@/store/lab-store";
+import { TutorialPanel } from "./TutorialPanel";
 
 export function ConstantsPanel() {
+  const relationId = useLabStore((s) => s.relationId);
   const snap = useActiveSnapshot();
   const { t, fmtPct, constName, locale } = useI18n();
 
   return (
     <div className="flex flex-col gap-3">
+      <TutorialPanel />
+      <RelationPanel />
+      <details open={!relationId}>
+      <summary className="min-h-11 cursor-pointer py-3 text-sm text-muted">{relationCopy(locale).table}</summary>
       <header>
         <p className="text-xs font-medium tracking-[0.18em] text-muted uppercase">
           {t("twelveRelations")}
@@ -62,7 +72,7 @@ export function ConstantsPanel() {
                     </div>
                   </td>
                   <td className="px-2 py-1.5 font-mono text-[0.7rem] text-muted">
-                    {locale === "pl" ? row.formulaPl : row.formula}
+                    {RELATION_PRESENTATIONS[row.id].formula}
                   </td>
                   <td className="rounded-r-sm px-2 py-1.5 text-right">
                     <span
@@ -99,6 +109,7 @@ export function ConstantsPanel() {
           </tbody>
         </table>
       </div>
+      </details>
     </div>
   );
 }

@@ -3,14 +3,20 @@ import { SceneMount } from "@/components/scene/SceneMount";
 import { useLabStore, type LabTab } from "@/store/lab-store";
 import { MODELS } from "@/lib/pyramid/engine";
 import { useI18n } from "@/hooks/use-i18n";
+import { t as translate } from "@/lib/i18n";
 import { LabHeader } from "./LabHeader";
 import { ModelRail } from "./ModelRail";
 import { ConstantsPanel } from "./ConstantsPanel";
 import { ScanPanel } from "./ScanPanel";
 import { VerdictPanel } from "./VerdictPanel";
 import { cn } from "@/lib/utils";
+import { useRelationLesson } from "@/hooks/use-relation-lesson";
+import { useTutorial } from "@/hooks/use-tutorial";
+import { useTutorialStore } from "@/store/tutorial-store";
 
 export function AppShell() {
+  useRelationLesson();
+  useTutorial();
   const mobileTab = useLabStore((s) => s.mobileTab);
   const setMobileTab = useLabStore((s) => s.setMobileTab);
   const setModel = useLabStore((s) => s.setModel);
@@ -59,18 +65,21 @@ export function AppShell() {
           }
         ).webkitRequestFullscreen;
       try {
-        void req?.call(root);
+        if (!req) { setSceneFullscreen(false); return; }
+        void Promise.resolve(req.call(root)).catch(() => setSceneFullscreen(false));
       } catch {
-        /* iframe / permission */
+        setSceneFullscreen(false);
       }
     };
     const exit = () => {
       const doc = document as Document & {
         webkitExitFullscreen?: () => Promise<void> | void;
+        webkitFullscreenElement?: Element;
       };
-      if (document.fullscreenElement || doc.webkitExitFullscreen) {
+      if (document.fullscreenElement || doc.webkitFullscreenElement) {
         try {
-          void (document.exitFullscreen?.() ?? doc.webkitExitFullscreen?.());
+          const exitFullscreen = doc.exitFullscreen ?? doc.webkitExitFullscreen;
+          void Promise.resolve(exitFullscreen?.call(doc)).catch(() => { /* rejected by host */ });
         } catch {
           /* ignore */
         }
@@ -99,8 +108,10 @@ export function AppShell() {
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.target instanceof HTMLInputElement) return;
+      if (e.target instanceof HTMLElement && e.target.closest("input, select, textarea, [contenteditable=true]")) return;
       if (e.key === "Escape") {
+        useTutorialStore.getState().close();
+        useLabStore.getState().selectRelation(null);
         setSceneFullscreen(false);
         return;
       }
@@ -119,9 +130,39 @@ export function AppShell() {
     return () => window.removeEventListener("keydown", onKey);
   }, [setModel, setSceneFullscreen]);
 
+  useEffect(() => {
+    let disposed = false;
+    let remove: (() => Promise<void>) | undefined;
+    void Promise.all([import("@capacitor/core"), import("@capacitor/app")]).then(
+      async ([{ Capacitor }, { App }]) => {
+        if (!Capacitor.isNativePlatform() || disposed) return;
+        const listener = await App.addListener("backButton", () => {
+          const state = useLabStore.getState();
+          if (state.sceneFullscreen) {
+            state.setSceneFullscreen(false);
+          } else if (useTutorialStore.getState().open) {
+            useTutorialStore.getState().close();
+          } else if (state.relationId) {
+            state.selectRelation(null);
+          } else if (state.mobileTab !== "modele") {
+            state.setMobileTab("modele");
+          } else if (window.confirm(translate(useLabStore.getState().locale, "confirmExit"))) {
+            void App.exitApp();
+          }
+        });
+        if (disposed) void listener.remove();
+        else remove = () => listener.remove();
+      },
+    );
+    return () => {
+      disposed = true;
+      void remove?.();
+    };
+  }, []);
+
   return (
-    <main ref={mainRef} className="relative h-dvh overflow-hidden bg-bg text-fg">
-      <div className="absolute inset-0">
+    <main ref={mainRef} className="relative h-dvh overflow-clip bg-bg text-fg">
+      <div className={cn("lab-scene absolute inset-x-0 top-36 bottom-[48dvh] lg:inset-0", sceneFullscreen && "inset-0")}>
         <SceneMount />
       </div>
 
@@ -129,7 +170,7 @@ export function AppShell() {
 
       {!sceneFullscreen ? (
         <>
-          <aside className="panel pointer-events-auto absolute top-28 bottom-4 left-4 hidden w-[22.5rem] overflow-y-auto rounded-xl p-4 lg:block">
+          <aside className="panel pointer-events-auto absolute top-36 bottom-4 left-4 hidden w-[22.5rem] overflow-y-auto rounded-xl p-4 lg:block">
             <ModelRail />
           </aside>
 
@@ -146,16 +187,17 @@ export function AppShell() {
             </div>
           </section>
 
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 lg:hidden">
-            <div className="pointer-events-auto max-h-[48dvh] overflow-hidden rounded-t-xl bg-bg-elevated shadow-[var(--shadow-border)]">
-              <nav className="flex border-b border-border">
+          <div className="mobile-panel pointer-events-none absolute inset-x-0 bottom-0 z-20 lg:hidden">
+            <div className="mobile-panel-content pointer-events-auto max-h-[48dvh] overflow-hidden rounded-t-xl bg-bg-elevated pb-[env(safe-area-inset-bottom)] shadow-[var(--shadow-border)]">
+              <nav className="flex overflow-x-auto border-b border-border">
                 {tabs.map((tab) => (
                   <button
                     key={tab.id}
                     type="button"
                     onClick={() => setMobileTab(tab.id)}
+                    aria-pressed={mobileTab === tab.id}
                     className={cn(
-                      "min-h-11 flex-1 px-2 text-sm font-medium",
+                      "min-h-11 min-w-0 flex-1 px-1 text-xs font-medium sm:px-2 sm:text-sm",
                       mobileTab === tab.id
                         ? "bg-bg-subtle text-fg"
                         : "text-muted",
@@ -165,7 +207,7 @@ export function AppShell() {
                   </button>
                 ))}
               </nav>
-              <div className="max-h-[40dvh] overflow-y-auto p-4">
+              <div className="mobile-panel-body max-h-[min(40dvh,calc(48dvh-3rem-env(safe-area-inset-bottom)))] overflow-y-auto p-3 sm:p-4">
                 {mobileTab === "modele" ? <ModelRail /> : null}
                 {mobileTab === "stale" ? <ConstantsPanel /> : null}
                 {mobileTab === "skan" ? (

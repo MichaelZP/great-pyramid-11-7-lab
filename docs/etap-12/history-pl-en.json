@@ -1,0 +1,158 @@
+[
+  {
+    "locale": "en",
+    "id": "pi",
+    "text": "History and sources\nConcept\nIn the third century BCE, Archimedes bounded circumference divided by diameter using polygons.\nName\n‘Pi’ names a Greek letter; the ratio was studied long before this name was adopted.\nSymbol\nJones used π for this ratio in 1706; Euler popularized the notation in 1748.\nE. B. Davies · Archimedes’ calculations of square roots (2011)\n\nResearch on bounds for √3 in Archimedes’ Measurement of a Circle; how he obtained them remains uncertain.\n\nJeff Miller · MacTutor: Symbols for Constants\n\nπ, e, γ and φ: notation and evidence of use; priority for γ is disputed.\n\nW. M. F. Petrie · The Pyramids and Temples of Gizeh (1883; wyd. 2 / ed. 2, 1885; reprint 1990)\n\nSecond-edition scan: survey in ch. II; interpretation of 7:22 and 14:11 in ch. IX, p. 93 (PDF 106). A later author’s theory, not a record of builders’ intent.\n\nNotes are available offline. Opening an external source requires internet.",
+    "hasSources": true
+  },
+  {
+    "locale": "en",
+    "id": "gamma",
+    "text": "History and sources\nConcept\nEuler studied the difference between 1+1/2+…+1/n and ln n in 1734–35; the work appeared in 1740.\nName\nThe name commemorates Euler and Mascheroni’s later calculations in 1790.\nSymbol\nEuler wrote C, Mascheroni A. γ is attested in the nineteenth century; priority for its use is disputed.\nJeff Miller · MacTutor: Symbols for Constants\n\nπ, e, γ and φ: notation and evidence of use; priority for γ is disputed.\n\nNotes are available offline. Opening an external source requires internet.",
+    "hasSources": true
+  },
+  {
+    "locale": "en",
+    "id": "sqrt3",
+    "text": "History and sources\nConcept\nArchimedes used bounds 265/153 < √3 < 1351/780 in Measurement of a Circle; how he obtained them is uncertain.\nName\n‘Square root of 3’ describes the positive number whose square is 3; it is not named after a discoverer.\nSymbol\n√ appears in Rudolff’s Coss (1525), long after Archimedes’ calculations.\nE. B. Davies · Archimedes’ calculations of square roots (2011)\n\nResearch on bounds for √3 in Archimedes’ Measurement of a Circle; how he obtained them remains uncertain.\n\nMacTutor · Christoff Rudolff\n\nCoss (1525): use of √. This dates notation, not the discovery of every square root.\n\nNotes are available offline. Opening an external source requires internet.",
+    "hasSources": true
+  },
+  {
+    "locale": "en",
+    "id": "sqrt6",
+    "text": "History and sources\nConcept\nBook X of Euclid’s Elements studies commensurability of lengths and squares, the context of modern irrational roots.\nName\n‘Square root of 6’ denotes the positive number with square 6. A separate discovery date has not been established.\nSymbol\n√6 combines the radical sign, attested in Rudolff in 1525, with the number 6.\nEuklides / D. Joyce · Elements X.9\n\nCommensurability of lengths and squares: ancient context for modern irrational roots.\n\nMacTutor · Christoff Rudolff\n\nCoss (1525): use of √. This dates notation, not the discovery of every square root.\n\nNotes are available offline. Opening an external source requires internet.",
+    "hasSources": true
+  },
+  {
+    "locale": "en",
+    "id": "sqrt2",
+    "text": "History and sources\nConcept\nOld Babylonian tablet YBC 7289 contains an accurate approximation to a square’s diagonal, today’s √2.\nName\n‘Square root of 2’ is an algebraic description. The tablet does not use this modern name.\nSymbol\nModern √2 uses the radical sign in Rudolff’s tradition (1525); the tablet uses sexagesimal notation.\nD. Melville · YBC 7289, Yale Babylonian Collection\n\nOld Babylonian tablet with an approximation to √2; not evidence about the builders at Giza.\n\nMacTutor · Christoff Rudolff\n\nCoss (1525): use of √. This dates notation, not the discovery of every square root.\n\nNotes are available offline. Opening an external source requires internet.",
+    "hasSources": true
+  },
+  {
+    "locale": "en",
+    "id": "sqrt5",
+    "text": "History and sources\nConcept\nEuclid’s construction II.11 divides a segment in a ratio now expressed using √5 and the golden ratio.\nName\n‘Square root of 5’ describes a number with square 5: modern algebraic language for ancient geometry.\nSymbol\n√5 uses the radical sign attested in Rudolff (1525), rather than Euclid’s notation.\nEuklides / D. Joyce · Elements II.11\n\nA construction dividing a segment; modern algebra relates it to √5 and φ.\n\nMacTutor · Christoff Rudolff\n\nCoss (1525): use of √. This dates notation, not the discovery of every square root.\n\nNotes are available offline. Opening an external source requires internet.",
+    "hasSources": true
+  },
+  {
+    "locale": "en",
+    "id": "tribonacci",
+    "text": "History and sources\nConcept\nThe sequence sums three preceding terms. Feinberg described it in Fibonacci–Tribonacci in 1963.\nName\nThe article’s title documents ‘Tribonacci’, referring to Fibonacci and three summands.\nSymbol\nT is this app’s abbreviation for the constant, not evidence of a universal historical symbol.\nM. Feinberg · Fibonacci–Tribonacci (1963), pp. 71–74\n\nOriginal article documents the name and recurrence summing three preceding terms; not priority for every such recurrence.\n\nNotes are available offline. Opening an external source requires internet.",
+    "hasSources": true
+  },
+  {
+    "locale": "en",
+    "id": "brun",
+    "text": "History and sources\nConcept\nIn 1919 Brun proved convergence of the reciprocal twin-prime sum, e.g. (1/3+1/5)+(1/5+1/7)+….\nName\n‘Brun’s constant’ commemorates Viggo Brun and denotes that sum, rather than an edge length.\nSymbol\nHere B₂ denotes the twin-prime sum. It differs from B, the pyramid’s base side.\nMacTutor · Viggo Brun\n\nThe 1919 convergence theorem for reciprocal twin primes and the constant’s name.\n\nOEIS · A065421\n\nProvenance of the adopted estimate 1.902160583104; not all its digits are established.\n\nNotes are available offline. Opening an external source requires internet.",
+    "hasSources": true
+  },
+  {
+    "locale": "en",
+    "id": "invPhi",
+    "text": "History and sources\nConcept\nIn a 1597 letter to Kepler, Mästlin gave about 0.6180340 for the longer part of a unit segment divided in the golden ratio.\nName\n‘Inverse φ’ describes the same proportion in the opposite direction, not a new discovery.\nSymbol\n1/φ combines division with the later symbol φ; we do not attribute ancient origins to this notation.\nJ. O’Connor, E. Robertson · MacTutor: Golden ratio\n\nMästlin (1597): 0.6180340; ‘golden section’ attested in Ohm (1835), its originator unknown.\n\nJeff Miller · MacTutor: Symbols for Constants\n\nπ, e, γ and φ: notation and evidence of use; priority for γ is disputed.\n\nNotes are available offline. Opening an external source requires internet.",
+    "hasSources": true
+  },
+  {
+    "locale": "en",
+    "id": "phi",
+    "text": "History and sources\nConcept\nEuclid VI, definition 3, describes extreme and mean ratio: whole to larger part as larger to smaller.\nName\n‘Golden section’ is attested in Martin Ohm in 1835; its originator has not been established.\nSymbol\nCook in 1914 credits Mark Barr with proposing φ. This documents notation, not use of the ratio by Phidias.\nEuklides / D. Joyce · Elements VI, Definition 3\n\nDefinition of division in extreme and mean ratio, without the name ‘golden’ or symbol φ.\n\nJ. O’Connor, E. Robertson · MacTutor: Golden ratio\n\nMästlin (1597): 0.6180340; ‘golden section’ attested in Ohm (1835), its originator unknown.\n\nJeff Miller · MacTutor: Symbols for Constants\n\nπ, e, γ and φ: notation and evidence of use; priority for γ is disputed.\n\nNotes are available offline. Opening an external source requires internet.",
+    "hasSources": true
+  },
+  {
+    "locale": "en",
+    "id": "e",
+    "text": "History and sources\nConcept\nStudies of logarithms and compound interest led to e. Bernoulli studied the limit of (1+1/n)ⁿ in 1683.\nName\n‘Euler’s number’ commemorates the mathematician, not evidence that the concept began with him.\nSymbol\nEuler used e in a 1727–28 manuscript and in print in Mechanica (1736). Why he chose the letter is uncertain.\nJ. O’Connor, E. Robertson · MacTutor: The number e\n\nLogarithms and compound interest; Bernoulli studied the limit of (1+1/n)ⁿ in 1683.\n\nJeff Miller · MacTutor: Symbols for Constants\n\nπ, e, γ and φ: notation and evidence of use; priority for γ is disputed.\n\nNotes are available offline. Opening an external source requires internet.",
+    "hasSources": true
+  },
+  {
+    "locale": "en",
+    "id": "eMinus1",
+    "text": "History and sources\nConcept\ne−1 subtracts one from e. Its historical context is the development of logarithms and the exponential function.\nName\n‘e minus one’ describes an operation; no separate historical name or discovery has been established.\nSymbol\ne−1 combines Euler’s symbol with subtraction. It differs from e⁻¹, which means 1/e.\nJ. O’Connor, E. Robertson · MacTutor: The number e\n\nLogarithms and compound interest; Bernoulli studied the limit of (1+1/n)ⁿ in 1683.\n\nJeff Miller · MacTutor: Symbols for Constants\n\nπ, e, γ and φ: notation and evidence of use; priority for γ is disputed.\n\nNotes are available offline. Opening an external source requires internet.",
+    "hasSources": true
+  },
+  {
+    "locale": "en",
+    "id": "eggLW",
+    "text": "History and sources\nConcept\nChristian Lange describes a modern golden-oval proposal: a plane cuts a hyperbola’s surface of revolution, with Z₀=7.65.\nName\n‘Golden Egg’ names the proposal and preset; its first use or ancient origin has not been established.\nSymbol\nL/W means length divided by width. Target φ is an existing constant, not a new L/W constant.\nChristian Lange · The golden angle (June 2002)\n\nAuthor’s source for the modern ‘golden egg’, zr=1 and Z₀=7.65 proposal. It does not establish its physical claims or builders’ intent; a separate audit checks the numbers.\n\nEuklides / D. Joyce · Elements VI, Definition 3\n\nDefinition of division in extreme and mean ratio, without the name ‘golden’ or symbol φ.\n\nNotes are available offline. Opening an external source requires internet.",
+    "hasSources": true
+  },
+  {
+    "locale": "pl",
+    "id": "pi",
+    "text": "Historia i źródła\nPojęcie\nArchimedes w III w. p.n.e. ograniczył stosunek obwodu koła do średnicy za pomocą wielokątów.\nNazwa\n„Pi” jest nazwą greckiej litery; stosunek badano długo przed przyjęciem tej nazwy.\nSymbol\nJones użył π dla tego stosunku w 1706 r.; Euler upowszechnił zapis w 1748 r.\nE. B. Davies · Archimedes’ calculations of square roots (2011)\n\nBadanie granic √3 w Pomiarze koła Archimedesa; metoda ich uzyskania pozostaje niepewna.\n\nJeff Miller · MacTutor: Symbols for Constants\n\nπ, e, γ i φ: zapisy i świadectwa ich użycia; pierwszeństwo γ jest sporne.\n\nW. M. F. Petrie · The Pyramids and Temples of Gizeh (1883; wyd. 2 / ed. 2, 1885; reprint 1990)\n\nSkan drugiego wydania: pomiary w rozdz. II; interpretacja 7:22 i 14:11 w rozdz. IX, s. 93 (PDF 106). Późniejsza teoria autora, nie zapis intencji budowniczych.\n\nNotatki dostępne offline. Otwarcie zewnętrznego źródła wymaga internetu.",
+    "hasSources": true
+  },
+  {
+    "locale": "pl",
+    "id": "gamma",
+    "text": "Historia i źródła\nPojęcie\nEuler badał różnicę między sumą 1+1/2+…+1/n a ln n w latach 1734–35; praca ukazała się w 1740 r.\nNazwa\nNazwa upamiętnia Eulera i późniejsze obliczenia Mascheroniego z 1790 r.\nSymbol\nEuler pisał C, Mascheroni A. γ jest poświadczone w XIX w.; pierwszeństwo jego użycia jest sporne.\nJeff Miller · MacTutor: Symbols for Constants\n\nπ, e, γ i φ: zapisy i świadectwa ich użycia; pierwszeństwo γ jest sporne.\n\nNotatki dostępne offline. Otwarcie zewnętrznego źródła wymaga internetu.",
+    "hasSources": true
+  },
+  {
+    "locale": "pl",
+    "id": "sqrt3",
+    "text": "Historia i źródła\nPojęcie\nArchimedes używał granic 265/153 < √3 < 1351/780 w Pomiarze koła; sposób ich uzyskania jest niepewny.\nNazwa\n„Pierwiastek z 3” opisuje dodatnią liczbę, której kwadrat to 3; nie jest nazwą od odkrywcy.\nSymbol\nZnak √ występuje w Coss Rudolffa (1525), dużo później niż obliczenia Archimedesa.\nE. B. Davies · Archimedes’ calculations of square roots (2011)\n\nBadanie granic √3 w Pomiarze koła Archimedesa; metoda ich uzyskania pozostaje niepewna.\n\nMacTutor · Christoff Rudolff\n\nCoss (1525): użycie znaku √. To historia zapisu, nie odkrycia wszystkich pierwiastków.\n\nNotatki dostępne offline. Otwarcie zewnętrznego źródła wymaga internetu.",
+    "hasSources": true
+  },
+  {
+    "locale": "pl",
+    "id": "sqrt6",
+    "text": "Historia i źródła\nPojęcie\nKsięga X Elementów Euklidesa bada współmierność długości i kwadratów — tło dzisiejszych pierwiastków niewymiernych.\nNazwa\n„Pierwiastek z 6” oznacza dodatnią liczbę o kwadracie 6. Nie ustalono osobnego momentu jej odkrycia.\nSymbol\n√6 łączy znak pierwiastka, poświadczony u Rudolffa w 1525 r., z liczbą 6.\nEuklides / D. Joyce · Elements X.9\n\nWspółmierność długości i kwadratów; starożytne tło dzisiejszych pierwiastków niewymiernych.\n\nMacTutor · Christoff Rudolff\n\nCoss (1525): użycie znaku √. To historia zapisu, nie odkrycia wszystkich pierwiastków.\n\nNotatki dostępne offline. Otwarcie zewnętrznego źródła wymaga internetu.",
+    "hasSources": true
+  },
+  {
+    "locale": "pl",
+    "id": "sqrt2",
+    "text": "Historia i źródła\nPojęcie\nStarobabilońska tabliczka YBC 7289 zawiera dokładne przybliżenie przekątnej kwadratu, czyli dzisiejszego √2.\nNazwa\n„Pierwiastek z 2” to opis algebraiczny. Tabliczka nie używa tej współczesnej nazwy.\nSymbol\nWspółczesne √2 używa znaku √ z tradycji Rudolffa (1525); tabliczka ma zapis sześćdziesiątkowy.\nD. Melville · YBC 7289, Yale Babylonian Collection\n\nTabliczka starobabilońska z przybliżeniem √2; nie jest dowodem wiedzy budowniczych w Gizie.\n\nMacTutor · Christoff Rudolff\n\nCoss (1525): użycie znaku √. To historia zapisu, nie odkrycia wszystkich pierwiastków.\n\nNotatki dostępne offline. Otwarcie zewnętrznego źródła wymaga internetu.",
+    "hasSources": true
+  },
+  {
+    "locale": "pl",
+    "id": "sqrt5",
+    "text": "Historia i źródła\nPojęcie\nKonstrukcja Euklidesa II.11 dzieli odcinek w proporcji dziś wyrażanej przez √5 i złotą liczbę.\nNazwa\n„Pierwiastek z 5” opisuje liczbę o kwadracie 5. To współczesny język algebraiczny dla dawnej geometrii.\nSymbol\n√5 używa znaku √ poświadczonego u Rudolffa (1525), a nie zapisu Euklidesa.\nEuklides / D. Joyce · Elements II.11\n\nKonstrukcja podziału odcinka; dzisiejsza algebra wiąże ją z √5 i φ.\n\nMacTutor · Christoff Rudolff\n\nCoss (1525): użycie znaku √. To historia zapisu, nie odkrycia wszystkich pierwiastków.\n\nNotatki dostępne offline. Otwarcie zewnętrznego źródła wymaga internetu.",
+    "hasSources": true
+  },
+  {
+    "locale": "pl",
+    "id": "tribonacci",
+    "text": "Historia i źródła\nPojęcie\nCiąg sumuje trzy poprzednie wyrazy. Feinberg opisał go w artykule Fibonacci–Tribonacci z 1963 r.\nNazwa\nTytuł artykułu dokumentuje nazwę „Tribonacci”, nawiązującą do Fibonacciego i trzech składników.\nSymbol\nT jest skrótem użytym w tej aplikacji dla stałej, nie dowodem uniwersalnego historycznego oznaczenia.\nM. Feinberg · Fibonacci–Tribonacci (1963), pp. 71–74\n\nŹródłowy artykuł dokumentuje nazwę i ciąg sumujący trzy poprzednie wyrazy; nie dowodzi pierwszeństwa wszelkich takich rekurencji.\n\nNotatki dostępne offline. Otwarcie zewnętrznego źródła wymaga internetu.",
+    "hasSources": true
+  },
+  {
+    "locale": "pl",
+    "id": "brun",
+    "text": "Historia i źródła\nPojęcie\nBrun w 1919 r. dowiódł zbieżności sumy odwrotności liczb pierwszych bliźniaczych, np. (1/3+1/5)+(1/5+1/7)+….\nNazwa\n„Stała Bruna” upamiętnia Vigga Bruna i dotyczy tej sumy, a nie długości krawędzi.\nSymbol\nB₂ oznacza tutaj sumę dla par bliźniaczych. To inne B niż bok podstawy piramidy.\nMacTutor · Viggo Brun\n\nTwierdzenie z 1919 r. o zbieżności sumy odwrotności liczb pierwszych bliźniaczych i nazwa stałej.\n\nOEIS · A065421\n\nPochodzenie przyjętego oszacowania 1,902160583104; nie wszystkie jego cyfry są ustalone.\n\nNotatki dostępne offline. Otwarcie zewnętrznego źródła wymaga internetu.",
+    "hasSources": true
+  },
+  {
+    "locale": "pl",
+    "id": "invPhi",
+    "text": "Historia i źródła\nPojęcie\nMästlin podał w liście do Keplera z 1597 r. około 0,6180340 dla dłuższej części złoto podzielonego odcinka jednostkowego.\nNazwa\n„Odwrotność φ” jest opisem tej samej proporcji w odwrotnym kierunku, nie nazwą nowego odkrycia.\nSymbol\n1/φ składa się z dzielenia i późniejszego symbolu φ; nie przypisujemy temu zapisowi starożytnego pochodzenia.\nJ. O’Connor, E. Robertson · MacTutor: Golden ratio\n\nMästlin (1597): 0,6180340; nazwa „złoty podział” poświadczona u Ohma (1835), jej twórca nieustalony.\n\nJeff Miller · MacTutor: Symbols for Constants\n\nπ, e, γ i φ: zapisy i świadectwa ich użycia; pierwszeństwo γ jest sporne.\n\nNotatki dostępne offline. Otwarcie zewnętrznego źródła wymaga internetu.",
+    "hasSources": true
+  },
+  {
+    "locale": "pl",
+    "id": "phi",
+    "text": "Historia i źródła\nPojęcie\nEuklides VI, definicja 3, opisuje podział w skrajnym i średnim stosunku: całość do większej części jak większa do mniejszej.\nNazwa\nNazwa „złoty podział” jest poświadczona u Martina Ohma w 1835 r.; nie ustalono jej twórcy.\nSymbol\nCook w 1914 r. przypisuje propozycję φ Markowi Barrowi. To świadectwo oznaczenia, nie użycia proporcji przez Fidiasza.\nEuklides / D. Joyce · Elements VI, Definition 3\n\nDefinicja podziału w skrajnym i średnim stosunku, bez nazwy „złoty” i symbolu φ.\n\nJ. O’Connor, E. Robertson · MacTutor: Golden ratio\n\nMästlin (1597): 0,6180340; nazwa „złoty podział” poświadczona u Ohma (1835), jej twórca nieustalony.\n\nJeff Miller · MacTutor: Symbols for Constants\n\nπ, e, γ i φ: zapisy i świadectwa ich użycia; pierwszeństwo γ jest sporne.\n\nNotatki dostępne offline. Otwarcie zewnętrznego źródła wymaga internetu.",
+    "hasSources": true
+  },
+  {
+    "locale": "pl",
+    "id": "e",
+    "text": "Historia i źródła\nPojęcie\nBadania logarytmów i procentu składanego prowadziły do e. Bernoulli badał granicę (1+1/n)ⁿ w 1683 r.\nNazwa\n„Liczba Eulera” jest nazwą upamiętniającą matematyka, nie świadectwem, że pojęcie zaczęło się od niego.\nSymbol\nEuler użył e w rękopisie z 1727–28 r.; drukiem w Mechanica (1736). Powód wyboru litery nie jest ustalony.\nJ. O’Connor, E. Robertson · MacTutor: The number e\n\nLogarytmy i procent składany; Bernoulli badał granicę (1+1/n)ⁿ w 1683 r.\n\nJeff Miller · MacTutor: Symbols for Constants\n\nπ, e, γ i φ: zapisy i świadectwa ich użycia; pierwszeństwo γ jest sporne.\n\nNotatki dostępne offline. Otwarcie zewnętrznego źródła wymaga internetu.",
+    "hasSources": true
+  },
+  {
+    "locale": "pl",
+    "id": "eMinus1",
+    "text": "Historia i źródła\nPojęcie\ne−1 powstaje przez odjęcie jedności od e. Jego kontekst historyczny to rozwój logarytmów i funkcji wykładniczej.\nNazwa\n„e minus jeden” jest opisem działania; nie ustalono odrębnej historycznej nazwy ani odkrycia.\nSymbol\ne−1 łączy symbol Eulera z odejmowaniem. To nie e⁻¹, które oznacza 1/e.\nJ. O’Connor, E. Robertson · MacTutor: The number e\n\nLogarytmy i procent składany; Bernoulli badał granicę (1+1/n)ⁿ w 1683 r.\n\nJeff Miller · MacTutor: Symbols for Constants\n\nπ, e, γ i φ: zapisy i świadectwa ich użycia; pierwszeństwo γ jest sporne.\n\nNotatki dostępne offline. Otwarcie zewnętrznego źródła wymaga internetu.",
+    "hasSources": true
+  },
+  {
+    "locale": "pl",
+    "id": "eggLW",
+    "text": "Historia i źródła\nPojęcie\nChristian Lange opisuje współczesną propozycję złotego owalu: płaskie cięcie powierzchni obrotu hiperboli, z Z₀=7,65.\nNazwa\n„Golden Egg” („Złote Jajo”) to nazwa propozycji i presetu; nie ustalono pierwszego użycia ani starożytnego pochodzenia.\nSymbol\nL/W to długość przez szerokość (length/width). Cel φ jest istniejącą stałą, nie nową stałą L/W.\nChristian Lange · The golden angle (June 2002)\n\nŹródło autorskie współczesnej propozycji „golden egg”, zr=1 i Z₀=7,65. Nie potwierdza jej twierdzeń fizycznych ani intencji budowniczych; liczby sprawdza osobny audyt.\n\nEuklides / D. Joyce · Elements VI, Definition 3\n\nDefinicja podziału w skrajnym i średnim stosunku, bez nazwy „złoty” i symbolu φ.\n\nNotatki dostępne offline. Otwarcie zewnętrznego źródła wymaga internetu.",
+    "hasSources": true
+  }
+]

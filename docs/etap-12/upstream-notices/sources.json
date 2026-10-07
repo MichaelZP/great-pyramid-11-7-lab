@@ -1,0 +1,53 @@
+[
+  {
+    "name": "@react-three/fiber",
+    "version": "9.7.0",
+    "licence": "MIT",
+    "url": "https://raw.githubusercontent.com/pmndrs/react-three-fiber/v9.7.0/LICENSE",
+    "file": "react-three-fiber.txt",
+    "sha256": "9c35b5de7b7493a707fffe4eb23bd2f7f449153c1911f7c6eefb4e591fd5349a",
+    "status": "retrieved"
+  },
+  {
+    "name": "maath",
+    "version": "0.10.8",
+    "licence": "MIT",
+    "url": "https://raw.githubusercontent.com/pmndrs/maath/v0.10.8/LICENSE",
+    "status": "unverified",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "name": "stats-gl",
+    "version": "2.4.2",
+    "licence": "MIT",
+    "url": "https://raw.githubusercontent.com/RenaudRohlinger/stats-gl/v2.4.2/LICENSE",
+    "status": "unverified",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "name": "draco3d",
+    "version": "1.5.7",
+    "licence": "Apache-2.0",
+    "url": "https://raw.githubusercontent.com/google/draco/1.5.7/LICENSE",
+    "file": "draco3d.txt",
+    "sha256": "d3709b0fb4b8a94bbb1d02b8a2e484f258b0d9c5c5a01f940391f3fe662cd1a4",
+    "status": "retrieved"
+  },
+  {
+    "name": "@mediapipe/tasks-vision",
+    "version": "0.10.17",
+    "licence": "Apache-2.0",
+    "url": "https://raw.githubusercontent.com/google-ai-edge/mediapipe/v0.10.17/LICENSE",
+    "status": "unverified",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "name": "victory-vendor",
+    "version": "36.9.2",
+    "licence": "MIT AND ISC",
+    "url": "https://raw.githubusercontent.com/FormidableLabs/victory/v36.9.2/LICENSE.txt",
+    "file": "victory-vendor.txt",
+    "sha256": "34dee5fd5e5cc756efb5ad4d64652bce719bdf5e900ca5d7538253e737930bc4",
+    "status": "retrieved"
+  }
+]

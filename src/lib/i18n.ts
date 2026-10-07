@@ -10,7 +10,7 @@ export const translations = {
     rainbowCaption:
       "Primary: vertical semicircle in the mid-plane, red r = H through the apex. Secondary: parallel plane behind the pyramid, green r = 2H. Front-face apothem 51.84° → green. Edge 41.99° ends at the apex.",
     goldenEggCaption:
-      "Hyperbolic cone z = 1/r (Harthun–Rennert). Cut at Z₀ = 7.65 with L/W = φ gives 51.795319256°. Pyramid slope, constants and errors follow that angle. Laboratory consensus: 10 of 13 within 0.1%, MAX ≈ 0.4% — a geometric lead, not a replacement for 11:7.",
+      "Modern section model zr=1, Z₀=7.65: fitting L/W to φ selects 51.795319256°. 10 of 13 targets are within 0.1%. The ordinary egg scene is illustrative; inspect L/W for the calculated section. This is not historical evidence.",
     hologram: "Hologram",
     rainbow: "Rainbow",
     dimensions: "Dimensions",
@@ -25,12 +25,13 @@ export const translations = {
     reverseDepth: "Reverse depth",
     language: "Language",
     assembling: "Assembling the pyramid…",
+    confirmExit: "Exit Great Pyramid 11:7? Your current lab settings will be lost.",
 
     geometryTemplate: "Geometry template",
     oneShapeParam: "One shape parameter",
     pickModel:
       "Pick a model or set your own base-to-height ratio.",
-    optimum: "optimum",
+    optimum: "preset",
     ratioBH: "B / H ratio",
     faceSlope: "Face slope angle",
     angle: "Angle",
@@ -44,7 +45,7 @@ export const translations = {
     relativeError:
       "Relative error |result − constant| / constant. √2 is exact for any square base and does not distinguish the angle.",
     mean: "Mean",
-    independent: "Independent",
+    independent: "Weighted",
     max: "Max.",
     constant: "Constant",
     formula: "Formula",
@@ -56,17 +57,17 @@ export const translations = {
     minimax: "minimax",
     model: "model",
 
-    verdict: "Multi-criteria verdict",
+    verdict: "Model ranking",
     points: "pts",
     verdictLead:
-      "11:7 wins because it joins constructional simplicity with a fit to all twelve relations. Petrie has a smaller mean error, π is exact in the perimeter — neither is so simple a fraction.",
-    construction: "construction",
+      "11:7 leads under the selected weights, including a preference for 11/7. It fits 12 of 13 targets within 0.1%. The rows are dependent; this ranking is not historical evidence.",
+    construction: "11:7 preset",
     num: "num",
-    meas: "meas.",
-    fraction: "fraction",
+    meas: "angle ref.",
+    fraction: "11/7 pref.",
     band: "band",
     verdictWeights:
-      "Weights: independent accuracy {n}%, agreement with measurement {m}%, fraction simplicity {f}%, robustness in the band {r}%. 11:7 is not the only numerical optimum — the error minimum sits near 51.845–51.851° — but it is the strongest constructional model.",
+      "Chosen weights: weighted error {n}%, reference-angle proximity {m}%, preference for 11/7 {f}%, robustness {r}%. This score is a comparison model, not a probability of builders’ intent. The reference angle’s uncertainty is not historically established here.",
 
     tabModels: "Models",
     tabConstants: "Constants",
@@ -115,7 +116,7 @@ export const translations = {
     rainbowCaption:
       "Pierwotna: pionowy półokrąg w płaszczyźnie środkowej, czerwień r = H przez czubek. Wtórna: równoległa płaszczyzna za piramidą, zieleń r = 2H. Apotema ściany przedniej 51,84° → zieleń. Krawędź 41,99° kończy się w wierzchołku.",
     goldenEggCaption:
-      "Stożek hiperboliczny z = 1/r (Harthun–Rennert). Cięcie w Z₀ = 7,65 przy L/W = φ daje 51,795319256°. Nachylenie piramidy i błędy stałych liczone są z tego kąta. Konsensus laboratorium: 10 z 13 w 0,1%, MAX ≈ 0,4% — trop geometryczny, nie zamiennik 11:7.",
+      "Współczesny model przekroju zr=1, Z₀=7,65: dopasowanie L/W do φ wybiera 51,795319256°. 10 z 13 celów w 0,1%. Zwykła scena jaja jest ilustracją; wybierz L/W dla obliczonego przekroju. To nie jest dowód historyczny.",
     hologram: "Hologram",
     rainbow: "Tęcza",
     dimensions: "Wymiary",
@@ -130,12 +131,13 @@ export const translations = {
     reverseDepth: "Odwróć głębię",
     language: "Język",
     assembling: "Składanie piramidy…",
+    confirmExit: "Zamknąć Great Pyramid 11:7? Bieżące ustawienia laboratorium zostaną utracone.",
 
     geometryTemplate: "Szablon geometrii",
     oneShapeParam: "Jeden parametr kształtu",
     pickModel:
       "Wybierz model albo zadaj własny stosunek boku do wysokości.",
-    optimum: "optimum",
+    optimum: "preset",
     ratioBH: "Stosunek B / H",
     faceSlope: "Kąt nachylenia ściany",
     angle: "Kąt",
@@ -149,7 +151,7 @@ export const translations = {
     relativeError:
       "Błąd względny |wynik − stała| / stała. √2 jest dokładne dla każdej kwadratowej podstawy i nie rozróżnia kąta.",
     mean: "Średni",
-    independent: "Niezależny",
+    independent: "Ważony",
     max: "Maks.",
     constant: "Stała",
     formula: "Wzór",
@@ -161,17 +163,17 @@ export const translations = {
     minimax: "minimax",
     model: "model",
 
-    verdict: "Werdykt wielokryterialny",
+    verdict: "Ranking modeli",
     points: "pkt",
     verdictLead:
-      "11:7 wygrywa, bo łączy prostotę konstrukcyjną z dopasowaniem wszystkich dwunastu relacji. Petrie ma mniejszy błąd średni, π jest dokładne w obwodzie — żaden z nich nie jest tak prostym ułamkiem.",
-    construction: "konstrukcja",
+      "11:7 prowadzi przy wybranych wagach, które uwzględniają preferencję 11/7. Mieści 12 z 13 celów w 0,1%. Wiersze są zależne; ranking nie jest dowodem historycznym.",
+    construction: "preset 11:7",
     num: "num",
-    meas: "pomiar",
-    fraction: "ułamek",
+    meas: "kąt odn.",
+    fraction: "pref. 11/7",
     band: "pasmo",
     verdictWeights:
-      "Wagi: dokładność niezależna {n}%, zgodność z pomiarem {m}%, prostota ułamka {f}%, odporność w paśmie {r}%. 11:7 nie jest jedynym optimum liczbowym — minimum błędu leży koło 51,845–51,851° — ale jest najsilniejszym modelem konstrukcyjnym.",
+      "Wybrane wagi: błąd ważony {n}%, bliskość kąta odniesienia {m}%, preferencja 11/7 {f}%, odporność {r}%. Ocena jest modelem porównania, nie prawdopodobieństwem intencji budowniczych. Nie potwierdzono tu historycznej podstawy niepewności kąta odniesienia.",
 
     tabModels: "Modele",
     tabConstants: "Stałe",

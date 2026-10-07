@@ -17,7 +17,7 @@ The laboratory exposes four layers without confusing them:
 1. **Exact parametric geometry** — the solid is derived from 440, 280, the cubit and the scale.
 2. **Comparison targets** — dimensionless expressions from the current slope are compared with established constants at a declared relative tolerance of **0.1%**.
 3. **An optical correspondence diagram** — the ~42° corner inclination and 51.842773° face slope sit beside schematic primary and secondary rainbow bands.
-4. **Golden Φ Egg (v2)** — a hyperbolic cone `z = 1/r` cut at `Z₀ = 7.65` so that `L/W = φ`, giving the unique plane angle **αp = 51.795319256°**. The ellipse in the cutting plane is revolved about the apothem to a translucent golden egg.
+4. **Golden Φ Egg (v2)** — a hyperbolic cone `z = 1/r` cut at `Z₀ = 7.65` so that `L/W ≈ φ` at the rounded preset, giving a numerically solved plane angle **αp = 51.795319256°**. The closed section is an oval, not an ellipse. The ordinary translucent egg is an illustrative scene; the selected L/W lesson renders the audited section.
 
 The result is a reproducible object for geometry, visualization and critical discussion — not proof of an ancient optical or mathematical encoding.
 
@@ -28,12 +28,12 @@ The result is a reproducible object for geometry, visualization and critical dis
 A very simple integer geometry generates an unusually rich family of close numerical relationships. The 440:280 scheme gives:
 
 - an exact base-to-height ratio of **11:7**;
-- a perimeter-to-height expression of **22:7**, the classic rational approximation of π;
+- a half-perimeter-to-height expression of **22:7**, the classic rational approximation of π;
 - a face slope of **51.842773°**;
 - a corner inclination of **41.985759°**;
 - a compact set of derived lengths that can be compared with π, φ, e and other constants.
 
-The Golden Φ Egg is a **separate** model: it does not use the rounded 51.84° cone. At `Z₀ = 7.65` the exact condition `L/W = φ` for `z = 1/r` yields **51.795319256°**. That angle drives B/H, height, and every constant error. The 51.84° cone remains a comparison model only.
+The Golden Φ Egg is a **separate** model: it does not use the rounded 51.84° cone. At `Z₀ = 7.65` solving `L/W = φ` for `z = 1/r` numerically yields **51.795319256°**. That angle drives B/H, height, and every constant error. The 51.84° cone remains a comparison model only.
 
 ## Canonical dimensions (11:7)
 
@@ -61,11 +61,11 @@ The Golden Φ Egg is a **separate** model: it does not use the rounded 51.84° c
 | Golden Φ Egg | `L/W = φ`; `z = 1/r`; `Z₀ = 7.65` | **51.795319256°** |
 | Custom ratio | user `B/H` or angle | editable |
 
-Consensus score weights (from the workbook): independent accuracy 0.35, agreement with observation 0.25, fraction simplicity 0.25, robustness in band 0.15. **11:7 remains the simplest construction model**; Golden Egg is a geometric lead, not a replacement construction. On the Golden Egg preset the laboratory engine reports **10 of 13** relations within 0.1%, with mean relative error ≈ 0.090% and maximum ≈ 0.397% (~0.4%).
+Chosen score weights (shared with the workbook): weighted error 0.35, proximity to the reference angle 0.25, preference for 11/7 0.25, robustness in band 0.15. The app uses 13 rows; the workbooks use 12 and a different fraction criterion. These weights do not establish independence or builders’ intent. **11:7 is the preferred construction preset**; Golden Egg is a geometric lead, not a replacement construction. On the Golden Egg preset the laboratory engine reports **10 of 13** relations within 0.1%, with mean relative error ≈ 0.090% and maximum ≈ 0.397% (~0.4%).
 
 ## Constant comparisons (11:7, tolerance 0.1%)
 
-Each row is derived from the current pyramid. With `MathTolerance = 0.001`, the 11:7 solid keeps the classical twelve inside 0.1%; after the exact egg integrator the thirteenth L/W row sits just outside (~0.106% relative to φ). That is 12 of 13 — not 13 of 13.
+Each row is derived from the current pyramid. With `MathTolerance = 0.001`, the 11:7 solid keeps the classical twelve inside 0.1%; after the geometric oval calculation the thirteenth L/W row sits just outside (~0.106% relative to φ). That is 12 of 13 — not 13 of 13.
 
 | Symbol | Formula | Target |
 |---|---|---|
@@ -97,7 +97,7 @@ Display radii are schematic, not atmospheric distances. See [docs/OPTICAL-CORRES
 
 ![Golden egg revolved about the apothem](docs/images/golden-egg.png)
 
-Selecting **Golden Egg 1.618033989** sets the pyramid to **51.795319256°**. Behind the solid a translucent hyperbolic cone (`r ∝ 1/z`) stands on the ground plane. The face-plane cut is a golden ellipse (`L/W = φ`); revolving that ellipse about the **apothem** produces the golden egg. With this preset the engine reports 10 of 13 relations within 0.1% and a maximum relative error of ~0.4% (about 4× the declared tolerance); 11:7 remains the construction model. Details: [docs/GOLDEN-EGG.md](docs/GOLDEN-EGG.md).
+Selecting **Golden Egg 1.618033989** sets the pyramid to **51.795319256°**. Behind the solid a translucent hyperbolic cone (`r ∝ 1/z`) stands on the ground plane. The ordinary cone and revolved egg are illustrative and use different framing parameters from the numeric section. Select **L/W** to inspect the actual closed oval at `Z₀=7.65`, with its length and maximum width. With this preset the engine reports 10 of 13 relations within 0.1% and a maximum relative error of ~0.4% (about 4× the declared tolerance); 11:7 remains the construction model. Details: [docs/GOLDEN-EGG.md](docs/GOLDEN-EGG.md).
 
 ## Run in a browser
 
@@ -107,7 +107,7 @@ GitHub does **not** execute the Vite app from the source tree. The production bu
 
 ## Run locally
 
-Requires [Node.js](https://nodejs.org/) **20 or 22 LTS**.
+Requires [Node.js](https://nodejs.org/) **22 or newer**.
 
 ```bash
 git clone https://github.com/MichaelZP/great-pyramid-11-7-lab.git
@@ -148,11 +148,11 @@ The numerical engine follows:
 - [`data/Great_Pyramid_11_7_Mathematical_Constants_Lab.xlsx`](data/Great_Pyramid_11_7_Mathematical_Constants_Lab.xlsx)
 - [`data/Piramida_11_7_laboratorium_stalych.xlsx`](data/Piramida_11_7_laboratorium_stalych.xlsx)
 
-Yellow cells in those books are inputs; blue cells are calculations. The web lab recomputes the same relations live.
+Yellow cells in those books are inputs; blue cells are calculations. The web lab recomputes the twelve pyramid relations and adds a thirteenth oval L/W comparison. Scores differ; see the [audit](docs/matematyka-13-stalych.md).
 
 ## Authorship and acknowledgement
 
-**Project concept, mathematical synthesis and authorship:** Michał Przybylski.
+**Project concept, mathematical synthesis and authorship:** Michał Przybylski — [prylski.dev](https://prylski.dev/).
 
 This web laboratory continues the Fusion model [great-pyramid-11-7](https://github.com/MichaelZP/great-pyramid-11-7).
 

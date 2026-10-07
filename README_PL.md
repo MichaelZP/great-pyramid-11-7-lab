@@ -17,7 +17,7 @@ Laboratorium rozdziela cztery warstwy:
 1. **Dokładna geometria parametryczna** — bryła z 440, 280, łokcia i skali.
 2. **Cele porównawcze** — wyrażenia bezwymiarowe z bieżącego kąta ściany, tolerancja względna **0,1%**.
 3. **Schemat korespondencji optycznej** — nachylenie krawędzi ~42° i apotema 51,842773° obok pasm tęczy pierwotnej i wtórnej.
-4. **Golden Φ Egg (v2)** — stożek hiperboliczny `z = 1/r` cięty przy `Z₀ = 7,65` tak, że `L/W = φ`, kąt płaszczyzny **αp = 51,795319256°**. Elipsa w płaszczyźnie cięcia obracana wokół apotemy daje złote jajo.
+4. **Golden Φ Egg (v2)** — stożek hiperboliczny `z = 1/r` cięty przy `Z₀ = 7,65` tak, że `L/W = φ`, kąt płaszczyzny **αp = 51,795319256°**. Przekrój jest owalem, nie elipsą. Zwykła scena jaja jest ilustracją; wybrana lekcja L/W przedstawia obliczony przekrój.
 
 Wynik służy geometrii, wizualizacji i dyskusji krytycznej — nie jest dowodem starożytnego kodu optycznego ani matematycznego.
 
@@ -35,7 +35,7 @@ Wynik służy geometrii, wizualizacji i dyskusji krytycznej — nie jest dowodem
 | Golden Φ Egg | `L/W = φ`; `z = 1/r`; `Z₀ = 7,65` | **51,795319256°** |
 | Własny stosunek | `B/H` lub kąt użytkownika | edytowalny |
 
-Wagi oceny (z skoroszytu): dokładność niezależna 0,35, zgodność z obserwacją 0,25, prostota ułamka 0,25, odporność w paśmie 0,15. **11:7 pozostaje najprostszym modelem konstrukcyjnym**; Golden Egg to trop geometryczny, nie zamiennik konstrukcji. Dla predefiniowanego Golden Egg silnik laboratorium zgłasza **10 z 13** relacji w 0,1%, średni błąd względny ≈ 0,090%, maksimum ≈ 0,397% (~0,4%). Dla 11:7 klasyczne dwanaście pozostaje w 0,1%; trzynasty wiersz L/W wypada tuż poza (~0,106%) po dokładnym integratorze — to 12 z 13, nie 13 z 13.
+Wybrane wagi (wspólne ze skoroszytem): błąd ważony 0,35, bliskość kąta odniesienia 0,25, preferencja 11/7 0,25, odporność w paśmie 0,15. Aplikacja ocenia 13 wierszy, arkusze 12 i inne kryterium ułamka. Wagi nie dowodzą niezależności ani intencji budowniczych. **11:7 jest preferowanym presetem konstrukcyjnym**; Golden Egg to trop geometryczny, nie zamiennik konstrukcji. Dla predefiniowanego Golden Egg silnik laboratorium zgłasza **10 z 13** relacji w 0,1%, średni błąd względny ≈ 0,090%, maksimum ≈ 0,397% (~0,4%). Dla 11:7 klasyczne dwanaście pozostaje w 0,1%; trzynasty wiersz L/W wypada tuż poza (~0,106%) po obliczeniu geometrii owalu — to 12 z 13, nie 13 z 13.
 
 ## Uruchomienie w przeglądarce
 
@@ -45,7 +45,7 @@ Sam GitHub **nie uruchamia** aplikacji Vite z drzewa źródłowego. Zbudowana st
 
 ## Uruchomienie lokalne
 
-Wymagany [Node.js](https://nodejs.org/) **20 lub 22 LTS**.
+Wymagany [Node.js](https://nodejs.org/) **22 lub nowszy**.
 
 ```bash
 git clone https://github.com/MichaelZP/great-pyramid-11-7-lab.git
@@ -63,7 +63,7 @@ Otwórz adres podany przez Vite (port **8080**).
 
 ## Autorstwo i podziękowania
 
-**Koncepcja, synteza matematyczna i autorstwo:** Michał Przybylski.
+**Koncepcja, synteza matematyczna i autorstwo:** Michał Przybylski — [prylski.dev](https://prylski.dev/).
 
 Laboratorium WWW kontynuuje model Fusion [great-pyramid-11-7](https://github.com/MichaelZP/great-pyramid-11-7).
 

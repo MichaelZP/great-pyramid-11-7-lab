@@ -1,0 +1,254 @@
+[
+  {
+    "requested": {
+      "width": 320,
+      "height": 844
+    },
+    "mode": "education",
+    "view": "side",
+    "error": "",
+    "height": 844,
+    "parameters": "C₁=(0;0;5.00), C₂=(0;0;9.00). R₁=R₂=2,4 u; r₁=r₂=0,65 u. Odległość środków d=4.00 u; szczelina osiowa d−2r=2.70 u. Położenie i zwroty zaakceptowane przez autora; efekty do odbioru.",
+    "scrollWidth": 305,
+    "source": "α=51.842773413°; z₀=7.65; q=0.400. L/W=1.619742961, błąd względem φ=0.105620% (próg 0,1%). Poza tolerancją modelu. Przekrój jest owalem, nie elipsą.",
+    "width": 320
+  },
+  {
+    "requested": {
+      "width": 320,
+      "height": 844
+    },
+    "mode": "education",
+    "view": "top",
+    "error": "",
+    "height": 844,
+    "parameters": "C₁=(0;0;5.00), C₂=(0;0;9.00). R₁=R₂=2,4 u; r₁=r₂=0,65 u. Odległość środków d=4.00 u; szczelina osiowa d−2r=2.70 u. Położenie i zwroty zaakceptowane przez autora; efekty do odbioru.",
+    "scrollWidth": 305,
+    "source": "α=51.842773413°; z₀=7.65; q=0.400. L/W=1.619742961, błąd względem φ=0.105620% (próg 0,1%). Poza tolerancją modelu. Przekrój jest owalem, nie elipsą.",
+    "width": 320
+  },
+  {
+    "requested": {
+      "width": 320,
+      "height": 844
+    },
+    "mode": "education",
+    "view": "perspective",
+    "error": "",
+    "height": 844,
+    "parameters": "C₁=(0;0;5.00), C₂=(0;0;9.00). R₁=R₂=2,4 u; r₁=r₂=0,65 u. Odległość środków d=4.00 u; szczelina osiowa d−2r=2.70 u. Położenie i zwroty zaakceptowane przez autora; efekty do odbioru.",
+    "scrollWidth": 305,
+    "source": "α=51.842773413°; z₀=7.65; q=0.400. L/W=1.619742961, błąd względem φ=0.105620% (próg 0,1%). Poza tolerancją modelu. Przekrój jest owalem, nie elipsą.",
+    "width": 320
+  },
+  {
+    "requested": {
+      "width": 320,
+      "height": 844
+    },
+    "mode": "cinema",
+    "view": "side",
+    "error": "",
+    "height": 844,
+    "parameters": "C₁=(0;0;5.00), C₂=(0;0;9.00). R₁=R₂=2,4 u; r₁=r₂=0,65 u. Odległość środków d=4.00 u; szczelina osiowa d−2r=2.70 u. Położenie i zwroty zaakceptowane przez autora; efekty do odbioru.",
+    "scrollWidth": 305,
+    "source": "α=51.842773413°; z₀=7.65; q=0.400. L/W=1.619742961, błąd względem φ=0.105620% (próg 0,1%). Poza tolerancją modelu. Przekrój jest owalem, nie elipsą.",
+    "width": 320
+  },
+  {
+    "requested": {
+      "width": 320,
+      "height": 844
+    },
+    "mode": "cinema",
+    "view": "top",
+    "error": "",
+    "height": 844,
+    "parameters": "C₁=(0;0;5.00), C₂=(0;0;9.00). R₁=R₂=2,4 u; r₁=r₂=0,65 u. Odległość środków d=4.00 u; szczelina osiowa d−2r=2.70 u. Położenie i zwroty zaakceptowane przez autora; efekty do odbioru.",
+    "scrollWidth": 305,
+    "source": "α=51.842773413°; z₀=7.65; q=0.400. L/W=1.619742961, błąd względem φ=0.105620% (próg 0,1%). Poza tolerancją modelu. Przekrój jest owalem, nie elipsą.",
+    "width": 320
+  },
+  {
+    "requested": {
+      "width": 320,
+      "height": 844
+    },
+    "mode": "cinema",
+    "view": "perspective",
+    "error": "",
+    "height": 844,
+    "parameters": "C₁=(0;0;5.00), C₂=(0;0;9.00). R₁=R₂=2,4 u; r₁=r₂=0,65 u. Odległość środków d=4.00 u; szczelina osiowa d−2r=2.70 u. Położenie i zwroty zaakceptowane przez autora; efekty do odbioru.",
+    "scrollWidth": 305,
+    "source": "α=51.842773413°; z₀=7.65; q=0.400. L/W=1.619742961, błąd względem φ=0.105620% (próg 0,1%). Poza tolerancją modelu. Przekrój jest owalem, nie elipsą.",
+    "width": 320
+  },
+  {
+    "requested": {
+      "width": 390,
+      "height": 844
+    },
+    "mode": "education",
+    "view": "side",
+    "error": "",
+    "height": 844,
+    "parameters": "C₁=(0;0;5.00), C₂=(0;0;9.00). R₁=R₂=2,4 u; r₁=r₂=0,65 u. Odległość środków d=4.00 u; szczelina osiowa d−2r=2.70 u. Położenie i zwroty zaakceptowane przez autora; efekty do odbioru.",
+    "scrollWidth": 375,
+    "source": "α=51.842773413°; z₀=7.65; q=0.400. L/W=1.619742961, błąd względem φ=0.105620% (próg 0,1%). Poza tolerancją modelu. Przekrój jest owalem, nie elipsą.",
+    "width": 390
+  },
+  {
+    "requested": {
+      "width": 390,
+      "height": 844
+    },
+    "mode": "education",
+    "view": "top",
+    "error": "",
+    "height": 844,
+    "parameters": "C₁=(0;0;5.00), C₂=(0;0;9.00). R₁=R₂=2,4 u; r₁=r₂=0,65 u. Odległość środków d=4.00 u; szczelina osiowa d−2r=2.70 u. Położenie i zwroty zaakceptowane przez autora; efekty do odbioru.",
+    "scrollWidth": 375,
+    "source": "α=51.842773413°; z₀=7.65; q=0.400. L/W=1.619742961, błąd względem φ=0.105620% (próg 0,1%). Poza tolerancją modelu. Przekrój jest owalem, nie elipsą.",
+    "width": 390
+  },
+  {
+    "requested": {
+      "width": 390,
+      "height": 844
+    },
+    "mode": "education",
+    "view": "perspective",
+    "error": "",
+    "height": 844,
+    "parameters": "C₁=(0;0;5.00), C₂=(0;0;9.00). R₁=R₂=2,4 u; r₁=r₂=0,65 u. Odległość środków d=4.00 u; szczelina osiowa d−2r=2.70 u. Położenie i zwroty zaakceptowane przez autora; efekty do odbioru.",
+    "scrollWidth": 375,
+    "source": "α=51.842773413°; z₀=7.65; q=0.400. L/W=1.619742961, błąd względem φ=0.105620% (próg 0,1%). Poza tolerancją modelu. Przekrój jest owalem, nie elipsą.",
+    "width": 390
+  },
+  {
+    "requested": {
+      "width": 390,
+      "height": 844
+    },
+    "mode": "cinema",
+    "view": "side",
+    "error": "",
+    "height": 844,
+    "parameters": "C₁=(0;0;5.00), C₂=(0;0;9.00). R₁=R₂=2,4 u; r₁=r₂=0,65 u. Odległość środków d=4.00 u; szczelina osiowa d−2r=2.70 u. Położenie i zwroty zaakceptowane przez autora; efekty do odbioru.",
+    "scrollWidth": 375,
+    "source": "α=51.842773413°; z₀=7.65; q=0.400. L/W=1.619742961, błąd względem φ=0.105620% (próg 0,1%). Poza tolerancją modelu. Przekrój jest owalem, nie elipsą.",
+    "width": 390
+  },
+  {
+    "requested": {
+      "width": 390,
+      "height": 844
+    },
+    "mode": "cinema",
+    "view": "top",
+    "error": "",
+    "height": 844,
+    "parameters": "C₁=(0;0;5.00), C₂=(0;0;9.00). R₁=R₂=2,4 u; r₁=r₂=0,65 u. Odległość środków d=4.00 u; szczelina osiowa d−2r=2.70 u. Położenie i zwroty zaakceptowane przez autora; efekty do odbioru.",
+    "scrollWidth": 375,
+    "source": "α=51.842773413°; z₀=7.65; q=0.400. L/W=1.619742961, błąd względem φ=0.105620% (próg 0,1%). Poza tolerancją modelu. Przekrój jest owalem, nie elipsą.",
+    "width": 390
+  },
+  {
+    "requested": {
+      "width": 390,
+      "height": 844
+    },
+    "mode": "cinema",
+    "view": "perspective",
+    "error": "",
+    "height": 844,
+    "parameters": "C₁=(0;0;5.00), C₂=(0;0;9.00). R₁=R₂=2,4 u; r₁=r₂=0,65 u. Odległość środków d=4.00 u; szczelina osiowa d−2r=2.70 u. Położenie i zwroty zaakceptowane przez autora; efekty do odbioru.",
+    "scrollWidth": 375,
+    "source": "α=51.842773413°; z₀=7.65; q=0.400. L/W=1.619742961, błąd względem φ=0.105620% (próg 0,1%). Poza tolerancją modelu. Przekrój jest owalem, nie elipsą.",
+    "width": 390
+  },
+  {
+    "requested": {
+      "width": 844,
+      "height": 390
+    },
+    "mode": "education",
+    "view": "side",
+    "error": "",
+    "height": 390,
+    "parameters": "C₁=(0;0;5.00), C₂=(0;0;9.00). R₁=R₂=2,4 u; r₁=r₂=0,65 u. Odległość środków d=4.00 u; szczelina osiowa d−2r=2.70 u. Położenie i zwroty zaakceptowane przez autora; efekty do odbioru.",
+    "scrollWidth": 829,
+    "source": "α=51.842773413°; z₀=7.65; q=0.400. L/W=1.619742961, błąd względem φ=0.105620% (próg 0,1%). Poza tolerancją modelu. Przekrój jest owalem, nie elipsą.",
+    "width": 844
+  },
+  {
+    "requested": {
+      "width": 844,
+      "height": 390
+    },
+    "mode": "education",
+    "view": "top",
+    "error": "",
+    "height": 390,
+    "parameters": "C₁=(0;0;5.00), C₂=(0;0;9.00). R₁=R₂=2,4 u; r₁=r₂=0,65 u. Odległość środków d=4.00 u; szczelina osiowa d−2r=2.70 u. Położenie i zwroty zaakceptowane przez autora; efekty do odbioru.",
+    "scrollWidth": 829,
+    "source": "α=51.842773413°; z₀=7.65; q=0.400. L/W=1.619742961, błąd względem φ=0.105620% (próg 0,1%). Poza tolerancją modelu. Przekrój jest owalem, nie elipsą.",
+    "width": 844
+  },
+  {
+    "requested": {
+      "width": 844,
+      "height": 390
+    },
+    "mode": "education",
+    "view": "perspective",
+    "error": "",
+    "height": 390,
+    "parameters": "C₁=(0;0;5.00), C₂=(0;0;9.00). R₁=R₂=2,4 u; r₁=r₂=0,65 u. Odległość środków d=4.00 u; szczelina osiowa d−2r=2.70 u. Położenie i zwroty zaakceptowane przez autora; efekty do odbioru.",
+    "scrollWidth": 829,
+    "source": "α=51.842773413°; z₀=7.65; q=0.400. L/W=1.619742961, błąd względem φ=0.105620% (próg 0,1%). Poza tolerancją modelu. Przekrój jest owalem, nie elipsą.",
+    "width": 844
+  },
+  {
+    "requested": {
+      "width": 844,
+      "height": 390
+    },
+    "mode": "cinema",
+    "view": "side",
+    "error": "",
+    "height": 390,
+    "parameters": "C₁=(0;0;5.00), C₂=(0;0;9.00). R₁=R₂=2,4 u; r₁=r₂=0,65 u. Odległość środków d=4.00 u; szczelina osiowa d−2r=2.70 u. Położenie i zwroty zaakceptowane przez autora; efekty do odbioru.",
+    "scrollWidth": 829,
+    "source": "α=51.842773413°; z₀=7.65; q=0.400. L/W=1.619742961, błąd względem φ=0.105620% (próg 0,1%). Poza tolerancją modelu. Przekrój jest owalem, nie elipsą.",
+    "width": 844
+  },
+  {
+    "requested": {
+      "width": 844,
+      "height": 390
+    },
+    "mode": "cinema",
+    "view": "top",
+    "error": "",
+    "height": 390,
+    "parameters": "C₁=(0;0;5.00), C₂=(0;0;9.00). R₁=R₂=2,4 u; r₁=r₂=0,65 u. Odległość środków d=4.00 u; szczelina osiowa d−2r=2.70 u. Położenie i zwroty zaakceptowane przez autora; efekty do odbioru.",
+    "scrollWidth": 829,
+    "source": "α=51.842773413°; z₀=7.65; q=0.400. L/W=1.619742961, błąd względem φ=0.105620% (próg 0,1%). Poza tolerancją modelu. Przekrój jest owalem, nie elipsą.",
+    "width": 844
+  },
+  {
+    "requested": {
+      "width": 844,
+      "height": 390
+    },
+    "mode": "cinema",
+    "view": "perspective",
+    "error": "",
+    "height": 390,
+    "parameters": "C₁=(0;0;5.00), C₂=(0;0;9.00). R₁=R₂=2,4 u; r₁=r₂=0,65 u. Odległość środków d=4.00 u; szczelina osiowa d−2r=2.70 u. Położenie i zwroty zaakceptowane przez autora; efekty do odbioru.",
+    "scrollWidth": 829,
+    "source": "α=51.842773413°; z₀=7.65; q=0.400. L/W=1.619742961, błąd względem φ=0.105620% (próg 0,1%). Poza tolerancją modelu. Przekrój jest owalem, nie elipsą.",
+    "width": 844
+  }
+]
