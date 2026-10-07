@@ -1,0 +1,188 @@
+{
+  "checkedAtUtc": "2026-10-07T11:08:45.221631+00:00",
+  "base": "https://michaelzp.github.io/great-pyramid-11-7-lab/",
+  "pagesCommit": "a600eb7eed17a695420eecfc4d41b848ef45a1d3",
+  "manifest": {
+    "version": "2.0.2",
+    "sourceCommit": "08aead2a2f3bb800db448822b5b374d8e1bbf62e",
+    "base": "/great-pyramid-11-7-lab/",
+    "missingNoticePackages": [
+      {
+        "name": "@mediapipe/tasks-vision",
+        "emittedModules": 0
+      },
+      {
+        "name": "maath",
+        "emittedModules": 0
+      },
+      {
+        "name": "stats-gl",
+        "emittedModules": 0
+      }
+    ]
+  },
+  "files": [
+    {
+      "path": "assets/index-BNaQLlQW.js",
+      "httpStatus": 200,
+      "sha256MatchesDeployedCommit": true,
+      "sha256": "eb677ef2e67d502780bea5fcee38d577d39395c9a899ba768c353cc66799d0f5",
+      "artifactDiffersOnlyInLineEndings": false
+    },
+    {
+      "path": "assets/index-BrxKMyzt.css",
+      "httpStatus": 200,
+      "sha256MatchesDeployedCommit": true,
+      "sha256": "06bea464230d2fe631e027c151ea320ad9c47f82714b2864dc239564be9c6eb5",
+      "artifactDiffersOnlyInLineEndings": false
+    },
+    {
+      "path": "assets/index-CKZhs57K.js",
+      "httpStatus": 200,
+      "sha256MatchesDeployedCommit": true,
+      "sha256": "6a4dcc3d51e6e6401d2239514e1cd4a49878fad6e4779fce276cf96573c05409",
+      "artifactDiffersOnlyInLineEndings": false
+    },
+    {
+      "path": "assets/index-ColpdIYy.js",
+      "httpStatus": 200,
+      "sha256MatchesDeployedCommit": true,
+      "sha256": "e3097dd664db26ebae411efd6feec82847ec3ee92c85228ec0c081cec2191b4c",
+      "artifactDiffersOnlyInLineEndings": false
+    },
+    {
+      "path": "assets/PyramidCanvas-DeXeIjI3.js",
+      "httpStatus": 200,
+      "sha256MatchesDeployedCommit": true,
+      "sha256": "de99b29c3eaf093bb3d3f58092f20b4f0670a95515576bd69cba6b412ceeffc0",
+      "artifactDiffersOnlyInLineEndings": false
+    },
+    {
+      "path": "assets/web-Hhpdxoha.js",
+      "httpStatus": 200,
+      "sha256MatchesDeployedCommit": true,
+      "sha256": "d24b3c9396ba2e3fab8e8ed1cc3b663118bc8cc82440a1f647d751ac61527a8a",
+      "artifactDiffersOnlyInLineEndings": false
+    },
+    {
+      "path": "bundle-inventory.json",
+      "httpStatus": 200,
+      "sha256MatchesDeployedCommit": true,
+      "sha256": "aafee4f039ad90b2eb3e0154d9aad4df6e9e49f2f4c0c47749fc41b7b0b8b2e8",
+      "artifactDiffersOnlyInLineEndings": false
+    },
+    {
+      "path": "etap-10/podglad.html",
+      "httpStatus": 200,
+      "sha256MatchesDeployedCommit": true,
+      "sha256": "b4cc59b7f1b0b928e72a33f67ea6a34adb9c66d4ba8c39b57d5b9795abf6e751",
+      "artifactDiffersOnlyInLineEndings": true
+    },
+    {
+      "path": "etap-10/preview.js",
+      "httpStatus": 200,
+      "sha256MatchesDeployedCommit": true,
+      "sha256": "4f06ba6982d4da64f150d595f40d2519cdc117559dd5103fbe728c521c18ff01",
+      "artifactDiffersOnlyInLineEndings": true
+    },
+    {
+      "path": "etap-10/style.css",
+      "httpStatus": 200,
+      "sha256MatchesDeployedCommit": true,
+      "sha256": "acade24e4dfc50bb33e5ca0bf980622c7826eb06b91282fe575ec2ce62f2e9f0",
+      "artifactDiffersOnlyInLineEndings": true
+    },
+    {
+      "path": "etap-10/vortex.js",
+      "httpStatus": 200,
+      "sha256MatchesDeployedCommit": true,
+      "sha256": "f9c056310112eb5f7783efd9324c3704ced85d850945da4497958ed74207af3f",
+      "artifactDiffersOnlyInLineEndings": true
+    },
+    {
+      "path": "etap-11/extension.js",
+      "httpStatus": 200,
+      "sha256MatchesDeployedCommit": true,
+      "sha256": "e31a126cc576a4ecc4a7f5ec74900d86fd2470ff95ec2521837f0554c7cce28b",
+      "artifactDiffersOnlyInLineEndings": true
+    },
+    {
+      "path": "etap-11/odbior.md",
+      "httpStatus": 200,
+      "sha256MatchesDeployedCommit": true,
+      "sha256": "433bf881606ded26113eb26a2f35bc72b9f23fcc2146a9284ab61e748ff1eb2c",
+      "artifactDiffersOnlyInLineEndings": true
+    },
+    {
+      "path": "etap-11/particles.js",
+      "httpStatus": 200,
+      "sha256MatchesDeployedCommit": true,
+      "sha256": "d6552faa9f66382f638e1701ae2d14630696d29917233b742bddf8c10171fc0d",
+      "artifactDiffersOnlyInLineEndings": true
+    },
+    {
+      "path": "etap-11/podglad.html",
+      "httpStatus": 200,
+      "sha256MatchesDeployedCommit": true,
+      "sha256": "ec8e8f819f14e96c7b989b1644a4169734cf0e7d9b4e3ec0b5928bdb49ce20f4",
+      "artifactDiffersOnlyInLineEndings": true
+    },
+    {
+      "path": "etap-7/animation.js",
+      "httpStatus": 200,
+      "sha256MatchesDeployedCommit": true,
+      "sha256": "d3e9b6cec61df4b05433e72205a89d7491af3397761e339834b3cdd2caed8106",
+      "artifactDiffersOnlyInLineEndings": true
+    },
+    {
+      "path": "etap-7/podglad.html",
+      "httpStatus": 200,
+      "sha256MatchesDeployedCommit": true,
+      "sha256": "5078e4b2ea12cfbe6e403477afed54c0d9558564e3cfe215e9e91d8b6b68fc71",
+      "artifactDiffersOnlyInLineEndings": true
+    },
+    {
+      "path": "etap-7/section.js",
+      "httpStatus": 200,
+      "sha256MatchesDeployedCommit": true,
+      "sha256": "82fd5d661488c87920e18d4eb727a5858c008638b2c1a907982677ffcc673bd5",
+      "artifactDiffersOnlyInLineEndings": true
+    },
+    {
+      "path": "favicon.svg",
+      "httpStatus": 200,
+      "sha256MatchesDeployedCommit": true,
+      "sha256": "fea570a53403ee0bdfce58827a83fac68fa8b68c83b67b062022414b68885ad7",
+      "artifactDiffersOnlyInLineEndings": true
+    },
+    {
+      "path": "index.html",
+      "httpStatus": 200,
+      "sha256MatchesDeployedCommit": true,
+      "sha256": "8580bfdfd6a22ddfb341e41be94022b6136781562dfd9ee7d8cee1fbe80e19c6",
+      "artifactDiffersOnlyInLineEndings": false
+    },
+    {
+      "path": "release.json",
+      "httpStatus": 200,
+      "sha256MatchesDeployedCommit": true,
+      "sha256": "5b452c840c22d8b6df7160f16daedb826bb159931a6a88f7ebe9856ecc9508d4",
+      "artifactDiffersOnlyInLineEndings": false
+    },
+    {
+      "path": "third-party-notices.txt",
+      "httpStatus": 200,
+      "sha256MatchesDeployedCommit": true,
+      "sha256": "9e2b98254a5e1a1a0a79dbc33e2f0fba780d228b262095a537ecc9a93df41aa6",
+      "artifactDiffersOnlyInLineEndings": true
+    },
+    {
+      "path": "wydanie/index.html",
+      "httpStatus": 200,
+      "sha256MatchesDeployedCommit": true,
+      "sha256": "d14e1198a1a6be9f0bf591774f40ef0d6ce62f5a93156eb8b38b54fa6fde2ac3",
+      "artifactDiffersOnlyInLineEndings": true
+    }
+  ],
+  "result": "PASS"
+}

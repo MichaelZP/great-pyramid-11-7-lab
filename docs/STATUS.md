@@ -1,3 +1,54 @@
+# ETAP 13 — opublikowane wydanie 2.0.2, 2026-10-07
+
+**Publikacja i kontrola po wdrożeniu: PASS. Brak nierozwiązanych blokad dla
+opublikowanego wydania internetowego.** Autor zaakceptował etap 12 i potwierdził
+prawa do dystrybucji przy zachowaniu braku licencji open source.
+Koncepcja: **Michał Przybylski — prylski.dev**, https://github.com/MichaelZP/.
+
+- Aplikacja: https://michaelzp.github.io/great-pyramid-11-7-lab/.
+- Wszystkie części: https://michaelzp.github.io/great-pyramid-11-7-lab/wydanie/.
+- Wersja/tag: **2.0.2 / v2.0.2**; kod wydania:
+  `08aead2a2f3bb800db448822b5b374d8e1bbf62e`.
+- PR #3 scalono po obu CI PASS; merge:
+  `f6f5d32cc92a22964c342fe72aff4184c8ddf012`.
+  Po merge poprawiono wyłącznie metadane wersji/dokumentację: historyczny
+  changelog zawierał już 2.0.1. Finalny commit 08aead2 także uzyskał CI PASS.
+- Paczka Pages: `a600eb7eed17a695420eecfc4d41b848ef45a1d3`;
+  [wdrożenie](https://github.com/MichaelZP/great-pyramid-11-7-lab/actions/runs/37611859019)
+  PASS. Jeden push gh-pages; merge uruchomił tylko CI. Hosting/domena/DNS bez zmian.
+
+**Weryfikacja:** TypeScript, 87/87 testów aplikacji, 14/14 podglądów,
+niezależny audyt 60-cyfrowy/13 pozycji/obu XLSX, build i aktualne CI PASS.
+Wszystkie trzy pakiety z brakującymi pełnymi notami mają 0 emitowanych modułów
+w finalnym artefakcie; dostępne noty dołączono. Bez oryginalnych XLSX/PDF
+w paczce strony. HTTP 200 i zgodność z dokładnymi blobami wdrożonego commitu:
+**23/23 plików PASS**. Git normalizuje końce linii części tekstów; brak różnic kodu.
+
+**Publiczna przeglądarka:** otwarcie i model 3D, PL/EN, 13 wyborów i kroki
+1–4 każdej lekcji, 9 kroków tutorialu, suwaki modelu, źródła/podpis,
+animacja konstrukcji/odbicie/pauza/reset, oba tryby wirów, widoki, suwaki,
+pauza/wznowienie/reset i bazowy etap 10 PASS. Telefonowe viewporty
+320×844 / 390×844 / 844×390 sprawdzono na komputerze; nie są pomiarem
+fizycznego telefonu. Nie zaobserwowano błędów konsoli ani istotnej awarii.
+Nie uruchomiono powrotu produkcji, bo nie było potrzeby.
+
+**Ograniczenia:** osobne strony stożków/wirów, zachowane historyczne etykiety
+podglądów; brak nowego APK i pełnego odbioru fizycznego, natywnego fullscreen,
+pomiarów FPS/temperatury/pamięci oraz pełnego WCAG. Opóźnione zrzuty hosta
+ilustrują sceny, nie dowodzą ostatniego kroku; stan DOM zapisano osobno.
+Ostrzeżenia dużych paczek i Three pozostają. Wyniki 11:7 12/13, Golden Egg
+10/13, L/W poza 0,1%, zależności i granice interpretacji bez zmian.
+Szerszy audyt npm/native i odbiór APK nadal wymagane przed dystrybucją APK.
+Nie opublikowano YouTube ani dodatkowych materiałów edukacyjnych.
+
+**Powrót:** cofnięcie commitu publikacji a600eb7 przez `git revert` i zwykły
+push gh-pages przywraca drzewo poprzedniej wersji
+`3d78300ef428153ec826261ed5cff5f6661325c8`. Próba w osobnej lokalnej kopii
+PASS: drzewo identyczne, bez force push. Zachowano także lokalny bundle/ZIP.
+Polecenia, dokładne wyniki i granice: [ETAP-13.md](ETAP-13.md),
+[opis wydania](RELEASE_NOTES.md), [dowody](etap-13/).
+Poniższe wpisy są historią przygotowania i wcześniejszych etapów.
+
 # ETAP 13 — release preparation, 2026-10-07
 
 The author accepted the stage 12 test version and authorized merge/publication.

@@ -1,0 +1,114 @@
+{
+  "version": "2.0.2",
+  "sourceCommit": "08aead2a2f3bb800db448822b5b374d8e1bbf62e",
+  "runtimeFilesMatchingTestedCandidate": 17,
+  "lineEndingOnlyChanges": [
+    "etap-7\\animation.js",
+    "etap-10\\preview.js",
+    "etap-10\\style.css",
+    "etap-10\\vortex.js",
+    "etap-11\\extension.js",
+    "etap-11\\particles.js"
+  ],
+  "artifactLinks": "PASS",
+  "noticeGate": "PASS",
+  "noOriginalWorkbooksOrPDF": "PASS",
+  "files": [
+    {
+      "path": ".nojekyll",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "assets/index-BNaQLlQW.js",
+      "sha256": "eb677ef2e67d502780bea5fcee38d577d39395c9a899ba768c353cc66799d0f5"
+    },
+    {
+      "path": "assets/index-BrxKMyzt.css",
+      "sha256": "06bea464230d2fe631e027c151ea320ad9c47f82714b2864dc239564be9c6eb5"
+    },
+    {
+      "path": "assets/index-CKZhs57K.js",
+      "sha256": "6a4dcc3d51e6e6401d2239514e1cd4a49878fad6e4779fce276cf96573c05409"
+    },
+    {
+      "path": "assets/index-ColpdIYy.js",
+      "sha256": "e3097dd664db26ebae411efd6feec82847ec3ee92c85228ec0c081cec2191b4c"
+    },
+    {
+      "path": "assets/PyramidCanvas-DeXeIjI3.js",
+      "sha256": "de99b29c3eaf093bb3d3f58092f20b4f0670a95515576bd69cba6b412ceeffc0"
+    },
+    {
+      "path": "assets/web-Hhpdxoha.js",
+      "sha256": "d24b3c9396ba2e3fab8e8ed1cc3b663118bc8cc82440a1f647d751ac61527a8a"
+    },
+    {
+      "path": "bundle-inventory.json",
+      "sha256": "aafee4f039ad90b2eb3e0154d9aad4df6e9e49f2f4c0c47749fc41b7b0b8b2e8"
+    },
+    {
+      "path": "etap-10/podglad.html",
+      "sha256": "da2382823598085450f8b4086dda178162b3643075f9d4113845bbf8accad935"
+    },
+    {
+      "path": "etap-10/preview.js",
+      "sha256": "fd2a1ace74abdc9f4a59e2fb2a021593a8a8f0fda6171e4b66fe97fa1bd902d4"
+    },
+    {
+      "path": "etap-10/style.css",
+      "sha256": "843a3969ea2a5348404346b35052c9ae31282907c3e6ce6ebeb011f8b439ec8c"
+    },
+    {
+      "path": "etap-10/vortex.js",
+      "sha256": "c70792e7a4de69101860cc237f1299fef4c7412cc18f111008ce8e4bf57e3058"
+    },
+    {
+      "path": "etap-11/extension.js",
+      "sha256": "68e58e46468ee3fa4dc2c60beeff7f619ed9d242a78ae3baed4c9f44dc42dcd2"
+    },
+    {
+      "path": "etap-11/odbior.md",
+      "sha256": "a4ac25eba3285a46a9d82e2773965aae692545e2404c8090cd966dc49d2e2000"
+    },
+    {
+      "path": "etap-11/particles.js",
+      "sha256": "4a385389bfe97e75d0518f74fc48210a39d55467221a8f0698b0410708242437"
+    },
+    {
+      "path": "etap-11/podglad.html",
+      "sha256": "bad28e58e53d0e9524abbe47ef90317e160f181c49e195559545908946ac5cfd"
+    },
+    {
+      "path": "etap-7/animation.js",
+      "sha256": "c1a40a41fb2679b76c3099a65f2a0b2ad24edd402d206f5badceb4e10f86e00a"
+    },
+    {
+      "path": "etap-7/podglad.html",
+      "sha256": "391ba473a91b201d38a6b8bbf663fa88c996312eb561f423399dd02e55e1289f"
+    },
+    {
+      "path": "etap-7/section.js",
+      "sha256": "94490166687ac7645ac05225f7391dd485a5ffb9d080931613c5c8f720f4e2f7"
+    },
+    {
+      "path": "favicon.svg",
+      "sha256": "a1f62dde538ef423bd34fcea56925aa712e2a7cce41bc46919000d43f7e7b094"
+    },
+    {
+      "path": "index.html",
+      "sha256": "8580bfdfd6a22ddfb341e41be94022b6136781562dfd9ee7d8cee1fbe80e19c6"
+    },
+    {
+      "path": "release.json",
+      "sha256": "5b452c840c22d8b6df7160f16daedb826bb159931a6a88f7ebe9856ecc9508d4"
+    },
+    {
+      "path": "third-party-notices.txt",
+      "sha256": "a9b31850473dc090e977dc6c90e557470113055389792ec7e59846905ee5bbe7"
+    },
+    {
+      "path": "wydanie/index.html",
+      "sha256": "01d2995e48e6c1503a32a944240d8d37b3e4c3db848a00078d0dbe611f392ded"
+    }
+  ]
+}

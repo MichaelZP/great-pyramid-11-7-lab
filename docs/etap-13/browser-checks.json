@@ -1,0 +1,196 @@
+{
+  "relations": [
+    {
+      "id": "pi",
+      "step4": true,
+      "hasResult": true,
+      "hasError": true
+    },
+    {
+      "id": "gamma",
+      "step4": true,
+      "hasResult": true,
+      "hasError": true
+    },
+    {
+      "id": "sqrt3",
+      "step4": true,
+      "hasResult": true,
+      "hasError": true
+    },
+    {
+      "id": "sqrt6",
+      "step4": true,
+      "hasResult": true,
+      "hasError": true
+    },
+    {
+      "id": "sqrt2",
+      "step4": true,
+      "hasResult": true,
+      "hasError": true
+    },
+    {
+      "id": "sqrt5",
+      "step4": true,
+      "hasResult": true,
+      "hasError": true
+    },
+    {
+      "id": "tribonacci",
+      "step4": true,
+      "hasResult": true,
+      "hasError": true
+    },
+    {
+      "id": "brun",
+      "step4": true,
+      "hasResult": true,
+      "hasError": true
+    },
+    {
+      "id": "invPhi",
+      "step4": true,
+      "hasResult": true,
+      "hasError": true
+    },
+    {
+      "id": "phi",
+      "step4": true,
+      "hasResult": true,
+      "hasError": true
+    },
+    {
+      "id": "e",
+      "step4": true,
+      "hasResult": true,
+      "hasError": true
+    },
+    {
+      "id": "eMinus1",
+      "step4": true,
+      "hasResult": true,
+      "hasError": true
+    },
+    {
+      "id": "eggLW",
+      "step4": true,
+      "hasResult": true,
+      "hasError": true
+    }
+  ],
+  "tutorial": [
+    {
+      "label": "1. Start with the square",
+      "text": "Geometry tutorial\nGo to step\n1. Start with the square\n2. One shape parameter\n3. Half the perimeter and π\n4. The γ, √3 and √6 family\n5. The φ, 1/φ and √5 family\n6. Tribonacci and Brun also depend on p\n7. Angles, e and e−1\n8. The oval is a separate model\n9. How to read a result and its history\nStep 1/"
+    },
+    {
+      "label": "2. One shape parameter",
+      "text": "Geometry tutorial\nGo to step\n1. Start with the square\n2. One shape parameter\n3. Half the perimeter and π\n4. The γ, √3 and √6 family\n5. The φ, 1/φ and √5 family\n6. Tribonacci and Brun also depend on p\n7. Angles, e and e−1\n8. The oval is a separate model\n9. How to read a result and its history\nStep 2/"
+    },
+    {
+      "label": "3. Half the perimeter and π",
+      "text": "Geometry tutorial\nGo to step\n1. Start with the square\n2. One shape parameter\n3. Half the perimeter and π\n4. The γ, √3 and √6 family\n5. The φ, 1/φ and √5 family\n6. Tribonacci and Brun also depend on p\n7. Angles, e and e−1\n8. The oval is a separate model\n9. How to read a result and its history\nStep 3/"
+    },
+    {
+      "label": "4. The γ, √3 and √6 family",
+      "text": "Geometry tutorial\nGo to step\n1. Start with the square\n2. One shape parameter\n3. Half the perimeter and π\n4. The γ, √3 and √6 family\n5. The φ, 1/φ and √5 family\n6. Tribonacci and Brun also depend on p\n7. Angles, e and e−1\n8. The oval is a separate model\n9. How to read a result and its history\nStep 4/"
+    },
+    {
+      "label": "5. The φ, 1/φ and √5 family",
+      "text": "Geometry tutorial\nGo to step\n1. Start with the square\n2. One shape parameter\n3. Half the perimeter and π\n4. The γ, √3 and √6 family\n5. The φ, 1/φ and √5 family\n6. Tribonacci and Brun also depend on p\n7. Angles, e and e−1\n8. The oval is a separate model\n9. How to read a result and its history\nStep 5/"
+    },
+    {
+      "label": "6. Tribonacci and Brun also depend on p",
+      "text": "Geometry tutorial\nGo to step\n1. Start with the square\n2. One shape parameter\n3. Half the perimeter and π\n4. The γ, √3 and √6 family\n5. The φ, 1/φ and √5 family\n6. Tribonacci and Brun also depend on p\n7. Angles, e and e−1\n8. The oval is a separate model\n9. How to read a result and its history\nStep 6/"
+    },
+    {
+      "label": "7. Angles, e and e−1",
+      "text": "Geometry tutorial\nGo to step\n1. Start with the square\n2. One shape parameter\n3. Half the perimeter and π\n4. The γ, √3 and √6 family\n5. The φ, 1/φ and √5 family\n6. Tribonacci and Brun also depend on p\n7. Angles, e and e−1\n8. The oval is a separate model\n9. How to read a result and its history\nStep 7/"
+    },
+    {
+      "label": "8. The oval is a separate model",
+      "text": "Geometry tutorial\nGo to step\n1. Start with the square\n2. One shape parameter\n3. Half the perimeter and π\n4. The γ, √3 and √6 family\n5. The φ, 1/φ and √5 family\n6. Tribonacci and Brun also depend on p\n7. Angles, e and e−1\n8. The oval is a separate model\n9. How to read a result and its history\nStep 8/"
+    },
+    {
+      "label": "9. How to read a result and its history",
+      "text": "Geometry tutorial\nGo to step\n1. Start with the square\n2. One shape parameter\n3. Half the perimeter and π\n4. The γ, √3 and √6 family\n5. The φ, 1/φ and √5 family\n6. Tribonacci and Brun also depend on p\n7. Angles, e and e−1\n8. The oval is a separate model\n9. How to read a result and its history\nStep 9/"
+    }
+  ],
+  "views": [
+    {
+      "credit": true,
+      "height": 844,
+      "noHorizontalOverflow": true,
+      "scene": [
+        {
+          "height": 294.890625,
+          "width": 320
+        }
+      ],
+      "width": 320
+    },
+    {
+      "credit": true,
+      "height": 390,
+      "noHorizontalOverflow": true,
+      "scene": [
+        {
+          "height": 246,
+          "width": 489.53125
+        }
+      ],
+      "width": 844
+    }
+  ],
+  "mobile390": {
+    "canvas": [
+      {
+        "height": 294.890625,
+        "width": 390
+      }
+    ],
+    "docWidth": 390,
+    "height": 844,
+    "width": 390
+  },
+  "cone": {
+    "pausedProgress": "82.2",
+    "endpointProgress": "100",
+    "reflectedEndpoint": "Końcowa skala względem V: 8.0%. Q(t) = (0.000; 0.000; 7.000); Q′(t) = (0.000; 0.000; 7.000); σ(t) = 1.322119; k(t) = σ²k = 1.747999. L(t) = L′(t) = 0.560, W(t) = W′(t) = 0.346. Kąt do osi = 38.157227°. Obrót układu = 0°. Odbicie aktualnej klatki: Z ↦ 14 − Z.",
+    "noHorizontalOverflow": true,
+    "resetProgress": "0",
+    "motionBeforePause": "76"
+  },
+  "vortexStart": "Przebieg pokazu\n100.0%\nOdtwórz\nPauza\nReset\nPokaż obiegi · 100%\nOgraniczony ruch\n\nPrzeciwbieżny obieg · Pauza zatrzyma znaczniki.\n\nPrędkość obiegu\n1.00×\nOdległość środków [u]\n4.0\nWidok\nPerspektywiczny\nZ boku · XZ\nZ góry · XY\nWidoczne układy\nOba\nT1 · pierwszy\nT2 · odbicie\nPiramida\nPowierzchnie\nPłaszczyzny cięcia\nRzeczywiste przekroje\nTorusy\nTrajektorie i znaczniki\nPowiązania schematyczne",
+  "vortexPause": {
+    "pauseDisabled": true,
+    "playEnabled": true,
+    "progress": "100",
+    "status": "Przebieg pokazu\n100.0%\nOdtwórz\nPauza\nReset\nPokaż obiegi · 100%\nOgraniczony ruch\n\nPauza · ręczna kontrola kierunków i warstw.\n\nPrędkość obiegu\n1.00×\nOdległość środków [u]\n4.0\nWidok\nPerspektywiczny\nZ boku · XZ\nZ góry · XY\nWidoczne układy\nOba\nT1 · pierwszy\nT2 · odbicie\nPiramida\nPowierzchnie\nPłaszczyzny cięcia\nRzeczywiste przekroje\nTorusy\nTrajektorie i znaczniki\nPowiązania schematyczne"
+  },
+  "vortexResume": true,
+  "vortexReset": {
+    "progress": "0",
+    "pauseDisabled": true
+  },
+  "vortexControls": {
+    "mode": "education",
+    "distance": "4.1",
+    "deformation": "0.05",
+    "noOverflow": true
+  },
+  "stage10": {
+    "resetProgress": "0",
+    "noOverflow": true
+  },
+  "consoleErrors": [],
+  "production": {
+    "version": "2.0.2",
+    "sourceCommit": "08aead2a2f3bb800db448822b5b374d8e1bbf62e",
+    "pagesCommit": "a600eb7eed17a695420eecfc4d41b848ef45a1d3",
+    "appUrl": "https://michaelzp.github.io/great-pyramid-11-7-lab/",
+    "checkedAtUtc": "2026-10-07T11:19:17.498Z",
+    "scope": "Desktop IAB UI checks and phone-sized viewports; not physical-device/FPS/WCAG validation. Screenshots may lag DOM."
+  }
+}
