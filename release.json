@@ -1,0 +1,19 @@
+{
+  "version": "2.0.2",
+  "sourceCommit": "08aead2a2f3bb800db448822b5b374d8e1bbf62e",
+  "base": "/great-pyramid-11-7-lab/",
+  "missingNoticePackages": [
+    {
+      "name": "@mediapipe/tasks-vision",
+      "emittedModules": 0
+    },
+    {
+      "name": "maath",
+      "emittedModules": 0
+    },
+    {
+      "name": "stats-gl",
+      "emittedModules": 0
+    }
+  ]
+}
