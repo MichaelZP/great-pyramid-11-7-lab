@@ -1,3 +1,58 @@
+# ETAP 13 — release preparation, 2026-10-07
+
+The author accepted the stage 12 test version and authorized merge/publication.
+The author separately confirmed public distribution with existing reserved rights
+(no open-source licence) and rights to materials already contained in PR #3.
+Concept: **Michał Przybylski — prylski.dev**, https://github.com/MichaelZP/.
+
+Accepted application/prototype implementation: `25281f5`; reviewed follow-up
+HEAD: `9895b67e6f6a4239954a21a1e1df05b0429073f0`. Changes since that audit are
+preview packaging/inventory and documentation; application/geometry unchanged.
+Existing local phone-report edits were reviewed and retained. Acceptance is the
+author's decision; it does not convert pending physical checks into measurements.
+
+Web release **2.0.1** is prepared for the existing Pages address:
+https://michaelzp.github.io/great-pyramid-11-7-lab/.
+The release hub `/wydanie/` links the unchanged separate stage 9–11 pages.
+No APK, new integration, YouTube or additional educational material is included.
+Public production deployment and post-deployment checks are **PENDING**.
+
+Live PR #3: draft/open, `feature/android-offline` → `main`, clean merge state,
+two successful CI checks at `9895b67`; no branch rulesets/required reviews.
+Pages source remains `gh-pages` at `/`, no custom domain. Main merge runs CI
+only; manual fast-forward push to `gh-pages` triggers the single Pages deployment.
+Pre-release main: `e5aeecce1457dd8b17a4d4c34161baedda182852`.
+Pre-release Pages/rollback tree: `3d78300ef428153ec826261ed5cff5f6661325c8`.
+Rollback restores that complete tree in a new commit on current `gh-pages`,
+then normal push/Pages build, without force push or rewriting history.
+
+Applicable web gates: rights confirmed; emitted-bundle notice audit must PASS;
+current CI/typecheck/87 application + 14 prototype tests/build must PASS before
+merge. The three full-notice inventory gaps remain outside the shipped web
+artifact. Native notice audit and physical APK acceptance still block APK release.
+Remaining limits: separate prototypes, incomplete measured phone/native/fullscreen/
+accessibility evidence, library/large-chunk warnings, mathematical/historical
+uncertainties described in stage 12. See [release notes](RELEASE_NOTES.md).
+Historical entries below retain their original evidence and publication scope.
+
+# ETAP 12 — częściowy odbiór telefonu, 2026-10-07
+
+Autor potwierdził na fizycznym NE2213 / Android 16 / Chrome: stronę z 4 kafelkami,
+widoczne dwa wiry i znaczniki, pauzę, wznowienie, reset, krótki pokaz filmowy,
+pion/poziom i ukrywanie/przywracanie warstwy piramidy. Obrót kamery po
+przeciągnięciu zgłoszony jako „ok”. Są to **ręczne obserwacje autora**, nie
+automatyczne pomiary ani bezpośrednia inspekcja ekranu przez agenta.
+ADB potwierdziło połączenie i uruchomienie Chrome, bez zapisu identyfikatora.
+
+Autor potwierdził także pełne 5 minut płynnego pokazu filmowego; nagrzewanie
+pozostało bez zmian i na akceptowalnym dla niego poziomie. To ocena subiektywna.
+To częściowy odbiór **osobnego podglądu etapu 11**. Pomiary
+FPS/temperatury/pamięci, tło/wznowienie, pozostałe kontrolki, główna aplikacja,
+stożki i natywny APK pozostają niezweryfikowane na tym telefonie.
+Nie oznaczono całego odbioru ani wydania jako zaliczonego.
+[Raport telefonu](etap-12/phone-2026-10-07.md),
+[checklista](MANUAL_ACCEPTANCE.md). Historyczne wyniki poniżej zachowano.
+
 # ETAP 12 — podgląd internetowy do odbioru, 2026-10-06
 
 Po zakończeniu audytu autor zlecił udostępnienie wersji testowej przez GitHub,

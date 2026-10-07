@@ -1,7 +1,7 @@
 {
   "name": "great-pyramid-11-7-lab",
   "private": true,
-  "version": "2.0.0",
+  "version": "2.0.1",
   "type": "module",
   "description": "Interactive 3D laboratory of the Great Pyramid 11:7 model, thirteen mathematical comparisons, and the Golden Φ Egg.",
   "scripts": {

@@ -1,5 +1,10 @@
 # Author acceptance — stage 12 test version
 
+[Partial phone results, 2026-10-07](etap-12/phone-2026-10-07.md): author-reported
+stage 11 playback/pause/resume/reset, short cinematic run, orientation and
+pyramid layer PASS; camera drag reported OK. This does not complete the broader
+rows below or establish sustained performance/native acceptance.
+
 Concept: **Michał Przybylski — prylski.dev**, https://github.com/MichaelZP/.
 [Scope/evidence](ETAP-12.md). Record reviewer/date, branch/commit, browser/device/orientation and PASS/FAIL/UNVERIFIED per item. Builds/screenshots are not device acceptance.
 

@@ -1,23 +1,46 @@
-# Pyramid 11:7 — stage 12 author review
+# Pyramid 11:7 — web release 2.0.1 (2026-10-07)
 
-Author-authorized follow-up: a [separate Pages test hub](https://michaelzp.github.io/great-pyramid-11-7-lab/preview/etap-12/)
-provides phone access to this audited app and the static prototypes. The
-existing site root stays unchanged; the PR stays draft. Emitted-chunk inventory
-shows that all three unresolved-notice packages are absent from this artifact.
-This does not resolve the broader npm/native inventory or assign a licence.
+Stage 12 was accepted by the author for public web release. This update delivers
+all thirteen labelled 3D constructions/four-step lessons, PL/EN history and
+sources, the optional nine-step tutorial, presets/sliders, scan/ranking, layers,
+camera and stereo. It repairs the short landscape layout. Separate stage 9
+construction/reflection pages and stage 10/11 opposite-circulation artistic
+vortices ship beside the lab, accessible through the release hub.
 
-This draft prepares the implemented lab and separate cone/vortex previews for author acceptance. It retains all thirteen labelled constructions/four-step lessons, PL/EN history/sources, optional nine-step tutorial, presets/sliders, scan/ranking, rainbow/hologram, camera and stereo. The existing Capacitor foundation remains included; no new APK is delivered.
+Application: https://michaelzp.github.io/great-pyramid-11-7-lab/.
+All parts: https://michaelzp.github.io/great-pyramid-11-7-lab/wydanie/.
+Accepted implementation: `25281f5`; reviewed preview follow-up:
+`9895b67e6f6a4239954a21a1e1df05b0429073f0`. Release commit/tag and production
+checks are pending until merge/deployment; see STATUS.md for the final record.
 
-Separate static previews cover hyperbolic sections/two scaled and axially placed/reflected systems (current stage 9), opposite-circulation tori (stage 10), and artistic particles/trails/deformation/glow with educational/cinematic modes, camera and bounded quality (stage 11). These `docs/` pages are **not integrated into the main app or Android assets**.
+The author confirmed public distribution and rights to existing PR materials
+while retaining reserved rights/no open-source licence. Original XLSX/private
+correspondence are excluded from the site artifact. Available verbatim dependency
+notices are included. The release builder inventories emitted modules and rejects
+code from any of the three unresolved-notice packages. Broader npm/native notice
+gaps do not become a complete audit; APK distribution remains blocked separately.
 
-The review fixes 844×390 layout: toolbar controls are reachable and scene height grows from approximately 59 to 246 px, with scrollable side controls. Desktop and expanded-scene layout remain usable; mobile navigation exposes pressed state. CI adds the 14 prototype tests. Reproducible dependency inventory and available verbatim notices accompany the release, with three full-notice gaps recorded.
+Validation before publication: stage 12 audit 87 application + 14 prototype tests,
+TypeScript, independent 60-digit/all-13/both-workbook audit and builds PASS; current
+checks and public post-deployment checks are recorded in the stage 13 evidence.
+Author phone observations cover stage 11 play/pause/resume/reset/orientation and
+five minutes of subjectively smooth playback. Other physical-phone rows remain
+unverified; acceptance does not imply measured FPS/temperature/memory or APK tests.
 
-Validation: **87 application tests + 14 prototype tests PASS**, TypeScript PASS, independent 60-digit audit/all 13 rows/both workbooks PASS, and web/Android-assets/Pages builds PASS. Browser review covers lessons, PL/EN history, tutorial, presets/layers/stereo and separate geometry/animation controls. [Stage 12 audit](ETAP-12.md) distinguishes automated checks, browser inspection and unverified physical-device behaviour.
+Known limits: prototypes remain separate pages, not integrated app/APK features.
+No new APK is published. Native fullscreen, complete screen-reader/WCAG testing
+and measured sustained device performance remain unverified. Existing large-bundle
+and library warnings remain. 11:7 gives 12/13 at 0.1%; L/W stays outside tolerance;
+Golden Egg gives 10/13. Dependent ratios/selected weights are not probabilities
+of historical intent. Vortices are artistic, without a Navier–Stokes solver or
+proof of pyramid function. Brun uncertainty/global uniqueness/historical evidence
+remain as documented in [stage 12](ETAP-12.md). No YouTube/material publication.
 
-11:7 gives 12/13 at 0.1%; oval L/W stays outside tolerance. Golden Egg gives 10/13. Targets/tolerances remain unchanged; dependent ratios and chosen scores are not historical probabilities. Vortices are artistic, without a Navier–Stokes solver or proof of pyramid function.
-
-Known limits: physical Android/native fullscreen/sustained FPS/thermal behaviour unverified; large-bundle/library warnings; unresolved Brun uncertainty/global uniqueness/historical claims. Project licensing and three dependency notice gaps block public distribution; native dependencies need audit before APK distribution. Local author review is ready.
-
-Use [startup/checklist](MANUAL_ACCEPTANCE.md), [audit](ETAP-12.md) and [materials/licences](THIRD_PARTY.md). Source delivery stays on `feature/android-offline` in draft [PR #3](https://github.com/MichaelZP/great-pyramid-11-7-lab/pull/3) targeting `main`. The separately authorized test preview adds only `preview/etap-12/` on `gh-pages`. No merge, production-root replacement, APK or release tag.
+Deployment uses existing GitHub Pages (`gh-pages`, `/`) with no domain/DNS/provider
+change. Merge runs CI only, then one normal Pages-branch push publishes the artifact.
+Rollback: restore the complete tree of `3d78300ef428153ec826261ed5cff5f6661325c8`
+into a new commit on current `gh-pages`, normal push, wait for Pages success,
+and recheck the public root/test preview. Preserve later independent changes;
+no reset/force push. Previous main: `e5aeecce1457dd8b17a4d4c34161baedda182852`.
 
 Concept: **Michał Przybylski — prylski.dev**, https://github.com/MichaelZP/.

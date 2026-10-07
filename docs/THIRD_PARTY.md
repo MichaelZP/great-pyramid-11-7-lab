@@ -36,3 +36,13 @@ audit. The preview includes available notices and no original workbooks/private
 correspondence, and assigns no project licence.
 
 Reproduce after `npm ci`: `python docs/etap-12/audit_dependencies.py`. Local files plus recorded upstream notices; exit 1 while gaps remain. `fetch_missing_notices.py` records version-specific retrievals, requires internet and does not install packages/choose project licensing. Failed retrieval records stay unresolved.
+
+## Stage 13 author decision (2026-10-07)
+
+The author explicitly confirmed public distribution of the app/separate previews
+and rights to materials already contained in PR #3, retaining reserved rights
+without assigning an open-source licence. Original workbooks/private correspondence
+are excluded from the deployed site. The web release builder repeats the emitted
+module inventory for the exact production artifact and rejects unresolved-notice
+packages if they contribute code. This resolves the applicable web release gates
+when the artifact check passes; broader npm/native gaps remain for other releases.
