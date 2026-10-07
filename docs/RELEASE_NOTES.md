@@ -1,4 +1,4 @@
-# Pyramid 11:7 — web release 2.0.1 (2026-10-07)
+# Pyramid 11:7 — web release 2.0.2 (2026-10-07)
 
 Stage 12 was accepted by the author for public web release. This update delivers
 all thirteen labelled 3D constructions/four-step lessons, PL/EN history and

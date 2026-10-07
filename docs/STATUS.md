@@ -11,7 +11,7 @@ preview packaging/inventory and documentation; application/geometry unchanged.
 Existing local phone-report edits were reviewed and retained. Acceptance is the
 author's decision; it does not convert pending physical checks into measurements.
 
-Web release **2.0.1** is prepared for the existing Pages address:
+Web release **2.0.2** is prepared for the existing Pages address:
 https://michaelzp.github.io/great-pyramid-11-7-lab/.
 The release hub `/wydanie/` links the unchanged separate stage 9–11 pages.
 No APK, new integration, YouTube or additional educational material is included.

@@ -1,13 +1,14 @@
 # Changelog
 
-## Unreleased — thirteen-position update, 2026-10-06
+## 2.0.2 — 2026-10-07
 
 - Labelled constructions and four-step PL/EN lessons for all 13 comparisons.
 - Scoped history, bibliography and optional nine-step tutorial with saved progress.
 - Correct RMS scan minimum, cancellable playback, visible author credit, compact
   header and fewer idle geometry uploads.
 - Correct oval terminology, approximation precision and ranking evidence limits.
-- Test-version details and remaining Android acceptance: [release notes](docs/RELEASE_NOTES.md).
+- Accepted separate construction/reflection and artistic vortex pages, release hub, and Pages artifact notice gate.
+- Public web release only; APK gates and unverified device measurements remain: [release notes](docs/RELEASE_NOTES.md).
 
 ## 2.0.1 — 2026-09-02
 
