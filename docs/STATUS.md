@@ -1,3 +1,36 @@
+# ETAP 14 — płaszczyzna między torusami, 2026-10-08
+
+Dodano warstwę **Płaszczyzna między torusami / Plane between tori**:
+złoty dysk w poziomej płaszczyźnie odniesienia, w połowie odległości
+środków. Dla zaakceptowanego symetrycznego rozstawu Z = 7. Promień =
+1,08 × max(R₁+r₁, R₂+r₂); nie zależy od skali stożków. Obwód jest
+próbkowany w 72 odcinkach i cache'owany, bez nowego renderera lub zegara.
+Wypełnienie pod konstrukcją/cząstkami, czytelny złoty obwód, osobny
+przełącznik i przezroczystość 0–100%, domyślnie 85%. Warstwa ujawnia się
+razem z torusami i zostaje w finale, stereo i nagraniu. Full show włącza
+warstwę, zachowując wybraną przezroczystość. Suwak zatrzymuje wspólny
+pokaz; przełącznik widoczności nie zmienia faz. To płaszczyzna odniesienia
+w prezentacji, bez dodawania twierdzeń o siłach lub funkcji piramidy.
+
+**32/32 testów podglądów PASS**, w tym położenie wszystkich punktów dysku,
+niezmienność geometrii pozostałych warstw, skala stożków/rozstaw bez zmiany
+dysku, dopasowanie do rozmiaru torusa, połowa środków przy innym Z,
+przezroczystość 0/100%, oba kadry stereo, jeden zegar, pauza i EN.
+Lokalny browser: włączenie/wyłączenie i 100%/85% przezroczystości bez błędu.
+[Widok lokalny](../education/evidence/midplane-local.png).
+Aktualizacja jest przeznaczona dla osobnej strony `great-pyramid-11-7-lab-edu`;
+główne laboratorium pozostaje oddzielne. Wynik wdrożenia należy potwierdzić.
+
+**Wdrożono i sprawdzono online.** Commit strony `54071d1`,
+[workflow 37760097067](https://github.com/MichaelZP/great-pyramid-11-7-lab-edu/actions/runs/37760097067)
+PASS (32 testy przed wdrożeniem). HTML i `show.js` zwracają HTTP 200,
+publiczna strona zawiera nową warstwę i krótki podpis „Z=7.0”. Browser:
+pełna scena 100%, przełącznik off/on i stereo bez alertu/błędów konsoli.
+Viewport 320×740: scrollWidth 305. To test układu na komputerze,
+bez nowego pomiaru FPS ani odbioru fizycznego telefonu.
+[Widok online](../education/evidence/midplane-online.png),
+[dowód](../education/evidence/midplane-checks.json).
+
 # ETAP 14 — osobna strona online, 2026-10-08
 
 Autor zlecił link online z końcówką `-edu`. Docelowy adres:

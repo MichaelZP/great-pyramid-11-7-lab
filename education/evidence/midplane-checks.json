@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-08",
+  "site": "https://michaelzp.github.io/great-pyramid-11-7-lab-edu/education/",
+  "siteCommit": "54071d1d0db820831a674371ca261c4b3d178dda",
+  "deployment": "https://github.com/MichaelZP/great-pyramid-11-7-lab-edu/actions/runs/37760097067",
+  "previewTestsPassed": 32,
+  "labelAndLanguageChecksPassed": 3,
+  "http": {"html": 200, "script": 200, "newLayer": true, "compactLabel": true},
+  "plane": {"midpointZ": 7, "defaultTransparencyPercent": 85, "radiusFactor": 1.08, "segments": 72},
+  "browser": {"layerOffAndOn": true, "localTransparency100And85": true, "stereo": true, "fullSceneProgress": 100, "geometryAlert": "", "consoleErrors": [], "phoneViewportWidth": 320, "phoneViewportHeight": 740, "contentWidth": 305},
+  "limits": "Desktop and responsive viewport checks; no new physical-phone or frame-rate/thermal measurement. Plane is a reference layer, without a force/flow claim."
+}
