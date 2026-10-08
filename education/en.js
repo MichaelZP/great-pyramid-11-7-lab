@@ -2,7 +2,7 @@
 'use strict';
 globalThis.VortexEnglish={
  'Pełny pokaz · konstrukcja i wiry · Piramida 11:7':'Full show · construction and vortices · Pyramid 11:7',
- 'Etap 14 · lokalny podgląd do oceny autora':'Stage 14 · local preview for author review',
+ 'Etap 14 · pokaz edukacyjny':'Stage 14 · educational show',
  'Konstrukcja i wiry na wspólnej scenie':'Construction and vortices in one scene',
  'Pięć odsłon na jednym zegarze. Piramida B = 11, h = 7; powierzchnie zr = 1, odbicie w Z = 7 i rzeczywiste owale. Torusy są osobnymi obiektami artystycznymi; nie wyprowadzono ich jako przekształcenia powierzchni ani rozwiązania przepływu.':'Five stages on one clock. Pyramid B = 11, h = 7; surfaces zr = 1, reflection across Z = 7 and actual oval sections. The tori are separate artistic objects; no derivation makes them a transformation of the surfaces or a flow solution.',
  'Wspólna scena':'Shared scene',

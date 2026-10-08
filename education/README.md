@@ -1,8 +1,9 @@
 # Etap 14 — wspólna scena konstrukcji i wirów
 
 Pokaz do oceny autora, aktualizacja 2026-10-08. Autor zlecił udostępnienie
-źródeł na GitHub w gałęzi `codex/education-show`, bez wdrożenia
-produkcyjnego i APK. Domyślne ustawienia zachowują zatwierdzoną geometrię;
+źródeł na GitHub w gałęzi `codex/education-show`, a następnie osobnej
+strony online: https://michaelzp.github.io/great-pyramid-11-7-lab-edu/.
+Główne laboratorium i APK pozostają oddzielne. Domyślne ustawienia zachowują zatwierdzoną geometrię;
 kontrolki pozwalają zmieniać artystyczne wiry.
 
 [English setup and viewing guide](README_EN.md).
@@ -287,9 +288,13 @@ Na telefonie pozostaje sprawdzić dotyk/przeciąganie, przewijanie poza
 sceną, +/−, pauzę/wznowienie, tło/wznowienie, obrót pion/poziom i 5 minut
 pokazu pod kątem płynności i nagrzewania. Zacznij od jakości niskiej.
 
-Strona `education/` jest rozszerzeniem istniejących podglądów, uruchamianym
-lokalnie ze źródeł. Kod znajduje się w gałęzi `codex/education-show`.
+Strona `education/` jest rozszerzeniem istniejących podglądów, dostępnym
+lokalnie ze źródeł oraz na osobnej stronie `great-pyramid-11-7-lab-edu`.
+Kod znajduje się w gałęzi `codex/education-show`.
 Standardowy build aplikacji i obecny skrypt wydania nie dołączają jej
-do produkcji ani APK. Podłączenie do wydania wymaga osobnego zlecenia.
+do głównej strony laboratorium ani APK. Podłączenie do ich wydania wymaga
+osobnego zlecenia. Statyczny eksport dla osobnego repozytorium wykonuje
+`node scripts/export-education.mjs <nowy-pusty-katalog>`; pliki sceny
+i zależności etapów 7–11 są kopiowane, a lokalne odnośniki HTML sprawdzane.
 
 Koncepcja: **Michał Przybylski — prylski.dev**.

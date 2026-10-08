@@ -14,6 +14,13 @@ no mathematical transformation from a hyperbolic surface to a torus is claimed.
 The cuts are ovals, not assumed ellipses, and near-golden proportions are
 not exact identities. See the [detailed geometry notes](README.md).
 
+## Open online
+
+**[Open the educational show](https://michaelzp.github.io/great-pyramid-11-7-lab-edu/)** — no installation needed.
+The dedicated [education website repository](https://github.com/MichaelZP/great-pyramid-11-7-lab-edu)
+hosts the same scene and stage 7–11 dependencies, separate from the main
+laboratory website. Select **Language → EN — English** above the title.
+
 ## Download and run
 
 The complete preview source is on the `codex/education-show` branch.
@@ -36,8 +43,13 @@ by Vite and append `/education/`. Desktop viewport checks do not replace
 physical-phone acceptance.
 
 This branch publishes source code and evidence for review. The standard
-application build, production website and Android APK do not include this
-page. Deploying it requires a separate release step.
+application build, main laboratory website and Android APK do not include
+this page. The dedicated education website has its own deployment.
+
+To export the static site from this source checkout, run
+`node scripts/export-education.mjs <new-empty-output-directory>`.
+The exporter copies the scene and its existing dependencies without
+changing the geometry, and checks local HTML links.
 
 ## Controls
 
