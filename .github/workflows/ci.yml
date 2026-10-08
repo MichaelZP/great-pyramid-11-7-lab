@@ -15,7 +15,7 @@ jobs:
       - run: npm ci
       - run: npm run typecheck
       - run: npm run test:run
-      - run: node --test docs/etap-7/animation.test.mjs docs/etap-10/vortex.test.mjs docs/etap-11/particles.test.mjs
+      - run: node --test docs/etap-7/animation.test.mjs docs/etap-10/vortex.test.mjs docs/etap-11/particles.test.mjs education/show.test.mjs
       - run: npm run build
       - run: npm run build:android
       - run: npm run build -- --outDir dist-pages
