@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-08",
+  "siteCommit": "77a2c38884bb309ba242236181ddd47d73704898",
+  "deployment": "https://github.com/MichaelZP/great-pyramid-11-7-lab-edu/actions/runs/37762992276",
+  "local": {
+    "languageTestsPassed": 3,
+    "phoneViewport": {
+      "width": 320,
+      "clientWidth": 305,
+      "scrollWidth": 305,
+      "height": 740
+    },
+    "recordingHidesReferences": true,
+    "directLinks": [
+      "https://www.youtube.com/watch?v=yHo1zoxmAkM",
+      "https://www.uw.edu.pl/laserowe-tornado/"
+    ],
+    "languages": [
+      "pl",
+      "en"
+    ],
+    "error": ""
+  },
+  "limits": "Responsive viewport check on desktop; no physical-phone measurement.",
+  "online": {
+    "sceneError": "",
+    "languagesChecked": [
+      "en"
+    ],
+    "directLinksVerified": true,
+    "conceptCreditPreserved": true,
+    "deployment": "success"
+  }
+}

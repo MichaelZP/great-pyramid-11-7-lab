@@ -1,3 +1,379 @@
+# ETAP 14 — odniesienia PL/EN, 2026-10-08
+
+Na zlecenie autora dodano pod sceną sekcję **Odniesienia i kontekst naukowy /
+References and scientific context**. Bezpośredni link do Giesberta Nijhuisa,
+**Double Toroidal Vortex Based Particle** (28 października 2012), jest opisany
+jako powiązana wizualizacja. Artykuł UW **Laserowe tornado** (2 kwietnia 2026)
+jest opisany jako kontekst naukowy dotyczący wirów optycznych w ciekłych
+kryształach. Krótka uwaga PL/EN wyjaśnia, że scena artystyczna nie symuluje
+opisanego eksperymentu. Zachowano podpis Michała Przybylskiego — prylski.dev.
+Sekcja jest ukryta w kadrze do nagrania przez istniejące reguły CSS.
+Zmiana dotyczy wyłącznie treści strony, bez zmian geometrii i animacji.
+Testy PL/EN, zachowania preferencji języka i kompletności tłumaczeń:
+**3/3 PASS**. Browser lokalny: obie wersje językowe, poprawne bezpośrednie
+linki i ukrycie sekcji w kadrze nagrania PASS. Wdrożenie na osobną stronę
+edukacyjną wymaga potwierdzenia workflow i publicznego widoku.
+
+**Wdrożenie potwierdzone:** commit strony `77a2c38`,
+[workflow 37762992276](https://github.com/MichaelZP/great-pyramid-11-7-lab-edu/actions/runs/37762992276)
+PASS. Publiczny browser po odświeżeniu pokazuje oba odnośniki i pełne
+tłumaczenie EN, zachowany podpis autora i pusty alert błędu sceny.
+Viewport lokalny 320×740: clientWidth = scrollWidth = 305, bez poziomego
+przepełnienia. To sprawdzenie układu na komputerze, bez nowego testu
+fizycznego telefonu. [Widok online](../education/evidence/references-online-en.png),
+[wyniki sprawdzeń](../education/evidence/references-checks.json).
+
+# ETAP 14 — płaszczyzna między torusami, 2026-10-08
+
+Dodano warstwę **Płaszczyzna między torusami / Plane between tori**:
+złoty dysk w poziomej płaszczyźnie odniesienia, w połowie odległości
+środków. Dla zaakceptowanego symetrycznego rozstawu Z = 7. Promień =
+1,08 × max(R₁+r₁, R₂+r₂); nie zależy od skali stożków. Obwód jest
+próbkowany w 72 odcinkach i cache'owany, bez nowego renderera lub zegara.
+Wypełnienie pod konstrukcją/cząstkami, czytelny złoty obwód, osobny
+przełącznik i przezroczystość 0–100%, domyślnie 85%. Warstwa ujawnia się
+razem z torusami i zostaje w finale, stereo i nagraniu. Full show włącza
+warstwę, zachowując wybraną przezroczystość. Suwak zatrzymuje wspólny
+pokaz; przełącznik widoczności nie zmienia faz. To płaszczyzna odniesienia
+w prezentacji, bez dodawania twierdzeń o siłach lub funkcji piramidy.
+
+**32/32 testów podglądów PASS**, w tym położenie wszystkich punktów dysku,
+niezmienność geometrii pozostałych warstw, skala stożków/rozstaw bez zmiany
+dysku, dopasowanie do rozmiaru torusa, połowa środków przy innym Z,
+przezroczystość 0/100%, oba kadry stereo, jeden zegar, pauza i EN.
+Lokalny browser: włączenie/wyłączenie i 100%/85% przezroczystości bez błędu.
+[Widok lokalny](../education/evidence/midplane-local.png).
+Aktualizacja jest przeznaczona dla osobnej strony `great-pyramid-11-7-lab-edu`;
+główne laboratorium pozostaje oddzielne. Wynik wdrożenia należy potwierdzić.
+
+**Wdrożono i sprawdzono online.** Commit strony `54071d1`,
+[workflow 37760097067](https://github.com/MichaelZP/great-pyramid-11-7-lab-edu/actions/runs/37760097067)
+PASS (32 testy przed wdrożeniem). HTML i `show.js` zwracają HTTP 200,
+publiczna strona zawiera nową warstwę i krótki podpis „Z=7.0”. Browser:
+pełna scena 100%, przełącznik off/on i stereo bez alertu/błędów konsoli.
+Viewport 320×740: scrollWidth 305. To test układu na komputerze,
+bez nowego pomiaru FPS ani odbioru fizycznego telefonu.
+[Widok online](../education/evidence/midplane-online.png),
+[dowód](../education/evidence/midplane-checks.json).
+
+# ETAP 14 — osobna strona online, 2026-10-08
+
+Autor zlecił link online z końcówką `-edu`. Docelowy adres:
+https://michaelzp.github.io/great-pyramid-11-7-lab-edu/.
+Osobne repozytorium `MichaelZP/great-pyramid-11-7-lab-edu` zawiera statyczną
+kopię `education/` i istniejących zależności etapów 7–11. Eksport wykonuje
+`scripts/export-education.mjs`, sprawdzając odnośniki HTML bez przebudowy
+geometrii. Nagłówek strony PL/EN nazywa ją pokazem edukacyjnym.
+Wdrożenie Pages ma najpierw przejść testy podglądów. Główne laboratorium,
+jego gałąź Pages, APK oraz geometria i kierunki pozostają bez zmian.
+Instrukcje PL/EN zawierają osobny adres strony. Wpis opisuje przygotowanie;
+wynik wdrożenia i testu publicznego adresu należy sprawdzić przed ogłoszeniem.
+
+**Wdrożenie i publiczny podgląd potwierdzone.** Repozytorium strony:
+https://github.com/MichaelZP/great-pyramid-11-7-lab-edu,
+commit `3c462b2ed59d1d1339d87cf1346f34838eb7ff59`.
+[Workflow Pages 37748831938](https://github.com/MichaelZP/great-pyramid-11-7-lab-edu/actions/runs/37748831938)
+PASS: 31/31 testów, konfiguracja, artefakt i wdrożenie. HTTP 200 dla
+adresu głównego oraz `/education/`; adres główny otwiera scenę.
+Browser: PL, przełączenie EN, EN po odświeżeniu, pełna scena 100%,
+odtwarzanie, pauza i Cross-eye PASS; alert geometrii pusty, brak błędów
+konsoli. Viewport 320×740: scrollWidth 305, Canvas 271×430, język 44 px.
+To sprawdzenie układu na komputerze, bez nowego odbioru fizycznego telefonu.
+[Dowód](../education/evidence/online-checks.json),
+[widok strony](../education/evidence/online-site.png),
+[pełna scena stereo](../education/evidence/online-full-scene.png).
+Porównano 12 plików sceny i rendererów źródłowych z eksportem: identyczne.
+Eksporter odrzuca zajęty katalog oraz zagnieżdżenie w kopiowanym źródle;
+eksport domyślny i sprawdzenie lokalnych odnośników PASS. CI projektu źródłowego
+obejmuje eksport. Odczyt zdalnych refs potwierdził brak zmian w głównym
+laboratorium: main `554a3c4`, gh-pages `a600eb7`.
+
+# ETAP 14 — udostępnienie źródeł na GitHub, 2026-10-08
+
+Autor zlecił umieszczenie wspólnego pokazu na GitHub. Zakres obejmuje
+gałąź `codex/education-show`, kod `education/`, zmiany współdzielonego
+renderera etapów 10–11, testy CI, istniejące nagrania i dowody przeglądarkowe.
+Dodano [angielską instrukcję pobrania i uruchomienia](../education/README_EN.md)
+oraz link z README repozytorium. Udostępnienie kodu nie wdraża strony na
+produkcję, nie scala gałęzi i nie tworzy APK. Starsze zapisy o braku
+commit/push poniżej opisują stan przed tym zleceniem.
+
+Kontrola przed wysłaniem: **31/31** testów podglądów (etapy 7, 10, 11
+i wspólna scena), **87/87** testów aplikacji, sprawdzenie typów i lokalny
+build web PASS. Vite zgłasza ostrzeżenie o rozmiarze głównych chunków.
+
+# ETAP 14 — wspólny pokaz konstrukcji i wirów, 2026-10-08
+
+**Przełącznik PL / EN dodany do education/.** Nad tytułem znajduje się
+**Język / Language**, opcje PL — Polski i EN — English. Wybór jest
+zapamiętywany w localStorage dla tego podglądu; przy niedostępnym zapisie
+działa na czas wizyty. Tłumaczenie obejmuje kontrolki/opcje, opisy geometrii,
+ARIA, komunikaty, jakość/pomiary, błędy, Canvas, Cross-eye, pełny ekran
+i nagranie. Podpis EN: „Artistic visualization of counter-rotating toroidal
+vortices”; autorstwo „Concept: Michał Przybylski — prylski.dev”. PL zachowano.
+Zastrzeżenia dotyczące owalu, błędu L/W i artystycznego charakteru torusów
+pozostają w obu wersjach. Język nie zmienia geometrii, zegara, kamery,
+kierunków, rozmiarów, warstw ani przezroczystości. Dokumentacja i starsze
+podglądy nie są objęte przełącznikiem. Cache tłumaczeń ograniczony do 256
+tekstów; bez dodatkowej pętli animacji lub obserwatora DOM.
+
+**26/26 testów PASS** (17 wspólnej sceny i 9 etapów 10–11): w tym
+zmiana języka podczas odtwarzania bez resetu, przywrócenie PL, EN po
+odświeżeniu, niedostępny zapis ustawień, dynamiczne komunikaty i błędy,
+niezmienne liczby/symbole oraz przetłumaczone podpisy Canvas i stereo.
+Browser: pełny interfejs EN i EN po odświeżeniu potwierdzone. Viewport
+320×740: scrollWidth 305, selektor języka wysokości 44 px. To test układu
+na komputerze; fizyczny telefon nadal do odbioru. Instrukcja wyboru języka
+w [education/README](../education/README.md). Podgląd lokalny:
+http://localhost:8080/education/. Bez publikacji, commit, push i APK.
+
+## Cross-eye — 2026-10-08
+
+**Cross-eye 3D dodany do wspólnej sceny.** Pasek nad sceną zawiera
+Cross-eye 3D, Odwróć głębię, Pełny ekran oraz regulację siły głębi.
+W trybie stereo lewy kadr pochodzi z kamery prawego oka, prawy z lewego;
+różnica kątów kamer wynosi domyślnie ±3°, regulowana 0–±6°. Projekcje
+równoległe mają wspólną oś pionową i punkt zbieżności V, bez deformowania
+geometrii lub przekrojów. Zamiana kadrów odwraca głębię, zachowując ruch.
+Oba obrazy powstają w tym samym rendererze, na jednym Canvas i zegarze,
+z identyczną fazą cząstek oraz wspólnymi warstwami i kamerą. Domyślnie
+stereo wyłączone; ponowne wyłączenie przywraca pojedynczy widok.
+
+Pełny ekran ma własny przycisk Odtwórz scenę / Pauza sceny; wyjście
+przyciskiem lub Esc. Jeśli natywny Fullscreen API jest niedostępny,
+układ wypełnia okno osadzonej przeglądarki. Nagranie Canvas zachowuje
+aktywną parę stereo, wspólny podpis artystyczny i autorstwo.
+
+**23/23 testów PASS** (14 wspólnej sceny i 9 etapów 10–11). Nowe testy
+obejmują identyczność geometrii/faz dla oczu, głębię zależną od współrzędnej
+przestrzennej, jednakowe pionowe współrzędne, zamianę oczu, siłę 0/1/2,
+dopasowanie kadru na 320/390/844/1280 px, stałe bufory, wspólną pauzę,
+ograniczony ruch, jednokrotny podpis i sterowanie pełnym ekranem.
+Browser: Cross-eye, odwrócenie głębi, pełny ekran, odtwarzanie i pauza
+sprawdzone; brak alertu geometrii. Viewport 320×740, scrollWidth 305,
+przyciski stereo >=44 px; przy 844×390 układ nie przepełnia się poziomo.
+Pomiar 30 klatek pary, jakość niska, q=0,055, jaja wyłączone:
+mediana CPU 7,9 ms, p95 9,7 ms, 136 cząstek rysowanych łącznie na parę
+(68 na oko), bufory nadal 7680 B. To komputerowy viewport telefonu,
+nie fizyczny telefon ani pełny FPS/GPU. Odbiór głębi pozostaje do oceny autora.
+[Pomiar i stan przeglądarki](../education/evidence/cross-eye-browser-checks.json),
+[para stereo](../education/evidence/cross-eye-scene.jpg).
+
+Podgląd pozostaje lokalny: http://localhost:8080/education/. Instrukcja
+w [education/README](../education/README.md). Bez publikacji, commit,
+push i APK. Nowego filmu Cross-eye nie tworzono. Poniżej wcześniejsze wpisy.
+
+## Kierunki, torusy i złote jaja — 2026-10-08
+
+**Aktualizacja zaakceptowanego widoku: kierunki, torusy i pełne złote jaja.**
+Dodano cztery niezależne wybory kierunku cząstek: stożek 1, stożek 2,
+torus 1 i torus 2. Odwrócenie zachowuje aktualne pozycje cząstek; zmienia
+dalszy przyrost fazy i zwrot smug. Znaczniki i strzałki torusów odpowiadają
+wybranemu θ/ψ. Wspólny zegar, pauza/reset i ograniczony ruch obejmują
+wszystkie cztery fazy. Domyślny ruch stożków nadal jest lustrzany.
+
+Osobne rozmiary torusów 25–200% skalują R i r równomiernie, bez deformacji.
+Suwak d = 2–8 u przesuwa środki symetrycznie wokół Z = 7. Piramida,
+powierzchnie i punkty cięcia pozostają niezmienione. **Domyślne wiry**
+przywracają zaakceptowane 100%, d = 4, T1 θ+/ψ+, T2 θ−/ψ− i lustrzane
+stożki. Zmiana kierunku, rozmiaru lub rozstawu zatrzymuje pokaz.
+
+Dodano dwie opcjonalne pełne bryły złotego jaja: konstrukcję obrotową
+połowy rzeczywistego owalu wokół jego długiej osi, zgodną z istniejącym
+`GoldenEggConstruct`. Profil pochodzi ze wspólnego `section`, transformacja
+i odbicie z `Stage8`; siatka ma 768 płatów na bryłę i zamknięte końce.
+To skończona siatka bryły obrotowej, nie objętość wycięta ze stożka.
+Każde jajo i każda siatka stożka mają osobny suwak przezroczystości.
+Owale i płaszczyzny pozostają czytelne niezależnie od tych ustawień.
+Jaja domyślnie wyłączone; przy q = 0,055 są małe, zgodnie ze skalą.
+Instrukcja inspekcji i nagrywania jest w [education/README](../education/README.md).
+
+**20/20 testów PASS**: 11 wspólnej sceny oraz 9 zastanych etapów 10–11.
+Sprawdzono izolację kierunków, brak przeskoku po odwróceniu, wspólną
+pauzę/reset, położenia cząstek na zmienionych torusach, symetrię rozstawu,
+niezmienność piramidy i przekrojów, siatkę jaj, dokładne południki owalu,
+zamknięte końce, odbicie, skalowanie i niezależną przezroczystość.
+Browser: nowe kontrolki sprawdzone, odtwarzanie działa; zmiana kierunku
+przerywa ruch. Brak błędów JS i alertu geometrii. Viewport 320×740:
+scrollWidth 305, nowe suwaki wysokości 44 px. Pomiar z oboma jajami,
+q = 0,405, zakres przekrojów, niska jakość, 68 cząstek łącznie:
+30 nieruchomych klatek, mediana CPU 9,8 ms, p95 11,4 ms, bufory 7680 B.
+To rysowanie Canvas na komputerze, nie pomiar FPS/GPU lub fizycznego telefonu.
+[Dowody kontrolek i pomiaru](../education/evidence/controls-browser-checks.json),
+[bryły we wspólnej scenie](../education/evidence/controls-eggs-scene.jpg),
+[kontrolki telefonu](../education/evidence/controls-phone.jpg).
+
+Podgląd lokalny: http://localhost:8080/education/. Bez publikacji, commit,
+push i APK. Nie tworzono nowego filmu z interaktywnymi ustawieniami;
+istniejący `demo-spirals.webm` pokazuje wcześniejsze domyślne wiry,
+bez brył jaj. Przycisk nagrania może zapisać bieżące ustawienia lokalnie.
+Fizyczny telefon nadal do odbioru autora. Poniższe wpisy są historią etapów.
+
+## Poprzednia korekta — 2026-10-07
+
+**Aktualna korekta autora: osobna skala stożków i spirale na powierzchniach.**
+Poprzednie dopasowanie kamery zmieniało ekranowy rozmiar piramidy przy
+edycji q. Domyślny kadr jest teraz stały i równoległy, jak w etapie 7:
+q zmienia tylko oba lustrzane układy źródłowe, ich płaszczyzny i owale.
+Pozycja, przybliżenie kamery oraz ekranowy rozmiar piramidy/torusów
+nie zależą od q. Dopasowanie całych stożków jest osobną, jawną opcją kamery;
+przybliżenie +/− jest oddzielne i działa także w widokach XZ/XY.
+
+Przycisk **Widok jak na ilustracji** ustawia q = 0,055, kadr stały,
+rzut równoległy 3D, obrót 25°, nachylenie 0,28 rad i otwarte powierzchnie
+ku nieskończoności z asymptotami, finał 100% i pauzę. Takie ustawienie
+jest też domyślne; dawne q = 0,4 nadal dostępne. Zachowano wybór pełnych
+wycinków z podstawami i otoczenia przekrojów. Równania, dokładne owale,
+kąt cięcia, B = 11, h = 7, odbicie i geometria torusów bez zmian.
+
+Warstwa **Spirale po stożkach** dodaje cząstki oraz analityczne smugi
+po zr = 1, na tym samym zegarze i istniejących buforach `VortexParticles`.
+Druga cząstka i cała smuga są odbiciem pierwszej w Z = 7: te same X/Y,
+Z′ = 14 − Z, Vz′ = −Vz, bez dodatkowego odwracania czasu. Prędkość
+obiegu, pauza, reset i ograniczony ruch są wspólne. Warstwy cząstek stożków
+i torusów można niezależnie przełączać. Torusy zachowują θ+/ψ+ oraz θ−/ψ−.
+Otwarte spirale wygaszają cząstki przed powrotem na początek; smugi nie
+łączą granic. To artystyczne trajektorie, bez solvera przepływu.
+
+**16/16 testów PASS** (7 wspólnej sceny, 9 etapów 10–11), w tym testy
+rzeczywistych ekranowych współrzędnych piramidy/torusów dla wszystkich
+trzech zakresów, trzech widoków, q = 0,005 / 0,055 / 0,08 / 0,4 / 1 / 2
+i szerokości 320 / 390 / 844 / 1280. Równanie powierzchni, pozycje oraz
+wektory ruchu odbicia, zamknięcie fazy, bufory, pauza, reset i warstwy PASS.
+Browser: kontrolki na 320 px bez poziomego przepełnienia (scrollWidth 305),
+widoczne przyciski >= 44 px; pokaz i spirale sprawdzane lokalnie.
+Pomiar CPU na telefonowym viewport 320 px: 30 nieruchomych klatek,
+jakość średnia, 168 cząstek (stożki i torusy łącznie), mediana 4,6 ms,
+p95 5,6 ms, stałe bufory 7680 B. To CPU rysowania Canvas na komputerze,
+nie pełny FPS/GPU ani pomiar fizycznego telefonu.
+
+**Aktualny film:** [demo-spirals.webm](../education/demo-spirals.webm),
+q = 0,055, stały kadr i lustrzane spirale, 1280×720, VP9,
+9 333 610 B, 764 klatki, ostatni znacznik 25,939 s. Struktura EBML PASS;
+finał odtworzony na 25 s z readyState = 4 i bez błędu dekodowania.
+[Metadane/SHA-256](../education/evidence/spirals-video-metadata.json),
+[odtwarzacz](../education/evidence/spirals-video.html),
+[dowody przeglądarki](../education/evidence/spirals-browser-checks.json).
+Film zawiera pięć odsłon i około 6 s ruchu finału, bez paneli, z wymaganym
+podpisem artystycznym i autorstwem. 29,45 zakodowanych klatek/s to średnia
+pliku; nie jest wynikiem na telefonie.
+Bez publikacji, commit, push i APK; fizyczny telefon nadal do odbioru.
+Poniższe wpisy i filmy bez spiral opisują wcześniejsze wersje etapu 14.
+
+**Korekta: całe stożki wraz z podstawami.** Poprzedni suwak skalował tylko
+wąskie otoczenie przekrojów. `Vortex.source` przyjmuje teraz opcjonalny
+zakres pełnych skończonych wycinków z etapu 7, z logarytmicznym próbkowaniem
+i wyróżnionymi okrągłymi podstawami. `education/` korzysta z tego zakresu;
+domyślna siatka starszych etapów 10–11 pozostaje taka jak wcześniej.
+Równanie powierzchni, dokładne punkty owali/płaszczyzn, odbicie i jednolite
+skalowanie zachowano. Podstawy są granicami skończonej siatki, nie
+skończonymi podstawami matematycznej powierzchni zr = 1.
+
+Kamera dopasowuje kadr i odległość do obu pełnych wycinków, piramidy oraz
+torusów. Zmiana skali przywraca zoom = 1; Reset kamery obejmuje całe stożki
+po ręcznym przybliżeniu. Obrót przy zoom = 1 nie ucina geometrii.
+Domyślne q = 0,4 zachowano; do wspólnego czytelnego kadru użyto q = 0,08.
+**14/14 testów PASS**: 5 wspólnej sceny i 9 etapów 10–11; sprawdzono
+równanie siatki/podstaw/owali, podobieństwo obu odbić, pełny kadr dla
+q = 0,005 / 0,08 / 0,4 / 1 / 2, obroty, 3 widoki i szerokości
+320 / 390 / 844 / 1280. To rozszerzenie nie wymagało zmian aplikacji TS.
+Browser przy 320×844: obie podstawy i podpis w kadrze; poza kadrem filmowym
+scrollWidth = 305, przyciski >= 44 px. Pomiar 30 nieruchomych klatek:
+jakość średnia, 84 cząstki, mediana CPU 3,6 ms, p95 4,4 ms, bufory 7680 B.
+Nie jest to pomiar fizycznego telefonu ani pełnego FPS/GPU.
+
+**Aktualny demonstrator:** [demo-full-cones.webm](../education/demo-full-cones.webm),
+q = 0,08, całe stożki i podstawy, 1280×720, VP9, 4 281 583 B,
+756 klatek, ostatni znacznik 25,970 s. Kompletna struktura EBML PASS;
+kontrola odtwarzania/finału w lokalnej przeglądarce.
+[Metadane/SHA-256](../education/evidence/full-cones-video-metadata.json),
+[odtwarzacz](../education/evidence/full-cones-video.html),
+[kontrola struktury](../education/evidence/inspect-webm.mjs).
+Starszy `demo.webm` i niższe wyniki CPU dotyczą poprzedniej wąskiej siatki.
+Podgląd pozostaje lokalny; bez publikacji, commit, push i APK.
+
+**Uzupełnienie skalowania:** odsłonięto dotychczasowy parametr `scaleFactor`
+jako suwak „Skala stożków hiperbolicznych względem V”, 0,5–200%, z odczytem
+procentowym i przyciskiem przywracania 40%. Korzysta ze wspólnego
+`Stage8.pose/transform` oraz `Vortex.source`; jednorodnie skaluje oba
+lustrzane układy, płaszczyzny i owale. Zmiana zatrzymuje pokaz, zachowuje
+bieżący przebieg, L/W i odbicie; piramida, torusy i ich kierunki są stałe.
+Pełny pokaz i nagranie zachowują wybrane q. Dotychczasowy film pokazuje
+domyślne 40%. Bez publikacji. Kontrola: **4/4 testów wspólnej sceny PASS**,
+w tym niezależne porównanie współrzędnych przy q = 0,005 / 0,08 / 0,4 / 1 / 2.
+W przeglądarce sprawdzono oba końce zakresu, przywrócenie 40% i pauzę po
+zmianie podczas obiegu. Na 320 px: scrollWidth 305, suwak i przycisk >= 44 px.
+
+**Lokalna implementacja gotowa do oceny autora. Bez publikacji, commit,
+push, zmiany wydania produkcyjnego ani APK.** Ten wpis dotyczy rozszerzenia
+etapu 14 o wspólną scenę; nie oznacza ukończenia innych prac edukacyjnych.
+Koncepcja: **Michał Przybylski — prylski.dev**.
+
+Podgląd: **http://localhost:8080/education/**. Vite działa lokalnie na 8080.
+Uruchomienie, pięć faz, sterowanie, nagranie i odbiór telefonu:
+[education/README.md](../education/README.md).
+Na telefonie w tej samej sieci można użyć adresu LAN wypisanego przez Vite
+(w tej sesji http://192.168.26.222:8080/education/).
+
+Pokaz ponownie wykorzystuje `section`, `Stage8`, `Vortex.source/pair/lane`,
+`VortexParticles`, pamięci podręczne, renderer etapu 10 oraz zegar
+`Vortex.clock`. Nowy `education/show.js` steruje odsłanianiem pięciu faz
+w 20 s i przygotowaniem kadru/nagrania. Nie dodano drugiego renderera,
+obliczeń geometrii ani niezależnego zegara ruchu.
+W finale wszystkie warstwy pozostają widoczne razem; obiegi trwają do pauzy.
+Tryb filmowy zachowuje powierzchnie, płaszczyzny i rzeczywiste przekroje.
+Dodano „Pełny pokaz”, odtwarzanie/pauzę/reset/suwak, dziewięć przełączników,
+opcjonalną kamerę, jakość niską/średnią/wysoką i ograniczony ruch.
+Ręczna kamera wyłącza automat; pauza zatrzymuje cały ruch.
+Pełny pokaz przywraca domyślny kadr po ręcznej zmianie kamery.
+
+Geometria pozostaje identyczna z etapami 9–11: B = 11, h = 7,
+α = atan(14/11), z₀ = 7,65, A/q = 0,4, odbicie w Z = 7;
+torusy C₁/C₂ na Z = 5/9, R = 2,4, r = 0,65; T1 θ+/ψ+, T2 θ−/ψ−.
+Deformacja jest zerowa. Widoczne powierzchnie są otwartymi, skończonymi
+wycinkami. Owal i L/W pozostają niezmienione i poza 0,1% od φ dla 11:7.
+Torusy są odsłaniane jako osobne obiekty artystyczne bez wyprowadzonego
+przekształcenia powierzchni i bez twierdzeń o fizycznym przepływie.
+
+**Sprawdzenie:** TypeScript i 87/87 testów aplikacji PASS; 14/14 zastanych
+testów podglądów oraz 3/3 nowych testów wspólnej sceny PASS. Po końcowych
+zmianach kamery sprawdzono ponownie 3/3 nowych testów. CI uzupełniono o
+nowe testy, ale nie uruchamiano zdalnego CI (bez push). Lokalny build Vite
+aplikacji PASS, ze znanym ostrzeżeniem o dużych paczkach. Build ten nie
+pakuje `education/`; scenę wykonano i sprawdzono w lokalnym Vite.
+
+Przegląd przeglądarki: finał wszystkich warstw, pauza, ręczne +/− wyłączające
+kamerę, reset kadru, jakość niska/średnia, preferencja ograniczonego ruchu,
+odtwarzanie i zapis filmu. Viewporty 320×844, 390×844, 844×390 oraz
+1280×720; brak błędów konsoli. Na 320 px nie ma poziomego przepełnienia
+(scrollWidth 305 <= innerWidth 320), wszystkie widoczne przyciski >= 44 px.
+Podpis wąskiego kadru zajmuje dwa wiersze i pozostaje czytelny.
+Zrzuty są w [education/evidence/](../education/evidence/).
+
+Próbka CPU w podglądzie 390 px: jakość średnia, 84 cząstki, 120 próbek,
+mediana 2,6 ms, p95 3,5 ms; bufory cząstek 7680 bajtów. Jest to czas CPU
+rysowania Canvas, nie pełny czas klatki/GPU, test obciążenia ani pomiar
+fizycznego telefonu. Mechanizm jakości nadal ogranicza cząstki, DPR,
+segmenty smug i częstotliwość oraz może obniżyć jakość przy przeciążeniu.
+
+**Gotowy film:** [education/demo.webm](../education/demo.webm), VP9,
+1280×720, 8 332 987 bajtów, 775 klatek, ostatni znacznik 25,970 s.
+Kontrola kompletności EBML PASS; odtwarzanie w przeglądarce bez błędu.
+Film przedstawia pięć odsłon i finał, bez paneli, z wymaganym podpisem
+artystycznym i autorstwem. Średnia 29,84 zakodowanych klatek/s jest
+własnością tego nagrania. [Metadane/SHA-256](../education/evidence/video-metadata.json).
+Eksport dużych danych przez host wymagał odczytu fragmentami; niekompletny
+pierwszy zapis zastąpiono pełnym plikiem i sprawdzono jego strukturę.
+Eksport z zasłoniętego Chrome ograniczał ruch; nie użyto tego częściowego
+filmu jako artefaktu demonstracyjnego.
+
+**Pozostały odbiór:** fizyczny dotyk/gesty, 5 minut płynności/nagrzewania,
+pomiary FPS/GPU/pamięci/temperatury na telefonie, natywny fullscreen i APK.
+Wcześniejsze obserwacje telefonu z etapu 11 nie zatwierdzają tej nowej
+wspólnej sceny. Standardowy build i skrypt wydania nie dołączają pokazu
+do produkcji ani APK; dalsze pakowanie/publikacja wymaga nowego polecenia.
+Poniższe wpisy zachowują historię wcześniejszych wydań.
+
 # ETAP 13 — opublikowane wydanie 2.0.2, 2026-10-07
 
 **Publikacja i kontrola po wdrożeniu: PASS. Brak nierozwiązanych blokad dla

@@ -107,6 +107,21 @@ GitHub does **not** execute the Vite app from the source tree. The production bu
 
 ## Run locally
 
+### Shared geometry and vortex preview
+
+**[Open the educational show online](https://michaelzp.github.io/great-pyramid-11-7-lab-edu/)**
+(separate GitHub Pages site).
+
+The shared scene with mirrored hyperbolic surfaces, artistic toroidal
+vortices, independent controls, Cross-eye 3D and PL/EN is available as source
+on the [`codex/education-show` branch](https://github.com/MichaelZP/great-pyramid-11-7-lab/tree/codex/education-show/education).
+See the [English setup guide](education/README_EN.md) or
+[Polish documentation](education/README.md). Run this branch locally and
+open `http://localhost:8080/education/`. This preview is not included in the
+main laboratory website or APK.
+
+### Main laboratory
+
 Requires [Node.js](https://nodejs.org/) **22 or newer**.
 
 ```bash
