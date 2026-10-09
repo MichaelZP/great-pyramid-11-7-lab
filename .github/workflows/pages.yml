@@ -1,0 +1,78 @@
+name: Deploy to GitHub Pages
+
+# Builds the accepted web release from main and publishes it with the
+# official Pages actions. Requires Settings -> Pages -> Source: "GitHub Actions".
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deployment at a time; never cancel a deployment that is already running.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run test:run
+      - run: node --test docs/etap-7/animation.test.mjs docs/etap-10/vortex.test.mjs docs/etap-11/particles.test.mjs
+
+      # Same release builder used for 2.0.2 (base /great-pyramid-11-7-lab/,
+      # stage 7/10/11 pages, /wydanie/ hub, release.json, notice gate).
+      - name: Build release artifact
+        run: node docs/etap-13/build_release.mjs "$GITHUB_WORKSPACE/_site"
+
+      # GitHub Pages serves 404.html for unknown paths; keep it in sync with
+      # the current build instead of a stale copy with dead asset hashes.
+      - name: Add 404 fallback
+        run: cp _site/index.html _site/404.html
+
+      # Keep the frozen stage 12 author preview that so far lived only on gh-pages.
+      - name: Preserve preview/ from gh-pages
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: legacy-pages
+        continue-on-error: true
+      - name: Copy preserved preview
+        run: |
+          if [ -d legacy-pages/preview ]; then cp -R legacy-pages/preview _site/preview; fi
+          rm -rf legacy-pages
+
+      - name: Sanity check artifact
+        run: |
+          test -f _site/index.html
+          test -f _site/wydanie/index.html
+          grep -q '/great-pyramid-11-7-lab/assets/' _site/index.html
+          cat _site/release.json
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
