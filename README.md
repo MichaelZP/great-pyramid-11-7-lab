@@ -186,6 +186,6 @@ The Harthun–Rennert hyperbolic cone `z = 1/r` and the solved cut `Z₀ = 7.65`
 
 ## Status
 
-Version **2.0.0**. Typecheck and production build succeed. The 3D scene (pyramid, rainbows, hyperbolic cone, revolved egg) was visually confirmed in the laboratory.
+Version **2.0.2**. Typecheck and production build succeed. The 3D scene (pyramid, rainbows, hyperbolic cone, revolved egg) was visually confirmed in the laboratory.
 
 Copyright © 2026 Michał Przybylski. Released under the [MIT License](LICENSE).
