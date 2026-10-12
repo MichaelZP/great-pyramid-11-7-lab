@@ -23,6 +23,32 @@ Wynik służy geometrii, wizualizacji i dyskusji krytycznej — nie jest dowodem
 
 **Gotowa geometria do druku** (poprzednik Fusion): [Thingiverse, thing:6944382](https://www.thingiverse.com/thing:6944382).
 
+## Dlaczego ta bryła jest wyjątkowa
+
+Bardzo prosta geometria oparta na liczbach całkowitych daje niezwykle bogatą rodzinę bliskich zależności liczbowych. Schemat 440:280 daje:
+
+- dokładny stosunek podstawy do wysokości **11:7**;
+- stosunek połowy obwodu do wysokości **22:7**, czyli klasyczne wymierne przybliżenie π;
+- nachylenie ściany **51,842773°**;
+- nachylenie krawędzi **41,985759°**;
+- zwarty zestaw długości pochodnych, które można porównać z π, φ, e i innymi stałymi.
+
+Golden Φ Egg to **osobny** model: nie korzysta z zaokrąglonego stożka 51,84°. Przy `Z₀ = 7,65` numeryczne rozwiązanie równania `L/W = φ` dla `z = 1/r` daje **51,795319256°**. Ten kąt wyznacza B/H, wysokość i błędy wszystkich stałych. Stożek 51,84° pozostaje wyłącznie modelem porównawczym.
+
+## Wymiary kanoniczne (11:7)
+
+| Wielkość | Wyrażenie | Wynik |
+|---|---|---:|
+| Przyjęty łokieć królewski | `RoyalCubit` | 523,8 mm |
+| Podstawa / wysokość | `440 / 280` | 11 : 7 |
+| Skala modelu | `ModelScale` | 1 : 3200 |
+| Bok podstawy | `440 × 523,8 mm ÷ 3200` | 72,0225 mm |
+| Wysokość pionowa | `280 × 523,8 mm ÷ 3200` | 45,8325 mm |
+| Apotema ściany | `√(H² + A²)` | 58,287462 mm |
+| Krawędź boczna | `√(H² + B²/2)` | 68,514512 mm |
+| Nachylenie ściany | `atan(H / A)` | 51,842773° |
+| Nachylenie krawędzi | `atan(H / (D/2))` | 41,985759° |
+
 ## Modele w laboratorium
 
 | Model | Definicja | Kąt ściany |
