@@ -49,6 +49,28 @@ Golden Φ Egg to **osobny** model: nie korzysta z zaokrąglonego stożka 51,84°
 | Nachylenie ściany | `atan(H / A)` | 51,842773° |
 | Nachylenie krawędzi | `atan(H / (D/2))` | 41,985759° |
 
+## Porównania stałych (11:7, tolerancja 0,1%)
+
+Każdy wiersz wynika z bieżącej bryły. Przy `MathTolerance = 0,001` bryła 11:7 utrzymuje klasyczne dwanaście w zakresie 0,1%; po geometrycznym obliczeniu owalu trzynasty wiersz L/W wypada tuż poza (~0,106% względem φ). To 12 z 13 — nie 13 z 13.
+
+| Symbol | Formuła | Cel |
+|---|---|---|
+| π | `2B / H` | π |
+| γ | `2B / (H + 2D)` | Euler–Mascheroni |
+| √3 | `(H + 2D) / (2B)` | √3 |
+| √6 | `(H + 2D) / D` | √6 |
+| √2 | `D / B` | √2 (podstawa kwadratowa — niezależne od kąta nachylenia) |
+| √5 | `(S + B) / S` | √5 |
+| T | `(A + 2D) / (S + B)` | tribonacci |
+| B₂ | `E / A` | stała Bruna |
+| 1/φ | `S / (S + A)` | 1/φ |
+| φ | `S / A` | φ |
+| e | `2θ / (90° − θ)` | e |
+| e − 1 | `e_model − 1` | e − 1 |
+| L/W | długość/szerokość jaja dla `z = 1/r` przy `Z₀ = 7,65` | φ przy 51,795319256° |
+
+To są **wzory porównawcze wybrane dla tego studium**, a nie dwanaście (ani trzynaście) niezależnych więzów konstrukcyjnych. Pełne wzory: [docs/MATHEMATICS.md](docs/MATHEMATICS.md).
+
 ## Korespondencja optyczna
 
 - **Tęcza pierwotna** — pionowy półokrąg w płaszczyźnie środkowej XZ, z centrum na osi piramidy; promień zewnętrznego pasma czerwieni = wysokość piramidy, więc rzeczywista krawędź boczna kończy się w wierzchołku.
