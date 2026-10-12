@@ -56,3 +56,8 @@ matched that tree exactly; bundle/ZIP backup verified. No production rollback
 was needed. Detailed commands: [ETAP-13.md](ETAP-13.md).
 
 Concept: **Michał Przybylski — prylski.dev**, https://github.com/MichaelZP/.
+
+## Android (unreleased)
+
+versionCode 2, versionName from package.json. A new signed AAB is required.
+

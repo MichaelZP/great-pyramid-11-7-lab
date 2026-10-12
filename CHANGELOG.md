@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Android: versionCode 2; versionName read from package.json (2.0.2).
+
 ## 2.0.2 — 2026-10-07
 
 - Labelled constructions and four-step PL/EN lessons for all 13 comparisons.
