@@ -25,6 +25,6 @@ references or inspiration. They do not transfer project authorship or imply
 endorsement of the author's hypothesis. Refer to the existing README and
 technical documents for the stated context of those acknowledgements.
 
-This document grants no new licence and does not alter existing rights or
-citation metadata. Existing documentation states that no open-source licence
-has yet been assigned.
+This document grants no licence by itself. The project's software is offered
+under the MIT License; see [`LICENSE`](LICENSE). Third-party software keeps its
+own licences (see `public/third-party-notices.txt`).

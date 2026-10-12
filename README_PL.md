@@ -79,4 +79,4 @@ To model matematyczno-wizualny, nie rekonstrukcja geodezyjna. Tolerancja 0,1% ni
 
 ## Status
 
-Wersja **2.0.0**. Copyright © 2026 Michał Przybylski. Licencja open-source nie została jeszcze nadana.
+Wersja **2.0.0**. Copyright © 2026 Michał Przybylski. Udostępniono na [licencji MIT](LICENSE).
