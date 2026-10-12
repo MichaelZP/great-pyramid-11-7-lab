@@ -49,6 +49,20 @@ Golden Φ Egg to **osobny** model: nie korzysta z zaokrąglonego stożka 51,84°
 | Nachylenie ściany | `atan(H / A)` | 51,842773° |
 | Nachylenie krawędzi | `atan(H / (D/2))` | 41,985759° |
 
+## Korespondencja optyczna
+
+- **Tęcza pierwotna** — pionowy półokrąg w płaszczyźnie środkowej XZ, z centrum na osi piramidy; promień zewnętrznego pasma czerwieni = wysokość piramidy, więc rzeczywista krawędź boczna kończy się w wierzchołku.
+- **Tęcza wtórna** — równoległa pionowa płaszczyzna za bryłą, odwrócona kolejność kolorów; apotema ściany jest przedłużona i spotyka pasmo zieleni przy promieniu `2H`.
+- Nachylenie ściany **51,842773°** wobec zieleni wtórnej ≈ **51,83°** (różnica **0,012773°**).
+
+Wyświetlane promienie są schematyczne, a nie rzeczywiste odległości atmosferyczne. Zobacz [docs/OPTICAL-CORRESPONDENCE.md](docs/OPTICAL-CORRESPONDENCE.md).
+
+## Golden Φ Egg
+
+![Golden egg revolved about the apothem](docs/images/golden-egg.png)
+
+Wybór **Golden Egg 1.618033989** ustawia piramidę na **51,795319256°**. Za bryłą na płaszczyźnie podłoża stoi półprzezroczysty stożek hiperboliczny (`r ∝ 1/z`). Zwykły stożek i obrócone jajo są ilustracyjne i używają innych parametrów kadrowania niż sekcja numeryczna. Wybierz **L/W**, aby obejrzeć rzeczywisty zamknięty owal przy `Z₀=7,65`, z jego długością i maksymalną szerokością. Przy tym presecie silnik zgłasza 10 z 13 relacji w zakresie 0,1% oraz maksymalny błąd względny ok. 0,4% (około 4× zadeklarowanej tolerancji); 11:7 pozostaje modelem konstrukcyjnym. Szczegóły: [docs/GOLDEN-EGG.md](docs/GOLDEN-EGG.md).
+
 ## Modele w laboratorium
 
 | Model | Definicja | Kąt ściany |
