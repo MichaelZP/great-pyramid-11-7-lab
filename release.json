@@ -1,6 +1,6 @@
 {
   "version": "2.0.2",
-  "sourceCommit": "08aead2a2f3bb800db448822b5b374d8e1bbf62e",
+  "sourceCommit": "e028c02087ca2a97aa39e0f62787fcd8d4c01d09",
   "base": "/great-pyramid-11-7-lab/",
   "missingNoticePackages": [
     {
@@ -15,5 +15,10 @@
       "name": "stats-gl",
       "emittedModules": 0
     }
-  ]
+  ],
+  "geogebra": {
+    "url": "https://www.geogebra.org/m/rz4avuw8",
+    "approvedFileSha256": "a6bdb540ed37407cafbc39fbd5bf20cbbf1968fa3ed5b84af6d5cb137a4eac2c",
+    "stage": "G5"
+  }
 }
