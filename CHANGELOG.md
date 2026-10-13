@@ -3,6 +3,7 @@
 ## Unreleased
 
 - Android: versionCode 2; versionName read from package.json (2.0.2).
+- Licence changed to MIT (PR #7).
 
 ## 2.0.2 — 2026-10-07
 
