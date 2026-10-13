@@ -25,6 +25,8 @@ export const translations = {
     reverseDepth: "Reverse depth",
     language: "Language",
     assembling: "Assembling the pyramid…",
+    sceneLoadError: "Couldn't load the 3D scene",
+    retry: "Retry",
     confirmExit: "Exit Great Pyramid 11:7? Your current lab settings will be lost.",
 
     geometryTemplate: "Geometry template",
@@ -131,6 +133,8 @@ export const translations = {
     reverseDepth: "Odwróć głębię",
     language: "Język",
     assembling: "Składanie piramidy…",
+    sceneLoadError: "Nie udało się wczytać sceny 3D",
+    retry: "Spróbuj ponownie",
     confirmExit: "Zamknąć Great Pyramid 11:7? Bieżące ustawienia laboratorium zostaną utracone.",
 
     geometryTemplate: "Szablon geometrii",
