@@ -19,9 +19,10 @@ z dopasowaniem kamery, porównanie obrysów oraz reset. Opis, instrukcja,
 podpis, GitHub, Huntley, Lange i licencje są dostępne w aktywności.
 Anonimowy HTTP bez ciasteczek: 200, właściwy tytuł, brak ściany logowania
 w HTML. Nie jest to osobny anonimowy test renderowania JavaScript.
-Pobranie pakietu konta przez narzędzie przeglądarki nie zakończyło się;
-nie potwierdzono hasha pliku pobranego z konta. Upload wskazywał dokładny
-zaakceptowany lokalny plik. Lokalny audyt archiwum G4 ponownie PASS.
+Pobranie pakietu przez przeglądarkę nie zakończyło się, ale odczytano
+rzeczywisty adres .ggb używany przez publiczny applet i pobrano go anonimowo.
+20562 bajtów, identyczny SHA-256 i zgodność bajt w bajt z zaakceptowanym G4:
+PASS. Lokalny audyt archiwum G4 ponownie PASS.
 
 Dodano odnośnik PL/EN w panelu modeli aplikacji, README PL/EN i materiałach
 edukacyjnych. GeoGebra otwiera się w nowej karcie (`_blank`, `noopener noreferrer`);
