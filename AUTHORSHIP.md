@@ -28,3 +28,10 @@ technical documents for the stated context of those acknowledgements.
 This document grants no licence by itself. The project's software is offered
 under the MIT License; see [`LICENSE`](LICENSE). Third-party software keeps its
 own licences (see `public/third-party-notices.txt`).
+
+## GeoGebra G4 publication exception — G5
+
+The author approved CC BY-NC-SA 4.0 and also CC BY-SA 3.0 for the accepted
+G4 model and its publication description at https://www.geogebra.org/m/rz4avuw8.
+This decision does not assign an open-source licence to the application,
+third-party sources or GeoGebra software.
