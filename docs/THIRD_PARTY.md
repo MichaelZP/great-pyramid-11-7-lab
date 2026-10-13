@@ -5,7 +5,7 @@ Lab credit, READMEs, AUTHORSHIP.md and CITATION.cff agree. Constants/prior resul
 
 ## Project/materials
 
-No project open-source licence has been assigned. This audit grants no new licence. The author decides licensing/permissions for the project, supplied workbooks/private correspondence and other supplied material before public distribution. A draft PR does not settle those rights.
+The project is released under the MIT License (see [LICENSE](../LICENSE)). This audit grants no additional licence. Rights to supplied workbooks/private correspondence and other author-supplied material remain as described in [AUTHORSHIP.md](../AUTHORSHIP.md).
 
 Reviewed app textures/labels are locally generated CanvasTexture, fonts are system fonts, icons Lucide, geometry procedural. Static previews use local Canvas/SVG/JS without new dependencies. Screenshots are captures of the previews. No new external photo/font/audio/video/article/PDF was incorporated. Workbooks/private correspondence are existing author-supplied sources; origin/permission is not independently established by this audit. History separates mathematics, source claims and interpretation. Linked works are not bundled offline. See [history](HISTORY-13.md), [correspondence](OPTICAL-CORRESPONDENCE.md).
 
@@ -13,7 +13,7 @@ Reviewed app textures/labels are locally generated CanvasTexture, fonts are syst
 
 [dependencies.json](etap-12/dependencies.json) covers every lock entry, installed version, declared licence/notice. The production scope is the **113 non-dev package superset**, not tree-shaken artifact analysis: MIT 87, Apache-2.0 6, ISC 15, BSD-3-Clause 3, 0BSD 1, MIT AND ISC 1. Exact versions/direct-transitive status are recorded. No installed/lock version mismatch was found. Native/tool packages remain listed even if npm classifies them dev.
 
-Direct app dependencies React/React DOM, Three, fiber/drei, Recharts, Zustand, Radix Slot, CVA, clsx, lucide-react and tailwind-merge declare MIT; Capacitor App/Core declare Apache-2.0.
+Direct app dependencies React/React DOM, Three, fiber/drei, Recharts, Zustand, Radix Slot, CVA, clsx, lucide-react and tailwind-merge declare MIT; Capacitor App/Core declare MIT.
 
 [third-party-notices.txt](../public/third-party-notices.txt) preserves available verbatim copyright/licence texts and is copied into Vite builds; it grants no project rights. It includes ISC notices of vendored d3 in victory-vendor. Missing archive notices for fiber 9.7.0, draco3d 1.5.7 and victory-vendor 36.9.2 were obtained from official version-tagged upstream files; [sources.json](etap-12/upstream-notices/sources.json) records URLs/SHA-256.
 

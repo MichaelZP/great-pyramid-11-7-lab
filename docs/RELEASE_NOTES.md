@@ -35,6 +35,8 @@ notices ship with it; all three unresolved-notice packages emit **zero modules**
 in the exact production bundle. Broader npm/native notice gaps remain for other
 artifacts. No remaining publication gate applies to this accepted web release.
 
+Update: since PR #7 the project source is offered under the MIT License (see LICENSE); the statement above reflects the state at the 2.0.2 release.
+
 Known limits: prototypes remain separate pages, not integrated app/APK features;
 some historical prototype captions retain local/acceptance wording. No new APK.
 Author's stage 12 phone report covers stage 11 play/pause/resume/reset/orientation
