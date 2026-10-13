@@ -23,6 +23,8 @@ Wynik służy geometrii, wizualizacji i dyskusji krytycznej — nie jest dowodem
 
 **Gotowa geometria do druku** (poprzednik Fusion): [Thingiverse, thing:6944382](https://www.thingiverse.com/thing:6944382).
 
+**[Eksperymentuj w GeoGebra](https://www.geogebra.org/m/rz4avuw8)** — osobny zaakceptowany model G4: 13 pozycji, suwaki proporcji i jednolitej skali, rzeczywisty przekrój powierzchni oraz wzorcowa złota elipsa. Główna aplikacja działa niezależnie. Przekrój jest owalem; jego L/W przy 11:7 przekracza tolerancję 0,1%. Autor udostępnia ten model i opis na CC BY-NC-SA 4.0 oraz także CC BY-SA 3.0. Nie jest to licencja całego projektu.
+
 ## Modele w laboratorium
 
 | Model | Definicja | Kąt ściany |
