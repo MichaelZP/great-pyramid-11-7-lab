@@ -23,6 +23,68 @@ Wynik służy geometrii, wizualizacji i dyskusji krytycznej — nie jest dowodem
 
 **Gotowa geometria do druku** (poprzednik Fusion): [Thingiverse, thing:6944382](https://www.thingiverse.com/thing:6944382).
 
+## Dlaczego ta bryła jest wyjątkowa
+
+Bardzo prosta geometria oparta na liczbach całkowitych daje niezwykle bogatą rodzinę bliskich zależności liczbowych. Schemat 440:280 daje:
+
+- dokładny stosunek podstawy do wysokości **11:7**;
+- stosunek połowy obwodu do wysokości **22:7**, czyli klasyczne wymierne przybliżenie π;
+- nachylenie ściany **51,842773°**;
+- nachylenie krawędzi **41,985759°**;
+- zwarty zestaw długości pochodnych, które można porównać z π, φ, e i innymi stałymi.
+
+Golden Φ Egg to **osobny** model: nie korzysta z zaokrąglonego stożka 51,84°. Przy `Z₀ = 7,65` numeryczne rozwiązanie równania `L/W = φ` dla `z = 1/r` daje **51,795319256°**. Ten kąt wyznacza B/H, wysokość i błędy wszystkich stałych. Stożek 51,84° pozostaje wyłącznie modelem porównawczym.
+
+## Wymiary kanoniczne (11:7)
+
+| Wielkość | Wyrażenie | Wynik |
+|---|---|---:|
+| Przyjęty łokieć królewski | `RoyalCubit` | 523,8 mm |
+| Podstawa / wysokość | `440 / 280` | 11 : 7 |
+| Skala modelu | `ModelScale` | 1 : 3200 |
+| Bok podstawy | `440 × 523,8 mm ÷ 3200` | 72,0225 mm |
+| Wysokość pionowa | `280 × 523,8 mm ÷ 3200` | 45,8325 mm |
+| Apotema ściany | `√(H² + A²)` | 58,287462 mm |
+| Krawędź boczna | `√(H² + B²/2)` | 68,514512 mm |
+| Nachylenie ściany | `atan(H / A)` | 51,842773° |
+| Nachylenie krawędzi | `atan(H / (D/2))` | 41,985759° |
+
+## Porównania stałych (11:7, tolerancja 0,1%)
+
+Każdy wiersz wynika z bieżącej bryły. Przy `MathTolerance = 0,001` bryła 11:7 utrzymuje klasyczne dwanaście w zakresie 0,1%; po geometrycznym obliczeniu owalu trzynasty wiersz L/W wypada tuż poza (~0,106% względem φ). To 12 z 13 — nie 13 z 13.
+
+| Symbol | Formuła | Cel |
+|---|---|---|
+| π | `2B / H` | π |
+| γ | `2B / (H + 2D)` | Euler–Mascheroni |
+| √3 | `(H + 2D) / (2B)` | √3 |
+| √6 | `(H + 2D) / D` | √6 |
+| √2 | `D / B` | √2 (podstawa kwadratowa — niezależne od kąta nachylenia) |
+| √5 | `(S + B) / S` | √5 |
+| T | `(A + 2D) / (S + B)` | tribonacci |
+| B₂ | `E / A` | stała Bruna |
+| 1/φ | `S / (S + A)` | 1/φ |
+| φ | `S / A` | φ |
+| e | `2θ / (90° − θ)` | e |
+| e − 1 | `e_model − 1` | e − 1 |
+| L/W | długość/szerokość jaja dla `z = 1/r` przy `Z₀ = 7,65` | φ przy 51,795319256° |
+
+To są **wzory porównawcze wybrane dla tego studium**, a nie dwanaście (ani trzynaście) niezależnych więzów konstrukcyjnych. Pełne wzory: [docs/MATHEMATICS.md](docs/MATHEMATICS.md).
+
+## Korespondencja optyczna
+
+- **Tęcza pierwotna** — pionowy półokrąg w płaszczyźnie środkowej XZ, z centrum na osi piramidy; promień zewnętrznego pasma czerwieni = wysokość piramidy, więc rzeczywista krawędź boczna kończy się w wierzchołku.
+- **Tęcza wtórna** — równoległa pionowa płaszczyzna za bryłą, odwrócona kolejność kolorów; apotema ściany jest przedłużona i spotyka pasmo zieleni przy promieniu `2H`.
+- Nachylenie ściany **51,842773°** wobec zieleni wtórnej ≈ **51,83°** (różnica **0,012773°**).
+
+Wyświetlane promienie są schematyczne, a nie rzeczywiste odległości atmosferyczne. Zobacz [docs/OPTICAL-CORRESPONDENCE.md](docs/OPTICAL-CORRESPONDENCE.md).
+
+## Golden Φ Egg
+
+![Golden egg revolved about the apothem](docs/images/golden-egg.png)
+
+Wybór **Golden Egg 1.618033989** ustawia piramidę na **51,795319256°**. Za bryłą na płaszczyźnie podłoża stoi półprzezroczysty stożek hiperboliczny (`r ∝ 1/z`). Zwykły stożek i obrócone jajo są ilustracyjne i używają innych parametrów kadrowania niż sekcja numeryczna. Wybierz **L/W**, aby obejrzeć rzeczywisty zamknięty owal przy `Z₀=7,65`, z jego długością i maksymalną szerokością. Przy tym presecie silnik zgłasza 10 z 13 relacji w zakresie 0,1% oraz maksymalny błąd względny ok. 0,4% (około 4× zadeklarowanej tolerancji); 11:7 pozostaje modelem konstrukcyjnym. Szczegóły: [docs/GOLDEN-EGG.md](docs/GOLDEN-EGG.md).
+
 ## Modele w laboratorium
 
 | Model | Definicja | Kąt ściany |

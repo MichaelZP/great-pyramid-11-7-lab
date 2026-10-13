@@ -61,7 +61,7 @@ The Golden Φ Egg is a **separate** model: it does not use the rounded 51.84° c
 | Golden Φ Egg | `L/W = φ`; `z = 1/r`; `Z₀ = 7.65` | **51.795319256°** |
 | Custom ratio | user `B/H` or angle | editable |
 
-Chosen score weights (shared with the workbook): weighted error 0.35, proximity to the reference angle 0.25, preference for 11/7 0.25, robustness in band 0.15. The app uses 13 rows; the workbooks use 12 and a different fraction criterion. These weights do not establish independence or builders’ intent. **11:7 is the preferred construction preset**; Golden Egg is a geometric lead, not a replacement construction. On the Golden Egg preset the laboratory engine reports **10 of 13** relations within 0.1%, with mean relative error ≈ 0.090% and maximum ≈ 0.397% (~0.4%).
+Chosen score weights (shared with the workbook): weighted error 0.35, proximity to the reference angle 0.25, preference for 11/7 0.25, robustness in band 0.15. The app uses 13 rows; the workbooks use 12 and a different fraction criterion. These weights do not establish independence or builders’ intent. **11:7 is the preferred construction preset**; Golden Egg is a geometric lead, not a replacement construction. On the Golden Egg preset the laboratory engine reports **10 of 13** relations within 0.1%, with mean relative error ≈ 0.090% and maximum ≈ 0.397% (~0.4%). For 11:7 the classic twelve stay within 0.1%; the thirteenth row, L/W, falls just outside (~0.106%) once the oval geometry is computed — 12 of 13, not 13 of 13.
 
 ## Constant comparisons (11:7, tolerance 0.1%)
 
