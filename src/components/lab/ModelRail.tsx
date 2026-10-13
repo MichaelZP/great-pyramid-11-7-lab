@@ -27,6 +27,9 @@ export function ModelRail() {
         </h2>
         <p className="mt-1 text-sm text-muted">{t("pickModel")}</p>
         <p className="mt-2 text-xs leading-relaxed text-muted">{locale === "pl" ? "Model matematyczny i ilustracja. Dopasowanie proporcji nie dowodzi intencji budowniczych. Historię i źródła znajdziesz przy pozycjach w panelu Stałe." : "Mathematical model and illustration. Matching ratios do not establish builders’ intent. Find history and sources beside each position in Constants."}</p>
+        <a href="https://www.geogebra.org/m/rz4avuw8" target="_blank" rel="noopener noreferrer" className="mt-2 inline-flex min-h-11 items-center rounded-md border border-border px-3 py-2 text-sm text-fg underline underline-offset-4 hover:bg-bg-subtle">
+          {locale === "pl" ? "Eksperymentuj w GeoGebra" : "Experiment in GeoGebra"}
+        </a>
       </header>
 
       <ul className="flex flex-col gap-1.5">

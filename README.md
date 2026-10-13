@@ -105,6 +105,8 @@ GitHub does **not** execute the Vite app from the source tree. The production bu
 
 **https://michaelzp.github.io/great-pyramid-11-7-lab/**
 
+**[Experiment in GeoGebra](https://www.geogebra.org/m/rz4avuw8)** — the separate, accepted G4 model: all 13 comparisons, shape and uniform scale sliders, a real surface section and a golden ellipse reference. The main laboratory works independently. The section is an oval; its 11:7 ratio is outside 0.1%. The model and its description are offered under CC BY-NC-SA 4.0 and also CC BY-SA 3.0 by author decision; this does not license the entire project.
+
 ## Run locally
 
 Requires [Node.js](https://nodejs.org/) **22 or newer**.
