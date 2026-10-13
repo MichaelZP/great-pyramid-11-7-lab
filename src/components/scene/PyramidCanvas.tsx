@@ -958,7 +958,7 @@ export function PyramidCanvas() {
     <div className="relative h-full w-full">
       <Canvas
         shadows
-        dpr={[1, 1.75]}
+        dpr={mobileCamera ? [1, 1.25] : [1, 1.75]}
         gl={{
           antialias: true,
           alpha: false,
@@ -984,6 +984,7 @@ export function PyramidCanvas() {
           scale={12}
           blur={2.4}
           far={4}
+          resolution={mobileCamera ? 256 : 512}
         />
         <CrossEyeStereo />
       </Canvas>
