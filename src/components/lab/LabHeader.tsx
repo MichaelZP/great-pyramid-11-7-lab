@@ -72,7 +72,7 @@ export function LabHeader() {
       </div>
       )}
 
-      <div className="pointer-events-auto flex min-w-0 w-full gap-1 overflow-x-auto pb-1 lg:w-auto lg:flex-wrap lg:justify-end lg:overflow-visible">
+      <div className="pointer-events-auto flex min-w-0 w-full flex-wrap gap-1 lg:w-auto lg:flex-wrap lg:justify-end lg:overflow-visible">
         <Button variant="outline" size="sm" className="min-h-11 shrink-0" onClick={() => useTutorialStore.getState().start()}>Tutorial</Button>
         <Toggle
           pressed={showHologram}
@@ -136,7 +136,7 @@ export function LabHeader() {
           size="sm"
           onClick={toggleLocale}
           aria-label={t("language")}
-          className="min-h-11 gap-1.5 bg-bg-elevated/80 px-3"
+          className="min-h-11 shrink-0 gap-1.5 bg-bg-elevated/80 px-3"
         >
           <Languages className="size-4" />
           <span className="font-mono text-xs tracking-wide">
@@ -169,7 +169,7 @@ function Toggle({
       onClick={onClick}
       aria-pressed={pressed}
       aria-label={label}
-      className={cn("min-h-11 shrink-0 gap-1.5 px-3", !pressed && "bg-bg-elevated/80")}
+      className={cn("min-h-11 min-w-11 shrink-0 gap-1.5 px-3", !pressed && "bg-bg-elevated/80")}
     >
       {icon}
       <span className="hidden lg:inline">{label}</span>
