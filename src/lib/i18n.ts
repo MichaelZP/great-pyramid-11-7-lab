@@ -24,6 +24,7 @@ export const translations = {
       "Look at the bottom white dots and cross your eyes until they become one.",
     reverseDepth: "Reverse depth",
     language: "Language",
+    tutorial: "Tutorial",
     assembling: "Assembling the pyramid…",
     confirmExit: "Exit Great Pyramid 11:7? Your current lab settings will be lost.",
 
@@ -130,6 +131,7 @@ export const translations = {
       "Patrz na dolne białe punkty i zezuj, aż zleją się w jeden.",
     reverseDepth: "Odwróć głębię",
     language: "Język",
+    tutorial: "Samouczek",
     assembling: "Składanie piramidy…",
     confirmExit: "Zamknąć Great Pyramid 11:7? Bieżące ustawienia laboratorium zostaną utracone.",
 

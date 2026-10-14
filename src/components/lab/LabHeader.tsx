@@ -73,7 +73,7 @@ export function LabHeader() {
       )}
 
       <div className="pointer-events-auto flex min-w-0 w-full flex-wrap gap-1 lg:w-auto lg:flex-wrap lg:justify-end lg:overflow-visible">
-        <Button variant="outline" size="sm" className="min-h-11 shrink-0" onClick={() => useTutorialStore.getState().start()}>Tutorial</Button>
+        <Button variant="outline" size="sm" className="min-h-11 shrink-0" onClick={() => useTutorialStore.getState().start()}>{t("tutorial")}</Button>
         <Toggle
           pressed={showHologram}
           onClick={toggleHologram}
