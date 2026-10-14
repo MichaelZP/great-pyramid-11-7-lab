@@ -109,12 +109,14 @@ export function AppShell() {
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.target instanceof HTMLElement && e.target.closest("input, select, textarea, [contenteditable=true]")) return;
+      if (e.ctrlKey || e.metaKey || e.altKey || e.isComposing) return;
       if (e.key === "Escape") {
         useTutorialStore.getState().close();
         useLabStore.getState().selectRelation(null);
         setSceneFullscreen(false);
         return;
       }
+      if (e.repeat) return;
       if (e.key === "f" || e.key === "F") {
         e.preventDefault();
         useLabStore.getState().toggleSceneFullscreen();
