@@ -43,8 +43,16 @@ export function HistoryPanel({ id }: { id: ConstantId }) {
 export function Bibliography() {
   const { locale } = useI18n();
   return <details className="text-sm leading-relaxed">
-    <summary className="min-h-11 cursor-pointer py-3">{locale === "pl" ? "Bibliografia · 13 pozycji" : "Bibliography · 13 positions"}</summary>
+    <summary className="min-h-11 cursor-pointer py-3">{bibliographySummary(locale, Object.keys(HISTORY_SOURCES).length)}</summary>
     <p className="mb-2 text-xs text-muted">{locale === "pl" ? "Zakres każdego źródła podano poniżej. Notatki są lokalne, pełne teksty otwierają się przez internet." : "Each source’s scope is given below. Notes are local; full texts open over the internet."}</p>
     <SourceList ids={Object.keys(HISTORY_SOURCES) as HistorySourceId[]} />
   </details>;
+}
+
+function bibliographySummary(locale: string, count: number): string {
+  if (locale !== "pl") return `Bibliography · ${count} ${count === 1 ? "source" : "sources"}`;
+  const mod10 = count % 10;
+  const mod100 = count % 100;
+  const word = count === 1 ? "pozycja" : mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14) ? "pozycje" : "pozycji";
+  return `Bibliografia · ${count} ${word}`;
 }
