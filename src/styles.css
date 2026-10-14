@@ -7,7 +7,7 @@
     bottom: 0;
   }
   .mobile-panel {
-    top: 144px;
+    top: calc(144px + env(safe-area-inset-top));
     left: 58%;
   }
   .mobile-panel-content {
@@ -15,7 +15,7 @@
     max-height: none;
   }
   .mobile-panel-body {
-    max-height: calc(100dvh - 144px - 3rem - env(safe-area-inset-bottom));
+    max-height: calc(100dvh - 144px - 3rem - env(safe-area-inset-top) - env(safe-area-inset-bottom));
   }
 }
 

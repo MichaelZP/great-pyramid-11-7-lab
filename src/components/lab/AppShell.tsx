@@ -162,7 +162,7 @@ export function AppShell() {
 
   return (
     <main ref={mainRef} className="relative h-dvh overflow-clip bg-bg text-fg">
-      <div className={cn("lab-scene absolute inset-x-0 top-36 bottom-[48dvh] lg:inset-0", sceneFullscreen && "inset-0")}>
+      <div className={cn("lab-scene absolute inset-x-0 top-[calc(9rem+env(safe-area-inset-top))] bottom-[48dvh] lg:inset-0", sceneFullscreen && "inset-0")}>
         <SceneMount />
       </div>
 
