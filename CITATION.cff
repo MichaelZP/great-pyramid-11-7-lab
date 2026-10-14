@@ -5,15 +5,15 @@ type: software
 authors:
   - family-names: "Przybylski"
     given-names: "Michał"
-version: 2.0.0
+version: 2.0.2
 license: MIT
-date-released: 2026-09-01
+date-released: 2026-10-07
 repository-code: "https://github.com/MichaelZP/great-pyramid-11-7-lab"
 url: "https://github.com/MichaelZP/great-pyramid-11-7-lab"
 abstract: >-
   Interactive web laboratory for the 11:7 Great Pyramid (440 × 280 royal cubits
   at 1:3200). Live 3D scene with limestone pyramid, primary/secondary rainbow
-  correspondence, twelve-plus constant error table, and the Golden Φ Egg
+  correspondence, thirteen-constant error table, and the Golden Φ Egg
   (Harthun–Rennert z = 1/r, Z₀ = 7.65, L/W = φ, αp = 51.795319256°).
 keywords:
   - Great Pyramid

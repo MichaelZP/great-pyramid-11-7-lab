@@ -51,6 +51,8 @@ inne wersje i czytelność natywnych kontrolek 320 px pozostają poza odbiorem.
 
 # ETAP 13 — opublikowane wydanie 2.0.2, 2026-10-07
 
+> Aktualizacja 2026-10-12: repozytorium ma teraz licencję MIT (plik LICENSE, PR #7). Wpisy poniżej o braku licencji open source opisują stan z 2026-10-07.
+
 **Publikacja i kontrola po wdrożeniu: PASS. Brak nierozwiązanych blokad dla
 opublikowanego wydania internetowego.** Autor zaakceptował etap 12 i potwierdził
 prawa do dystrybucji przy zachowaniu braku licencji open source.
