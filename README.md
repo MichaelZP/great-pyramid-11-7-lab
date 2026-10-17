@@ -6,6 +6,8 @@
 
 **Open in the browser (no install):** [michaelzp.github.io/great-pyramid-11-7-lab](https://michaelzp.github.io/great-pyramid-11-7-lab/)
 
+**Read the illustrated article:** [A Finger's Breadth of Difference](articles/one-finger/article-en.md) ([PDF](articles/one-finger/a-fingers-breadth-of-difference-EN.pdf)) · [Wersja polska](articles/one-finger/artykul.md) ([PDF](articles/one-finger/roznica-szerokosci-jednego-palca-PL.pdf)). It follows the 3-4-5 triangle through the Egyptian seked to the 11:7 model, distinguishing the geometry from claims about ancient intent.
+
 ![11:7 laboratory — pyramid, rainbows, constant table](docs/images/lab-11-7.png)
 
 This repository is the **web laboratory (v2)** of the 11:7 Great Pyramid study. The Fusion 360 generator remains in a separate project: [MichaelZP/great-pyramid-11-7](https://github.com/MichaelZP/great-pyramid-11-7).
