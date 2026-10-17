@@ -6,6 +6,8 @@
 
 **Otwórz w przeglądarce (bez instalacji):** [michaelzp.github.io/great-pyramid-11-7-lab](https://michaelzp.github.io/great-pyramid-11-7-lab/)
 
+**Przeczytaj artykuł z ilustracją:** [Różnica szerokości jednego palca](articles/one-finger/artykul.md) ([PDF](articles/one-finger/roznica-szerokosci-jednego-palca-PL.pdf)) · [English version](articles/one-finger/article-en.md) ([PDF](articles/one-finger/a-fingers-breadth-of-difference-EN.pdf)). Tekst prowadzi od trójkąta 3–4–5 przez egipski seked do modelu 11:7, oddzielając geometrię od twierdzeń o zamiarach dawnych budowniczych.
+
 ![Laboratorium 11:7 — piramida, tęcze, tabela stałych](docs/images/lab-11-7.png)
 
 To repozytorium to **laboratorium WWW (v2)** badania piramidy 11:7. Generator Autodesk Fusion pozostaje w osobnym projekcie: [MichaelZP/great-pyramid-11-7](https://github.com/MichaelZP/great-pyramid-11-7).
