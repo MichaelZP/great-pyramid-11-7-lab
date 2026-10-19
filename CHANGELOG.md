@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Geometric extensions (separate from the 13-comparison table): golden-egg L/W limit with a Z₀ slider, inscribed sphere with points O, V, M, I, T, and “Why 11:7?”. PL/EN, direct links `#ext=egg-limit`, `#ext=inscribed-sphere`, `#ext=why-11-7`. See [docs/GEOMETRIC-EXTENSIONS.md](docs/GEOMETRIC-EXTENSIONS.md).
 - Android: versionCode 2; versionName read from package.json (2.0.2).
 - Licence changed to MIT (PR #7).
 
