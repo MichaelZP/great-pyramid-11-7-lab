@@ -13,9 +13,12 @@ import { cn } from "@/lib/utils";
 import { useRelationLesson } from "@/hooks/use-relation-lesson";
 import { useTutorial } from "@/hooks/use-tutorial";
 import { useTutorialStore } from "@/store/tutorial-store";
+import { useExtensionStore } from "@/store/extension-store";
+import { useExtensionLesson } from "@/hooks/use-extension-lesson";
 
 export function AppShell() {
   useRelationLesson();
+  useExtensionLesson();
   useTutorial();
   const mobileTab = useLabStore((s) => s.mobileTab);
   const setMobileTab = useLabStore((s) => s.setMobileTab);
@@ -113,6 +116,7 @@ export function AppShell() {
       if (e.key === "Escape") {
         useTutorialStore.getState().close();
         useLabStore.getState().selectRelation(null);
+        useExtensionStore.getState().close();
         setSceneFullscreen(false);
         return;
       }
@@ -146,6 +150,8 @@ export function AppShell() {
             useTutorialStore.getState().close();
           } else if (state.relationId) {
             state.selectRelation(null);
+          } else if (useExtensionStore.getState().id) {
+            useExtensionStore.getState().close();
           } else if (state.mobileTab !== "modele") {
             state.setMobileTab("modele");
           } else if (window.confirm(translate(useLabStore.getState().locale, "confirmExit"))) {

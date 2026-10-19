@@ -5,12 +5,12 @@ import * as THREE from "three";
 import { useActiveSnapshot } from "@/hooks/use-lab";
 import { useLabStore } from "@/store/lab-store";
 import { relationSteps, RELATION_PRESENTATIONS, RELATION_COMPARISONS, relationMeasures, QUANTITY_SYMBOLS, SEGMENT_COLORS, type Point3 } from "@/lib/pyramid/relations";
-import { pyramidSegments, angleArcs, ovalSection, comparisonChains } from "@/lib/pyramid/relation-geometry";
+import { pyramidSegments, angleArcs, ovalSection, comparisonChains, type OvalSection } from "@/lib/pyramid/relation-geometry";
 import type { ConstantId } from "@/lib/pyramid/engine";
 
 // Canvas sprites use system fonts and need no network/font asset. They also work
 // in the existing stereo renderer (unlike an HTML label over the mono canvas).
-function Label({ text, at, compact = false }: { text: string; at: Point3; compact?: boolean }) {
+export function Label({ text, at, compact = false, color = "#ece8e1" }: { text: string; at: Point3; compact?: boolean; color?: string }) {
   const sprite = useRef<THREE.Sprite>(null);
   const worldPosition = useMemo(() => new THREE.Vector3(), []);
   const texture = useMemo(() => {
@@ -21,14 +21,14 @@ function Label({ text, at, compact = false }: { text: string; at: Point3; compac
     canvas.width = Math.max(128, Math.ceil(ctx.measureText(text).width + 40));
     ctx.fillStyle = "#12151a";
     ctx.fillRect(0, 0, canvas.width, 128);
-    ctx.fillStyle = "#ece8e1";
+    ctx.fillStyle = color;
     ctx.font = "500 72px Segoe UI, sans-serif";
     ctx.textAlign = "center"; ctx.textBaseline = "middle";
     ctx.fillText(text, canvas.width / 2, 66);
     const tex = new THREE.CanvasTexture(canvas);
     tex.colorSpace = THREE.SRGBColorSpace;
     return tex;
-  }, [text, compact]);
+  }, [text, compact, color]);
   useEffect(() => () => texture.dispose(), [texture]);
   useFrame(({ camera, size }) => {
     if (!sprite.current) return;
@@ -107,18 +107,13 @@ function CopiedLengths({ id }: { id: ConstantId }) {
   </Billboard>;
 }
 
-function OvalGeometry() {
-  const snap = useActiveSnapshot();
-  const step = useLabStore((s) => s.lessonStep);
-  const oval = useMemo(() => ovalSection(snap.geo.angleDeg), [snap.geo.angleDeg]);
-  const active = step === null ? ["L", "W", "theta"] : relationSteps("eggLW")[step].segments;
-  // Uniform scale and a translation only: the displayed oval is the actual cut.
-  const scale = 5.5;
+/** Surface patch and section plane around an oval, with one uniform scale. Shared by the eggLW lesson and the egg-limit extension. */
+export function useOvalMeshes(oval: OvalSection, scale: number, { pad = 0.035, hx = 0.19, hy = 0.18, cx = 0 } = {}) {
   const mapPoint = ([x, y, z]: Point3): Point3 => [x * scale, 1.25 + (z - oval.z0) * scale, y * scale];
   const surface = useMemo(() => {
     const positions: number[] = [], indices: number[] = [];
     const rings = 32, sides = 72;
-    const lo = oval.zLo - 0.035, hi = oval.zHi + 0.035;
+    const lo = oval.zLo - pad, hi = oval.zHi + pad;
     for (let i = 0; i <= rings; i++) {
       const z = lo + (hi - lo) * i / rings;
       for (let j = 0; j <= sides; j++) {
@@ -134,17 +129,27 @@ function OvalGeometry() {
     geom.setAttribute("position", new THREE.Float32BufferAttribute(positions, 3));
     geom.setIndex(indices); geom.computeVertexNormals();
     return geom;
-  }, [oval]);
+  }, [oval, scale, pad]);
   const plane = useMemo(() => {
     const positions: number[] = [];
-    const corners: Point3[] = [[-0.19, -0.18, oval.z0 - 0.19 * oval.t], [0.19, -0.18, oval.z0 + 0.19 * oval.t], [0.19, 0.18, oval.z0 + 0.19 * oval.t], [-0.19, 0.18, oval.z0 - 0.19 * oval.t]];
+    const corners: Point3[] = [[cx - hx, -hy, oval.z0 + (cx - hx) * oval.t], [cx + hx, -hy, oval.z0 + (cx + hx) * oval.t], [cx + hx, hy, oval.z0 + (cx + hx) * oval.t], [cx - hx, hy, oval.z0 + (cx - hx) * oval.t]];
     corners.forEach((p) => positions.push(...mapPoint(p)));
     const geom = new THREE.BufferGeometry();
     geom.setAttribute("position", new THREE.Float32BufferAttribute(positions, 3));
     geom.setIndex([0, 1, 2, 0, 2, 3]); geom.computeVertexNormals();
     return geom;
-  }, [oval]);
+  }, [oval, scale, hx, hy, cx]);
   useEffect(() => () => { surface.dispose(); plane.dispose(); }, [surface, plane]);
+  return { mapPoint, surface, plane };
+}
+
+function OvalGeometry() {
+  const snap = useActiveSnapshot();
+  const step = useLabStore((s) => s.lessonStep);
+  const oval = useMemo(() => ovalSection(snap.geo.angleDeg), [snap.geo.angleDeg]);
+  const active = step === null ? ["L", "W", "theta"] : relationSteps("eggLW")[step].segments;
+  // Uniform scale and a translation only: the displayed oval is the actual cut.
+  const { mapPoint, surface, plane } = useOvalMeshes(oval, 5.5);
   const L = oval.length.map(mapPoint), W = oval.width.map(mapPoint);
   const inclination = Array.from({ length: 41 }, (_, i): Point3 => {
     const a = oval.theta * i / 40;
@@ -172,13 +177,22 @@ function OvalGeometry() {
   </group>;
 }
 
-export function RelationCamera({ id }: { id: ConstantId | null }) {
+/** Fixed camera for a lesson that is not a table relation (geometric extensions). */
+export type LessonView = { key: string; position: Point3; target: Point3 };
+
+export function RelationCamera({ id, view = null }: { id: ConstantId | null; view?: LessonView | null }) {
   const { camera, controls, size } = useThree();
   const saved = useRef<{ position: THREE.Vector3; quaternion: THREE.Quaternion; target: THREE.Vector3 } | null>(null);
+  const viewKey = view?.key ?? null;
   useEffect(() => {
     if (!controls) return;
     const orbit = controls as unknown as { target: THREE.Vector3; update: () => void };
-    if (id) {
+    if (!id && view) {
+      if (!saved.current) saved.current = { position: camera.position.clone(), quaternion: camera.quaternion.clone(), target: orbit.target.clone() };
+      camera.position.set(...view.position);
+      orbit.target.set(...view.target);
+      orbit.update();
+    } else if (id) {
       if (!saved.current) saved.current = { position: camera.position.clone(), quaternion: camera.quaternion.clone(), target: orbit.target.clone() };
       const def = RELATION_COMPARISONS[id];
       const copies = id !== "eggLW" && (def.numerator.length > 1 || def.denominator.length > 1);
@@ -194,6 +208,6 @@ export function RelationCamera({ id }: { id: ConstantId | null }) {
       saved.current = null;
       orbit.update();
     }
-  }, [id, camera, controls, size.width]);
+  }, [id, viewKey, camera, controls, size.width]);
   return null;
 }

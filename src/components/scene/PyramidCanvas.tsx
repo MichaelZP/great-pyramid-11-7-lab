@@ -6,6 +6,7 @@ import { useLabStore } from "@/store/lab-store";
 import { useActiveSnapshot } from "@/hooks/use-lab";
 import {
   CONSTANTS,
+  PHI,
   RAINBOW_ANGLE,
   TARGET_RATIO,
 } from "@/lib/pyramid/engine";
@@ -27,6 +28,10 @@ import { useTutorialStore } from "@/store/tutorial-store";
 import { TUTORIAL_STEPS, tutorialCopy } from "@/lib/pyramid/tutorial";
 import { Button } from "@/components/ui/button";
 import { useReducedMotion } from "@/hooks/use-relation-lesson";
+import { useExtensionStore } from "@/store/extension-store";
+import { ExtensionGeometry, useExtensionView } from "./ExtensionOverlay";
+import { ExtensionPlayback } from "@/components/lab/ExtensionsPanel";
+import { eggLimit } from "@/lib/pyramid/geometric-extensions";
 
 const BASE = 2;
 const START_H = BASE / TARGET_RATIO;
@@ -112,7 +117,11 @@ function PyramidRig() {
   const pyramidOpacity = useLabStore((s) => s.pyramidOpacity);
   const autoRotate = useLabStore((s) => s.autoRotate);
   const relationId = useLabStore((s) => s.relationId);
-  const lesson = Boolean(relationId && RELATION_PRESENTATIONS[relationId].renderer);
+  const extension = useExtensionStore((s) => s.id);
+  const extensionView = useExtensionView(relationId ? null : extension);
+  const lesson = Boolean(relationId && RELATION_PRESENTATIONS[relationId].renderer) || Boolean(extension && !relationId);
+  // Both oval lessons replace the pyramid with the section surface.
+  const ovalScene = relationId === "eggLW" || (!relationId && extension === "eggLimit");
   const reduced = useReducedMotion();
   const isGoldenEgg = snap.model.id === "goldenEgg";
   const targetH = BASE / snap.geo.bh;
@@ -157,7 +166,7 @@ function PyramidRig() {
 
   return (
     <>
-      {relationId !== "eggLW" ? <AnimatedPyramid
+      {!ovalScene ? <AnimatedPyramid
         targetH={targetH}
         texture={limestone}
         showHologram={showHologram && !lesson}
@@ -175,13 +184,14 @@ function PyramidRig() {
       {isGoldenEgg && !lesson ? <GoldenEggConstruct targetH={targetH} /> : null}
       <ArrisGuide targetH={targetH} visible={showRainbow && !lesson} />
       {relationId ? <RelationGeometry id={relationId} /> : null}
-      <RelationCamera id={relationId} />
-      {relationId !== "eggLW" ? <Plinth /> : null}
+      {!relationId && extension ? <ExtensionGeometry id={extension} /> : null}
+      <RelationCamera id={relationId} view={extensionView} />
+      {!ovalScene ? <Plinth /> : null}
       <OrbitControls
         makeDefault
         enableDamping
         dampingFactor={0.08}
-        autoRotate={autoRotate && !relationId && !reduced}
+        autoRotate={autoRotate && !relationId && !extension && !reduced}
         autoRotateSpeed={0.35}
         minPolarAngle={0.12}
         maxPolarAngle={Math.PI * 0.52}
@@ -953,6 +963,7 @@ export function PyramidCanvas() {
   const c = relationCopy(locale);
   const steps = relationSteps(relationId);
   const lesson = Boolean(relationId && RELATION_PRESENTATIONS[relationId].renderer);
+  const extension = useExtensionStore((s) => s.id);
   const mobileCamera = window.matchMedia("(max-width: 1023px)").matches;
   return (
     <div className="relative h-full w-full">
@@ -990,6 +1001,7 @@ export function PyramidCanvas() {
       </Canvas>
       {crossEye ? <CrossEyeOverlay /> : null}
       {relationId ? <p className="sr-only">{relationSceneDescription(relationId, locale)}</p> : null}
+      {!relationId && extension ? <ExtensionSceneBar fullscreen={fullscreen} /> : null}
       {relationId ? <div className={`pointer-events-none absolute inset-x-2 bottom-2 z-10 flex justify-center ${fullscreen ? "" : "lg:top-28 lg:bottom-auto lg:left-[calc(22.5rem+2rem)] lg:right-[calc(24rem+2rem)]"}`}>
         <div className="panel pointer-events-auto max-w-full rounded-sm p-2">
           {tutorial.open && fullscreen ? <p aria-live="polite" className="mb-2 max-w-sm text-xs text-fg">{tutorialCopy(locale).step} {tutorial.step + 1}/{TUTORIAL_STEPS.length} · {TUTORIAL_STEPS[tutorial.step].text[locale]}</p> : lesson && step !== null && fullscreen ? <p aria-live="polite" className="mb-2 max-w-sm text-xs text-fg lg:max-w-[18rem]">{c.step} {step + 1}/{steps.length} · {steps[step].text[locale]}</p> : null}
@@ -1003,4 +1015,29 @@ export function PyramidCanvas() {
       </div> : null}
     </div>
   );
+}
+
+const EXTENSION_TEXT = {
+  eggLimit: ["ext_eggLimit_plain"], inSphere: ["ext_inSphere_text1", "ext_inSphere_text2", "ext_inSphere_text3", "ext_inSphere_text4"],
+  why117: ["ext_why117_text1", "ext_why117_text2", "ext_why117_text3"],
+} as const;
+
+/** Compact controls over the scene. In full screen (recording) only a short line of text is shown; proofs stay in the side panel. */
+function ExtensionSceneBar({ fullscreen }: { fullscreen: boolean }) {
+  const { t } = useI18n();
+  const id = useExtensionStore((s) => s.id);
+  const step = useExtensionStore((s) => s.step);
+  const z0 = useExtensionStore((s) => s.z0);
+  const snap = useActiveSnapshot();
+  const { fmt } = useI18n();
+  if (!id) return null;
+  const egg = id === "eggLimit" ? eggLimit(snap.geo, z0) : null;
+  const texts = EXTENSION_TEXT[id];
+  const text = egg ? Math.abs(egg.limit - PHI) < 1e-12 ? "ext_eggLimit_plainEqual" : egg.limit > PHI ? "ext_eggLimit_plain" : "ext_eggLimit_plainBelow" : texts[Math.min(step, texts.length - 1)]!;
+  return <div className={`pointer-events-none absolute inset-x-2 bottom-2 z-10 flex justify-center ${fullscreen ? "" : "lg:top-28 lg:bottom-auto lg:left-[calc(22.5rem+2rem)] lg:right-[calc(24rem+2rem)]"}`} data-testid="extension-scene-bar">
+    <div className="panel pointer-events-auto max-w-full rounded-sm p-2">
+      {fullscreen ? <p aria-live="polite" className="mb-2 max-w-sm text-xs text-fg lg:max-w-[18rem]">{egg ? "" : `${t("ext_step", { n: step + 1, total: texts.length })} · `}{t(text)}{egg ? egg.ok ? ` Z₀ = ${fmt(z0, 2)} · L/W = ${fmt(egg.ratio, 6)} · S/A = ${fmt(egg.limit, 6)} · φ = ${fmt(PHI, 6)}` : ` ${t("ext_eggLimit_domain", { min: fmt(egg.z0Min, 4) })}` : ""}</p> : null}
+      <div className="flex flex-wrap justify-center gap-2"><ExtensionPlayback inScene full={fullscreen} /></div>
+    </div>
+  </div>;
 }

@@ -7,9 +7,12 @@ import { relationCopy } from "@/lib/relation-copy";
 import { RELATION_PRESENTATIONS } from "@/lib/pyramid/relations";
 import { useLabStore } from "@/store/lab-store";
 import { TutorialPanel } from "./TutorialPanel";
+import { ExtensionsPanel } from "./ExtensionsPanel";
+import { useExtensionStore } from "@/store/extension-store";
 
 export function ConstantsPanel() {
   const relationId = useLabStore((s) => s.relationId);
+  const extensionId = useExtensionStore((s) => s.id);
   const snap = useActiveSnapshot();
   const { t, fmtPct, constName, locale } = useI18n();
 
@@ -17,7 +20,8 @@ export function ConstantsPanel() {
     <div className="flex flex-col gap-3">
       <TutorialPanel />
       <RelationPanel />
-      <details open={!relationId}>
+      <ExtensionsPanel />
+      <details open={!relationId && !extensionId}>
       <summary className="min-h-11 cursor-pointer py-3 text-sm text-muted">{relationCopy(locale).table}</summary>
       <header>
         <p className="text-xs font-medium tracking-[0.18em] text-muted uppercase">
