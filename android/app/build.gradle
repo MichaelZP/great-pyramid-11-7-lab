@@ -23,7 +23,7 @@ android {
         applicationId appIdentity.appId
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 2 // manual: must exceed every code uploaded to Play (Play has 1)
+        versionCode 3 // manual: must exceed every code uploaded to Play (Play has 1; 2 reserved for the pre-lessons build)
         versionName packageJson.version
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
