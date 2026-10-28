@@ -65,4 +65,13 @@ test('rendering and parameter source cache stay correct across quality, view, pr
  p.get('preset').value='pyramid';p.event('preset','change');assert.equal(p.get('error').textContent,'');
 });
 
+test('count mid-density rounding, budget ignore non-finite ms, empty stats, and 30 slow frames to drop',()=>{
+ assert.equal(P.count(0,0.5),24);
+ assert.equal(P.count(1,0.5),60);
+ assert.equal(P.count(2,0.5),120);
+ const empty=P.budget(2);assert.equal(empty.add(NaN),undefined);assert.equal(empty.add(-1),undefined);assert.equal(empty.add(Infinity),undefined);
+ const e=empty.stats();assert.equal(e.effective,2);assert.equal(e.samples,0);assert.equal(e.p50,0);assert.equal(e.p95,0);
+ const m=P.budget(2);for(let i=0;i<29;i++)m.add(13);assert.equal(m.level,2);m.add(13);assert.equal(m.level,1);
+});
+
 test('benchmark is bounded, pauses the shared clock and records 30 draws',()=>{const p=preview();p.event('circulate','click');p.event('play','click');p.event('benchmark','click');assert.equal(p.pending.size,0);assert.equal(p.c.VortexPreviewExtension.stats().frames,30);assert.equal(p.c.VortexPreviewExtension.stats().samples,30);});
