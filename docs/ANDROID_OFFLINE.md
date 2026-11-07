@@ -9,12 +9,14 @@ Android build tools requested by Gradle.
 
 ```sh
 npm ci
-npm test -- --run
+npm run test:run
 npm run build:android
 npx cap sync android
 cd android
 ./gradlew bundleRelease assembleDebug
 ```
+
+For a debug APK only (no signing files needed), run `./gradlew assembleDebug` instead. `bundleRelease` requires `android/keystore.properties` and fails early without it.
 
 Release signing reads `android/keystore.properties`, which must contain
 `storeFile=pyramid-upload.jks`, `storePassword`, `keyAlias=pyramid_upload`, and
