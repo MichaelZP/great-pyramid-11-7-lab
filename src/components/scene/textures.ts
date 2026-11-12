@@ -101,19 +101,19 @@ export function drawHologram(
   ctx.strokeRect(18, 18, w - 36, h - 36);
 
   ctx.fillStyle = "#ece8e1";
-  ctx.font = "500 42px 'IBM Plex Mono', ui-monospace, monospace";
+  ctx.font = "500 42px Consolas, ui-monospace, 'SF Mono', Menlo, monospace";
   ctx.fillText(heading, 48, 78);
 
   ctx.fillStyle = "#9a958c";
-  ctx.font = "400 24px Outfit, sans-serif";
+  ctx.font = "400 24px 'Segoe UI', Roboto, system-ui, sans-serif";
   ctx.fillText(title, 48, 114);
   ctx.fillText(angleLabel, 48, 146);
 
   ctx.fillStyle = matches >= rows.length ? "#7d9a7c" : matches >= rows.length - 3 ? "#c4a574" : "#c47a72";
-  ctx.font = "500 28px 'IBM Plex Mono', ui-monospace, monospace";
+  ctx.font = "500 28px Consolas, ui-monospace, 'SF Mono', Menlo, monospace";
   ctx.fillText(toleranceLabel, 48, 186);
   ctx.fillStyle = "#c5ccd4";
-  ctx.font = "400 22px Outfit, sans-serif";
+  ctx.font = "400 22px 'Segoe UI', Roboto, system-ui, sans-serif";
   ctx.fillText(scoreLabel, 48, 218);
 
   const startY = 248;
@@ -129,7 +129,7 @@ export function drawHologram(
     ctx.fillRect(40, y - 22, w - 80, 50);
 
     ctx.fillStyle = "#ece8e1";
-    ctx.font = "500 26px 'IBM Plex Mono', ui-monospace, monospace";
+    ctx.font = "500 26px Consolas, ui-monospace, 'SF Mono', Menlo, monospace";
     ctx.fillText(row.symbol, 56, y + 10);
 
     const barW = 280;
@@ -141,7 +141,7 @@ export function drawHologram(
     ctx.fillRect(barX, y - 6, Math.max(4, barW * filled), 10);
 
     ctx.fillStyle = tone;
-    ctx.font = "400 20px 'IBM Plex Mono', ui-monospace, monospace";
+    ctx.font = "400 20px Consolas, ui-monospace, 'SF Mono', Menlo, monospace";
     const err = (row.error * 100).toFixed(3).replace(".", decimal) + " %";
     ctx.fillText(err, barX + barW + 24, y + 8);
 

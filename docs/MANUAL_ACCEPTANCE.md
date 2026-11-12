@@ -37,7 +37,7 @@ python -m http.server 8088 --bind 127.0.0.1 --directory docs
 
 Open [stage 9 cones](http://127.0.0.1:8088/etap-7/podglad.html), [stage 10 tori](http://127.0.0.1:8088/etap-10/podglad.html) or [stage 11 vortices](http://127.0.0.1:8088/etap-11/podglad.html). They are separate pages, not included in the main build. Stop servers with Ctrl+C. Audit-session servers may already be running; use their existing URLs if ports are occupied.
 
-For a phone on a trusted LAN, start Vite with `npm run dev` and docs with `python -m http.server 8088 --bind 0.0.0.0 --directory docs`; use the computer's LAN IP and the same ports. Keep access within the intended LAN. Bibliography needs internet. For native offline acceptance follow [Android instructions](ANDROID_OFFLINE.md), build a new debug APK, and test it. Old APKs/web viewports do not validate this revision. No APK was built/installed in stage 12; prototypes are not Android assets.
+For a phone on a trusted LAN, start Vite with `npm run dev:lan` (plain `npm run dev` listens on 127.0.0.1 only) and docs with `python -m http.server 8088 --bind 0.0.0.0 --directory docs`; use the computer's LAN IP and the same ports. Keep access within the intended LAN. Bibliography needs internet. For native offline acceptance follow [Android instructions](ANDROID_OFFLINE.md), build a new debug APK, and test it. Old APKs/web viewports do not validate this revision. No APK was built/installed in stage 12; prototypes are not Android assets.
 
 ## Checklist
 
