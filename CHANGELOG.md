@@ -3,8 +3,19 @@
 ## Unreleased
 
 - Geometric extensions (separate from the 13-comparison table): golden-egg L/W limit with a Z₀ slider, inscribed sphere with points O, V, M, I, T, and “Why 11:7?”. PL/EN, direct links `#ext=egg-limit`, `#ext=inscribed-sphere`, `#ext=why-11-7`. See [docs/GEOMETRIC-EXTENSIONS.md](docs/GEOMETRIC-EXTENSIONS.md).
-- Android: versionCode 2; versionName read from package.json (2.0.2).
+- Link to the accepted GeoGebra G4 model (PR #18) and a bilingual article on the 3-4-5 triangle and the 11:7 pyramid (PR #25).
+- Android: versionCode 3 for the geometric-extensions release (PR #27; 2 was reserved for the pre-lessons build); versionName read from package.json (2.0.2) (PR #8).
 - Licence changed to MIT (PR #7).
+
+### Fixes
+
+- Header toolbar wraps on narrow screens instead of a clipped horizontal scroll (PR #6).
+- Mobile: `viewport-fit=cover` and safe-area-inset-top offsets for the scene and the landscape panel (PRs #16, #19).
+- Mobile performance: lower DPR and contact-shadow resolution (PR #10).
+- 3D scene shows a retry fallback when it fails to load or throws (PR #20).
+- Bibliography count is derived from the source list (15, was hard-coded 13) (PR #21).
+- Polish label for the Tutorial button: „Samouczek” (PR #22).
+- Global shortcuts ignore modifier keys, IME composition and key repeat, so Ctrl+F no longer toggles full screen (PR #23).
 
 ## 2.0.2 — 2026-10-07
 
