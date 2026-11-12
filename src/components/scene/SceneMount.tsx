@@ -48,7 +48,7 @@ export function SceneMount() {
 
   if (!Canvas) {
     return (
-      <div className="relative flex h-full w-full items-center justify-center bg-bg">
+      <div role="status" className="relative flex h-full w-full items-center justify-center bg-bg">
         <div
           aria-hidden
           className="absolute left-1/2 top-[42%] h-40 w-52 -translate-x-1/2 -translate-y-1/2"

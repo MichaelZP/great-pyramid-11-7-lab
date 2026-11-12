@@ -38,12 +38,13 @@ export function RangeSlider({
         <input
           type="range"
           aria-label={label}
+          aria-valuetext={display}
           min={min}
           max={max}
           step={step}
           value={rounded}
           onChange={(e) => onChange(Number(e.target.value))}
-          className="h-11 w-full cursor-pointer appearance-none bg-bg-subtle"
+          className="h-11 w-full cursor-pointer appearance-none bg-bg-subtle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/50"
         />
       ) : (
         <div className="h-11 w-full bg-bg-subtle" />

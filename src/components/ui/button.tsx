@@ -10,7 +10,7 @@ const buttonVariants = cva(
       variant: {
         default: "bg-accent text-accent-fg hover:opacity-90",
         ghost:
-          "bg-transparent text-fg hover:bg-bg-subtle box-shadow-none",
+          "bg-transparent text-fg hover:bg-bg-subtle shadow-none",
         outline:
           "bg-transparent text-fg shadow-[var(--shadow-border)] hover:shadow-[var(--shadow-border-hover)]",
         winner:

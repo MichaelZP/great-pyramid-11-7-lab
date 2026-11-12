@@ -13,6 +13,8 @@ import { useI18n } from "@/hooks/use-i18n";
 import { OBSERVED_ANGLE, RAINBOW_ANGLE } from "@/lib/pyramid/engine";
 
 const AXIS = "#6e6a63";
+// Tick labels use --color-muted for WCAG AA contrast on --color-bg.
+const TICK = "#9a958c";
 const GRID = "#2a2e35";
 const INDEP = "#c5ccd4";
 const MAX = "#c47a72";
@@ -39,18 +41,21 @@ export function ScanPanel() {
           <h2 className="font-display text-lg text-fg">{t("angleScan")}</h2>
         </div>
         <dl className="flex flex-wrap gap-x-4 gap-y-1 font-mono text-xs tabular text-muted">
-          <span>
-            {t("minMean")} {fmtDeg(minima.mean, 3)}
-          </span>
-          <span>
-            {t("minimax")} {fmtDeg(minima.minimax, 3)}
-          </span>
-          <span>
-            {t("model")} {fmtDeg(snap.geo.angleDeg, 3)}
-          </span>
+          <div className="flex gap-1">
+            <dt>{t("minMean")}</dt>
+            <dd>{fmtDeg(minima.mean, 3)}</dd>
+          </div>
+          <div className="flex gap-1">
+            <dt>{t("minimax")}</dt>
+            <dd>{fmtDeg(minima.minimax, 3)}</dd>
+          </div>
+          <div className="flex gap-1">
+            <dt>{t("model")}</dt>
+            <dd>{fmtDeg(snap.geo.angleDeg, 3)}</dd>
+          </div>
         </dl>
       </div>
-      <div className="min-h-40 flex-1">
+      <div role="img" aria-label={t("angleScan")} className="min-h-40 flex-1">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={data} margin={{ top: 8, right: 8, left: 0, bottom: 0 }}>
             <CartesianGrid stroke={GRID} strokeDasharray="3 6" />
@@ -58,12 +63,12 @@ export function ScanPanel() {
               dataKey="angle"
               type="number"
               domain={["dataMin", "dataMax"]}
-              tick={{ fill: AXIS, fontSize: 11, fontFamily: "monospace" }}
+              tick={{ fill: TICK, fontSize: 11, fontFamily: "monospace" }}
               tickFormatter={(v: number) => v.toFixed(2).replace(".", dec)}
               stroke={GRID}
             />
             <YAxis
-              tick={{ fill: AXIS, fontSize: 11, fontFamily: "monospace" }}
+              tick={{ fill: TICK, fontSize: 11, fontFamily: "monospace" }}
               tickFormatter={(v: number) =>
                 `${v.toFixed(2).replace(".", dec)}%`
               }
