@@ -40,6 +40,7 @@ export function ModelRail() {
             <li key={m.id}>
               <button
                 type="button"
+                aria-pressed={active}
                 onClick={() => setModel(m.id)}
                 className={cn(
                   "flex w-full min-h-11 items-center justify-between rounded-md px-3 py-2 text-left transition-[box-shadow,background-color] duration-150",

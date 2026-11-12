@@ -26,6 +26,7 @@ export function RelationPanel() {
   const presentation = id ? RELATION_PRESENTATIONS[id] : null;
   const ready = Boolean(presentation?.renderer);
   const measures = useMemo(() => id ? relationMeasures(id, lessonGeo(snap.geo)) : null, [id, snap.geo]);
+  const maxTotal = measures ? Math.max(...measures.rows.map((r) => r.total)) : 1;
   const steps = relationSteps(id);
   const instructions = <div className="space-y-2">
     <div>
@@ -76,15 +77,15 @@ export function RelationPanel() {
             <>
               <div className="flex flex-wrap gap-x-3 gap-y-1 text-xs">
                 {presentation?.quantities.map((q) => <span key={q} className="flex items-center gap-1">
-                  <span className="h-0.5 w-3" style={{ background: SEGMENT_COLORS[q] }} />
+                  <span aria-hidden className="h-0.5 w-3" style={{ background: SEGMENT_COLORS[q] }} />
                   {quantityLabel(q, locale)} = {fmt(measures?.values[q] ?? 0, 6)}{q === "theta" || q === "beta" ? "°" : ""}
                 </span>)}
               </div>
               <p className="text-xs text-muted">{id === "eggLW" ? c.ovalUnits : presentation?.scene === "pyramid-angles" ? c.angleUnits : c.units}</p>
-              <div aria-label={c.ratio} className="space-y-1.5 text-xs">
+              <div role="group" aria-label={c.ratio} className="space-y-1.5 text-xs">
                 {measures?.rows.map((r, i) => <div key={i} className="space-y-1">
                   <span className="font-mono">{r.label} = {fmt(r.total, 6)}{presentation?.scene === "pyramid-angles" ? "°" : ""}</span>
-                  <div className="flex h-2 bg-bg-subtle" aria-label={`${r.label}: ${fmt(r.total, 6)}`}>{r.terms.map((q, j) => <div key={j} className="h-full border-r border-bg" style={{ width: `${100 * (measures.values[q]) / Math.max(...measures.rows.map((r) => r.total))}%`, background: SEGMENT_COLORS[q] }} />)}</div>
+                  <div role="img" className="flex h-2 bg-bg-subtle" aria-label={`${r.label}: ${fmt(r.total, 6)}`}>{r.terms.map((q, j) => <div key={j} aria-hidden className="h-full border-r border-bg" style={{ width: `${100 * (measures.values[q]) / maxTotal}%`, background: SEGMENT_COLORS[q] }} />)}</div>
                 </div>)}
               </div>
               {measures?.rows.some((r) => r.terms.length > 1) ? <p className="text-xs text-muted">{presentation?.scene === "pyramid-angles" ? c.angleCopies : c.copies}{measures.subtract ? " R = (2θ / β) − 1." : ""}</p> : null}

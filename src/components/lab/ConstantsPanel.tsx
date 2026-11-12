@@ -47,9 +47,9 @@ export function ConstantsPanel() {
         <table className="w-full min-w-[18rem] border-separate border-spacing-y-1 text-left">
           <thead>
             <tr className="text-[0.65rem] tracking-wide text-muted uppercase">
-              <th className="px-2 font-medium">{t("constant")}</th>
-              <th className="px-2 font-medium">{t("formula")}</th>
-              <th className="px-2 text-right font-medium">{t("error")}</th>
+              <th scope="col" className="px-2 font-medium">{t("constant")}</th>
+              <th scope="col" className="px-2 font-medium">{t("formula")}</th>
+              <th scope="col" className="px-2 text-right font-medium">{t("error")}</th>
             </tr>
           </thead>
           <tbody>
@@ -60,6 +60,7 @@ export function ConstantsPanel() {
                   <td className="rounded-l-sm px-2 py-1.5">
                     <div className="flex items-center gap-2">
                       <span
+                        aria-hidden
                         className={cn(
                           "size-1.5 shrink-0 rounded-full",
                           tone === "ok"
@@ -91,7 +92,7 @@ export function ConstantsPanel() {
                     >
                       {fmtPct(row.error, 3)}
                     </span>
-                    <div className="mt-1 ml-auto h-1 w-16 overflow-hidden rounded-full bg-bg">
+                    <div aria-hidden className="mt-1 ml-auto h-1 w-16 overflow-hidden rounded-full bg-bg">
                       <div
                         className={cn(
                           "h-full",

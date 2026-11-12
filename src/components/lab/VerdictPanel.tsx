@@ -36,6 +36,7 @@ export function VerdictPanel() {
             <li key={s.model.id}>
               <button
                 type="button"
+                aria-pressed={active}
                 onClick={() => setModel(s.model.id)}
                 className={cn(
                   "w-full rounded-md px-3 py-2 text-left transition-[box-shadow,background-color] duration-150",
@@ -55,7 +56,7 @@ export function VerdictPanel() {
                     {fmt(s.consensus.combined, 1)}
                   </span>
                 </div>
-                <div className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-bg">
+                <div aria-hidden className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-bg">
                   <div
                     className={cn(
                       "h-full rounded-full",
