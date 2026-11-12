@@ -24,7 +24,7 @@ export const useTutorialStore = create<TutorialState>((set, get) => ({
   open: false, step: savedStep(), playing: false, revision: 0,
   start: () => { useLabStore.getState().setSceneFullscreen(false); showStep(get().step); set((s) => ({ open: true, playing: false, revision: s.revision + 1 })); },
   close: () => { set({ open: false, playing: false }); useLabStore.getState().selectRelation(null); },
-  pause: () => set({ playing: false }),
+  pause: () => { if (get().playing) set({ playing: false }); },
   play: () => {
     const state = get();
     if (!state.open || state.step >= TUTORIAL_STEPS.length - 1) return;

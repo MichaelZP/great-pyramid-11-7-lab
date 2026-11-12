@@ -7,7 +7,9 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 function dec(n: number, digits: number, locale: Locale = "en"): string {
-  const s = n.toFixed(digits);
+  let s = n.toFixed(digits);
+  // Tiny negatives round to "-0.000…"; show them as plain zero.
+  if (/^-0(\.0+)?$/.test(s)) s = s.slice(1);
   return locale === "pl" ? s.replace(".", ",") : s;
 }
 
