@@ -2,10 +2,14 @@ import { useEffect, useState } from "react";
 import { useLabStore } from "@/store/lab-store";
 import { playbackTimer } from "@/lib/playback-timer";
 
+const REDUCED_MOTION = "(prefers-reduced-motion: reduce)";
+const hasMatchMedia = () => typeof window !== "undefined" && typeof window.matchMedia === "function";
+
 export function useReducedMotion() {
-  const [reduced, setReduced] = useState(() => window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+  const [reduced, setReduced] = useState(() => hasMatchMedia() && window.matchMedia(REDUCED_MOTION).matches);
   useEffect(() => {
-    const media = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (!hasMatchMedia()) return;
+    const media = window.matchMedia(REDUCED_MOTION);
     const update = () => setReduced(media.matches);
     media.addEventListener("change", update);
     return () => media.removeEventListener("change", update);

@@ -964,7 +964,7 @@ export function PyramidCanvas() {
   const steps = relationSteps(relationId);
   const lesson = Boolean(relationId && RELATION_PRESENTATIONS[relationId].renderer);
   const extension = useExtensionStore((s) => s.id);
-  const mobileCamera = window.matchMedia("(max-width: 1023px)").matches;
+  const mobileCamera = typeof window.matchMedia === "function" && window.matchMedia("(max-width: 1023px)").matches;
   return (
     <div className="relative h-full w-full">
       <Canvas
