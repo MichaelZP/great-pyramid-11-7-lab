@@ -55,7 +55,7 @@ export function TutorialPanel() {
         <h3 className="text-base">{c.step} {step + 1}/{TUTORIAL_STEPS.length} · {content.title[locale]}</h3>
         <p className="text-sm leading-relaxed">{content.text[locale]}</p>
         <p className="break-words font-mono text-xs leading-relaxed">{content.formula}</p>
-        <p className="text-xs text-muted">{step === TUTORIAL_STEPS.length - 1 ? c.finished : !playing ? c.paused : `${locale === "pl" ? "Automat" : "Auto-play"} · 18 s`}</p>
+        <p className="text-xs text-muted">{step === TUTORIAL_STEPS.length - 1 ? c.finished : !playing ? c.paused : `${c.autoPlay} · 18 s`}</p>
       </div>
       <TutorialControls />
       <Button variant="ghost" size="sm" className="min-h-11" onClick={() => go(0)}>{c.restart}</Button>
